@@ -22,7 +22,7 @@ function buildButtons()
         ["https://www.youtube.com/channel/UCCp4IWg4A_JLexo30Jlf-UQ", "Kanál Minecraft"],
         ["https://www.lego.com/cs-cz/", "Lego.cz"],
         ["https://www.lego.com/cs-cz/service/buildinginstructions/search#?search&text=31313%2520LEGO%25C2%25AE%2520MINDSTORMS%25C2%25AE%2520EV3%2520MINDSTORMS", "Stahování Mindstormu"],
-        ["KnifeHit.html?_ijt=40a0ce6n9i03n4af9j42k7kbpm", "Co je to Knife Hit?"],
+        ["KnifeHit.html", "Co je to Knife Hit?"],
         ["0.html?_ijt=r1q803msoo6mld0sle8degebfg", "Co je to nula?"]
         ]
     var html = "";
@@ -36,7 +36,7 @@ function buildButtons()
 }
     </script>
 </head>
-<body>
+<body onload="buildButtons()">
 <h1>Podtržené texty otevří danou stránku ve stejném okně, tlačítka v novém okně(in new tab)</h1><br>
 <h2>1. Užitečné odkazy</h2><hr>
 <div id="ButtonsDiv"></div>
