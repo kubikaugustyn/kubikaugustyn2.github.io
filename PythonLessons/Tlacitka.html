@@ -22,8 +22,8 @@ function buildButtons()
         ["https://www.youtube.com/channel/UCCp4IWg4A_JLexo30Jlf-UQ", "Kanál Minecraft"],
         ["https://www.lego.com/cs-cz/", "Lego.cz"],
         ["https://www.lego.com/cs-cz/service/buildinginstructions/search#?search&text=31313%2520LEGO%25C2%25AE%2520MINDSTORMS%25C2%25AE%2520EV3%2520MINDSTORMS", "Stahování Mindstormu"],
-        ["http://localhost:63342/PythonLessons/Knife%20Hit.html?_ijt=40a0ce6n9i03n4af9j42k7kbpm", "Co je to Knife Hit?"],
-        ["http://localhost:63342/PythonLessons/0.html?_ijt=r1q803msoo6mld0sle8degebfg", "Co je to nula?"]
+        ["KnifeHit.html?_ijt=40a0ce6n9i03n4af9j42k7kbpm", "Co je to Knife Hit?"],
+        ["0.html?_ijt=r1q803msoo6mld0sle8degebfg", "Co je to nula?"]
         ]
     var html = "";
     for (var i=0; i<buttonInfos.length; i++) {
@@ -36,7 +36,7 @@ function buildButtons()
 }
     </script>
 </head>
-<body onload="buildButtons()">
+<body>
 <h1>Podtržené texty otevří danou stránku ve stejném okně, tlačítka v novém okně(in new tab)</h1><br>
 <h2>1. Užitečné odkazy</h2><hr>
 <div id="ButtonsDiv"></div>
@@ -51,11 +51,11 @@ function buildButtons()
     <button onclick="openInNewTab('https://www.lego.com/cs-cz/')">Otevřít Lego.cz</button><hr>
     <button onclick="openInNewTab('https://www.lego.com/cs-cz/service/buildinginstructions/search#?search&text=31313%2520LEGO%25C2%25AE%2520MINDSTORMS%25C2%25AE%2520EV3%2520MINDSTORMS')">Otevřít stahování Mindstormu</button><hr>
     <button onclick="openInNewTab('https://www.lego.com/cs-cz/service/buildinginstructions')">Otevřít stahování návodů</button><hr>
-    <button onclick="openInNewTab('http://localhost:63342/PythonLessons/KnifeHit.html?_ijt=40a0ce6n9i03n4af9j42k7kbpm')">Otevřít "Co je to Knife Hit?"</button><hr>
-    <button onclick="openInNewTab('http://localhost:63342/PythonLessons/0.html?_ijt=r1q803msoo6mld0sle8degebfg')">Otevřít "Co je to nula?"</button><hr>
+    <button onclick="openInNewTab('KnifeHit.html')">Otevřít "Co je to Knife Hit?"</button><hr>
+    <button onclick="openInNewTab('0.html')">Otevřít "Co je to nula?"</button><hr>
 <h2>3. Užitečná tlačítka seřazená podle abecedy</h2><hr>
     K<br><br>
-    <button onclick="openInNewTab('http://localhost:63342/PythonLessons/Knife%20Hit.html?_ijt=40a0ce6n9i03n4af9j42k7kbpm')">Otevřít "Co je to Knife Hit?"</button><hr>
+    <button onclick="openInNewTab('KnifeHit.html')">Otevřít "Co je to Knife Hit?"</button><hr>
     L<br><br>
     <button onclick="openInNewTab('https://www.lego.com/cs-cz/')">Otevřít Lego.cz</button><hr>
     M<br><br>
@@ -63,7 +63,7 @@ function buildButtons()
     <button onclick="openInNewTab('https://www.youtube.com/channel/UCCp4IWg4A_JLexo30Jlf-UQ')">Otevřít kanál Minecraftu(SUB)</button><hr>
     N<br><br>
     <button onclick="openInNewTab('https://www.lego.com/cs-cz/service/buildinginstructions')">Otevřít stahování návodů</button><br><br>
-    <button onclick="openInNewTab('http://localhost:63342/PythonLessons/0.html?_ijt=r1q803msoo6mld0sle8degebfg')">Otevřít "Co je to nula?"</button><hr>
+    <button onclick="openInNewTab('0.html?_ijt=r1q803msoo6mld0sle8degebfg')">Otevřít "Co je to nula?"</button><hr>
     P<br><br>
     <button onclick="openInNewTab('https://www.parlamentnilisty.cz/')">Otevřít Parlamentní Listy</button><hr>
     S<br><br>
