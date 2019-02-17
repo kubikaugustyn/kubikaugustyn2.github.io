@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tlačítka</title>
+    <style>
+    </style>
+    <script>
+function openInNewTab(url) {
+    var win = window.open(url, '_blank');
+    win.focus();
+}
+
+function buildButtons()
+{
+    var buttonInfos = [
+        ["https://uloz.to/", "Ulož.to"],
+        ["https://www.youtube.com/", "You Tube"],
+        ["https://www.seznam.cz/","Seznam.cz"],
+        ["https://email.seznam.cz/?", "mail"],
+        ["https://www.youtube.com/channel/UCNtV2t2MX3qGkBSD_uRtCGg", "Kanál Tech Ideas"],
+        ["https://www.youtube.com/channel/UCCp4IWg4A_JLexo30Jlf-UQ", "Kanál Minecraft"],
+        ["https://www.lego.com/cs-cz/", "Lego.cz"],
+        ["https://www.lego.com/cs-cz/service/buildinginstructions/search#?search&text=31313%2520LEGO%25C2%25AE%2520MINDSTORMS%25C2%25AE%2520EV3%2520MINDSTORMS", "Stahování Mindstormu"],
+        ["http://localhost:63342/PythonLessons/Knife%20Hit.html?_ijt=40a0ce6n9i03n4af9j42k7kbpm", "Co je to Knife Hit?"],
+        ["http://localhost:63342/PythonLessons/0.html?_ijt=r1q803msoo6mld0sle8degebfg", "Co je to nula?"]
+        ]
+    var html = "";
+    for (var i=0; i<buttonInfos.length; i++) {
+        var info = buttonInfos[i];
+        html += '<a href="' + info[0] + '">' + info[1] + '</a><br><br>\n';
+    }
+
+    document.getElementById("ButtonsDiv").innerHTML = html;
+
+}
+    </script>
+</head>
+<body onload="buildButtons()">
+<h1>Podtržené texty otevří danou stránku ve stejném okně, tlačítka v novém okně(in new tab)</h1><br>
+<h2>1. Užitečné odkazy</h2><hr>
+<div id="ButtonsDiv"></div>
+
+    <h2 onouseover="console.log('sss')">2. Užitečná tlačítka</h2><hr>
+    <button onclick="openInNewTab('https://uloz.to/')">Otevřít Ulož.To</button><hr>
+    <button onclick="openInNewTab('https://www.youtube.com/')">Otevřít You Tube</button><hr>
+    <button onclick="openInNewTab('https://www.seznam.cz/')">Otevřít Seznam.cz</button><hr>
+    <button onclick="openInNewTab('https://www.parlamentnilisty.cz/')">Otevřít Parlamentní Listy</button><hr>
+    <button onclick="openInNewTab('https://www.youtube.com/channel/UCNtV2t2MX3qGkBSD_uRtCGg')">Otevřít kanál Tech Ideas</button><hr>
+    <button onclick="openInNewTab('https://www.youtube.com/channel/UCCp4IWg4A_JLexo30Jlf-UQ')">Otevřít kanál Minecraftu(SUB)</button><hr>
+    <button onclick="openInNewTab('https://www.lego.com/cs-cz/')">Otevřít Lego.cz</button><hr>
+    <button onclick="openInNewTab('https://www.lego.com/cs-cz/service/buildinginstructions/search#?search&text=31313%2520LEGO%25C2%25AE%2520MINDSTORMS%25C2%25AE%2520EV3%2520MINDSTORMS')">Otevřít stahování Mindstormu</button><hr>
+    <button onclick="openInNewTab('https://www.lego.com/cs-cz/service/buildinginstructions')">Otevřít stahování návodů</button><hr>
+    <button onclick="openInNewTab('http://localhost:63342/PythonLessons/Knife%20Hit.html?_ijt=40a0ce6n9i03n4af9j42k7kbpm')">Otevřít "Co je to Knife Hit?"</button><hr>
+    <button onclick="openInNewTab('http://localhost:63342/PythonLessons/0.html?_ijt=r1q803msoo6mld0sle8degebfg')">Otevřít "Co je to nula?"</button><hr>
+<h2>3. Užitečná tlačítka seřazená podle abecedy</h2><hr>
+    K<br><br>
+    <button onclick="openInNewTab('http://localhost:63342/PythonLessons/Knife%20Hit.html?_ijt=40a0ce6n9i03n4af9j42k7kbpm')">Otevřít "Co je to Knife Hit?"</button><hr>
+    L<br><br>
+    <button onclick="openInNewTab('https://www.lego.com/cs-cz/')">Otevřít Lego.cz</button><hr>
+    M<br><br>
+    <button onclick="openInNewTab('https://www.lego.com/cs-cz/service/buildinginstructions/search#?search&text=31313%2520LEGO%25C2%25AE%2520MINDSTORMS%25C2%25AE%2520EV3%2520MINDSTORMS')">Otevřít stahování Mindstormu</button><br><br>
+    <button onclick="openInNewTab('https://www.youtube.com/channel/UCCp4IWg4A_JLexo30Jlf-UQ')">Otevřít kanál Minecraftu(SUB)</button><hr>
+    N<br><br>
+    <button onclick="openInNewTab('https://www.lego.com/cs-cz/service/buildinginstructions')">Otevřít stahování návodů</button><br><br>
+    <button onclick="openInNewTab('http://localhost:63342/PythonLessons/0.html?_ijt=r1q803msoo6mld0sle8degebfg')">Otevřít "Co je to nula?"</button><hr>
+    P<br><br>
+    <button onclick="openInNewTab('https://www.parlamentnilisty.cz/')">Otevřít Parlamentní Listy</button><hr>
+    S<br><br>
+    <button onclick="openInNewTab('https://www.seznam.cz/')">Otevřít Seznam.cz</button><hr>
+    T<br><br>
+    <button onclick="openInNewTab('https://www.youtube.com/channel/UCNtV2t2MX3qGkBSD_uRtCGg')">Otevřít kanál Tech Ieas</button><hr>
+    U<br><br>
+    <button onclick="openInNewTab('https://uloz.to/')">Otevřít Ulož.To</button><hr>
+    Y<br><br>
+    <button onclick="openInNewTab('https://www.youtube.com/')">Otevřít You Tube</button><hr>
+</body>
+</html>
