@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Album</title>
+    <script src="src/js/browser.min.js"></script>
+    <script src="src/js/react.min.js"></script>
+    <script src="src/js/react-dom.js"></script>
+    <script src="src/js/browser.min.js"></script>
+    <style>
+        .FrammedImage {
+            box-shadow: 0.3em 0.3em 0.3em #888888;
+            border: rgb(0, 112, 192) solid thin;
+            color: rgb(34, 34, 34);
+            display: inline;
+            height: 128px;
+            list-style-type: none;
+            margin: 0.3em;
+            __width: 128px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="like_button_container"></div>
+
+<script type="text/babel">
+    var PreviewImage =  React.createClass({
+        render: function () {
+            return <a href={this.props.imageName}><img className="FrammedImage" src={this.props.imageName} /></a>
+        }
+    });
+
+    var PathItem = React.createClass({
+        render: function () {
+            return <span>{this.props.pathName}\</span>
+        }
+    });
+
+var ImagePreviews = React.createClass({
+    reqListener: function (e) {
+        //data = JSON.parse(this.responseText);
+        console.log("Data loaded..." + this.responseText);
+    },
+
+    loadData: function () {
+        var oReq = new XMLHttpRequest();
+        oReq["imagePreviews"] = this;
+        oReq.onload = function (e) {
+            this.imagePreviews.setState({ jsonData: JSON.parse(this.responseText) });
+        }
+        oReq.open("get", this.props.jsonURL, true);
+        oReq.send();
+    },
+
+    getInitialState: function() {
+        return {
+            jsonData: this.loadData()
+        }
+    },
+
+
+
+    render: function(){
+        if (this.state.jsonData) {
+            var urlParts = this.props.jsonURL.split('/');
+            urlParts = urlParts.slice(0, urlParts.length - 1);
+            var urlPath = urlParts.join('/') + '/';
+
+            var albumCaption = this.state.jsonData.caption? this.state.jsonData.caption: '';
+
+            return (
+                <div>
+                    <h1>{albumCaption}</h1>
+                    <div>{urlParts.map((item, index) => <PathItem key={index} pathName={item} />)}</div>
+                    {this.state.jsonData.images.map((item, index) => <PreviewImage key={index} imageName={urlPath + item} />)}
+                </div>
+            )
+        }
+        else {
+
+        }
+        return (<div>Loading data...</div>)
+    }
+});
+
+
+ReactDOM.render(<ImagePreviews jsonURL="01_Jaro2019Zabreh/01_Tuesday/listdir.json" />, document.getElementById('like_button_container'));
+</script>
+</body>
+</html>
