@@ -1,0 +1,26 @@
+h1 {
+ text-align: right;
+}
+h2 {
+    margin: 0px 0px 0px 0px;
+ text-align: center;
+}
+h3 {
+ text-align: left;
+}
+body {
+    color: orchid;
+    background-color: pink
+}
+h1,h2,h3 {
+    color: darkorange;
+}
+h3 {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h3 {
+    color: greenyellow;
+}
+th,td {
+    color: cornflowerblue;
+}

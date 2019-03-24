@@ -5,6 +5,29 @@
     <title>Tlačítka</title>
     <style>
     </style>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    var availableTags = [
+      "Ulož.to",
+      "You Tube",
+      "Seznam.cz",
+      "Kanál Tech Ideas",
+      "Kanál Minecraft",
+      "Lego.cz",
+      "Stahování Mindstormu",
+      "Co je to Knife Hit?",
+      "Co je to nula?"
+          ];
+    $( "#SearchInput" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
+
     <script>
 function openInNewTab(url) {
     var win = window.open(url, '_blank');
@@ -37,13 +60,13 @@ function buildButtons()
     </script>
 </head>
 <body onload="buildButtons()">
-<h1>Podtržené texty otevří danou stránku ve stejném okně, tlačítka v novém okně(in new tab)</h1><br>
+<h1>Tlačítka</h1><br>
 <h2>1. Užitečné odkazy</h2><hr>
 <div id="ButtonsDiv"></div>
-
+Hledání: <input id="SearchInput"/>
     <h2 onouseover="console.log('sss')">2. Užitečná tlačítka</h2><hr>
     <button onclick="openInNewTab('https://uloz.to/')">Otevřít Ulož.To</button><hr>
-    <button onclick="openInNewTab('https://www.youtube.com/')">Otevřít You Tube<br></button><hr>
+    <button onclick="openInNewTab('https://www.youtube.com/')">Otevřít You Tube</button><br><hr>
     <button onclick="openInNewTab('https://www.seznam.cz/')">Otevřít Seznam.cz</button><hr>
     <button onclick="openInNewTab('https://www.youtube.com/channel/UCNtV2t2MX3qGkBSD_uRtCGg')">Otevřít kanál Tech Ideas</button><hr>
     <button onclick="openInNewTab('https://www.youtube.com/channel/UCCp4IWg4A_JLexo30Jlf-UQ')">Otevřít kanál Minecraftu(SUB)</button><hr>
