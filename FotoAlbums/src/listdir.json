@@ -1,0 +1,8 @@
+{
+    "images": [], 
+    "directories": [
+        "css", 
+        "js", 
+        "scss"
+    ]
+}
