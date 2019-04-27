@@ -1,6 +1,27 @@
 body {
     background-color: lightblue;
 }
-textarea {
-    color: blue;
+
+textarea, input {
+    color: #495057;
+    outline: none;
+    border: rgb(206, 212, 218) 1px solid;
+    padding: 6px 12px 6px 12px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+input:focus {
+        border-color: #80bdff;
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.text01 {
+     background-color: red;
+}
+.text02 {
+     background-color: orange;
+}
+.text03 {
+     background-color: pink;
 }
