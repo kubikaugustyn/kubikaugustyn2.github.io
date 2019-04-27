@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <title>Tlačítka</title>
     <link rel="stylesheet" href="Tlacitka.css" type="text/css" />
-
+    <script>
+function openInNewTab(url) {
+    var win = window.open(url, '_blank');
+    win.focus();
+}
+    </script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -26,44 +31,48 @@
     });
   } );
   </script>
-
     <script>
-function openInNewTab(url) {
-    var win = window.open(url, '_blank');
-    win.focus();
-}
-
-function buildButtons()
-{
-    var buttonInfos = [
-        ["https://uloz.to/", "Ulož.to"],
-        ["https://www.youtube.com/", "You Tube"],
-        ["https://www.seznam.cz/","Seznam.cz"],
-        ["https://email.seznam.cz/?", "mail"],
-        ["https://www.youtube.com/channel/UCNtV2t2MX3qGkBSD_uRtCGg", "Kanál Tech Ideas"],
-        ["https://www.youtube.com/channel/UCCp4IWg4A_JLexo30Jlf-UQ", "Kanál Minecraft"],
-        ["https://www.lego.com/cs-cz/", "Lego.cz"],
-        ["https://www.lego.com/cs-cz/service/buildinginstructions/search#?search&text=31313%2520LEGO%25C2%25AE%2520MINDSTORMS%25C2%25AE%2520EV3%2520MINDSTORMS", "Stahování Mindstormu"],
-        ["KnifeHit.html", "Co je to Knife Hit?"],
-        ["0.html?_ijt=r1q803msoo6mld0sle8degebfg", "Co je to nula?"]
-        ]
-    var html = "";
-    for (var i=0; i<buttonInfos.length; i++) {
-        var info = buttonInfos[i];
-        html += '<a href="' + info[0] + '">' + info[1] + '</a><br><br>\n';
-    }
+        function buildButtons() {
+            var buttonInfos = [
+                ["https://uloz.to/", "Ulož.to"],
+                ["https://www.youtube.com/", "You Tube"],
+                ["https://www.seznam.cz/", "Seznam.cz"],
+                ["https://email.seznam.cz/?", "mail"],
+                ["https://www.youtube.com/channel/UCNtV2t2MX3qGkBSD_uRtCGg", "Kanál Tech Ideas"],
+                ["https://www.youtube.com/channel/UCCp4IWg4A_JLexo30Jlf-UQ", "Kanál Minecraft"],
+                ["https://www.lego.com/cs-cz/", "Lego.cz"],
+                ["https://www.lego.com/cs-cz/service/buildinginstructions/search#?search&text=31313%2520LEGO%25C2%25AE%2520MINDSTORMS%25C2%25AE%2520EV3%2520MINDSTORMS", "Stahování Mindstormu"],
+                ["KnifeHit.html", "Co je to Knife Hit?"],
+                ["0.html?_ijt=r1q803msoo6mld0sle8degebfg", "Co je to nula?"]
+            ]
+            var html = "";
+            for (var i = 0; i < buttonInfos.length; i++) {
+                var info = buttonInfos[i];
+                html += '<a href="' + info[0] + '">' + info[1] + '</a><br><br>\n';
+            }
+        }
 
     document.getElementById("ButtonsDiv").innerHTML = html;
 
-}
     </script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    var availableTags = [
+      "SuperStránka:https://www.youtube.com/"
+          ];
+    $( "#SearchInput2" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
 </head>
 <body onload="buildButtons()">
 <h1>Tlačítka</h1>
-<textarea class="text01">Prvni</textarea>
-<textarea class="text02">Druhy</textarea>
 <h2>1. Hledání ve všech tlačítcích</h2>
-Hledání: <input id="SearchInput" class="text03"/>
+Hledání: <input id="SearchInput" class="text01"/>
 <h2>2. Užitečné odkazy</h2><hr>
 <div id="ButtonsDiv"></div>
     <h2 onouseover="console.log('sss')">3. Užitečná tlačítka</h2><hr>
@@ -95,6 +104,7 @@ Hledání: <input id="SearchInput" class="text03"/>
     U<br><br>
         <button onclick="openInNewTab('https://uloz.to/')">Otevřít Ulož.To</button><hr>
     Y<br><br>
-        <button onclick="openInNewTab('https://www.youtube.com/')">Otevřít You Tube</button><hr>
+        <button onclick="openInNewTab('https://www.youtube.com/')">Otevřít You Tube</button><hr><br>
+<input id="SearchInput2" class="text02"/>
 </body>
 </html>

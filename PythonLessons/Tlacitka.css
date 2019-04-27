@@ -1,7 +1,6 @@
 body {
     background-color: lightblue;
 }
-
 textarea, input {
     color: #495057;
     outline: none;
@@ -10,18 +9,20 @@ textarea, input {
     border-radius: 4px;
     background-color: white;
 }
-
 input:focus {
-        border-color: #80bdff;
-        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+        border-color: red;
+        box-shadow: 0 0 0 0.2rem rgba(255,255,255,.50);
 }
-
 .text01 {
-     background-color: red;
+     background-color: black;
 }
 .text02 {
-     background-color: orange;
-}
-.text03 {
-     background-color: pink;
+color: blue;
+    outline: none;
+    border: rgb(0, 0, 0) 0px solid;
+    padding: 0px 0px 0px 0px;
+    border-radius: 4px;
+    background-color: lightblue;
+    border-color: red;
+    box-shadow: 0 0 0 0.2rem rgba(0,0,0,.0);
 }
