@@ -1,23 +1,27 @@
 body {
     background-color: lightblue;
 }
+
 textarea, input {
     color: #495057;
     outline: none;
     border: rgb(206, 212, 218) 1px solid;
     padding: 6px 12px 6px 12px;
     border-radius: 4px;
-    background-color: white;
+    background-color: black;
 }
+
 input:focus {
         border-color: red;
         box-shadow: 0 0 0 0.2rem rgba(255,255,255,.50);
 }
+
 .text01 {
-     background-color: black;
+     color: white;
 }
+
 .text02 {
-color: blue;
+    color: blue;
     outline: none;
     border: rgb(0, 0, 0) 0px solid;
     padding: 0px 0px 0px 0px;
@@ -25,4 +29,36 @@ color: blue;
     background-color: lightblue;
     border-color: red;
     box-shadow: 0 0 0 0.2rem rgba(0,0,0,.0);
+}
+
+button01 {
+    background-color: red;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.element {
+  @include invisible(visible);
+}
+
+.element {
+  @include invisible(hidden);
+}
+
+display {
+    textarea: blue
+}
+
+.shadow-textarea textarea.form-control::placeholder {
+    font-weight: 300;
+}
+
+.shadow-textarea textarea.form-control {
+    padding-left: 0.8rem;
 }
