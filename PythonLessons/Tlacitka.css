@@ -65,3 +65,14 @@ display {
 textarea02 {
     background-color: white;
 }
+.button02 {
+    color: lightblue;
+    background-color: lightblue;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+}
+.button02:focus {
+    background-color: red;
+    color: black;
+}
