@@ -29,6 +29,7 @@ input:focus {
     background-color: lightblue;
     border-color: red;
     box-shadow: 0 0 0 0.2rem rgba(0,0,0,.0);
+    cursor: context-menu;
 }
 
 button01 {
@@ -51,8 +52,8 @@ button01 {
   @include invisible(hidden);
 }
 
-display {
-    textarea: blue
+.display {
+    textarea: blue;
 }
 
 .shadow-textarea textarea.form-control::placeholder {
