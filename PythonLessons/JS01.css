@@ -1,0 +1,11 @@
+body {
+    font-family: arial;
+}
+
+.button01, .button02, .button03, .button04, .button05 {
+    background-color: #59ff90;
+    border-radius: 3px;
+    border: none;
+    padding: 3px 10px 3px 10px;
+    cursor: pointer;
+}

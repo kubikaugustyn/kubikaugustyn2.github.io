@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>01</title>
+    <script src="JS01.js" type="application/javascript"></script>
+    <link rel="Stylesheet" href="JS01.css" type="text/css" />
+    <script>
+console.log("Main HTML Script...");
+
+function openLinkInNewTab(url) {
+    var win = window.open(url, '_blank');
+    win.focus()
+}
+
+function CloseTab(url) {
+    var url = window.location.href;
+    alert(url.split('?')[0]);
+}
+    </script>
+</head>
+<body>
+    <button class="button01" onclick="onClickProc1()">Seznam.cz</button><br><br>
+    <button class="button02" onclick="onClickProc2()">YouTube</button><br><br>
+    <button class="button03" onclick="onClickProc3()">YouTube Channel Tech Ideas</button><br><br>
+    <button class="button04" onclick="onClickProc4()">Seznam.cz</button><br><br>
+    <button class="button05" onclick="onClickProc5()">Reload page</button><br><br>
+</body>
+</html>
