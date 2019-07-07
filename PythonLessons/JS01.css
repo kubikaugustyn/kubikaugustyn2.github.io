@@ -1,5 +1,6 @@
 body {
     font-family: arial;
+    margin: 0px;
 }
 
 .button01, .button02, .button03, .button04, .button05 {
@@ -8,4 +9,21 @@ body {
     border: none;
     padding: 3px 10px 3px 10px;
     cursor: pointer;
+}
+
+.input01 {
+    background-color: #59ff90;
+    border-radius: 3px;
+    border: none;
+    padding: 3px 10px 3px 10px;
+    cursor: pointer;
+}
+
+.button11, .button12, .button13, .button14 {
+    border-radius: 3px;
+    background-color: white;
+    border: 0;
+    padding: 0;
+    cursor: context-menu;
+    height: 100px;
 }

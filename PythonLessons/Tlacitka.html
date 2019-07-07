@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Tlačítka</title>
     <script>
-        function openLinkInNewTab(url) {
+        function openInNewTab(url) {
         var win = window.open(url, '_blank');
         win.focus();
     }
@@ -51,13 +51,8 @@
                 html += '<a href="' + info[0] + '">' + info[1] + '</a><br><br>\n';
             }
         }
-
-
-
     </script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
   $( function() {
     var availableTags = [
@@ -75,7 +70,7 @@
 Hledání: <input id="SearchInput" class="text01,"/>
 <h2>2. Užitečné odkazy</h2><hr>
 <div id="ButtonsDiv"></div>
-    <h2 onouseover="console.log('sss')">3. Užitečná tlačítka</h2><hr>
+    <h2 onmouseover="console.log('sss')">3. Užitečná tlačítka</h2><hr>
         <button onclick="openInNewTab('https://uloz.to/')">Otevřít Ulož.To</button><hr>
         <button onclick="openInNewTab('https://www.lego.com/cs-cz/')">Otevřít Lego.cz</button><hr>
         <button onclick="openInNewTab('https://www.youtube.com/')">Otevřít You Tube</button><br><hr>
