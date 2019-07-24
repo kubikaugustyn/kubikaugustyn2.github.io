@@ -3,35 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Tlačítka</title>
-    <script>
-        function openInNewTab(url) {
-        var win = window.open(url, '_blank');
-        win.focus();
-    }
-    </script>
     <link rel="stylesheet" href="Tlacitka.css" type="text/css" />
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    var availableTags = [
-      "Ulož.to",
-      "You Tube",
-      "Seznam.cz",
-      "Kanál Tech Ideas",
-      "Kanál Minecraft",
-      "Lego.cz",
-      "Stahování Mindstormu",
-      "Co je to Knife Hit?",
-      "Co je to nula?"
-          ];
-    $( "#SearchInput" ).autocomplete({
-      source: availableTags
-    });
-  } );
-  </script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script>
+        var superStrankaText = "SuperStránka:https://www.youtube.com/";
+        function openInNewTab(url) {
+            var win = window.open(url, '_blank');
+            win.focus();
+        }
+
         function buildButtons() {
             var buttonInfos = [
                 ["https://uloz.to/", "Ulož.to"],
@@ -50,38 +33,67 @@
                 var info = buttonInfos[i];
                 html += '<a href="' + info[0] + '">' + info[1] + '</a><br><br>\n';
             }
+            document.getElementById("ButtonsDiv").innerHTML = html
         }
+
+        function onHiddenInputKeyUp() {
+            console.log("Hodnota v SearchInput2:", document.getElementById("SearchInput2").value);
+            if (document.getElementById("SearchInput2").value == superStrankaText) {
+                openInNewTab('https://www.youtube.com/')
+            }
+        }
+
+        $( function() {
+            $( "#SearchInput" ).autocomplete({
+              source: [
+              "Ulož.to",
+              "You Tube",
+              "Seznam.cz",
+              "Kanál Tech Ideas",
+              "Kanál Minecraft",
+              "Lego.cz",
+              "Stahování Mindstormu",
+              "Co je to Knife Hit?",
+              "Co je to nula?"
+                  ]
+            });
+
+            $( "#SearchInput2" ).autocomplete({
+                source: [superStrankaText],
+                select: function(event, ui) {
+                    openInNewTab('https://www.youtube.com/')
+                }
+            });
+
+            buildButtons();
+        } );
+
     </script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <script>
-  $( function() {
-    var availableTags = [
-      "SuperStránka:https://www.youtube.com/"
-          ];
-    $( "#SearchInput2" ).autocomplete({
-      source: availableTags
-    });
-  } );
-  </script>
 </head>
-<body onload="buildButtons()">
+<body>
 <h1>Tlačítka</h1>
 <h2>1. Hledání ve všech tlačítcích</h2>
 Hledání: <input id="SearchInput" class="text01,"/>
+
 <h2>2. Užitečné odkazy</h2><hr>
-<div id="ButtonsDiv"></div>
-    <h2 onmouseover="console.log('sss')">3. Užitečná tlačítka</h2><hr>
-        <button onclick="openInNewTab('https://uloz.to/')">Otevřít Ulož.To</button><hr>
-        <button onclick="openInNewTab('https://www.lego.com/cs-cz/')">Otevřít Lego.cz</button><hr>
-        <button onclick="openInNewTab('https://www.youtube.com/')">Otevřít You Tube</button><br><hr>
-        <button onclick="openInNewTab('https://www.seznam.cz/')">Otevřít Seznam.cz</button><hr>
-        <button onclick="openInNewTab('0.html')">Otevřít "Co je to nula?"</button><hr>
-        <button onclick="openInNewTab('https://www.youtube.com/channel/UCNtV2t2MX3qGkBSD_uRtCGg')">Otevřít kanál Tech Ideas</button><hr>
-        <button onclick="openInNewTab('https://www.lego.com/cs-cz/service/buildinginstructions')">Otevřít stahování návodů</button><hr>
-        <button onclick="openInNewTab('KnifeHit.html')">Otevřít "Co je to Knife Hit?"</button><hr>
-        <button onclick="openInNewTab('https://www.lego.com/cs-cz/service/buildinginstructions/search#?search&text=31313%2520LEGO%25C2%25AE%2520MINDSTORMS%25C2%25AE%2520EV3%2520MINDSTORMS')">Otevřít stahování Mindstormu</button><hr>
-        <button onclick="openInNewTab('https://www.youtube.com/channel/UCCp4IWg4A_JLexo30Jlf-UQ')">Otevřít kanál Minecraftu(SUB)</button><hr>
+<div id="ButtonsDiv">Nenačteno...</div>
+
+<h2 onmouseover="console.log('sss')">3. Užitečná tlačítka</h2><hr>
+<div>
+    <button onclick="openInNewTab('https://uloz.to/')">Otevřít Ulož.To</button><hr>
+    <button onclick="openInNewTab('https://www.lego.com/cs-cz/')">Otevřít Lego.cz</button><hr>
+    <button onclick="openInNewTab('https://www.youtube.com/')">Otevřít You Tube</button><br><hr>
+    <button onclick="openInNewTab('https://www.seznam.cz/')">Otevřít Seznam.cz</button><hr>
+    <button onclick="openInNewTab('0.html')">Otevřít "Co je to nula?"</button><hr>
+    <button onclick="openInNewTab('https://www.youtube.com/channel/UCNtV2t2MX3qGkBSD_uRtCGg')">Otevřít kanál Tech Ideas</button><hr>
+    <button onclick="openInNewTab('https://www.lego.com/cs-cz/service/buildinginstructions')">Otevřít stahování návodů</button><hr>
+    <button onclick="openInNewTab('KnifeHit.html')">Otevřít "Co je to Knife Hit?"</button><hr>
+    <button onclick="openInNewTab('https://www.lego.com/cs-cz/service/buildinginstructions/search#?search&text=31313%2520LEGO%25C2%25AE%2520MINDSTORMS%25C2%25AE%2520EV3%2520MINDSTORMS')">Otevřít stahování Mindstormu</button><hr>
+    <button onclick="openInNewTab('https://www.youtube.com/channel/UCCp4IWg4A_JLexo30Jlf-UQ')">Otevřít kanál Minecraftu(SUB)</button><hr>
+</div>
+
 <h2>4. Užitečná tlačítka seřazená podle abecedy</h2><hr>
+<div>
     K<br><br>
         <button onclick="openInNewTab('KnifeHit.html')">Otevřít "Co je to Knife Hit?"</button><hr>
     L<br><br>
@@ -99,8 +111,15 @@ Hledání: <input id="SearchInput" class="text01,"/>
     U<br><br>
         <button onclick="openInNewTab('https://uloz.to/')">Otevřít Ulož.To</button><hr>
     Y<br><br>
-        <button onclick="openInNewTab('https://www.youtube.com/')">Otevřít You Tube</button><hr>
-<p><input id="SearchInput2" class="text02"/>&nbsp;<button class="button02" onclick="openInNewTab('https://www.youtube.com/')">SuperStránka</button><hr></p>
+    <button onclick="openInNewTab('https://www.youtube.com/')">Otevřít You Tube</button><hr>
+</div>
+
+<p>
+    <input id="SearchInput2" class="text02" onkeyup="onHiddenInputKeyUp()"/>&nbsp
+    <button class="button02" onclick="openInNewTab('https://www.youtube.com/')">SuperStránka</button>
+    <hr>
+</p>
+
 <div class="invisible">1</div>
 <div class="visible">2</div>
 <textarea name="hide" style="display:none;"></textarea>
