@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulačka</title>
+    <script type="text/javascript">
+      function Plus()
+      {
+        C.innerHTML = A.value*1+B.value*1;
+      }
+    </script>
+</head>
+<body onload="Plus();">
+<h1>Kalkulačka</h1>
+<p>
+    <input type="text" id="A" value="1" size="20" onkeyup="Plus();" /> +
+    <input type="text" id="B" value="1" size="20" onkeyup="Plus();" />
+    <span id="C" value="2"></span>
+</p>
+</body>
+</html>

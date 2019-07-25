@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Povol- Zakaž</title>
+    <script type="text/javascript">
+        function ObnovUI()
+        {
+            B1.disabled = N.value > 2;
+              if (N.value > 2) B1.disabled = true; else B1.disabled = false;
+            B2.disabled = N.value < 2 || N.value >= 4;
+            B3.disabled = N.value < 3;
+        }
+    </script>
+</head>
+<body onclick="N.value=1+N.value*1; ObnovUI();" onload="ObnovUI();">
+<h1>Chytrá tlačítka</h1>
+Klepnutím anebo zadáním změnte číslo N:<br>
+N = <input type="text" id="N" name="N" size="4" value="1" onclick="event.cancelBubble = true"; onkeyup="ObnovUI()"><br>
+<p>
+    <input type="button" id="B1" name="B1" value="N <= 2" >
+    <input type="button" id="B2" name="B2" value="N >= 2 && N <4">
+    <input type="button" id="B3" name="B3" value="N >= 3">
+</p>
+</body>
+</html>
