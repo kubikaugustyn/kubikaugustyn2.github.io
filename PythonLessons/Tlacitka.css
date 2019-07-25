@@ -1,4 +1,4 @@
-body {
+        body {
     background-color: lightblue;
     font-family: arial;
 }
@@ -81,6 +81,7 @@ textarea02 {
     padding: 0px;
     border: 0px;
     margin: 0px;
+    cursor: hand;
 }
 .button02:focus {
     background-color: red;
