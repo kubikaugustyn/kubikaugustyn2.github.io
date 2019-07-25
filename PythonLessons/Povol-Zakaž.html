@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Povol- Zakaž</title>
+    <style type="text/css">
+        body{
+            background-color: lightblue;
+        }
+        .input02{
+            background-color: #8a90e6;
+        }
+    </style>
     <script type="text/javascript">
         function ObnovUI()
         {
@@ -16,7 +24,7 @@
 <body onclick="N.value=1+N.value*1; ObnovUI();" onload="ObnovUI();">
 <h1>Chytrá tlačítka</h1>
 Klepnutím anebo zadáním změnte číslo N:<br>
-N = <input type="text" id="N" name="N" size="4" value="1" onclick="event.cancelBubble = true"; onkeyup="ObnovUI()"><br>
+N = <input type="text" class="input02" id="N" name="N" size="4" value="1" onclick="event.cancelBubble = true"; onkeyup="ObnovUI()"><br>
 <p>
     <input type="button" id="B1" name="B1" value="N <= 2" >
     <input type="button" id="B2" name="B2" value="N >= 2 && N <4">
