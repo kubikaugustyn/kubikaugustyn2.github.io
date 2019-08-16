@@ -1,33 +1,31 @@
-function ButtonProc1(sender) {
+var viditelnaTlacitka = [];
+
+function ButtonProc1(sender, coZviditelnitId) {
     console.log(sender);
     sender.disabled=true;
+    var spanToBeVisible = document.getElementById(coZviditelnitId);
+    spanToBeVisible.style.visibility="visible";
+    viditelnaTlacitka.push(spanToBeVisible);
+    document.getElementById("RemoveAddedButtons_Button").disabled = false;
 }
 
-function ButtonProc2(sender) {
-    console.log(sender);
-    sender.disabled=true;
-}
-
-function ButtonProc3(sender) {
-    console.log(sender);
-    sender.disabled=true;
-}
-
-function ButtonProc4(sender) {
-    console.log(sender);
-    sender.disabled=true;
-}
-
-function ButtonProc5(sender) {
-    console.log(sender);
-    sender.disabled=true;
-}
 
 function ButtonProc6() {
-    console.log("6");
+    console.log("6", viditelnaTlacitka);
+    for (var i= 0; i<viditelnaTlacitka.length; i++) {
+        viditelnaTlacitka[i].style.visibility = "hidden";
+    }
+
+    const switcherButtons = document.querySelectorAll(".switcher");
+    console.log(switcherButtons)
+    for (var i= 0; i<switcherButtons.length; i++) {
+        switcherButtons[i].disabled = false;
+    }
+
+    document.getElementById("RemoveAddedButtons_Button").disabled = true;
 }
 
- function openLinkInNewTab(url) {
-        var win = window.open(url, '_blank');
-        win.focus();
-    }
+function openLinkInNewTab(url) {
+    var win = window.open(url, '_blank');
+    win.focus();
+}

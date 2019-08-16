@@ -18,18 +18,22 @@
 <body>
 <h1>Tlačítka 3</h1>
 
-<span id="span1"><button id="B1" onclick="ButtonProc1(this)">Přidat tlačítko "Otevřít You Tube"</button></span>
+<span id="span1"><button class="switcher" onclick="ButtonProc1(this, 'O1')">Přidat tlačítko "Otevřít You Tube"</button></span>
 <span class="neviditelne" id="O1"><button onclick="openLinkInNewTab('https://www.youtube.com')">Otevřít You Tube</button></span><hr>
-<span id="span2"><button id="B2" onclick="ButtonProc2(this)">Přidat tlačítko "Otevřít Seznam.cz"</button></span>
-<span class="neviditelne" id="O2><button onclick="openLinkInNewTab('https://www.seznam.cz/')">Otevřít Seznam.cz</button></span><hr>
-<span id="span3"><button id="B3" onclick="ButtonProc3(this)">Přidat tlačítko "Otevřít Ulož.to"</button></span>
-<span class="neviditelne" id="O3><button onclick="openLinkInNewTab('https://uloz.to/')">Otevřít Ulož.to</button></span><hr>
-<span id="span4"><button id="B4" onclick="ButtonProc4(this)">Přidat tlačítko "Otevřít Lego.cz"</button></span>
-<span class="neviditelne" id="O4><button onclick="openLinkInNewTab('https://www.lego.com/cs-cz')">Otevřít Lego.cz</button></span><hr>
-<span id="span5"><button id="B5" onclick="ButtonProc5(this)">Přidat tlačítko "Otevřít Stahování Mindstormu"</button></span>
-<span class="neviditelne" id="O5><button onclick="openLinkInNewTab('https://www.lego.com/cs-cz/service/buildinginstructions/' +
+
+<span id="span2"><button class="switcher" onclick="ButtonProc1(this, 'O2')">Přidat tlačítko "Otevřít Seznam.cz"</button></span>
+<span class="neviditelne" id="O2"><button onclick="openLinkInNewTab('https://www.seznam.cz/')">Otevřít Seznam.cz</button></span><hr>
+
+<span id="span3"><button class="switcher" onclick="ButtonProc1(this, 'O3')">Přidat tlačítko "Otevřít Ulož.to"</button></span>
+<span class="neviditelne" id="O3"><button onclick="openLinkInNewTab('https://uloz.to/')">Otevřít Ulož.to</button></span><hr>
+
+<span id="span4"><button class="switcher" onclick="ButtonProc1(this, 'O4')">Přidat tlačítko "Otevřít Lego.cz"</button></span>
+<span class="neviditelne" id="O4"><button onclick="openLinkInNewTab('https://www.lego.com/cs-cz')">Otevřít Lego.cz</button></span><hr>
+
+<span id="span5"><button class="switcher" onclick="ButtonProc1(this, 'O5')">Přidat tlačítko "Otevřít Stahování Mindstormu"</button></span>
+<span class="neviditelne" id="O5"><button onclick="openLinkInNewTab('https://www.lego.com/cs-cz/service/buildinginstructions/' +
 'search#?search&text=31313%2520LEGO%25C2%25AE%2520MINDSTORMS%25C2%25AE%2520EV3%2520MINDSTORMS')">Otevřít Stahování Mindstormu</button></span><hr>
-<div id="span6"><button id="B6" onclick="ButtonProc6()">Odebrat všechna přidaná tlačítka</button></div>
+<div id="span6"><button id="RemoveAddedButtons_Button" onclick="ButtonProc6()" disabled>Odebrat všechna přidaná tlačítka</button></div>
 
 <footer class="text-muted">
     <div class="container">
