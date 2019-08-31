@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Matrix</title>
+<link rel="stylesheet" href="../Stylesheets/Tomáš1.css" type="text/css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    var availableTags = [
+      "Ulož.to",
+      "You Tube",
+      "Seznam.cz",
+      "Kanál Tech Ideas",
+      "Kanál Minecraft",
+      "Lego.cz",
+      "Stahování Mindstormu",
+      "Co je to Knife Hit?",
+      "Co je to nula?"
+          ];
+    $( "#SearchInput" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
+
+    <script>
+    function openLinkInNewTab(url) {
+        var win = window.open(url, '_blank');
+        win.focus();
+    }
+    </script>
+</head>
+<body>
+<mark>Ahoj</mark><s>Pepíku!!!</s><hr><br>
+    <button onclick="openLinkInNewTab('https://www.youtube.com/')"><img src="../Png/YouTube.png" width="50px"/></button><hr><br>
+Hledání: <input id="SearchInput"/><hr><br>
+<a href="https://uloz.to/">Ulož.to</a><hr><br>
+<a href="https://uloz.to/">Další stránka</a><hr><br>
+<p><table border="1">
+  <thead>
+        <tr>
+                <th>Náhled</th>
+                <th>Typ</th>
+                <th>Procesor</th>
+                <th>Graf. karta</th>
+                <th>Skladem</th>
+        </tr>
+  </thead>
+  <tbody>
+        <tr>
+            <th>Ahoj</th>
+            </table>
+  </tbody><br><hr>
+</body>
+</html>

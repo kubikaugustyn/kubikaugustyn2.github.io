@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ukázka reakce na stisknutí klávesy</title>
+    <script>
+
+
+function showMsg() {
+    var elementIds = ["Input1", "Input2", "Input3"];
+    var html = "<table>";
+    for (var i=0; i<elementIds.length; i++) {
+        var elementId = elementIds[i];
+        var value = document.getElementById(elementId).value
+        html += "<tr><td>" + elementId + "</td><td>" + value + "</td></tr>";
+    }
+    html += "</table>"
+    document.getElementById("ConsoleDiv").innerHTML = html;
+}
+
+function onInputKeyPress(sender, event) {
+    console.log(sender, event);
+    showMsg();
+}
+    </script>
+</head>
+<body onload="showMsg()">
+<h1>Ukázka reakce na stisknutí klávesy</h1>
+<p>
+    Tato stránka ukazuje jak je možné reagovat na stisknutí klávesy. Když se stiskne klávesa, vyvolá se funkce onInputKeyPress,
+    která poté zobrazí hodnotu ve všech vstupních polích.
+</p>
+    <hr>
+    <div>
+        <label for="Input1">Prvni tlacitko:</label><input id="Input1" onkeyup="onInputKeyPress(this, event)">
+        <label for="Input2">Druhe tlacitko:</label><input id="Input2" onkeyup="onInputKeyPress(this, event)">
+        <label for="Input3">Treti tlacitko:</label><input id="Input3" onkeyup="onInputKeyPress(this, event)">
+    </div>
+    <hr>
+    <div id="ConsoleDiv">
+
+    </div>
+</body>
+</html>

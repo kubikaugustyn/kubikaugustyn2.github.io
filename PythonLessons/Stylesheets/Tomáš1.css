@@ -1,0 +1,20 @@
+body {
+    background-color: white;
+}
+
+tr {
+    color: orange;
+}
+
+button {
+    background-color: white;
+margin: 0px;
+border: 0px;
+padding: 0px;
+}
+
+hr {
+    margin: 0px;
+    border: 1px black solid;
+    padding: 0px;
+}

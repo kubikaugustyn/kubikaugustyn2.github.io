@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Co je vybráno</title>
+    <script type="text/javascript">
+        function Vybrane(Jmeno) {
+            var Prvky = document.all[Jmeno];
+            for (var i = 0; i < Prvky.length; i++)
+            {
+                if (Prvky[i].checked)
+                    return (Prvky[i].value)
+            }
+            return "Nic není vybráno!!!";
+        }
+    </script>
+</head>
+<body>
+<h1>Co je vybráno</h1>
+<fieldset>
+    <legend>Loutky</legend>
+    <input type="radio" name="Loutky" value="Vybraná loutka je: Buratino">Buratino<br>
+    <input type="radio" name="Loutky" value="Vybraná loutka je: Hurvínek">Hurvínek<br>
+    <input type="radio" name="Loutky" value="Vybraná loutka je: Hamo">Hamo<br>
+</fieldset>
+<p>
+    <input type="button" value="Oznam výběr" onclick="alert('\n\n' + Vybrane('Loutky'))">
+</p>
+</body>
+</html>
