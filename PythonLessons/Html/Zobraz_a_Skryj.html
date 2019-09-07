@@ -1,45 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Zobraz a Skryj</title>
     <style type="text/css">
+
         body {
             background-color: lightblue;
         }
-        .skryte { display: none;}
+
+        .skryte {
+            display: none;
+        }
+
     </style>
     <script type="text/javascript">
+
         function Skryj_Zobraz (Obr, Div)
         {
-            if (Div.style.display == "block")
-            {Div.style.display = "none";
-            Obr.src = "close.book.png";
-            co.innerText="zobrazíte";
-            }
-            else
-            { Div.style.display = "block";
-            Obr.src = "open.book.jpg";
-            co.innerText="skryjete";
+            if (Div.style.display === "block") {
+                Div.style.display = "none";
+                Obr.src = "../Png/close.book.png";
+                co.innerText = "zobrazíte";
+            } else {
+                Div.style.display = "block";
+                Obr.src = "../Jpg/open.book.jpg";
+                co.innerText = "skryjete";
             }
         }
+
     </script>
 </head>
 <body>
-<h1>Zobraz a Skryj</h1>
-<p>
-    Klepnutím na ikonu knihy <strong id="co">zobrazíte</strong> podrobnosti.
-</p>
-    <img src="../Png/close.book.png" onclick="Skryj_Zobraz (this, Div1)">
+    <h1>Zobraz a Skryj</h1>
+    <p>
+        Klepnutím na ikonu knihy <strong id="co">zobrazíte</strong> podrobnosti.
+    </p>
+    <img alt="knizka" src="../Png/close.book.png" onclick="Skryj_Zobraz (this, Div1)">
     <strong>Podrobnosti</strong>
     <div id="Div1" class="skryte">
-    <p>
-        Toto je skrytý text a obázek. Klepnutím na ikonu otevřené knihy skryjete text i obrázek.
-    </p>
-    <img src="../Jpg/butterfly.jpg">
-    <p>
-        Další odstavec skrytého textu...
-    </p>
+        <p>Toto je skrytý text a obázek. Klepnutím na ikonu otevřené knihy skryjete text i obrázek.</p>
+        <img alt="motyl" src="../Jpg/butterfly.jpg">
+        <p>Další odstavec skrytého textu...</p>
     </div>
 
    <footer class="text-muted">

@@ -1,7 +1,5 @@
 /* Made with love by Mutiullah Samim*/
 
-@import url('https://fonts.googleapis.com/css?family?Numans');
-
 html,body{
     background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
     background-size: cover;
@@ -30,7 +28,7 @@ html,body{
 }
 
 .social_icon span:hover{
-    color: white;
+    color: lightblue;
     cursor: pointer;
 }
 
@@ -59,6 +57,7 @@ input{
 
 .remember{
     color: white;
+    visibility: hidden;
 }
 
 .login_btn{
@@ -69,7 +68,7 @@ input{
 
 .login_btn:hover{
     color: black;
-    background-color: white;
+    background-color: lightblue;
 }
 
 .links{
@@ -79,3 +78,102 @@ input{
 .links a{
     margin-left: 4px;
 }
+
+.neviditelne {
+    visibility: hidden;
+}
+
+.id1 {
+    height: 100px;
+}
+
+.form-control2 {
+    display:block;
+    width:100%;
+    height:40px;
+    padding:8px 12px;
+    font-size:16px;
+    line-height:1.42857143;
+}
+
+.form-control2:focus{
+    border-color:#66afe9;
+    outline:0;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+    box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6)
+}
+
+.form-control2::-moz-placeholder{
+    color:#b3b3b3;opacity:1
+}
+
+.form-control2:-ms-input-placeholder{
+    color:#b3b3b3
+}
+
+.form-control2::-webkit-input-placeholder{
+    color:#b3b3b3
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-control2::-ms-expand{
+    border:0;
+    background-color:transparent
+}
+
+.form-control2[disabled],.form-control2[readonly],fieldset[disabled] .form-control2{
+    background-color:#eeeeee;
+    opacity:1
+}.form-control2[disabled],fieldset[disabled]
+.form-control2{
+     cursor:not-allowed
+ }
+textarea.form-control2{
+    height:auto
+}
+input[type="search"]{
+    -webkit-appearance:none
+}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+    input[type="date"]
+    .form-control2,input[type="time"]
+    .form-control2,input[type="datetime-local"]
+    .form-control2,input[type="month"]
+    .form-control2{
+        line-height:40px
+    }
+    input[type="date"].input-sm,input[type="time"].input-sm,input[type="datetime-local"]
+    .input-sm,input[type="month"]
+    .input-sm,
+    .input-group-sm input[type="date"],.input-group-sm input[type="time"],.input-group-sm
+    input[type="datetime-local"],.input-group-sm input[type="month"]{line-height:33px}input[type="date"].input-lg,input[type="time"].input-lg,input[type="datetime-local"].input-lg,input[type="month"].input-lg,.input-group-lg input[type="date"],.input-group-lg input[type="time"],.input-group-lg input[type="datetime-local"],.input-group-lg input[type="month"]{line-height:57px}}.form-group{margin-bottom:15px}.radio,.checkbox{position:relative;display:block;margin-top:10px;margin-bottom:10px}.radio label,.checkbox label{min-height:22px;padding-left:20px;margin-bottom:0;font-weight:normal;cursor:pointer}.radio input[type="radio"],.radio-inline input[type="radio"],.checkbox input[type="checkbox"],.checkbox-inline input[type="checkbox"]{position:absolute;margin-left:-20px;margin-top:4px \9}.radio+.radio,.checkbox+.checkbox{margin-top:-5px}.radio-inline,.checkbox-inline{position:relative;display:inline-block;padding-left:20px;margin-bottom:0;vertical-align:middle;font-weight:normal;cursor:pointer}.radio-inline+.radio-inline,.checkbox-inline+.checkbox-inline{margin-top:0;margin-left:10px}input[type="radio"][disabled],input[type="checkbox"][disabled],input[type="radio"].disabled,input[type="checkbox"].disabled,fieldset[disabled] input[type="radio"],fieldset[disabled] input[type="checkbox"]{cursor:not-allowed}.radio-inline.disabled,.checkbox-inline.disabled,fieldset[disabled] .radio-inline,fieldset[disabled] .checkbox-inline{cursor:not-allowed}.radio.disabled label,.checkbox.disabled label,fieldset[disabled] .radio label,fieldset[disabled] .checkbox label{cursor:not-allowed}
+.form-control2-static{padding-top:9px;padding-bottom:9px;margin-bottom:0;min-height:38px}
+.form-control2-static.input-lg,
+.form-control2-static.input-sm{padding-left:0;padding-right:0}.input-sm{height:33px;padding:5px 10px;font-size:14px;line-height:1.5;border-radius:3px}select.input-sm{height:33px;line-height:33px}textarea.input-sm,select[multiple].input-sm{height:auto}.form-group-sm .form-control2{height:33px;padding:5px 10px;font-size:14px;line-height:1.5;border-radius:3px}.form-group-sm select.form-control2{height:33px;line-height:33px}.form-group-sm textarea.form-control2,.form-group-sm select[multiple].form-control2{height:auto}.form-group-sm .form-control2-static{height:33px;min-height:36px;padding:6px 10px;font-size:14px;line-height:1.5}.input-lg{height:57px;padding:14px 16px;font-size:20px;line-height:1.3333333;border-radius:6px}select.input-lg{height:57px;line-height:57px}textarea.input-lg,select[multiple].input-lg{height:auto}.form-group-lg .form-control2{height:57px;padding:14px 16px;font-size:20px;line-height:1.3333333;border-radius:6px}.form-group-lg select.form-control2{height:57px;line-height:57px}.form-group-lg textarea.form-control2,.form-group-lg select[multiple].form-control2{height:auto}.form-group-lg .form-control2-static{height:57px;min-height:42px;padding:15px 16px;font-size:20px;line-height:1.3333333}.has-feedback{position:relative}.has-feedback .form-control2{padding-right:50px}.form-control2-feedback{position:absolute;top:0;right:0;z-index:2;display:block;width:40px;height:40px;line-height:40px;text-align:center;pointer-events:none}.input-lg+.form-control2-feedback,.input-group-lg+.form-control2-feedback,.form-group-lg .form-control2+.form-control2-feedback{width:57px;height:57px;line-height:57px}.input-sm+.form-control2-feedback,.input-group-sm+.form-control2-feedback,.form-group-sm .form-control2+.form-control2-feedback{width:33px;height:33px;line-height:33px}.has-success .help-block,.has-success .control-label,.has-success .radio,.has-success .checkbox,.has-success .radio-inline,.has-success .checkbox-inline,.has-success.radio label,.has-success.checkbox label,.has-success.radio-inline label,.has-success.checkbox-inline label{color:#3fad46}.has-success .form-control2{border-color:#3fad46;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075);box-shadow:inset 0 1px 1px rgba(0,0,0,0.075)}.has-success .form-control2:focus{border-color:#318837;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px #81d186;box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px #81d186}.has-success .input-group-addon{color:#3fad46;border-color:#3fad46;background-color:#dff0d8}.has-success .form-control2-feedback{color:#3fad46}.has-warning .help-block,.has-warning .control-label,.has-warning .radio,.has-warning .checkbox,.has-warning .radio-inline,.has-warning .checkbox-inline,.has-warning.radio label,.has-warning.checkbox label,.has-warning.radio-inline label,.has-warning.checkbox-inline label{color:#f0ad4e}.has-warning .form-control2{border-color:#f0ad4e;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075);box-shadow:inset 0 1px 1px rgba(0,0,0,0.075)}.has-warning .form-control2:focus{border-color:#ec971f;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px #f8d9ac;box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px #f8d9ac}.has-warning .input-group-addon{color:#f0ad4e;border-color:#f0ad4e;background-color:#fcf8e3}.has-warning .form-control2-feedback{color:#f0ad4e}.has-error .help-block,.has-error .control-label,.has-error .radio,.has-error .checkbox,.has-error .radio-inline,.has-error .checkbox-inline,.has-error.radio label,.has-error.checkbox label,.has-error.radio-inline label,.has-error.checkbox-inline label{color:#d9534f}.has-error .form-control2{border-color:#d9534f;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075);box-shadow:inset 0 1px 1px rgba(0,0,0,0.075)}.has-error .form-control2:focus{border-color:#c9302c;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px #eba5a3;box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px #eba5a3}.has-error .input-group-addon{color:#d9534f;border-color:#d9534f;background-color:#f2dede}.has-error .form-control2-feedback{color:#d9534f}.has-feedback label~.form-control2-feedback{top:27px}.has-feedback label.sr-only~.form-control2-feedback{top:0}.help-block{display:block;margin-top:5px;margin-bottom:10px;color:#737373}@media (min-width:768px){.form-inline .form-group{display:inline-block;margin-bottom:0;vertical-align:middle}.form-inline .form-control2{display:inline-block;width:auto;vertical-align:middle}.form-inline .form-control2-static{display:inline-block}.form-inline .input-group{display:inline-table;vertical-align:middle}.form-inline .input-group .input-group-addon,.form-inline .input-group .input-group-btn,.form-inline .input-group .form-control2{width:auto}.form-inline .input-group>.form-control2{width:100%}.form-inline .control-label{margin-bottom:0;vertical-align:middle}.form-inline .radio,.form-inline .checkbox{display:inline-block;margin-top:0;margin-bottom:0;vertical-align:middle}.form-inline .radio label,.form-inline .checkbox label{padding-left:0}.form-inline .radio input[type="radio"],.form-inline .checkbox input[type="checkbox"]{position:relative;margin-left:0}.form-inline .has-feedback .form-control2-feedback{top:0}}.form-horizontal .radio,.form-horizontal .checkbox,.form-horizontal .radio-inline,.form-horizontal .checkbox-inline{margin-top:0;margin-bottom:0;padding-top:9px}.form-horizontal .radio,.form-horizontal .checkbox{min-height:31px}.form-horizontal .form-group{margin-left:-15px;margin-right:-15px}@media (min-width:768px){.form-horizontal .control-label{text-align:right;margin-bottom:0;padding-top:9px}}.form-horizontal .has-feedback .form-control2-feedback{right:15px}
+
+
+
+
+
+
+
+
+.form-control2{position:relative;z-index:2;float:left;width:100%;margin-bottom:0}.input-group .form-control2:focus{z-index:3}.input-group-lg>.form-control2,.input-group-lg>.input-group-addon,.input-group-lg>.input-group-btn>.btn{height:57px;padding:14px 16px;font-size:20px;line-height:1.3333333;border-radius:6px}select.input-group-lg>.form-control2,select.input-group-lg>.input-group-addon,select.input-group-lg>.input-group-btn>.btn{height:57px;line-height:57px}textarea.input-group-lg>.form-control2,textarea.input-group-lg>.input-group-addon,textarea.input-group-lg>.input-group-btn>.btn,select[multiple].input-group-lg>.form-control2,select[multiple].input-group-lg>.input-group-addon,select[multiple].input-group-lg>.input-group-btn>.btn{height:auto}.input-group-sm>.form-control2,.input-group-sm>.input-group-addon,.input-group-sm>.input-group-btn>.btn{height:33px;padding:5px 10px;font-size:14px;line-height:1.5;border-radius:3px}select.input-group-sm>.form-control2,select.input-group-sm>.input-group-addon,select.input-group-sm>.input-group-btn>.btn{height:33px;line-height:33px}textarea.input-group-sm>.form-control2,textarea.input-group-sm>.input-group-addon,textarea.input-group-sm>.input-group-btn>.btn,select[multiple].input-group-sm>.form-control2,select[multiple].input-group-sm>.input-group-addon,select[multiple].input-group-sm>.input-group-btn>.btn{height:auto}.input-group-addon,.input-group-btn,.input-group .form-control2{display:table-cell}.input-group-addon:not(:first-child):not(:last-child),.input-group-btn:not(:first-child):not(:last-child),.input-group .form-control2:not(:first-child):not(:last-child){border-radius:0}.input-group-addon,.input-group-btn{width:1%;white-space:nowrap;vertical-align:middle}.input-group-addon{padding:8px 12px;font-size:16px;font-weight:normal;line-height:1;color:#333333;text-align:center;background-color:#eeeeee;border:1px solid #dddddd;border-radius:4px}.input-group-addon.input-sm{padding:5px 10px;font-size:14px;border-radius:3px}.input-group-addon.input-lg{padding:14px 16px;font-size:20px;border-radius:6px}.input-group-addon input[type="radio"],.input-group-addon input[type="checkbox"]{margin-top:0}.input-group .form-control2:first-child,.input-group-addon:first-child,.input-group-btn:first-child>.btn,.input-group-btn:first-child>.btn-group>.btn,.input-group-btn:first-child>.dropdown-toggle,.input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle),.input-group-btn:last-child>.btn-group:not(:last-child)>.btn{border-bottom-right-radius:0;border-top-right-radius:0}.input-group-addon:first-child{border-right:0}.input-group .form-control2:last-child,
+
+
+
+
+.form-control2{display:inline-block;width:auto;vertical-align:middle}.navbar-form .form-control2-static{display:inline-block}.navbar-form .input-group{display:inline-table;vertical-align:middle}.navbar-form .input-group .input-group-addon,.navbar-form .input-group .input-group-btn,.navbar-form .input-group .form-control2{width:auto}.navbar-form .input-group>.form-control2{width:100%}.navbar-form .control-label{margin-bottom:0;vertical-align:middle}.navbar-form .radio,.navbar-form .checkbox{display:inline-block;margin-top:0;margin-bottom:0;vertical-align:middle}.navbar-form .radio label,.navbar-form .checkbox label{padding-left:0}.navbar-form .radio input[type="radio"],.navbar-form .checkbox input[type="checkbox"]{position:relative;margin-left:0}.navbar-form .has-feedback .form-control2-feedback{top:0}
