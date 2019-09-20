@@ -1,22 +1,51 @@
-console.log("Checking login.js")
+console.log("Checking login2.js")
 
-function Login1(sender) {
-    console.log(sender);
-    console.log("function Login1()");
-    document.getElementById("div1").innerHTML = username[document.getElementById("input1").value] || ""
+function setLockIcon(elementId, value) {
+    var innerHTML = {
+        true: "&#128275;",
+        false: "&#128274;"
+    }
+    document.getElementById(elementId).innerHTML = innerHTML[value]
+
 }
 
-function Login2(sender) {
+function setResetButton(){
+    document.getElementById("reset").disabled = document.getElementById("UserNameInput").value != "" && document.getElementById("PasswordInput").value != ""
+
+}
+
+function checkUserName(sender) {
+    console.log("function Login1(", sender, ")");
+    var result = (userCredits[document.getElementById("UserNameInput").value] != undefined) || false
+    setLockIcon("UserNameIcon", result)
+
+    setResetButton()
+    return result
+}
+
+function checkUserPassword(sender) {
+    console.log("function Login2(", sender, ")");
+
+    var result = checkUserName(sender) && (document.getElementById("PasswordInput").value == userCredits[document.getElementById("UserNameInput").value])
+    setLockIcon("PasswordIcon", result)
+
+    setResetButton()
+    return result
+}
+
+function resetUserCredits(sender){
+    console.log("checkUserCredits")
+    setLockIcon("UserNameIcon", false)
+    setLockIcon("PasswordIcon", false)
+}
+
+function prihlasit(sender) {
     console.log(sender)
-    console.log("function Login2()");
-    document.getElementById("div2").innerHTML = passwords2[document.getElementById("input2").value] || ""
 }
 
-var username = {
-    "bbb" : "&#128273;"
+var userCredits = {
+    "bbb" : "ccc",
+    "augustyn": "jakub"
 }
 
-var passwords2 = {
-    "ccc" : "&#128274;"
-}
- console.log(passwords2, username)
+ console.log(userCredits)
