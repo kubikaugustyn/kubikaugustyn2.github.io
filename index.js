@@ -22,4 +22,4 @@ function onKeyPress() {
 }
 
 //zobrazí hesla (pageVariants)
-console.log(pageVarians)
+console.log(pageVariants)
