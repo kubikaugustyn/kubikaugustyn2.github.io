@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hra 02</title>
+    <link rel="stylesheet" href="Game02.css" type="text/css">
+    <script>
+        function mic() {
+            console.log("Fotbalový míč");
+            document.getElementById("td01").innerHTML="<img class=\"img01\" alt=\"Vyfouklý fotbalový míč\" src=\"Vyfoukly_mic_01.jpg\" height=\"45px\">";
+        }
+
+        function pumpicka() {
+            console.log("Pumpička");
+            document.getElementById("td02").innerHTML="<img class=\"img01\" alt=\"Pumpička\" src=\"Pumpička_01.jpg\" height=\"45px\">";
+        }
+    </script>
+</head>
+<body>
+<div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+<span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>
+<img class="img01" alt="Fotbalový míč" src="Vyfoukly_mic_01.jpg" height="20px" onclick="mic();this.style.visibility='hidden'">
+
+<img class="img02" alt="Pumpička" src="Pumpička_01.jpg" height="20px" onclick="pumpicka();this.style.visibility='hidden'">
+
+<div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+<table align="center" class="table01">
+    <tr>
+        <td class="width50px" id="td01"></td>
+        <td class="verticalline"></td>
+        <td class="width50px" id="td02"></td>
+        <td class="verticalline"></td>
+        <td></td>
+        <td class="verticalline"></td>
+        <td></td>
+        <td class="verticalline"></td>
+        <td></td>
+        <td class="verticalline"></td>
+        <td></td>
+        <td class="verticalline"></td>
+        <td></td>
+        <td class="verticalline"></td>
+        <td></td>
+        <td class="verticalline"></td>
+        <td></td>
+        <td class="verticalline"></td>
+        <td></td>
+    </tr>
+</table>
+
+<footer class="text-muted">
+    <div class="container">
+        <p>&copy; 2019 <a href="mailto:kubik.augustyn@post.cz">Jakub Augustýn</a></p>
+    </div>
+</footer>
+</body>
+</html>

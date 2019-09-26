@@ -9,7 +9,9 @@ var pageVariants = {
 
     "dddd": "<a href='PythonLessons/Html/PoHeslu.html'>Kubíkův web</a>",
 
-    "eee" : "Ahoj Ondro!!!<br><a href='PythonLessons/Ondra/Ondra1.html'>Ondráškův web</a>"
+    "eee" : "Ahoj Ondro!!!<br><a href='PythonLessons/Ondra/Ondra1.html'>Ondráškův web</a>",
+
+    "test" : "<a href='Testy.html'>Testy</a>"
 
     //další heslo a funkce k němu ("heslo" : "funkce")
 }
