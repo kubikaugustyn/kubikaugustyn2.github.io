@@ -7,13 +7,35 @@
     <script>
         function mic() {
             console.log("Fotbalový míč");
-            document.getElementById("td01").innerHTML="<img class=\"img01\" alt=\"Vyfouklý fotbalový míč\" src=\"Vyfoukly_mic_01.jpg\" height=\"45px\">";
+            document.getElementById("td01").innerHTML="<img onclick='pumpickaAmica1' class=\"img01\" alt=\"Vyfouklý fotbalový míč\" src=\"Vyfoukly_mic_01.jpg\" height=\"45px\">";
+
+            pumpickaAmic = pumpickaAmic+1;
+            console.log("pumpickaAmic=",pumpickaAmic);
+
+            if (pumpickaAmic === 2) {
+                console.log("funkce pumpickaAmic = 2");
+            }
         }
 
         function pumpicka() {
             console.log("Pumpička");
             document.getElementById("td02").innerHTML="<img class=\"img01\" alt=\"Pumpička\" src=\"Pumpička_01.jpg\" height=\"45px\">";
+
+            pumpickaAmic = pumpickaAmic+1;
+            console.log("pumpickaAmic=",pumpickaAmic);
+
+            if (pumpickaAmic === 2) {
+                console.log("funkce pumpickaAmic = 2");
+            }
         }
+
+        var pumpickaAmic = 0
+
+        function pumpickaAmica1() {
+
+        }
+
+        console.log("pumpickaAmic=",pumpickaAmic)
     </script>
 </head>
 <body>
@@ -36,14 +58,18 @@
 
 <img class="img02" alt="Pumpička" src="Pumpička_01.jpg" height="20px" onclick="pumpicka();this.style.visibility='hidden'">
 
+<button id="a" onclick="aaa()">aaa</button>
+
+<button id="b" onclick="ccc()">ccc</button>
+
 <div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
 <table align="center" class="table01">
     <tr>
         <td id="td01"></td>
-        <td></td>
         <td id="td02"></td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
