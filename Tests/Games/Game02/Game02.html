@@ -4,39 +4,7 @@
     <meta charset="UTF-8">
     <title>Hra 02</title>
     <link rel="stylesheet" href="Game02.css" type="text/css">
-    <script>
-        function mic() {
-            console.log("Fotbalový míč");
-            document.getElementById("td01").innerHTML="<img onclick='pumpickaAmica1' class=\"img01\" alt=\"Vyfouklý fotbalový míč\" src=\"Vyfoukly_mic_01.jpg\" height=\"45px\">";
-
-            pumpickaAmic = pumpickaAmic+1;
-            console.log("pumpickaAmic=",pumpickaAmic);
-
-            if (pumpickaAmic === 2) {
-                console.log("funkce pumpickaAmic = 2");
-            }
-        }
-
-        function pumpicka() {
-            console.log("Pumpička");
-            document.getElementById("td02").innerHTML="<img class=\"img01\" alt=\"Pumpička\" src=\"Pumpička_01.jpg\" height=\"45px\">";
-
-            pumpickaAmic = pumpickaAmic+1;
-            console.log("pumpickaAmic=",pumpickaAmic);
-
-            if (pumpickaAmic === 2) {
-                console.log("funkce pumpickaAmic = 2");
-            }
-        }
-
-        var pumpickaAmic = 0
-
-        function pumpickaAmica1() {
-
-        }
-
-        console.log("pumpickaAmic=",pumpickaAmic)
-    </script>
+    <script src="Game02.js"></script>
 </head>
 <body>
 <div>
