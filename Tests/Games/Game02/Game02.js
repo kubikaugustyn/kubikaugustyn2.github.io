@@ -1,5 +1,5 @@
 function mic() {
-    //console.log("Fotbalový míč");
+    console.log("Fotbalový míč");
     //document.getElementById("td01").innerHTML="<img onclick='pumpickaAmica1()' class='img01' alt='Vyfouklý fotbalový míč' src='Vyfoukly_mic_01.jpg' height='45px'>";
 
     CoMasMic();
@@ -13,7 +13,7 @@ function mic() {
 }
 
 function pumpicka() {
-    //console.log("Pumpička");
+    console.log("Pumpička");
     //document.getElementById("td02").innerHTML="<img onclick='pumpickaAmica1()' class='img01' alt='Pumpička' src='Pumpička_01.jpg' height='45px'>";
 
     CoMasPumpicku();
@@ -30,11 +30,11 @@ function CoMasPumpicku() {
 
      if (comas === 0) {
         console.log("mas",comas);
-        document.getElementById("td01").innerHTML="<img onclick='pumpickaAmica1()' class='img01' alt='Pumpička' src='Pumpička_01.jpg' height='45px'>";
+        document.getElementById("td01").innerHTML="<img onclick='pumpickaAmica4()' class='img01' alt='Pumpička' src='Pumpička_01.jpg' height='45px'>";
     }
 
      else {
-        document.getElementById("td02").innerHTML="<img onclick='pumpickaAmica1()' class='img01' alt='Pumpička' src='Pumpička_01.jpg' height='45px'>";
+        document.getElementById("td02").innerHTML="<img onclick='pumpickaAmica4()' class='img01' alt='Pumpička' src='Pumpička_01.jpg' height='45px'>";
      }
 
      comas =comas+1;
@@ -44,11 +44,11 @@ function CoMasMic() {
 
      if (comas === 0) {
         console.log("mas",comas);
-        document.getElementById("td01").innerHTML="<img onclick='pumpickaAmica1()' class='img01' alt='Mic' src='Vyfoukly_mic_01.jpg' height='45px'>";
+        document.getElementById("td01").innerHTML="<img onclick='pumpickaAmica3()' class='img01' alt='Mic' src='Vyfoukly_mic_01.jpg' height='45px'>";
     }
 
      else {
-         document.getElementById("td02").innerHTML="<img onclick='pumpickaAmica1()' class='img01' alt='Mic' src='Vyfoukly_mic_01.jpg' height='45px'>";
+         document.getElementById("td02").innerHTML="<img onclick='pumpickaAmica3();' class='img01' alt='Mic' src='Vyfoukly_mic_01.jpg' height='45px'>";
      }
 
      comas =comas+1;
@@ -64,6 +64,15 @@ function pumpickaAmica1() {
     pumpickaAmica2 = pumpickaAmica2+1;
     console.log("pumpickaAmica1=", pumpickaAmica2);
     nafouklymic();
+}
+
+function pumpickaAmica3() {
+    document.getElementById("td02").innerHTML="<img class='img01' alt='Mic' src='Vyfoukly_mic_01.jpg' height='45px'>";
+    document.getElementById("td01").innerHTML="";
+}
+
+function pumpickaAmica4() {
+
 }
 
 function nafouklymic() {
