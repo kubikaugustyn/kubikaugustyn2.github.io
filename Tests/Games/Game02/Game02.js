@@ -30,11 +30,11 @@ function CoMasPumpicku() {
 
      if (comas === 0) {
         console.log("mas",comas);
-        document.getElementById("td01").innerHTML="<img onclick='pumpickaAmica4()' class='img01' alt='Pumpička' src='Pumpička_01.jpg' height='45px'>";
+        document.getElementById("td01").innerHTML="<img onclick='pumpickaAmica5()' class='img01' alt='Pumpička' src='Pumpička_01.jpg' height='45px'>";
     }
 
      else {
-        document.getElementById("td02").innerHTML="<img onclick='pumpickaAmica4()' class='img01' alt='Pumpička' src='Pumpička_01.jpg' height='45px'>";
+        document.getElementById("td02").innerHTML="<img onclick='pumpickaAmica6()' class='img01' alt='Pumpička' src='Pumpička_01.jpg' height='45px'>";
      }
 
      comas =comas+1;
@@ -48,7 +48,7 @@ function CoMasMic() {
     }
 
      else {
-         document.getElementById("td02").innerHTML="<img onclick='pumpickaAmica3();' class='img01' alt='Mic' src='Vyfoukly_mic_01.jpg' height='45px'>";
+         document.getElementById("td02").innerHTML="<img onclick='pumpickaAmica4();' class='img01' alt='Mic' src='Vyfoukly_mic_01.jpg' height='45px'>";
      }
 
      comas =comas+1;
@@ -67,12 +67,23 @@ function pumpickaAmica1() {
 }
 
 function pumpickaAmica3() {
-    document.getElementById("td02").innerHTML="<img class='img01' alt='Mic' src='Vyfoukly_mic_01.jpg' height='45px'>";
-    document.getElementById("td01").innerHTML="";
+    pumpickaAmica1();
+    document.getElementById("td01").innerHTML="<img class='img01' alt='Mic' src='Vyfoukly_mic_01.jpg' height='45px'>";
 }
 
 function pumpickaAmica4() {
+    pumpickaAmica1();
+    document.getElementById("td02").innerHTML="<img class='img01' alt='Mic' src='Vyfoukly_mic_01.jpg' height='45px'>";
+}
 
+function pumpickaAmica5() {
+    pumpickaAmica1();
+    document.getElementById("td01").innerHTML="<img class='img01' alt='Pumpička' src='Pumpička_01.jpg' height='45px'>";
+}
+
+function pumpickaAmica6() {
+    pumpickaAmica1();
+    document.getElementById("td02").innerHTML="<img class='img01' alt='Pumpička' src='Pumpička_01.jpg' height='45px'>";
 }
 
 function nafouklymic() {

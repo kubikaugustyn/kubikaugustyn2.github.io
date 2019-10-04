@@ -16,6 +16,10 @@ body {
     padding: 3px;
 }
 
+.table01 td {
+    height: 50px;
+}
+
 .lastTD {
 
 }
