@@ -1,5 +1,10 @@
 console.log("Checking index.js...")
 
+function openInNewTab(url) {
+            var win = window.open(url, '_blank');
+            win.focus();
+        }
+
 var pageVariants = {
     "aaa" : "<br><a href='https://decko.ceskatelevize.cz/hry/kutej-spunte'><img alt='Kutej špunte' src='Kutej_spunte.png'></a>",
 
