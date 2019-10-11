@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input01</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+    </style>
+    <script>
+        function odesli() {
+            console.log(document.getElementById("zdroj").value);
+            document.getElementById("mamrad").innerHTML="Mám nejvíc rád:" document.getElementById("zdroj").value;
+        }
+    </script>
+</head>
+<body>
+    Mám nejvíc rád: <select id="zdroj" size="1" name="D1">
+        <option></option>
+        <option value="Banán">banán</option>
+        <option value="Jahoda">jahodu</option>
+        <option value="Pomeranč">pomeranč</option>
+    </select>
+    <p></p>
+    <button onclick="odesli()">Odeslat</button>
+    <div id="mamrad"></div>
+
+
+    <footer class="text-muted">
+        <div class="container">
+            <p>&copy; <a href="mailto:kubik.augustyn@post.cz">Jakub Augustýn</a></p>
+        </div>
+    </footer>
+</body>
+</html>
