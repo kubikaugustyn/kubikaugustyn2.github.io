@@ -11,20 +11,22 @@
     <script>
         function odesli() {
             console.log(document.getElementById("zdroj").value);
-            document.getElementById("mamrad").innerHTML="Mám nejvíc rád:" document.getElementById("zdroj").value;
+            document.getElementById("mamrad").innerHTML=document.getElementById("zdroj").value + ".";
         }
     </script>
 </head>
 <body>
     Mám nejvíc rád: <select id="zdroj" size="1" name="D1">
         <option></option>
-        <option value="Banán">banán</option>
-        <option value="Jahoda">jahodu</option>
-        <option value="Pomeranč">pomeranč</option>
+        <option value="banán">banán</option>
+        <option value="jahodu">jahodu</option>
+        <option value="pomeranč">pomeranč</option>
+        <option value="nic z nabídky"></option>
     </select>
     <p></p>
     <button onclick="odesli()">Odeslat</button>
-    <div id="mamrad"></div>
+    <p></p>
+    Mám nejvíc rád <span id="mamrad"></span>
 
 
     <footer class="text-muted">
