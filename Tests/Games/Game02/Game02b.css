@@ -1,7 +1,6 @@
 body {
     font-family: cursive;
     text-align: justify;
-    background-image: url("Dům_Diamantovi_01.png");
 }
 
 .table01 {
@@ -31,4 +30,21 @@ body {
 
 .text-muted {
     background-color: lightblue;
+}
+
+.cele {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left:0px;
+}
+
+.pred {
+    position: absolute;
+    z-index: 500;
+}
+
+.img01 {
+    background-color: black;
 }
