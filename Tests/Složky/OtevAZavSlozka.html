@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Zobraz a Skryj</title>
+    <style type="text/css">
+
+        body {
+            background-color: lightblue;
+        }
+
+        .skryte {
+            display: none;
+        }
+
+        .cursor {
+            cursor: pointer;
+        }
+    </style>
+    <script type="text/javascript">
+        function Skryj_Zobraz (Div, Text, Sipka)
+        {
+            if (Div.style.display === "block") {
+                Div.style.display = "none";
+                Text.innerText = "Skryto";
+                Sipka.innerHTML = "&#709;"
+            } else {
+                Div.style.display = "block";
+                Text.innerText = "Zobrazeno";
+                Sipka.innerHTML = "&#708;"
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Zobraz a Skryj</h1>
+        <div class="cursor" onclick="Skryj_Zobraz (Div1, co1, sipka1)">
+            <strong id="co1">Skryto</strong><span id="sipka1" style='font-family: "Font Awesome 5 Brands"'>&#709</span>
+        </div>
+
+        <div id="Div1" class="skryte">
+
+        Ahoj1<br>
+
+            <div class="cursor" onclick="Skryj_Zobraz (Div2, co2, sipka2)">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong id="co2">Skryto</strong><span id="sipka2" style='font-family: "Font Awesome 5 Brands"'>&#709</span>
+            </div>
+
+            <div>
+                <div id="Div2" class="skryte">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ahoj2<br>
+                    <div class="cursor" onclick="Skryj_Zobraz (Div3, co3, sipka3)">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong id="co3">Skryto</strong><span id="sipka3" style='font-family: "Font Awesome 5 Brands"'>&#709</span>
+                    </div>
+
+                    <div>
+                        <div id="Div3" class="skryte">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ahoj3
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+   <footer class="text-muted">
+        <div class="container">
+            <p>&copy; <a href="mailto:kubik.augustyn@post.cz">Jakub Augustýn</a></p>
+        </div>
+   </footer>
+</body>
+</html>
