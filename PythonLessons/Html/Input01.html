@@ -7,22 +7,39 @@
         body {
             background-color: lightblue;
         }
+
+        .input01 {
+            visibility: hidden;
+        }
     </style>
     <script>
+        function nicznabidky() {
+            if (document.getElementById("zdroj").value === "nic z nabídky") {
+                console.log("nicznabidky")
+                document.getElementById("nicznabidky").style.visibility="visible"
+                console.log(document.getElementById("nicznabidky").value)
+            }
+        }
+
         function odesli() {
             console.log(document.getElementById("zdroj").value);
+            if (document.getElementById("zdroj").value === "nic z nabídky") {
+                document.getElementById("nicznabidky").value === "hhh"
+            }
             document.getElementById("mamrad").innerHTML=document.getElementById("zdroj").value + ".";
         }
     </script>
 </head>
 <body>
-    Mám nejvíc rád: <select id="zdroj" size="1" name="D1">
-        <option></option>
+    Mám nejvíc rád: <select onclick="nicznabidky()" id="zdroj" size="1" name="D1">
         <option value="banán">banán</option>
         <option value="jahodu">jahodu</option>
         <option value="pomeranč">pomeranč</option>
         <option value="nic z nabídky">nic z nabídky</option>
     </select>
+
+    <input width="5558px" class="input01" placeholder="Zde napište, co máte nejradši." type="text" id="nicznabidky">
+
     <p></p>
     <button onclick="odesli()">Odeslat</button>
     <p></p>
