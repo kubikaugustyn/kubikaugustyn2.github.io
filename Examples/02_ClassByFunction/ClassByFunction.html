@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+function Bod(x, y) {
+    this.x = x
+    this.y = y
+
+    this.tiskni = function() {
+        console.log("Bod (", x, ",", y, ")")
+    }
+
+}
+
+Bod.prototype.pricti = function(b) {
+        this.x = this.x + b.x
+        this.y = this.y + b.y
+        console.log("pricitam", this.x)
+    }
+
+var a = new Bod(2, 4)
+var b = new Bod(5, 8)
+a.tiskni()
+b.tiskni()
+        a.pricti(b)
+a.tiskni()
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

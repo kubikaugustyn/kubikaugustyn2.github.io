@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Přesouvání Obrázku</title>
+    <style>
+        .obrazek {
+            border: outset 2pt;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+    <script>
+        var x1 = window.event.x
+
+        var y1 = window.event.y
+
+        var obrazek
+
+        function loadProc() {
+            obrazek = document.getElementById("Obrazek")
+        }
+
+        function Zacatek() {
+            setCapture()
+            obrazek.onmousemove = Presun//()
+            obrazek.onmouseup = Konec//()
+        }
+
+        function Presun() {
+            obrazek.style.left = x1 + "px"
+            obrazek.style.top = y1 + "px"
+        }
+
+        function Konec() {
+            relaseCapture()
+            obrazek.onmousemove = ""
+            obrazek.onmouseup = ""
+        }
+
+        function relaseCapture() {
+            console.log("relaseCapture...")
+        }
+
+        function setCapture() {
+            console.log("setCapture...")
+        }
+    </script>
+</head>
+<body onload="loadProc()">
+    <img class="obrazek" id="Obrazek" onmousemove="Zacatek(this)" onmousedown="Zacatek(this)" alt="Motýl" src="butterfly.jpg">
+</body>
+</html>
