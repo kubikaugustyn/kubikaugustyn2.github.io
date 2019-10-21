@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hledání na YouTube</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        .cervena {
+            padding: 5px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        function button() {
+            var win = window.open("https://www.youtube.com/results?search_query="+co, '_blank');
+            win.focus();
+        }
+
+        function obnov() {
+            co = document.getElementById("cohledat").value
+            document.getElementById("adresa").innerText = "https://www.youtube.com/results?search_query=" + co
+        }
+
+        var co
+
+        function onload() {
+            co = document.getElementById("cohledat").value
+        }
+    </script>
+</head>
+<body onload="onload();obnov()">
+<h1>Hledání na YouTube s pomocí mého webu</h1>
+Hledám:<span class="cervena"><input onkeypress="obnov()" onkeyup="obnov()" onkeydown="obnov()" id="cohledat" placeholder="Zde začněte hledat." value=""></span><br><br>
+Adresa:<span class="cervena" id="adresa"></span><br><br>
+<button class="cervena" onclick="button()">Otevřít hledání</button>
+</body>
+</html>
