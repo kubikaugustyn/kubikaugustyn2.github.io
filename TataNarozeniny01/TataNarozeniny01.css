@@ -1,0 +1,18 @@
+body {
+    background-color: #b1009c;
+    //#b1009c
+}
+
+.neviditelne {
+    background-color: #b1009c;
+    color: #b1009c;
+}
+
+.pridavacidivnatlacitka {
+    border: 5px solid red;
+    margin-bottom: 10px;
+}
+
+.yellow {
+    color: yellow;
+}
