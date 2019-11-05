@@ -16,3 +16,7 @@ body {
 .yellow {
     color: yellow;
 }
+
+.neviditelne1 {
+    visibility: hidden;
+}
