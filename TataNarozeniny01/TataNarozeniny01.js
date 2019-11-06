@@ -118,9 +118,9 @@ var makeelementinnerhtml =
     "<div class='divcara'></div>" +
     "<button onclick='makebutton()'>Tlačítko</button><br>" +
     "<div class='divcara'></div>" +
-    "<button onclick='openLinkInNewTab()'>Vstup textu</button><br>" +
+    "<a href='TataNarozeniny01Error.html'>Vstup textu</a><br>" +
     "<div class='divcara'></div>" +
-    "<button>Odkaz</button><br>" +
+    "<a href='TataNarozeniny01Error.html'>Odkaz</a><br>" +
     "<div class='divcara'></div>" +
     "<div class='divcara'></div>" +
     "<div class='divcara'></div>" +
