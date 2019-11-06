@@ -1,5 +1,12 @@
 console.log("TataNarozeniny01.js...")
 
+var pagebody
+
+function pageBody() {
+    pagebody = document.getElementById('body').innerHTML
+    ////////////console.log(pagebody + "54")
+}
+
 function openLinkInNewTab(url) {
     var win = window.open(url, '_blank');
     win.focus();
@@ -9,18 +16,20 @@ function vymaz() {
     document.getElementById(elementIds).value = ""
 }
 
-var name
+var obsahtlacitka
 
-function nameload() {
-    name = document.getElementById("innertext1").innerText
-    console.log(name)
+function loadobsahtlacitka() {
+    obsahtlacitka = document.getElementById("innertext1").innerText
+    ///////////////console.log(obsahtlacitka)
 }
 
-function pridej() {
-    confirm('Text v tlačítku je ' + name + '.')
+function pridejbutton() {
+    ////////////confirm('Text v tlačítku je ' + obsahtlacitka + '.')
+    alert("Přidávám tlačítko " + obsahtlacitka + ", barva pozadí " + barvatlacitka + ".")
+    makeadd1()
     var pridej = document.createElement("button")
-    pridej.innerHTML = name
-    pridej.style.backgroundColor = name1
+    pridej.innerHTML = obsahtlacitka
+    pridej.style.backgroundColor = barvatlacitka
     //pridej.placeholder = placeholder
     //pridej.id = "+guug+"
     document.getElementById("pridavacidivnatlacitka").appendChild(pridej)
@@ -53,11 +62,11 @@ function vymaz1() {
     document.getElementById(elementIds1).value = ""
 }
 
-var name1
+var barvatlacitka
 
-function nameload1() {
-    name1 = document.getElementById("pozadi1").innerText
-    console.log(name1)
+function loadbarvatlacitka1() {
+    barvatlacitka = document.getElementById("pozadi1").innerText
+    ///////////////console.log(barvatlacitka)
 }
 
 var elementIds1 = ["pozadi"];
@@ -77,3 +86,64 @@ function onInputKeyPress1(event) {
     //////////console.log(event);
     showMsg1();
 }
+
+function makeadd() {
+    /////////////console.log(pagebody + "1")
+    //////////console.log(pagebody + "1")
+    /////////////////console.log(pagebody + "1")
+    document.getElementById('body').innerHTML = makeelementinnerhtml
+}
+
+function makeadd1() {
+    ////////////console.log(pagebody + "5")
+    document.getElementById('body').innerHTML = pagebody
+}
+
+
+function makebutton() {
+    console.log("Vytvořit tlačítko...")
+    document.getElementById('body').innerHTML = makebuttoninnerhtml
+}
+
+function console1() {
+    console.log("Přidávám tlačítko " + obsahtlacitka + ", barva pozadí " + barvatlacitka + ".")
+}
+
+
+
+
+
+var makeelementinnerhtml =
+    "<div class='divcenter center'>Vytvořit<br>" +
+    "<div class='divcara'></div>" +
+    "<button onclick='makebutton()'>Tlačítko</button><br>" +
+    "<div class='divcara'></div>" +
+    "<button onclick='openLinkInNewTab()'>Vstup textu</button><br>" +
+    "<div class='divcara'></div>" +
+    "<button>Odkaz</button><br>" +
+    "<div class='divcara'></div>" +
+    "<div class='divcara'></div>" +
+    "<div class='divcara'></div>" +
+    "<button class='down' onclick='makeadd1()'>Zrušit</button></div>"
+
+
+
+var makebuttoninnerhtml = "<div class='center'><input onclick='vymaz();showMsg()' placeholder='Zde napište text do tlačítka.' id='innertext' onkeyup='onInputKeyPress(event);loadobsahtlacitka()'><br><hr>" +
+    "<input onclick='vymaz1();showMsg1()' placeholder='Zde napište barvu pozadí(anglicky).' id='pozadi' size='30' onkeyup='onInputKeyPress1(event);loadbarvatlacitka1()'><br>" +
+    "<hr><button onclick='pridejbutton();console1()'>Přidej tlačítko</button>" +
+    "<div class='neviditelne' id='innertext1'></div>" +
+    "<div class='neviditelne' id='pozadi1'></div></div>"
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -20,3 +20,17 @@ body {
 .neviditelne1 {
     visibility: hidden;
 }
+
+.center {
+    text-align: center;
+}
+
+.divcenter {
+    height: 200px;
+    background-color: yellow;
+}
+
+.divcara {
+    height: 15px;
+    background-color: #ffc84d;
+}

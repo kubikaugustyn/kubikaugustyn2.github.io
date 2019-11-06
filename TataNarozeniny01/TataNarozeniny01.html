@@ -8,12 +8,20 @@
     <noscript>Váš prohlížeč nepodporuje JavaScript!!!!!</noscript>
     <link rel="stylesheet" href="TataNarozeniny01.css" type="text/css">
 </head>
-<body>
-<input onclick="vymaz()" placeholder="Zde napište text do tlačítka." id="innertext" onkeyup="onInputKeyPress(event);nameload()">
-<input onclick="vymaz1()" placeholder="Zde napište barvu pozadí(anglicky)." id="pozadi" size="30" onkeyup="onInputKeyPress1(event);nameload1()">
-<button onclick="pridej()">Přidej tlačítko</button><hr>
-<div class="pridavacidivnatlacitka" id="pridavacidivnatlacitka"><span class="yellow">Zde jsou všechna přidaná tlačítka:</span><button class="neviditelne1">gfd</button></div>
-<div class="neviditelne" id="innertext1"></div>
-<div class="neviditelne" id="pozadi1"></div>
+<body id="body"> <!--onload="makeadd()"-->
+<div onmousedown="pageBody()" onkeyup="pageBody()" onload="pageBody()">
+    <button onclick="makeadd()">Přidat element</button><hr>
+
+    <!--<input onclick="vymaz();showMsg()" placeholder="Zde napište text do tlačítka." id="innertext" onkeyup="onInputKeyPress(event);nameload()">
+    <input onclick="vymaz1();showMsg1()" placeholder="Zde napište barvu pozadí(anglicky)." id="pozadi" size="30" onkeyup="onInputKeyPress1(event);nameload1()">
+    <button onclick="pridej()">Přidej tlačítko</button>--->
+    <div class="pridavacidivnatlacitka" id="pridavacidivnatlacitka"><span class="yellow">Zde jsou všechny přidané elementy:</span><button class="neviditelne1">gfd</button></div>
+
+
+
+    <!--<div class="neviditelne" id="innertext1"></div>
+    <div class="neviditelne" id="pozadi1"></div>-->
+
+</div>
 </body>
 </html>
