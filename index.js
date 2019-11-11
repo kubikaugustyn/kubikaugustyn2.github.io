@@ -18,7 +18,9 @@ var pageVariants = {
 
     "test" : "<a href='Testy.html'>Testy</a>",
 
-    "tata" : "<a href='TataNarozeniny01/TataNarozeniny01.html'>Tátův editor</a>"
+    "tata" : "<a href='TataNarozeniny01/TataNarozeniny01.html'>Tátův editor</a>",
+
+    "editor" : "<a href='Editor.html'>Editor webu</a>"
 
     //další heslo a funkce k němu ("heslo" : "funkce")
 }

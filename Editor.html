@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editor</title>
+    <style>
+        body {
+            background-color: lightblue;
+            text-align: center;
+        }
+    </style>
+    <script>
+        var pageVariants = {
+            "editorwebu" : "<br><a href='TataNarozeniny01/TataNarozeniny01.html'>Editor webu</a>"
+    }
+
+    function onKeyPress() {
+        document.getElementById("poheslu").innerHTML = pageVariants[document.getElementById("heslo").value]
+    }
+    </script>
+</head>
+<body>
+<div><br><br><br><br><br><br></div>
+<input type="password" onkeyup="onKeyPress()" id="heslo">
+<div id="poheslu"></div>
+
+<footer class="text-muted">
+    <div class="container">
+        <p>&copy; 2019 <a href="mailto:kubik.augustyn@post.cz">Jakub Augustýn</a></p>
+    </div>
+</footer>
+</body>
+</html>
