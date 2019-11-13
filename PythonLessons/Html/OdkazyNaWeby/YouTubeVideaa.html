@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube videa</title>
+    <style>
+        body {
+            background-color: lightblue;
+            text-align: center;
+        }
+    </style>
+    <script>
+    var pageVariants = {
+        "youtube" : "<br><a href='YouTubeVideab.html'>YouTube videa</a>"
+    }
+
+    function heslo() {
+        document.getElementById("poheslu").innerHTML = pageVariants[document.getElementById("heslo").value]
+    }
+    </script>
+</head>
+<body>
+<input type="password" id="heslo" onkeyup="heslo()">
+<div id="poheslu"></div>
+</body>
+</html>
