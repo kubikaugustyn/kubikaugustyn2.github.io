@@ -30,12 +30,21 @@ function makebutton() {
     document.getElementById('body').innerHTML = makebuttoninnerhtml
 }
 
+function makeInput() {
+    console.log("Vytvořit vstup textu...")
+    document.getElementById('body').innerHTML = makeInputInnerHTML
+}
+
+function vymaz(covymaz) {
+    document.getElementById(covymaz).value = ""
+}
+
 var makeelementinnerhtml =
     "<div class='divcenter center'>Vytvořit<br>" +
     "<div class='divcara'></div>" +
     "<button onclick='makebutton()'>Tlačítko</button><br>" +
     "<div class='divcara'></div>" +
-    "<a href='TataNarozeniny01Error.html'>Vstup textu(Nemačkat!!!)</a><br>" +
+    "<button onclick='makeInput()'>Vstup textu</button><br>" +
     "<div class='divcara'></div>" +
     "<a href='TataNarozeniny01Error.html'>Odkaz(Nemačkat!!!)</a><br>" +
     "<div class='divcara'></div>" +
@@ -54,7 +63,7 @@ function zobrazUpozorneni() {
     if (upozornenizobrazeno === 1) {
         TextZobrazitSkryt = "Skrýt upozornění"
         document.getElementById('buttonNaZobrazeni').innerText = TextZobrazitSkryt
-        document.getElementById('zobrazovaniUpozorneni').innerHTML = "Barva pozadí napsaná anglicky se sama převádí na češtinu, ale zadávejte anglicky!!!!!!!!!!!<br>Pokud se Angličtina nepřevede, musíte si být jisti správnosti barvy zadané anglicky!!!!!!!!!!!!!!!"
+        document.getElementById('zobrazovaniUpozorneni').innerHTML = "Barva pozadí napsaná anglicky se sama převádí na češtinu, ale zadávejte anglicky!!!!!!!!!!!<br>Pokud se angličtina nepřevede, musíte si být jisti správnosti barvy zadané anglicky!!!!!!!!!!!!!!!"
         upozornenizobrazeno = 0
         TextZobrazitSkryt = "Zobrazit upozornění"
     }
@@ -66,14 +75,14 @@ function zobrazUpozorneni() {
     }
 }
 
-var makebuttoninnerhtml = "<div class='center'><input onclick='vymaz(innertext);showMsg2()' placeholder='Zde napište text do tlačítka.' id='innertext' onkeyup='onInputKeyPress(event);loadobsahtlacitka()'><br><hr>" +
+var makebuttoninnerhtml = "<div class='center'><input onclick='vymaz(this.id);showMsg1()' placeholder='Zde napište text do tlačítka.' id='innertext' onkeyup='onInputKeyPress(event);loadobsahtlacitka()'><br><hr>" +
     "<input onclick='vymaz(pozadi);showMsg2()' placeholder='Zde napište barvu pozadí(anglicky).' id='pozadi' size='30' onkeyup='onInputKeyPress1(event);loadbarvatlacitka1()'><br><hr>" +
     "<button id='buttonNaZobrazeni' onclick='zobrazUpozorneni()'>Zobrazit upozornění</button>" +
     "<div id='zobrazovaniUpozorneni'></div>" +
     "<hr><button onclick='pridejbutton();console1()'>Přidej tlačítko</button>" +
     "<div id='ConsoleDiv'></div>"
 
-
+//var makeInputInnerHTML = "<div class='center'><input id='placeholder' onclick='vymaz(this.id);showMs'></div>"
 
 
 

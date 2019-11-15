@@ -1,14 +1,10 @@
+console.log("VytvoritTlacitko01.js...")
+
 var obsahtlacitka
 
 var barvatlacitka
 
 var str1
-
-
-
-function vymaz(covymaz) {
-    document.getElementById(covymaz).value = ""
-}
 
 function loadobsahtlacitka() {
     obsahtlacitka = document.getElementById("innertext1").innerText
@@ -42,7 +38,7 @@ function showMsg() {
 
 function onInputKeyPress(event) {
     ////////////console.log(event);
-    showMsg2();
+    showmsg1();
 }
 
 function loadbarvatlacitka1() {
@@ -71,8 +67,8 @@ function loadbarvatlacitka1() {
         "darkgray": "tmavěšedá",
         "gray": "šedá",
         "black": "černá",
-        "brown": "hnědá",
-        "dark": "tmavě"
+        "brown": "hnědá"//,
+        //"dark": "tmavě"
     }
 
     var str = document.getElementById("pozadi").value
@@ -108,11 +104,11 @@ function showMsg1() {
 
 function onInputKeyPress1(event) {
     //////////console.log(event);
-    showMsg2();
+    showmsg1();
 }
 
 
-function showMsg2() {
+function showmsg1() {
     var elementIds = ["innertext", "pozadi"]
     var buttonIds = ["innertext1", "pozadi1"]
     var html = "";
