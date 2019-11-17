@@ -2,6 +2,52 @@ console.log("TataNarozeniny01.js...")
 
 var pagebody
 
+var barvapozadi
+
+function loadbarvapozadi() {
+
+    var englishToCzechColors = {
+        "red": "červená",
+        "blue": "modrá",
+        "green": "zelená",
+        "darkgreen": "tmavězelená",
+        "greenyellow": "zelenožlutá",
+        "lightgreen": "světlezelená",
+        "darkred": "tmavěčervená",
+        "orangered": "oranžovočervená",
+        "gold": "zlatá",
+        "orange": "oranžová",
+        "darkorange": "tmavěoranžová",
+        "lightyellow": "světležlutá",
+        "yellow": "žlutá",
+        "lightblue": "světlemodrá",
+        "darkblue": "tmavěmodrá",
+        "violet": "fialová",
+        "blueviolet": "modrofialová",
+        "darkviolet": "tmavěfialová",
+        "pink": "růžová",
+        "white": "bílá",
+        "lightgray": "světlešedá",
+        "darkgray": "tmavěšedá",
+        "gray": "šedá",
+        "black": "černá",
+        "brown": "hnědá"//,
+        //"dark": "tmavě"
+
+    }
+
+    var str = document.getElementById("pozadi").value
+    for (var englishColor in englishToCzechColors) {
+        str = str.replace(englishColor, englishToCzechColors[englishColor])
+    }
+    barvatlacitka = document.getElementById("pozadi").value
+    document.getElementById("pozadi").value = str;
+    ////////////console.log(barvatlacitka)
+    str1 = str
+    //barvapozadi = str1
+    console.log(str1)
+}
+
 function pageBody() {
     pagebody = document.getElementById('body').innerHTML
     ////////////console.log(pagebody + "54")
@@ -76,17 +122,19 @@ function zobrazUpozorneni() {
     }
 }
 
-var makebuttoninnerhtml = "<div class='center'><input onclick='vymaz(this.id)' placeholder='Zde napište text do tlačítka.' id='innertext' onkeyup='onInputKeyPress1(event);loadobsahtlacitka()'><br><hr>" +
-    "<input onclick='vymaz(this.id)' placeholder='Zde napište barvu pozadí(anglicky).' id='pozadi' size='30' onkeyup='onInputKeyPress1(event);loadbarvatlacitka1()'><br><hr>" +
+var makebuttoninnerhtml = "<div class='center'>" +
+    "<input onclick='vymaz(this.id)' placeholder='Zde napište text do tlačítka.' id='innertext' onkeyup='//showmsg1();loadobsahtlacitka()'><br><hr>" +
+    "<input onclick='vymaz(this.id)' placeholder='Zde napište barvu pozadí(anglicky).' id='pozadi' size='30' onkeyup='loadbarvapozadi()'><br><hr>" +
     "<button id='buttonNaZobrazeni' onclick='zobrazUpozorneni()'>Zobrazit upozornění</button>" +
     "<div id='zobrazovaniUpozorneni'></div>" +
-    "<hr><button onclick='pridejbutton();console1()'>Přidej tlačítko</button><br><hr>" +
+    "<hr><button onclick='pridejbutton();/*console1()*/'>Přidej tlačítko</button><br><hr>" +
     "<button class='down' onclick='makeadd1()'>Zrušit</button>" +
     "<div id='ConsoleDiv'></div>"
 
-var makeInputInnerHTML = "Nefunkční!!!!!!<div class='center'><input id='placeholder' onclick='vymaz(this.id)' onkeyup='showmsg2()'><br><hr>" +
-    "<input id='pozadi' onclick='vymaz(this.id)' onkeyup='showmsg2()'><br><hr>" +
-    "<button onclick='pridejinput();console1()'>Přidej tlačítko</button><br><hr>" +
+var makeInputInnerHTML = "<center>Nefunkční!!!!!!</center><div class='center'>" +
+    "<input id='placeholder' onclick='vymaz(this.id)' onkeyup='//showmsg2()'><br><hr>" +
+    "<input id='pozadi' onclick='vymaz(this.id)' onkeyup='loadbarvapozadi()'><br><hr>" +
+    "<button onclick='pridejinput()/*;console2()*/'>Přidej vstup textu</button><br><hr>" +
     "<button class='down' onclick='makeadd1()'>Zrušit</button><div>"
 
 

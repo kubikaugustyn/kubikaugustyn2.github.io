@@ -1,24 +1,17 @@
 console.log("VytvoritInput01.js...")
 
-var strb1
-
 function pridejinput() {
     ////////////confirm('Text v tlačítku je ' + obsahtlacitka + '.')
-    alert("Přidávám vstup textu " + obsahtlacitka + ", barva pozadí " + strb1 + ".")
+    alert("Přidávám vstup textu pomoc pri zadávání " + document.getElementById("placeholder").value + ", barva pozadí " + str1 + ".")
+    var pridej = document.createElement("input")
+    pridej.placeholder = document.getElementById("placeholder").value
+    pridej.style.backgroundColor = barvapozadi
     makeadd1()
-    var pridej = document.createElement("button")
-    pridej.innerHTML = obsahtlacitka
-    pridej.style.backgroundColor = barvatlacitka
-    //pridej.placeholder = placeholder
-    //pridej.id = "+guug+"
     document.getElementById("pridavacidivnatlacitka").appendChild(pridej)
+    console.log("Přidávám vstup textu " + document.getElementById("placeholder").value + ", barva pozadí " + str1 + ".")
 }
 
-function console2() {
-    console.log("Přidávám vstup textu " + obsahtlacitka + ", barva pozadí " + strb1 + ".")
-}
-
-function showmsg2() {
+/*function showmsg2() {
     var elementIds = ["placeholder", "pozadi"]
     var buttonIds = ["placeholder1", "pozadi1"]
     var html = "";
@@ -30,4 +23,4 @@ function showmsg2() {
     }
     html += ""
     document.getElementById("ConsoleDiv").innerHTML = html;
-}
+}*/
