@@ -29,4 +29,29 @@ body {
 .divcara {
     height: 15px;
     background-color: #ffc84d;
+    border-radius: 10px;
+}
+
+.kulate {
+    border-radius: 10px;
+}
+
+.kulatetlacitka:hover {
+    background-color: green;
+}
+
+.kulatetlacitka {
+    background-color: lightblue;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0px;
+    border: 0px;
+}
+
+.kulatetlacitka:active {
+    background-color: yellow;
+}
+
+.cervene {
+    background-color: red;
 }

@@ -89,17 +89,15 @@ function vymaz(covymaz) {
 }
 
 var makeelementinnerhtml =
-    "<div class='divcenter center'>Vytvořit<br>" +
+    "<div class='divcenter center kulate'>Vytvořit<br>" +
     "<div class='divcara'></div>" +
-    "<button onclick='make.Button()'>Tlačítko</button><br>" +
+    "<button class='kulatetlacitka' onclick='make.Button()'>Tlačítko</button><br>" +
     "<div class='divcara'></div>" +
-    "<button onclick='make.Input()'>Vstup textu</button><br>" +
+    "<button class='kulatetlacitka' onclick='make.Input()'>Vstup textu</button><br>" +
     "<div class='divcara'></div>" +
-    "<a href='TataNarozeniny01Error.html'>Odkaz(Nemačkat!!!)</a><br>" +
+    "<a class='kulatetlacitka' href='TataNarozeniny01Error.html'>Odkaz(Nemačkat!!!)</a><br>" +
     "<div class='divcara'></div>" +
-    "<div class='divcara'></div>" +
-    "<div class='divcara'></div>" +
-    "<button class='down' onclick='makeadd1()'>Zrušit</button></div>"
+    "<button class='kulatetlacitka' class='down' onclick='makeadd1()'>Zrušit</button></div>"
 
 var innertext = "innertext"
 
@@ -123,18 +121,18 @@ function zobrazUpozorneni() {
 }
 
 var makebuttoninnerhtml = "<div class='center'>" +
-    "<input onclick='vymaz(this.id)' placeholder='Zde napište text do tlačítka.' id='innertext' onkeyup='//showmsg1();loadobsahtlacitka()'><br><hr>" +
-    "<input onclick='vymaz(this.id)' placeholder='Zde napište barvu pozadí(anglicky).' id='pozadi' size='30' onkeyup='loadbarvapozadi()'><br><hr>" +
-    "<button id='buttonNaZobrazeni' onclick='zobrazUpozorneni()'>Zobrazit upozornění</button>" +
+    "<input class='kulate center' onclick='vymaz(this.id)' placeholder='Zde napište text do tlačítka...' size='25' id='innertext' onkeyup='pridattlacitko(this.id)/*showmsg1();loadobsahtlacitka()*/'><br><hr>" +
+    "<input class='kulate center' onclick='vymaz(this.id)' placeholder='Zde napište barvu pozadí(anglicky).' id='pozadi' size='30' onkeyup='pridattlacitko(this.id);loadbarvapozadi()'><br><hr>" +
+    "<button class='kulatetlacitka' id='buttonNaZobrazeni' onclick='zobrazUpozorneni()'>Zobrazit upozornění</button>" +
     "<div id='zobrazovaniUpozorneni'></div>" +
-    "<hr><button onclick='pridejbutton();/*console1()*/'>Přidej tlačítko</button><br><hr>" +
+    "<hr><button class='kulatetlacitka' onclick='pridejbutton();/*console1()*/'>Přidej tlačítko</button><br><hr>" +
     "<button class='down' onclick='makeadd1()'>Zrušit</button>" +
     "<div id='ConsoleDiv'></div>"
 
-var makeInputInnerHTML = "<center>Nefunkční!!!!!!</center><div class='center'>" +
-    "<input id='placeholder' onclick='vymaz(this.id)' onkeyup='//showmsg2()'><br><hr>" +
-    "<input id='pozadi' onclick='vymaz(this.id)' onkeyup='loadbarvapozadi()'><br><hr>" +
-    "<button onclick='pridejinput()/*;console2()*/'>Přidej vstup textu</button><br><hr>" +
+var makeInputInnerHTML = "<div class='center kulate cervene'>Nefunkční!!!!!!</div><div class='center'>" +
+    "<input class='kulate center' id='placeholder' placeholder='Zde napište pomoc při psaní...' size='35' onclick='vymaz(this.id)' onkeyup='//showmsg2()'><br><hr>" +
+    "<input class='kulate center' id='pozadi' placeholder='Zde napište barvu pozadí...' size='30' onclick='vymaz(this.id)' onkeyup='loadbarvapozadi()'><br><hr>" +
+    "<button class='kulatetlacitka' onclick='pridejinput()/*;console2()*/'>Přidej vstup textu</button><br><hr>" +
     "<button class='down' onclick='makeadd1()'>Zrušit</button><div>"
 
 
