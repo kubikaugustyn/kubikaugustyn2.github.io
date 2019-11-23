@@ -7,7 +7,7 @@
         <link rel="shortcut icon" href="favicon.ico"/>
         <link rel="stylesheet" href="../hry/icontainerjs/css/jsapp-iframe.css"/>
         <script src="../hry/icontainerjs/js/IntegrativeContainerJS.min.js?v=1.0.0.285"></script>
-        <!--<script src="../cms/common/js/jquery-2.1.1.min.js"></script>-->
+        <script src="../cms/common/js/jquery-2.1.1.min.js"></script>
         <script src="../cms/common/js/webfont-1.5.3.min.js"></script>
         <script src="../cms/common/js/games/tween-max/1.19.0/TweenMax.min.js"></script>
         <script src="../cms/common/js/AmfConnector.min.js"></script>
@@ -45,7 +45,8 @@
         <script type="text/javascript">
             /* <![CDATA[ */
             $(function() {
-                sendAppRequest("6a02b945-6462-48aa-a330-5221e479892d", "../rest/Token/flashVars.json", null, "closeButtonEnabled=false", null);
+                //sendAppRequest("6a02b945-6462-48aa-a330-5221e479892d", "../rest/Token/flashVars.json", null, "closeButtonEnabled=false", null);
+                sendAppRequest("6a02b945-6462-48aa-a330-5221e479892d", "/rest/Token/flashVars", "closeButtonEnabled=false", null);
             });
             /* ]]> */
         </script>
