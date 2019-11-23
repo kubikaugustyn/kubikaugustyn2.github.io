@@ -11,6 +11,8 @@ html, body {
 	padding: 0;
 	overflow: hidden;
 
+	background-image: url("../../../rest/FileStore/FLASH_APP_DATA_PACKAGES/FILE-1689746!/pkg/Pattern.png");
+
 	-moz-user-select: none;
    	-khtml-user-select: none;
    	-webkit-user-select: none;
