@@ -5,7 +5,6 @@ var pagebody
 var barvapozadi
 
 function loadbarvapozadi() {
-
     var englishToCzechColors = {
         "red": "červená",
         "blue": "modrá",
@@ -121,8 +120,8 @@ function zobrazUpozorneni() {
 }
 
 var makebuttoninnerhtml = "<div class='center'>" +
-    "<input class='kulate center' onclick='vymaz(this.id)' placeholder='Zde napište text do tlačítka...' size='25' id='innertext' onkeyup='pridattlacitko(this.id)/*showmsg1();loadobsahtlacitka()*/'><br><hr>" +
-    "<input class='kulate center' onclick='vymaz(this.id)' placeholder='Zde napište barvu pozadí(anglicky).' id='pozadi' size='30' onkeyup='pridattlacitko(this.id);loadbarvapozadi()'><br><hr>" +
+    "<input class='kulate center' onclick='vymaz(this.id)' placeholder='Zde napište text do tlačítka...' size='25' id='innertext' onkeyup='pridattlacitko()/*showmsg1();loadobsahtlacitka()*/'><br><hr>" +
+    "<input class='kulate center' onclick='vymaz(this.id)' placeholder='Zde napište barvu pozadí(anglicky).' id='pozadi' size='30' onkeyup='pridattlacitko();loadbarvapozadi()'><br><hr>" +
     "<button class='kulatetlacitka' id='buttonNaZobrazeni' onclick='zobrazUpozorneni()'>Zobrazit upozornění</button>" +
     "<div id='zobrazovaniUpozorneni'></div>" +
     "<hr><button class='kulatetlacitka' onclick='pridejbutton();/*console1()*/'>Přidej tlačítko</button><br><hr>" +

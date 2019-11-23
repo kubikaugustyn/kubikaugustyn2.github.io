@@ -13,33 +13,38 @@ pridani = false
     //////////console.log(obsahtlacitka)
 }*/
 
-function pridattlacitko(id) {
-    if (document.getElementById(id === 'innertext').value === "") {
+function pridattlacitko() {
+    if (document.getElementById('innertext').value === '') {
         pridanipovolenoA = 0
-        pridanipovoleno1 = false
     }
 
     else {
-        pridanipovolenoA++
+        pridanipovolenoA = 1
     }
 
-    if (document.getElementById(id === 'pozadi').value === "") {
+    if (document.getElementById('pozadi').value === '') {
         pridanipovolenoB = 0
-        pridanipovoleno1 = false
     }
 
     else {
-        pridanipovolenoB++
+        pridanipovolenoB = 1
     }
 
-    pridanipovoleno1 = pridanipovolenoA + pridanipovolenoA
+    pridanipovoleno1 = pridanipovolenoA + pridanipovolenoB
 
     if (pridanipovoleno1 === 2) {
         pridani = true
+        console.log(pridani + " pravda...")
     }
 
-    else {
+    if (pridanipovoleno1 === 2) {
         pridani === false
+        console.log(pridani + " lez...")
+    }
+
+    if (pridanipovoleno1 === 1) {
+        pridani === false
+        console.log(pridani + " lez...")
     }
 }
 
