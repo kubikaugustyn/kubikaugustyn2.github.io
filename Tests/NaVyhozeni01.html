@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        $configurator = new s9e\TextFormatter\Configurator;
+
+        // The [url] BBCode uses a tag named "URL" with an attribute of the same name
+        $configurator->BBCodes->addFromRepository('URL');
+        $configurator->Autolink;
+
+        // <a> will use the "URL" tag
+        $configurator->HTMLElements->aliasElement('a', 'URL');
+
+        // The "href" attribute will use the "url" attribute
+        $configurator->HTMLElements->aliasAttribute('a', 'href', 'url');
+
+        // Limit the number of URL tags to 3
+        $configurator->tags['URL']->tagLimit = 3;
+
+        // Get an instance of the parser and the renderer
+        extract($configurator->finalize());
+
+        $text = 'http://example.org/1
+        [url=http://example.org/2]Second link[/url]
+        <a href="http://example.org/3">The third and last</a>
+        <a href="http://example.org/4">This one will not be linkified</a>';
+
+        $xml  = $parser->parse($text);
+        $html = $renderer->render($xml);
+
+        echo $html;
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+</body>
+</html>
