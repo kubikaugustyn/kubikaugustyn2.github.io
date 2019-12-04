@@ -1,8 +1,22 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<style src="index.css">
+    <meta charset="UTF-8">
+    <title>Hra 04</title>
+    <script src="src/index.js"></script>
+    <script src="src/FullScreen.js"></script>
+    <style>@import url(src/index.css);</style>
 </head>
-<body>
-<button>aaa</button>
+<body style="margin: 0px">
+<div class="red top-nula">
+    <div id="fullscreen_panel" class="right">
+        <img class="red" width="1%" src="src/fullscreen_open.jpg" alt="open fullscreen" onclick="openFullscreen()">
+    </div>
+</div>
+
+<canvas height="594" width="1088" class="a top-a-left-nula"></canvas>
+
+
+<div onclick="this.style.visibility = 'hidden'" style="position: absolute; cursor: pointer; background-color: green; z-index: 100; width: 1088px; height: 612px; top: 18px;"></div>
 </body>
 </html>

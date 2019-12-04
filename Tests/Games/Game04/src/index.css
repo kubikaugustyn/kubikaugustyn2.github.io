@@ -1,0 +1,47 @@
+body {
+	background-image: url("background.jpg");
+}
+
+.a {
+	background-color: blue;
+}
+
+.right {
+	text-align: right;
+}
+
+.red {
+		background-color: red;
+}
+
+.top-a-left-nula {
+	top: 18px;
+	left: 0px;
+	position: absolute;
+}
+
+.top-nula {
+	top: 0px;
+	left: 0px;
+	__position: absolute;
+}
+
+/* Chrome, Safari and Opera syntax */
+:-webkit-full-screen {
+  background-image: url("background.jpg");
+}
+
+/* Firefox syntax */
+:-moz-full-screen {
+  background-image: url("background.jpg");
+}
+
+/* IE/Edge syntax */
+:-ms-fullscreen {
+  background-image: url("background.jpg");
+}
+
+/* Standard syntax */
+:fullscreen {
+  background-image: url("background.jpg");
+}
