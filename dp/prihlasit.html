@@ -1,0 +1,32 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Déčko - přihlášení</title><script type="text/javascript" src="../Prihlasit/cms/common/js/jquery-1.10.2.min.js"></script><script type="text/javascript" src="../Prihlasit/cms/common/js/forms/jquery.validate/1.11.1/jquery.validate.js" ></script><link rel="stylesheet" type="text/css" href="../Prihlasit/cms/common/js/jquery.jscrollpane.css" /><link rel="stylesheet" type="text/css" href="../Prihlasit/cms/common/css/registrace-iframe.css?v=1.1.00" /><script type="text/javascript" src="../Prihlasit/cms/common/js/dp.js" ></script><script type="text/javascript" src="../Prihlasit/cms/common/js/jquery.jscrollpane.min.js"></script><link rel="stylesheet" type="text/css" href="../Prihlasit/cms/moje-decko/css/profil.css?v=1.0" /><script type="text/javascript">
+            /* <![CDATA[ */
+            var DP = {
+                logged: function () {
+                    if (parent === window) {
+                        parent.window.location.replace("/");
+                    } else if (typeof (parent.DP) === "undefined" || typeof (parent.DP.logged) === "undefined") {
+                        parent.window.location.reload();
+                    } else {
+                        var res = parent.DP.logged();
+                        if (typeof (res) !== "undefined" && res !== null) {
+                            parent.window.location.replace(res);
+                        }
+                    }
+                },
+                registerred: function () {
+                    if (parent === window || typeof (parent.DP) === "undefined" || typeof (parent.DP.registerred) === "undefined") {
+                        // nedelat nic, nechceme presmerovani, uzivatel si vybere jedno z tlacitek
+                    } else {
+                        var res = parent.DP.registerred();
+                        if (typeof (res) !== "undefined" && res !== null) {
+                            parent.window.location.replace(res);
+                        }
+                    }
+                }
+            };
+            /* ]]> */
+        </script><style>
+            html {width: 980px;}
+        </style></head><body><iframe id="loginFrameId"
+					src="https://kubikaugustyn.github.io/prihlasit/mini-form?skin=native"
+					frameborder="no" style="border: none; margin: 0; padding: 0; width: 980px; min-height: 440px; overflow: hidden;" scrolling="no"></iframe></body></html>
