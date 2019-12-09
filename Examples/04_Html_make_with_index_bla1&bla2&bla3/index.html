@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index?bla1&bla2</title>
+    <style>body {background-color: lightblue;}</style>
+    <script>
+
+function onLoadProc() {
+    console.log("document.location:", document.location)
+    var valuesToBePrinted = ["hash", "host", "hostname", "href", "origin", "pathname", "port", "protocol", "search"]
+    var tableRowsHTML = ""
+    //console.log("entries:", Object.entries(myObj).forEach(itm=>a.push({key: itm[0], value: itm[1]})))
+    for (var index=0; index<valuesToBePrinted.length; index++) {
+        tableRowsHTML += "\t<tr><td>"+ valuesToBePrinted[index] + ":</td><td>"+ document.location[valuesToBePrinted[index]] + "</td></tr>\n"
+    }
+
+    var query = document.location.search.substr(1)
+    var paramList = query.split("&")
+    var params = {}
+    for (index=0; index<paramList.length; index++) {
+        paramItems = paramList[index].split("=")
+        console.group("param:", paramList[index])
+        console.log("paramItems:", paramItems)
+        params[paramItems[0]] = paramItems[1]
+        console.groupEnd()
+    }
+    console.log("params:", params)
+    if (query) {
+        var paramsHTML = ""
+        for (var key in params) {
+            paramsHTML += key + ":" + params[key] + "<br>"
+        }
+        tableRowsHTML += "\t<tr><td>Params:</td><td>"+ paramsHTML + "</td></tr>\n"
+    }
+
+    document.getElementById("Values_Table_tbody").innerHTML = tableRowsHTML
+
+    if (params["numrows"] && params["numcols"]) {
+        console.group("Vytvarim tabulku...")
+        var tableHTML = ""
+        for (var row=0; row<params["numrows"]; row++) {
+            tableHTML += "<tr>"
+            for (var col=0; col<params["numcols"]; col++) {
+                tableHTML  += "<td>" + row + "," + col + "</td>"
+            }
+            tableHTML += "</tr>"
+        }
+        document.getElementById("Created_Table_tbody").innerHTML = tableHTML
+        console.groupEnd()
+    }
+}
+    </script>
+</head>
+<body onload="onLoadProc()">
+<h1>Parametry v URL</h1>
+<table >
+    <tbody id="Values_Table_tbody">
+    <tr>
+        <td>Document.location:</td>
+        <td><div id="Document_Location_div"></div></td>
+    </tr>
+    <tr>
+        <td>URL skriptu:</td>
+        <td><div id="Script_URL_div"></div></td>
+    </tr>
+    </tbody>
+</table>
+
+<table >
+    <tbody id="Created_Table_tbody">
+    <tr>
+        <td>Prázdná tabulka.(zadejte do URL "04_Html_make_with_index_bla1&bla2&bla3?numcols=cislo&numrows=cislo" cislo = jakékoliv číslo)<button onclick="location.href+='?numcols=5&numrows=4'">Přidat do adresy a opravit tím chybu</button></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
