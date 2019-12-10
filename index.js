@@ -20,7 +20,9 @@ var pageVariants = {
 
     "tata" : "<a href='TataNarozeniny01/TataNarozeniny01.html'>Tátův editor</a>",
 
-    "editor" : "<a href='Editor.html'>Editor webu</a>"
+    "editor" : "<a href='Editor.html'>Editor webu</a>",
+
+    "game" : "<a href='URL_button_enabled/index.html?buttonEnabled=true'>URL_button_enabled/index.html?buttonEnabled=true</a>"
 
     //další heslo a funkce k němu ("heslo" : "funkce")
 }
