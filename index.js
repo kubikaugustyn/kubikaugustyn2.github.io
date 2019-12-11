@@ -30,9 +30,10 @@ var pageVariants = {
 function onKeyPress() {
     //zobrazí v consoli "Klávesa stisknuta..."
     console.log("Klávesa stisknuta...");
+
     //najde element neco a podle varu pageVariants rozpozná heslo a pokud není správné, tak se zobrazí zámeček(&#128274;)
     document.getElementById("neco").innerHTML = pageVariants[document.getElementById("input01").value] || "&#128274;"
 }
 
-//zobrazí hesla (pageVariants)
-console.log(pageVariants)
+//zobrazí v consoli hesla (pageVariants)
+//console.log(pageVariants)
