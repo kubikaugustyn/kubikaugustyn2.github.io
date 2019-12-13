@@ -39,6 +39,14 @@ function onLoadProc() {
     if (params["closeButtonEnabled"] != "true") {
         if (params["closeButtonEnabled"] != "false") {
             console.error("Cannot find '?closeButtonEnabled=true' or '?closeButtonEnabled=false' in URL.")
+            document.getElementsByTagName('body').innerHTML = "404\n" +
+                "File not found\n" +
+                "\n" +
+                "The site configured at this address does not contain the requested file.\n" +
+                "\n" +
+                "If this is your site, make sure that the filename case matches the URL.\n" +
+                "\n" +
+                "Read the full documentation for more information about using https://kubikaugustyn.github.io Pages."
         }
     }
 
