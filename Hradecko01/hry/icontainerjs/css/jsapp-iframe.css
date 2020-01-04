@@ -21,9 +21,7 @@ canvas {
     z-index: 10;
     position: absolute;
 }
-
 /*-- rules --*/
-
 .rules-link {
 	color: #ffffff;
 	font-weight: bold;
