@@ -9,36 +9,13 @@ import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert'
-import clsx from 'clsx';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import { green } from '@material-ui/core/colors';
-import Button from '@material-ui/core/Button';
-import Fab from '@material-ui/core/Fab';
-import CheckIcon from '@material-ui/icons/Check';
-import SaveIcon from '@material-ui/icons/Save';
-
-var jgfxdvbfgc = '<div className={classes.root}><div className={classes.wrapper}><Fab aria-label="save"color="secondary" className={buttonClassname} onClick={handleButtonClick}>{success ? <CheckIcon /> : <SaveIcon />}</Fab>{loading && <CircularProgress size={68} className={classes.fabProgress} />}<Button variant="contained" color="secondary" className={buttonClassname} disabled={loading} onClick={handleButtonClick}>Accept terms</Button>{loading && <CircularProgress size={24} className={classes.buttonProgress} />}</div></div>'
-const pocet = 6
-var accept_terms_napocitane_a_vytvorene1 = 'hfgytrffgvb'
-
-function accepttermsnapocitaneavytvorene(){
-    return (
-        accept_terms_napocitane_a_vytvorene1
-    )
-}
-
-function accept_terms() {
-    for (var i = 0; i < pocet; i++){
-        accept_terms_napocitane_a_vytvorene1 += '<div className={classes.root}><div className={classes.wrapper}><Fab aria-label="save" color="secondary" className={buttonClassname} onClick={handleButtonClick}>{success ? <CheckIcon /> : <SaveIcon />}</Fab>{loading && <CircularProgress size={68} className={classes.fabProgress} />}<Button variant="contained" color="secondary" className={buttonClassname} disabled={loading} onClick={handleButtonClick}>Accept terms</Button>{loading && <CircularProgress size={24} className={classes.buttonProgress} />}</div></div>'
-        console.log(accept_terms_napocitane_a_vytvorene1)
-    }
-    return (<accepttermsnapocitaneavytvorene />)
-}
+//import AcceptTermsCountedAndCreated from "./accepttermsnapocitaneavytvorene"
+import PrimaryButton from './components/PrimaryButton'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -137,32 +114,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function PrimarySearchAppBar() {
-
-  const [loading, setLoading] = React.useState(false);
-  const [success, setSuccess] = React.useState(false);
-  const timer = React.useRef();
-
-  const buttonClassname = clsx({
-      [useStyles.buttonSuccess]: success,
-  });
-
-  React.useEffect(() => {
-    return () => {
-      clearTimeout(timer.current);
-    };
-  }, []);
-
-  const handleButtonClick = () => {
-    if (!loading) {
-      setSuccess(false);
-      setLoading(true);
-      timer.current = setTimeout(() => {
-        setSuccess(true);
-        setLoading(false);
-      }, 10000); //TODO 1s = 1000, 53s = 53 + 3x0(000)
-    }
-  };
-
   function handleClick(event) {
     setAnchorEl(event.currentTarget);
   }
@@ -249,8 +200,6 @@ export default function PrimarySearchAppBar() {
     </Menu>
   );
 
-  const kuba = (<div className={classes.root}><div className={classes.wrapper}><Fab aria-label="save"color="secondary" className={buttonClassname} onClick={handleButtonClick}>{success ? <CheckIcon /> : <SaveIcon />}</Fab>{loading && <CircularProgress size={68} className={classes.fabProgress} />}<Button variant="contained" color="secondary" className={buttonClassname} disabled={loading} onClick={handleButtonClick}>Accept terms</Button>{loading && <CircularProgress size={24} className={classes.buttonProgress} />}</div></div>);
-
   return (
     <div className={classes.grow}>
       <AppBar position="static">
@@ -271,9 +220,6 @@ export default function PrimarySearchAppBar() {
             Kubíkův web
           </Typography>
           <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
             <InputBase
               placeholder="Vyhledat…"
               classes={{
@@ -282,6 +228,9 @@ export default function PrimarySearchAppBar() {
               }}
               inputProps={{ 'aria-label': 'search' }}
             />
+          </div>
+          <div className={classes.searchIcon}>
+              <PrimaryButton />
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
@@ -317,9 +266,11 @@ export default function PrimarySearchAppBar() {
               <MoreIcon />
             </IconButton>
           </div>
+
+
         </Toolbar>
       </AppBar>
-      {kuba}
+      <PrimaryButton />
       {renderMobileMenu}
       {renderMenu}
     </div>
