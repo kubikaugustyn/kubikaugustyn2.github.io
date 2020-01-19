@@ -1,1 +1,8 @@
+.zindex {
+    position: absolute;
+    z-index: 1000;
+}
 
+.blue {
+    color: lightblue;
+}

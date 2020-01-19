@@ -16,6 +16,7 @@ import MoreIcon from '@material-ui/icons/MoreVert'
 import { green } from '@material-ui/core/colors';
 //import AcceptTermsCountedAndCreated from "./accepttermsnapocitaneavytvorene"
 import PrimaryButton from './components/PrimaryButton'
+import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -220,6 +221,7 @@ export default function PrimarySearchAppBar() {
             Kubíkův web
           </Typography>
           <div className={classes.search}>
+            <PrimaryButton />
             <InputBase
               placeholder="Vyhledat…"
               classes={{
@@ -228,9 +230,6 @@ export default function PrimarySearchAppBar() {
               }}
               inputProps={{ 'aria-label': 'search' }}
             />
-          </div>
-          <div className={classes.searchIcon}>
-              <PrimaryButton />
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
@@ -266,11 +265,8 @@ export default function PrimarySearchAppBar() {
               <MoreIcon />
             </IconButton>
           </div>
-
-
         </Toolbar>
       </AppBar>
-      <PrimaryButton />
       {renderMobileMenu}
       {renderMenu}
     </div>
