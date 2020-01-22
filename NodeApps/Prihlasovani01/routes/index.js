@@ -1,3 +1,7 @@
+/*
+    author Kubík Augustýn, kubik.augustyn@post.cz
+*/
+
 const express = require('express');
 const router = express.Router();
 const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');

@@ -1,3 +1,6 @@
+/*
+    author Kubík Augustýn, kubik.augustyn@post.cz
+*/
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
@@ -14,25 +17,27 @@ router.get('/register', forwardAuthenticated, (req, res) => res.render('register
 
 // Register
 router.post('/register', (req, res) => {
-  const { name, email, password, password2 } = req.body;
+  const { name, email, password, password2, osloveni, userData } = req.body;
   let errors = [];
 
-  if (!name || !email || !password || !password2) {
-    errors.push({ msg: 'Please enter all fields' });
+  if (!name || !email || !password || !password2 || !osloveni || !userData ) {
+    errors.push({ msg: 'Vyplňte všechna políčka' });
   }
 
   if (password != password2) {
-    errors.push({ msg: 'Passwords do not match' });
+    errors.push({ msg: 'Hesla se neshodují' });
   }
 
   if (password.length < 6) {
-    errors.push({ msg: 'Password must be at least 6 characters' });
+    errors.push({ msg: 'Heslo musí mít minimálně 6 znaků' });
   }
 
   if (errors.length > 0) {
     res.render('register', {
       errors,
       name,
+      osloveni,
+      userData,
       email,
       password,
       password2
@@ -40,10 +45,12 @@ router.post('/register', (req, res) => {
   } else {
     User.findOne({ email: email }).then(user => {
       if (user) {
-        errors.push({ msg: 'Email already exists' });
+        errors.push({ msg: 'E-mail už existuje' });
         res.render('register', {
           errors,
           name,
+          osloveni,
+          userData,
           email,
           password,
           password2
@@ -52,6 +59,8 @@ router.post('/register', (req, res) => {
         const newUser = new User({
           name,
           email,
+          osloveni,
+          userData,
           password
         });
 
@@ -64,7 +73,7 @@ router.post('/register', (req, res) => {
               .then(user => {
                 req.flash(
                   'success_msg',
-                  'You are now registered and can log in'
+                  'Teď jste zaregistrován(a), můžete se přihlásit'
                 );
                 res.redirect('/users/login');
               })
@@ -88,7 +97,7 @@ router.post('/login', (req, res, next) => {
 // Logout
 router.get('/logout', (req, res) => {
   req.logout();
-  req.flash('success_msg', 'You are logged out');
+  req.flash('success_msg', 'Byl(a) jste odhlášen(a)');
   res.redirect('/users/login');
 });
 

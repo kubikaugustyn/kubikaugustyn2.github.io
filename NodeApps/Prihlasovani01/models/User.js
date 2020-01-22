@@ -1,3 +1,7 @@
+/*
+    author Kubík Augustýn, kubik.augustyn@post.cz
+*/
+
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
@@ -16,6 +20,14 @@ const UserSchema = new mongoose.Schema({
   date: {
     type: Date,
     default: Date.now
+  },
+  osloveni: {
+    type: String,
+    required: true
+  },
+  userData: {
+    type: String,
+    required: true
   }
 });
 

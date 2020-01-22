@@ -1,3 +1,7 @@
+/*
+    author Kubík Augustýn, kubik.augustyn@post.cz
+*/
+
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcryptjs');
 
@@ -12,7 +16,7 @@ module.exports = function(passport) {
         email: email
       }).then(user => {
         if (!user) {
-          return done(null, false, { message: 'That email is not registered' });
+          return done(null, false, { message: 'Tento E-mail není zaregistrován' });
         }
 
         // Match password
@@ -21,7 +25,7 @@ module.exports = function(passport) {
           if (isMatch) {
             return done(null, user);
           } else {
-            return done(null, false, { message: 'Password incorrect' });
+            return done(null, false, { message: 'Heslo je nesprávné' });
           }
         });
       });

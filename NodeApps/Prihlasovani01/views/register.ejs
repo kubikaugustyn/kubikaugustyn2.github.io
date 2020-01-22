@@ -7,54 +7,78 @@
       <% include ./partials/messages %>
       <form action="/users/register" method="POST">
         <div class="form-group">
-          <label for="name">Name</label>
+          <label for="name">Jméno</label>
           <input
             type="name"
             id="name"
             name="name"
             class="form-control"
-            placeholder="Enter Name"
+            placeholder="Napište jméno"
             value="<%= typeof name != 'undefined' ? name : '' %>"
           />
         </div>
         <div class="form-group">
-          <label for="email">Email</label>
+          <label for="osloveni">Zadejte oslovení</label>
+          <br>
+          Vítám
+          <input
+            type="osloveni"
+            id="osloveni"
+            name="osloveni"
+            class="form-control"
+            placeholder="Vaše jméno v nálež. tvaru"
+            value="<%= typeof osloveni != 'undefined' ? osloveni : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
           <input
             type="email"
             id="email"
             name="email"
             class="form-control"
-            placeholder="Enter Email"
+            placeholder="Napište váš E-mail"
             value="<%= typeof email != 'undefined' ? email : '' %>"
           />
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
+          <label for="password">Heslo (ne do E-mailu)</label>
           <input
             type="password"
             id="password"
             name="password"
             class="form-control"
-            placeholder="Create Password"
+            placeholder="Vytvořte heslo..."
             value="<%= typeof password != 'undefined' ? password : '' %>"
           />
         </div>
         <div class="form-group">
-          <label for="password2">Confirm Password</label>
+          <label for="password2">Potvrdit heslo (ne do E-mailu)</label>
           <input
             type="password"
             id="password2"
             name="password2"
             class="form-control"
-            placeholder="Confirm Password"
+            placeholder="Potvrďte heslo"
             value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
           />
         </div>
+        <div class="form-group">
+          <label for="userData">userData</label>
+          <input
+            type="hidden"
+            id="userData"
+            name="userData"
+            class="form-control"
+            placeholder="userData"
+            value="<%= typeof userData != 'undefined' ? userData : '' %>kubadfg"
+          />
+        </div>
         <button type="submit" class="btn btn-primary btn-block">
-          Register
+          Zaregistrovat
         </button>
       </form>
-      <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
+      <p class="lead mt-4">Máte účet? <a href="/users/login">Přihlašte se</a></p>
     </div>
   </div>
 </div>
