@@ -2,5 +2,29 @@
 <div class="lead mb-3">UserData: <%= user.userData %></div>
 <div class="lead mb-3">Uživatel: <%= user.name %></div>
 <div class="lead mb-3">E-mail: <%= user.email %></div>
-<button onClick="user.userData = "user datahxcjmnbgfcvgjhkcndvbhtjcd">fdgh</button>
+<button onClick="console.log(MyUser)">fdgh</button>
+<script>
+    var MyUserData = '<%= user.userData %>'
+    console.log(MyUserData)
+    MyUserData.replace('&lt;', '<')
+    console.log(MyUserData)
+    MyUserData.replace('&gt;', '>')
+    console.log(MyUserData)
+</script>
+<!--<button onClick="a()">hghv</button>
+<script>
+    function a() {
+        console.log(document.getElementById('bodyKuba').innerHTML)
+        var MyDocument = document.getElementById('bodyKuba').innerHTML
+        console.log(MyDocument)
+        MyDocument.replace('&lt;', '&lt;', '<', '<')
+        MyDocument.replace('&lt;', '<')
+        console.log(MyDocument)
+        MyDocument.replace('&gt;', '>')
+        console.log(MyDocument)
+        document.getElementById('bodyKuba').innerHTML = document
+        console.log(MyDocument)
+    }
+</script>
+-->
 <a href="/users/logout" class="btn btn-secondary">Odhlásit</a>
