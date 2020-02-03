@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1">
+    &lt;a href=&#34;/users/logout&#34; class=&#34;btn btn-secondary&#34;&gt;Odhlásit&lt;/a&gt;
+</div>
+<script>
+    var div1 = document.getElementById('div1').innerText
+    console.log(div1)
+    div1.replace('&lt;', '<')
+    console.log(div1)
+    div1.replace('&gt;', '>')
+    console.log(div1)
+
+    var div2 = '&lt;a href=&#34;/users/logout&#34; class=&#34;btn btn-secondary&#34;&gt;Odhlásit&lt;/a&gt;'
+    for (var i = 0;i<50;i++) {
+        console.log(div2)
+        div2 = div2.replace('&lt;', '<')
+        console.log(div2)
+        div2 = div2.replace('&gt;', '>')
+        console.log(div2)
+        div2 = div2.replace('&#34;', '"')
+        console.log(div2)
+    }
+</script>
+</body>
+</html>
