@@ -4,7 +4,7 @@
 <div class="lead mb-3">E-mail: <%= user.email %></div>
 <script>
     var UserData = '<%= user.userData %>'
-    console.log(UserData)
+    //console.log(UserData)
     /*if (true) {
         UserData = unescape(UserData)
     }
@@ -18,13 +18,32 @@
     //}
     console.log(UserData)
     document.getElementById('UserData').innerHTML = 'UserData: ' + UserData
+    //console.log(document.getElementById('UserData').innerHTML)
 
     var UserDataSplitVykricnik = UserData.split('!')
-    console.log(UserDataSplitVykricnik[0])
-    var game1aData = UserDataSplitVykricnik[0].split(',')
+    //console.log(UserDataSplitVykricnik[0])
+    var game1aAbData = UserDataSplitVykricnik[0].split(',')
+    var game1aData0
+    var game1aData1
     for (i = 0; i < 50000; i++) {
-            game1aData = game1aData.replace('&#39;', "'")
+        game1aData0 = game1aAbData[0].replace('&#39;', "'")
+        game1aData1 = game1aAbData[1].replace('&#39;', "'")
     }
-    console.log(game1aData)
+    var game1aData = game1aData0
+    var game1bData = game1aData1
+    //console.log(game1aData)
+    //console.log(game1bData)
+    document.getElementById('UserData').innerHTML = 'UserData: ' + UserDataSplitVykricnik[1]
+    //console.log(document.getElementById('UserData').innerHTML)
+    var game1Data = {
+        'a' : game1aData,
+        'b' : game1bData
+    }
+    for (i=0; i<50000; i++) {
+        game1Data['a'] = game1Data['a'].replace('&#39;', "'")
+    }
+    //console.log(game1Data)
+    console.log(game1Data['a'])
+    console.log(game1Data['b'])
 </script>
 <a href="/users/logout" class="btn btn-secondary">Odhlásit</a>
