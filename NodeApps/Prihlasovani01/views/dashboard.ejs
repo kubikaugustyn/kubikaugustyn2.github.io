@@ -9,23 +9,28 @@
     <br>
     <a href="/users/logout" class="btn btn-secondary">Odhlásit</a>
 </div>
-<script>
-function VratText(varName, divId) {
-    document.getElementById(divId).innerHTML = varName
-}
+<script>function VratText(varName, divId) {document.getElementById(divId).innerHTML = varName}</script>
+<script id="game">
+    function playGame() {
+        document.getElementById('game1').innerHTML += '<br>Level:' + game1DataLevel[1] + '<br>Stage:' + game1DataStage[1]
+    }
+</script>
+<script id="loadGame">
+function deleteLoadGameScript() {document.getElementById('loadGame').innerHTML = ''}
 function VratText1() {
     document.getElementById('game1').innerHTML = game1Text
 }
-var game1Hrani = 'Hrajete hru1'
-var game1Text = 'Hra nactena...<br><button onclick="VratText(game1Hrani, \'game1\')">Hrát</button>'
-var game1Nacitani = '<div onclick="setTimeout(VratText1, 10000)">Načítání hry...<br>Klikněte na tento text!</div>'
+var game1Hrani = 'Hrajete hru1...'
+var game1Text = 'Hra načtena...<br><button onclick="VratText(game1Hrani, \'game1\');deleteLoadGameScript();playGame()" class="btn btn-secondary">Hrát</button>'
+var game1Nacitani = '<button class="btn btn-secondary" style="cursor: not-allowed;">Načítání hry... (přibližně 10s)</button>'
 var game1 =
     '<div id="game1">' +
-        '<button onclick="VratText(game1Nacitani, \'game1\')" class="btn btn-secondary">Načti hru</button>' +
+        'Hru se nepodařilo načíst.<br><br><button onclick="VratText(game1Nacitani, \'game1\');setTimeout(VratText1, 10000)" class="btn btn-secondary">Zkusit znovu načíst</button>' +
     '</div>'
 </script>
 
-<script>
+<script id="userData">
+    function deleteUserDataScript() {document.getElementById('userData').innerHTML = ''}
     var UserData = '<%= user.userData %>'
     //console.log(UserData)
     /*if (true) {
@@ -39,7 +44,7 @@ var game1 =
             //UserData = UserData.replace('&#39;', "'")
         }
     //}
-    console.log(UserData)
+    //console.log(UserData)
     document.getElementById('UserData').innerHTML = 'UserData: ' + UserData
     //console.log(document.getElementById('UserData').innerHTML)
 
@@ -67,8 +72,22 @@ var game1 =
         game1Data['b'] = game1Data['b'].replace('&#39;', "'")
     }
     //console.log(game1Data)
-    console.log(game1Data['a'])
-    console.log(game1Data['b'])
+    //console.log(game1Data['a'])
+    //console.log(game1Data['b'])
+    var game1DataLevelToSplit2x = game1Data['a'].split('=')
+    var game1DataStageToSplit2x = game1Data['b'].split('=')
+    var game1DataLevelToSplit = game1DataLevelToSplit2x[1]
+    var game1DataStageToSplit = game1DataStageToSplit2x[1]
+    for (i=0; i<2; i++) {
+        game1DataLevelToSplit = game1DataLevelToSplit.replace("'", "")
+        game1DataStageToSplit = game1DataStageToSplit.replace("'", "")
+    }
+    var game1DataLevel = game1DataLevelToSplit.split(':')
+    var game1DataStage = game1DataStageToSplit.split(':')
+    //console.log(game1DataLevel[1])
+    //console.log(game1DataStage[1])
+
+    deleteUserDataScript()
 </script>
 
 

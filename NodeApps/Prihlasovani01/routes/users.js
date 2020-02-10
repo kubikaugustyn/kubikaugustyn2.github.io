@@ -15,6 +15,9 @@ router.get('/login', forwardAuthenticated, (req, res) => res.render('login'));
 // Register Page
 router.get('/register', forwardAuthenticated, (req, res) => res.render('register'));
 
+// Script Pages
+router.get('/LoadGame', forwardAuthenticated, (req, res) => res.render('login'));
+
 // Register
 router.post('/register', (req, res) => {
   const { name, email, password, password2, osloveni, userData } = req.body;

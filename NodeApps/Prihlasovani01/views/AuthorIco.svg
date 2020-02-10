@@ -1,0 +1,9 @@
+<svg width="40" height="40" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none"><path fill="#E1E1E1" d="M0 0h128v128H0z"/>
+        <text text-anchor="middle" font-family="TriviaSeznam, Trivia Seznam, Arial" font-size="52" fill="#000">
+            <tspan x="64" y="82">
+                KA
+            </tspan>
+        </text>
+    </g>
+</svg>
