@@ -1,4 +1,3 @@
-
 function DpAnalytics () {
 
 	// vars - private
