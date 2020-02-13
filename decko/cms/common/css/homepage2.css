@@ -1658,7 +1658,7 @@ div.background.hp div.wrapper {
     width: 1193px;
 }
 
-/* ================ MimoÅ™Ã¡dnÃ© zprÃ¡vy ================ */
+/* ================ Mimořádné zprávy ================ */
 .mimoradne-zpravy {
   font-family: Verdana;
   box-sizing: border-box;
@@ -1702,5 +1702,5 @@ padding-left: 110px;
 .mimoradne-zpravy p:hover {
     text-decoration:underline !important;
 }
-/* ================ Konec - MimoÅ™Ã¡dnÃ© zprÃ¡vy ================ */
+/* ================ Konec - Mimořádné zprávy ================ */
 
