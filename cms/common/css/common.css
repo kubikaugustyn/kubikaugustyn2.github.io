@@ -1,0 +1,1508 @@
+* {
+	/*cursor: url(../favicon.png), auto;*/
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+@font-face {
+    font-family: TvSans;
+    src: url( /cms/common/fonts/TVSansScreenMedium.otf );
+}
+
+@font-face {
+    font-family: TvSansRegular;
+    src: url( /cms/common/fonts/TVSansPrintRegular.otf );
+}
+
+@font-face {
+    font-family: TvSansLight;
+    src: url( /cms/common/fonts/TVSansPrintLight.otf );
+}
+
+@font-face {
+    font-family: BowlbyOneSC-Regular;
+    src: url( /cms/common/fonts/BowlbyOneSC-Regular.ttf );
+}
+
+.ff-tvSans {	
+    font-family: TvSans;	
+}
+
+.ff-tvSans-reg {	
+    font-family: TvSansRegular;	
+}
+
+.ff-bowl-reg {	
+    font-family: BowlbyOneSC-Regular;
+	text-transform: uppercase !important;
+}
+
+.ff-verdana {
+	font-family: Verdana, "Bitstream Vera Sans", "DejaVu Sans", Tahoma, Geneva, Arial, Sans-serif;
+	text-transform: initial;
+}
+
+body {
+    font-family: Verdana, "Bitstream Vera Sans", "DejaVu Sans", Tahoma, Geneva, Arial, Sans-serif;
+}
+
+*:focus { outline:none; }
+
+a {
+	cursor: pointer;
+}
+
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+ul li a {
+	display: block;
+}
+
+.clr-hry2 {
+        /* DEFAULT */
+	/* color: #ff6a6a !important; */
+        /* ROZBZUC DECKO 2019 */
+        color: #e34444 !important;
+}
+.clr-hry {
+	color: #e34444 !important;
+}
+
+.clr-videa2 {
+        /* DEFAULT */
+	/* color: #72b1f9 !important;*/
+        /* ROZBZUC DECKO 2019 */
+        color: #3b79c2 !important;
+}
+.clr-videa {
+	color: #4b88cf !important;
+}
+
+.clr-porady2 {
+	/* color: #cbd450 !important; */
+        /* ROZBZUC DECKO */
+        color: #98a303 !important;
+}
+.clr-porady {
+	color: #a6ae3a !important;
+}
+
+.clr-program2 {
+	color: #cbd450 !important;
+}
+.clr-program {
+	color: #ffa300 !important;
+}
+
+.clr-contest {
+	color: #f46c30 !important;
+}
+
+.clr-extra2 {
+   /* color: #fcba16 !important; */
+   /* ROZBZUC DECKO */
+    color: #ee9b07;
+}
+.clr-extra {
+    color: #ffa300 !important;
+}
+
+.clr-fff {
+	color: #fff !important;
+}
+
+.clr-003b51 {
+	color: #003b51 !important;
+}
+
+.clr-df1e31 {
+	color: #df1e31 !important;
+}
+
+.clr-4f8fd1 {
+	color: #4f8fd1 !important;
+}
+
+.clr-b5be34 {
+	color: #b5be34 !important;
+}
+
+.clr-ffc80c {
+	color: #ffc80c !important;
+}
+
+.fl-r {
+	float: right !important;
+}
+
+.fl-l {
+	float: left !important;
+}
+
+.cl-l {
+	clear: left !important;
+}
+
+.cl-r {
+	clear: right !important;
+}
+
+.fs-16 {
+	font-size: 16px !important;
+	line-height: 24px;
+}
+
+.fs-24 {
+	font-size: 24px !important;
+	line-height: 34px;
+}
+
+.fs-26 {
+	font-size: 26px !important;
+	line-height: 36px;
+}
+
+.fs-30 {
+	font-size: 30px !important;
+	line-height: 40px;
+}
+
+.fs-36 {
+    font-size: 36px !important;
+    line-height: 44px;
+}
+
+.fs-42 {
+	font-size: 42px !important;
+	line-height: 50px;
+}
+
+.fs-46 {
+	font-size: 46px !important;
+	line-height: 52px;
+}
+
+.fs-56 {
+	font-size: 56px !important;
+	line-height: 64px;
+}
+
+.tt-u {
+	text-transform: uppercase;
+}
+
+.m-auto {
+	margin: auto;	
+}
+
+.mlr-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+p.error,
+.red {
+	color: red !important;
+}
+
+input, textarea {
+	/*	font-family: TV_Sans_Screen, Verdana;*/
+	font-size: 11px;
+}
+
+div.moje-d-toolbar-container {
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	display: none;
+}
+
+div.moje-d-toolbar-container > div {
+	/*margin-left: auto;
+	margin-right: auto;*/
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 1196px;
+	height: 133px;
+}
+
+div.top {
+	background: transparent url( /cms/videa/images/videa/bg-top.png) no-repeat scroll left bottom;	/*#eaf3fe*/
+	padding: 0px 2px 2px 2px;
+	width: 1196px;
+	/*min-height: 133px;*/
+}
+
+div.top div.static {
+	height: 118px;
+	background-color: #eaf3fe;
+}
+
+div.top.profil {
+	position: absolute;
+	/*top: 55px;*/
+	left: auto;
+	margin-top: 0px;
+	z-index: 99999;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.top.profil div.static {
+	background: #ffede2 url( /cms/moje-decko/images/profil/top-shadow.png) repeat-x scroll left top;
+	height: 118px;
+}
+
+div.top div.bg-bottom {
+	height: 15px;
+}
+
+div.content div div.tip {
+	background: transparent url( /cms/videa/images/videa/tip.png) no-repeat scroll left bottom;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	width: 83px;
+	height: 83px;
+}
+
+div.content ul.buttons {
+	line-height: 37px;
+	padding: 10px 0px 30px 0px;
+	clear: left;
+}
+
+div.content ul.buttons li {
+	background: transparent url( /cms/common/images/common/bg-button-w142.png) no-repeat scroll right top;
+	width: 142px;
+	text-align: center;
+	margin-right: 10px;
+}
+
+div.content ul.buttons li.ostatni {
+	background: transparent url( /cms/hry/images/hry/bg-button-w202.png) no-repeat scroll right top;
+	width: 202px;
+}
+
+div.content ul.buttons li a {
+	padding-left: 21px;
+	font-size: 83%;
+}
+
+div.content ul.buttons li:hover a, div.content ul.buttons li.active a {
+	color: #fff;
+	text-decoration: none;
+}
+
+div.content a.dalsi {
+	margin-left: 522px;
+	color: #fff;
+	font-size: 85%;
+	line-height: 38px;
+	width: 95px;
+	display: block;
+	padding-left: 45px;
+	height: 38px;
+	clear: right;
+}
+
+div.content a.dalsi:hover {
+	text-decoration: none;
+}
+
+/* ---   Podle nazvu   ---   START   --- */
+
+div.top div.top-bottom ul.abeceda {
+	padding-left: 20px;
+	margin-top: 25px;
+}
+
+div.top div.top-bottom ul.abeceda li {
+	background: transparent url( /cms/videa/images/videa/bg-letter.png) no-repeat scroll left top;
+	width: 30px;
+	height: 40px;
+	margin-right: 4px;
+	text-align: center;
+}
+
+div.top div.top-bottom ul.abeceda li a {
+	line-height: 40px;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+
+div.top div.top-bottom ul.abeceda li.wide {
+	background: transparent url( /cms/videa/images/videa/bg-letter-wide.png) no-repeat scroll left top;
+	width: 70px;
+}
+
+div.top div.top-bottom ul.abeceda li:hover a, div.top div.top-bottom div.vysledky ul li:hover a {
+	color: #fff;
+}
+
+div.top div.top-bottom ul li a {
+	font-size: 96%;
+}
+
+div.top div.top-bottom div.vysledky ul li a {
+	padding: 6px 0px 3px 8px;
+}
+
+div.top div.top-bottom div.vysledky {
+	position: relative;
+	margin-left: 3px;
+}
+
+div.top div.top-bottom div.vysledky ul li.r0 {
+	top: 50px;
+	padding-left: 8px;
+	color: #99a7b6;
+	font-weight: bold;
+	font-size: 95%;
+}
+
+div.top div.top-bottom div.vysledky ul li.r0:hover {
+	background: none !important;
+}
+
+div.top div.top-bottom div.vysledky ul li.r1 {
+	top: 70px;
+}
+
+div.top div.top-bottom div.vysledky ul li.r2 {
+	top: 95px;
+}
+
+div.top div.top-bottom div.vysledky ul li.r3 {
+	top: 120px;
+}
+
+div.top div.top-bottom div.vysledky ul li.r4 {
+	top: 145px;
+}
+
+/* ---   Podle nazvu   ---   END   --- */
+
+/* ---   Co tě zajímá   ---   START   --- */
+
+div.top.hry div.top-bottom ul.tema li.c1.r1:hover a, div.top.hry div.top-bottom ul.tema li.c1.r1.active a,
+div.top.videa div.top-bottom ul.tema li.c1.r1:hover a, div.top.videa div.top-bottom ul.tema li.c1.r1.active a,
+div.top.porady div.top-bottom ul.tema li.c1.r1:hover a, div.top.porady div.top-bottom ul.tema li.c1.r1.active a {
+	background: transparent url( /cms/common/images/common/ico-zvirata-priroda-hover.png) no-repeat scroll 3px 4px;
+}
+
+div.top.hry div.top-bottom ul.tema li.c1.r2:hover a, div.top.hry div.top-bottom ul.tema li.c1.r2.active a,
+div.top.videa div.top-bottom ul.tema li.c1.r2:hover a, div.top.videa div.top-bottom ul.tema li.c1.r2.active a,
+div.top.porady div.top-bottom ul.tema li.c1.r2:hover a, div.top.porady div.top-bottom ul.tema li.c1.r2.active a {
+	background: transparent url( /cms/common/images/common/ico-veda-technika-hover.png) no-repeat scroll 3px 4px;
+}
+
+div.top.hry div.top-bottom ul.tema li.c1.r3:hover a, div.top.hry div.top-bottom ul.tema li.c1.r3.active a,
+div.top.videa div.top-bottom ul.tema li.c1.r3:hover a, div.top.videa div.top-bottom ul.tema li.c1.r3.active a,
+div.top.porady div.top-bottom ul.tema li.c1.r3:hover a, div.top.porady div.top-bottom ul.tema li.c1.r3.active a,
+div.top.program div.top-bottom ul.menu-bott li.sport:hover a, div.top.program div.top-bottom ul.menu-bott li.sport.active a{
+	background: transparent url( /cms/common/images/common/ico-sport-hover.png) no-repeat scroll 3px 5px;
+}
+
+div.top.hry div.top-bottom ul.tema li.c2.r1:hover a, div.top.hry div.top-bottom ul.tema li.c2.r1.active a,
+div.top.videa div.top-bottom ul.tema li.c2.r1:hover a, div.top.videa div.top-bottom ul.tema li.c2.r1.active a,
+div.top.porady div.top-bottom ul.tema li.c2.r1:hover a, div.top.porady div.top-bottom ul.tema li.c2.r1.active a {
+	background: transparent url( /cms/common/images/common/ico-umeni-hover.png) no-repeat scroll 3px 4px;
+}
+
+div.top.hry div.top-bottom ul.tema li.c2.r2:hover a, div.top.hry div.top-bottom ul.tema li.c2.r2.active a,
+div.top.videa div.top-bottom ul.tema li.c2.r2:hover a, div.top.videa div.top-bottom ul.tema li.c2.r2.active a,
+div.top.porady div.top-bottom ul.tema li.c2.r2:hover a, div.top.porady div.top-bottom ul.tema li.c2.r2.active a {
+	background: transparent url( /cms/common/images/common/ico-lide-spolecnost-hover.png) no-repeat scroll 3px 4px;
+}
+
+div.top.hry div.top-bottom ul.tema li.c2.r3:hover a, div.top.hry div.top-bottom ul.tema li.c2.r3.active a,
+div.top.videa div.top-bottom ul.tema li.c2.r3:hover a, div.top.videa div.top-bottom ul.tema li.c2.r3.active a,
+div.top.porady div.top-bottom ul.tema li.c2.r3:hover a, div.top.porady div.top-bottom ul.tema li.c2.r3.active a {
+	background: transparent url( /cms/common/images/common/ico-zabava-hover.png) no-repeat scroll 3px center;
+}
+
+div.top.hry div.top-bottom ul.tema li.c3.r1:hover a, div.top.hry div.top-bottom ul.tema li.c3.r1.active a,
+div.top.videa div.top-bottom ul.tema li.c3.r1:hover a, div.top.videa div.top-bottom ul.tema li.c3.r1.active a,
+div.top.porady div.top-bottom ul.tema li.c3.r1:hover a, div.top.porady div.top-bottom ul.tema li.c3.r1.active a {
+	background: transparent url( /cms/common/images/common/ico-zahady-dobrodruzstvi-hover.png) no-repeat scroll 3px 5px;
+}
+
+div.top.hry div.top-bottom ul.tema li.c3.r2:hover a, div.top.hry div.top-bottom ul.tema li.c3.r2.active a,
+div.top.videa div.top-bottom ul.tema li.c3.r2:hover a, div.top.videa div.top-bottom ul.tema li.c3.r2 a.active,
+div.top.porady div.top-bottom ul.tema li.c3.r2:hover a, div.top.porady div.top-bottom ul.tema li.c3.r2 a.active {
+	background: transparent url( /cms/common/images/common/ico-jidlo-vareni-hover.png) no-repeat scroll 3px 4px;
+}
+
+div.top.hry div.top-bottom ul.tema li.c3.r3:hover a, div.top.hry div.top-bottom ul.tema li.c3.r3.active a,
+div.top.videa div.top-bottom ul.tema li.c3.r3:hover a, div.top.videa div.top-bottom ul.tema li.c3.r3.active a,
+div.top.porady div.top-bottom ul.tema li.c3.r3:hover a, div.top.porady div.top-bottom ul.tema li.c3.r3.active a,
+div.top.program div.top-bottom ul.menu-bott li.pohadky:hover a, div.top.program div.top-bottom ul.menu-bott li.pohadky.active a{
+	background: transparent url( /cms/common/images/common/ico-pohadky-hover.png) no-repeat scroll 3px center;
+}
+
+div.top.hry div.top-bottom ul.tema li.c4.r1:hover a, div.top.hry div.top-bottom ul.tema li.c4.r1.active a,
+div.top.videa div.top-bottom ul.tema li.c4.r1:hover a, div.top.videa div.top-bottom ul.tema li.c4.r1.active a,
+div.top.porady div.top-bottom ul.tema li.c4.r1:hover a, div.top.porady div.top-bottom ul.tema li.c4.r1.active a {
+	background: transparent url( /cms/common/images/common/ico-zemepis-cestovani-hover.png) no-repeat scroll 3px 4px;
+}
+
+div.top.hry div.top-bottom ul.tema li.c4.r2:hover a, div.top.hry div.top-bottom ul.tema li.c4.r2.active a,
+div.top.videa div.top-bottom ul.tema li.c4.r2:hover a, div.top.videa div.top-bottom ul.tema li.c4.r2.active a,
+div.top.porady div.top-bottom ul.tema li.c4.r2:hover a, div.top.porady div.top-bottom ul.tema li.c4.r2.active a {
+	background: transparent url( /cms/common/images/common/ico-historie-hover.png) no-repeat scroll 4px 3px;
+}
+
+div.top.hry div.top-bottom ul.tema li.c4.r3:hover a, div.top.hry div.top-bottom ul.tema li.c4.r3.active a,
+div.top.videa div.top-bottom ul.tema li.c4.r3:hover a, div.top.videa div.top-bottom ul.tema li.c4.r3.active a,
+div.top.porady div.top-bottom ul.tema li.c4.r3:hover a, div.top.porady div.top-bottom ul.tema li.c4.r3.active a {
+	background: transparent url( /cms/common/images/common/ico-lidske-telo-zdravi-hover.png) no-repeat scroll 3px 4px;
+}
+
+div.top.hry div.top-bottom ul.tema li.c5.r1:hover a, div.top.hry div.top-bottom ul.tema li.c5.r1.active a,
+div.top.videa div.top-bottom ul.tema li.c5.r1:hover a, div.top.videa div.top-bottom ul.tema li.c5.r1.active a,
+div.top.porady div.top-bottom ul.tema li.c5.r1:hover a, div.top.porady div.top-bottom ul.tema li.c5.r1.active a {
+	background: transparent url( /cms/common/images/common/ico-pro-nejmensi-hover.png) no-repeat scroll 3px 4px;
+}
+
+/* ---   Co tě zajímá   ---   END   --- */
+
+/* ---   O Déčku   ---   START   --- */
+
+div.background.o-decku div.shadow.wrapper > .wrapper {
+	background: transparent url( /cms/common/images/common/bg-o-decku.png) no-repeat scroll 0px top;
+}
+
+div.content.o-decku {
+	padding-top: 40px;
+}
+
+div.content.o-decku > ul {
+	margin-left: auto;
+	margin-right: auto;
+	width: 330px;
+	/*	width: 590px; verze s peti tlacitky*/
+	overflow: hidden;
+}
+
+div.content.o-decku ul.o-decku li {
+	width: 110px;
+}
+
+div.content.o-decku div.footer-menu ul.menu li {
+    margin: 10px 20px 0px 0px;
+}
+
+div.content.o-decku ul li.o-decku {
+	background: transparent url( /cms/common/images/common/o-decku-info.png) no-repeat scroll center top;
+}
+
+div.content.o-decku ul li.novinky {
+	background: transparent url( /cms/common/images/common/o-decku-novinky.png) no-repeat scroll center top;
+}
+
+div.content.o-decku ul li.pravidla {
+	background: transparent url( /cms/common/images/common/o-decku-pravidla.png) no-repeat scroll center top;
+}
+
+div.content.o-decku ul li.napsali-jste {
+	background: transparent url( /cms/common/images/common/o-decku-napsali-jste-nam.png) no-repeat scroll center top;
+}
+
+div.content.o-decku ul li.napsali-jste:hover, div.content.o-decku ul li.napsali-jste.active {
+	background: transparent url( /cms/common/images/commotn/o-decku-napsali-jste-nam-hover.png) no-repeat scroll center top;
+}
+
+div.content.o-decku ul li.kontakty {
+	background: transparent url( /cms/common/images/common/o-decku-kontakty.png) no-repeat scroll center top;
+}
+
+div.content.o-decku ul li.kontakty:hover, div.content.o-decku ul li.kontakty.active {
+	background: transparent url( /cms/common/images/common/o-decku-kontakty-hover.png) no-repeat scroll center top;
+}
+
+div.content.o-decku ul li.novinky:hover, div.content.o-decku ul li.novinky.active,
+div.content.o-decku ul li.pravidla:hover, div.content.o-decku ul li.pravidla.active,
+div.content.o-decku ul li.o-decku:hover, div.content.o-decku ul li.o-decku.active {
+	background-position: center -98px;
+}
+
+div.content.o-decku ul.o-decku li a {
+	/*	color: #fff;*/
+	color: #f17322;
+	font-size: 90%;
+	padding-top: 78px;
+	text-align: center;
+}
+
+div.content.o-decku ul.o-decku li a:hover, div.content.o-decku ul.o-decku li.active a {
+	font-weight: bold;
+}
+
+div.box div.box-content p {
+    color: #666666;
+    font-size: 14px;
+	line-height: 24px;
+}
+
+div.box div.box-content p a {
+    color: #f46c30;
+	font-weight: bold;
+    text-decoration: underline;
+}
+
+div.box div.box-content p a:hover {
+    text-decoration: none;
+}
+
+div.content div.novinky div.splitter {
+	background: transparent url( /cms/common/images/common/splitter-novinky.png) no-repeat scroll center center;
+	width: 100%;
+	clear: both;
+	height: 80px;
+}
+
+div.content.o-decku div.novinky div.img {
+    background: transparent url( /cms/common/images/common/novinky/ramecek-novinky.png ) no-repeat scroll center top;
+	position: relative;
+	height: 257px;
+	width: 478px;
+	float: left;
+}
+
+div.content div.novinky div.ico {
+    left: 205px;
+    top: 90px;
+    background: transparent url( /cms/hp/images/hp/ico-content-play.png) no-repeat scroll center center;
+    height: 70px;
+    position: absolute;
+    width: 70px;
+}
+
+/*div.content.o-decku > div.novinky {
+	background: transparent url( /cms/common/images/common/bg-novinky-2.png) no-repeat scroll center top;
+	height: 852px;
+}*/
+
+/*div.content.o-decku div.box div.box-top {
+	background: transparent url( /cms/common/images/common/bg-o-decku-box-top.png) no-repeat scroll center top;
+	height: 30px;
+}*/
+
+div.content.o-decku div.box div.box-content {
+	/*	background: transparent url( /cms/common/images/common/bg-o-decku-box-content.png) repeat-y scroll center bottom;*/
+	padding: 30px 50px;
+}
+
+div.content.o-decku div.novinky div.img img {
+	width:460px;
+	height: 239px;
+	padding: 9px;
+}
+
+div.content.o-decku div.novinky div.img a:hover img {
+	opacity: 0.8;
+}
+
+div.content.o-decku div.novinky p.text.obrazek {
+	clear: none;
+	padding-left: 20px;
+}
+
+div.content.o-decku div.novinky img.splitter {
+	padding: 60px 0px 40px 0px;
+}
+
+div.content.o-decku.pravidla div.box div.box-content {
+	height: 280px;
+}
+
+div.content.o-decku div.box p {
+	color: #676363;
+	font-size: 100%;
+	clear: left;
+}
+
+div.content.o-decku div.box p.datum {
+	font-size: 70%;
+	line-height: 20px;
+	padding-bottom: 20px;
+}
+
+div.content.o-decku div.box p.datum + p {
+	margin-top: 15px;
+}
+
+div.content.o-decku div.box p.text + p {
+	margin-top: 50px;
+}
+
+div.content.o-decku div.box p.text a, div.content.o-decku div.novinky li a {
+	color: #f17322;
+}
+
+div.content.o-decku div.box p.text a:hover {
+	text-decoration: underline;
+}
+
+div.content.o-decku div.box p.text {
+	font-size: 85%;
+	margin-top: 30px;
+	line-height: 20px;
+}
+
+div.content.o-decku div.novinky p.text {
+	width: 560px;
+	float: left;
+}
+
+div.content.o-decku div.box h2 {
+	color: #f17322;
+	font-size: 125%;
+	/*	font-weight: bold;*/
+	text-shadow: none;
+	padding-top: 5px;
+}
+
+div.content.o-decku div.box.decko p span {
+	color: #f17322;
+	font-size: 125%;
+	font-weight: bold;
+}
+
+div.content.o-decku div.novinky p.text, div.content.o-decku div.novinky ul li {
+	margin-top: 5px;
+	font-size: 80%;
+	line-height: 18px;
+	color: #676363;
+}
+
+div.content.o-decku div.novinky ul li {
+	width: auto;
+	list-style-type: disc;
+	margin-left: 60px;
+	clear: left;
+}
+
+div.content.o-decku div.novinky p.text span {
+	color: #f17322;
+	/*line-height: 44px;*/
+	font-weight: bold;
+}
+
+div.content.o-decku div.novinky p.text a, div.content.o-decku div.novinky li a {
+	text-decoration: underline;
+}
+
+div.content.o-decku div.novinky p.text a.link {
+	/*	color: #676363;*/
+	font-weight: bold;
+}
+
+div.content.o-decku div.novinky li a {
+	display: inline;
+	padding: 0px;
+	font-size: inherit;
+}
+
+div.content.o-decku div.novinky li a:hover {
+	font-weight: normal;
+}
+
+div.content.o-decku div.novinky p.text a:hover, div.content.o-decku div.novinky li a:hover {
+	text-decoration: none;
+}
+
+/*div.content.o-decku ul.menu {
+	padding: 30px 0px 0px 10px;
+}
+
+div.content.o-decku ul.menu li {
+	width: auto;
+}
+
+div.content.o-decku ul.menu li a {
+	padding: 26px 0px 0px 84px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: left;
+	border: none;
+	height: 46px;
+}
+
+div.content.o-decku ul.menu li a.hry {
+	background: transparent url( /cms/common/images/common/o-decku-hry.png) no-repeat scroll left top;
+	color: #e34444;
+}
+
+div.content.o-decku ul.menu li a.videa {
+	background: transparent url( /cms/common/images/common/o-decku-videa.png) no-repeat scroll left top;
+	color: #4b88cf;
+}
+
+div.content.o-decku ul.menu li a.porady {
+	background: transparent url( /cms/common/images/common/o-decku-porady.png) no-repeat scroll left top;
+	color: #a6ae3a;
+}
+
+div.content.o-decku ul.menu li a.program {
+	background: transparent url( /cms/common/images/common/o-decku-program.png) no-repeat scroll left top;
+	color: #ffa300;
+}
+
+div.content.o-decku ul.menu li a.zive {
+	background: transparent url( /cms/common/images/common/o-decku-zive.png) no-repeat scroll left top;
+	color: #4b88cf;
+}
+
+div.content.o-decku ul.menu li a.piskoviste {
+	background: transparent url( /cms/common/images/common/o-decku-piskoviste.png) no-repeat scroll left top;
+	color: #f46c30;
+}
+
+div.content.o-decku ul.menu li a:hover {
+	background-position: left bottom;
+}*/
+
+
+/* ---   O Déčku   ---   END   --- */
+
+/* ---   Napište nám   ---   START   --- */
+
+div.content div.napis-nam {
+	background: transparent url( /cms/common/images/common/bg-napis-nam-box_2.png) no-repeat scroll left center;
+	width: 1200px;
+	height: 610px;
+	padding-top: 35px;
+	/* margin-top: 30px; */
+	text-align: center;
+        margin-bottom: 200px;
+}
+
+div.content div.napis-nam p {
+	color: #676363;
+	font-size: 90%;
+	text-align: center;
+	line-height: 26px;
+}
+
+div.content div.napis-nam div.napis-nam-ok {
+	text-align: center;
+}
+
+div.content div.napis-nam div.napis-nam-ok span {
+	font-size: 130%;
+	font-weight: bold;
+	color: #f17322;
+}
+
+div.content div.napis-nam div.napis-nam-ok img {
+	padding-top: 30px;
+}
+
+div.content div.napis-nam div.napis-nam-ok a {
+	background: transparent url( /cms/common/images/common/bg-button-napsat-dalsi.png) no-repeat scroll center top;
+	float: none;
+	width: 130px;
+	height: 38px;
+	display: block;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.content div.napis-nam div.napis-nam-ok a:hover {
+	background-position: center bottom;
+}
+
+div.content div.napis-nam p span {
+	color: #f17322;
+}
+
+div.content div.napis-nam form {
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 30px;
+	overflow: hidden;
+}
+
+div.content.profil div.napis-nam input {
+	background: transparent url( /cms/common/images/common/bg-input-w360.png) no-repeat scroll center center;
+	width: 335px;
+	height: 40px;
+	padding: 5px 5px 5px 20px;
+	float: right;
+	border: none;
+}
+
+div.content.profil div.napis-nam textarea {
+	background: transparent url("/cms/common/images/common/bg-textarea-w360.png") no-repeat scroll left top;
+	border: none;
+	width: 340px;
+	padding-left: 20px;
+	height: 215px;
+	resize: none;
+	padding-top: 15px;
+	float: right;
+	margin-top: 6px;
+}
+
+div.content.profil div.napis-nam a {
+	float: right;
+}
+
+div.content.profil div.napis-nam label {
+	float: left;
+	width: 120px;
+	color: #f17322;
+	font-size: 80%;
+	line-height: 50px;
+	padding-right: 20px;
+	text-align: right;
+}
+
+div.content.profil div.napis-nam div.form-line {
+	clear: both;
+}
+
+div.content.profil div.napis-nam div.form-line label.error {
+	background-color:red;
+	border-radius:0 0 8px 8px;
+	padding:5px 15px;
+	width:330px;
+	display:none;
+	color:#fff;
+	text-align:left;
+	font-size:11px;
+	float:right;
+	z-index:10;
+	line-height: 12px;
+	margin-top:-11px;
+}
+
+div.content.profil div.napis-nam input.odeslat {
+	background: transparent url("/cms/moje-decko/images/profil/button-odeslat.png") no-repeat scroll left top;
+	width: 110px;
+	text-align: left;
+	margin-top: 20px;
+	padding-left: 24px;
+	height: 38px;
+	color: #fff;
+	font-size: 70%;
+	clear: right;
+}
+
+div.content.profil div.napis-nam input.odeslat:hover {
+	background: transparent url("/cms/moje-decko/images/profil/button-odeslat-hover.png") no-repeat scroll left top;
+}
+
+div.content.profil div.napis-nam label.priloha {
+	background: transparent url("/cms/moje-decko/images/profil/ico-prilohy.png") no-repeat scroll left center;
+	text-align: left;
+	padding-left: 20px;
+	width: 210px;
+}
+
+div.content.profil div.napis-nam input.priloha {
+	color: #f17322;
+	font-size: 75%;
+	height: 25px;
+	width: auto;
+	clear: none;
+	background-image: none;
+	padding-right: 20px;
+}
+
+div.content.profil div.napis-nam a:hover span {
+	text-decoration: underline;
+}
+
+div.content.profil div.napis-nam .odesilaSe {
+	clear: both;
+	position: relative;
+	top: -250px;
+	z-index: 999999;
+	color: #fff;
+	font-size: 14px;
+	line-height: 34px;
+}
+
+div.content.profil div.napis-nam .odesilaSeClose {
+	background: url(/cms/common/images/common/napis-nam-close.png) no-repeat left top;
+	cursor: pointer;
+	height: 18px;
+	left: 480px;
+	position: relative;
+	width: 18px;
+}
+
+/* ---   Napište nám   ---   END   --- */
+
+/* ---   ERROR Page   ---   START   --- */
+
+
+div.background.error {
+	background: transparent url( /cms/common/images/common/bg-error.jpg) no-repeat scroll center top;	
+	text-align: center;
+	min-height: 1000px;
+}
+
+div.background.error.e404.clr-fff {
+	/*background: #0e3e84 url( /cms/common/images/common/bg-error2.jpg) no-repeat scroll center center;*/
+	background: #fff url( /cms/common/images/common/bg-error3.jpg) no-repeat scroll center 50px;
+	min-height: 100%;
+}
+
+div.background.error.e404.clr-fff .wrapper {
+	display: flex;
+	min-height: 750px;
+}
+
+div.background.error.e404 {
+	background: #fff url( /cms/common/images/common/bg-error.jpg) no-repeat scroll center top;
+}
+
+div.background.error h2 {
+	color: #fff;
+	text-shadow: 1px 1px 3px #808080;
+	padding: 303px 0px 10px 0px;
+	font-size: 180%;
+	line-height: 40px
+}
+
+div.background.error.e404 h2 {
+	padding-top: 330px;
+}
+
+div.background.error a.sezente-ovecky {
+	background: transparent url("/cms/common/images/common/btn-sezente_ovecky.png") no-repeat scroll left top;	
+	width: 311px;
+	height: 163px;
+	display: block;
+	margin-top: 20px;
+}
+
+div.background.error a.decko {
+	background: transparent url("/cms/common/images/common/logoDecko-w197.png") no-repeat scroll left top;	
+	width: 197px;
+	height: 67px;
+	display: block;
+	margin-top: 50px;
+}
+
+div.background.error a.sezente-ovecky:hover,
+div.background.error a.decko:hover {
+	background-position: left bottom;
+}
+
+div.background.error a.reload {
+	background: transparent url("/cms/common/images/common/button-reload.png") no-repeat scroll left center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 150px;
+	line-height: 38px;
+	display: block;
+	color: #fff;
+	font-size: 80%;
+	padding-left: 30px;
+}
+
+div.background.error a.reload:hover {
+	background: transparent url("/cms/common/images/common/button-reload-hover.png") no-repeat scroll left center;
+}
+
+div.background.error a.reload.e404 {
+	background: transparent url("/cms/common/images/common/button-w180.png") no-repeat scroll left center;
+	padding: 0px;
+	width: 180px;
+	margin-top: 20px;
+}
+
+div.background.error a.reload.e404:hover {
+	background: transparent url("/cms/common/images/common/button-w180-hover.png") no-repeat scroll left center;
+}
+
+div.content div.jak-naladit {
+	background: transparent url("/cms/common/images/common/bg-jak-naladit.png") no-repeat scroll left top;
+	width: 1140px;
+	height: 457px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 45px;
+	padding: 30px;
+}
+
+div.content div.jak-naladit h2 {
+	text-align: center;
+	color: #f17322;
+	text-shadow: none;
+	padding-bottom: 25px;
+}
+
+div.content div.jak-naladit p {
+	color: #666666;
+	font-size: 85%;
+	line-height: 18px;
+}
+
+div.content div.jak-naladit p a {
+	color: #f17322;
+}
+
+div.content div.jak-naladit p a:hover {
+	text-decoration: underline;
+}
+
+div.content div.jak-naladit p span {
+	color: #f17322;
+	font-weight: bold;
+}
+
+/* ---   ERROR Page   ---   END   --- */
+
+h2.h2-vypis {
+    margin-top: 50px;
+    font-size: 35px;
+    line-height: 44px;
+}
+
+/* no-flash */
+.no-flash img {
+	display: none;
+}
+
+
+/* --- video ICKO  --- */
+
+div#icko {
+	background: transparent url("/cms/common/images/common/decko_porady-icko-bottom.png") no-repeat scroll bottom center;
+	padding-bottom: 15px;
+	overflow: hidden;
+}
+
+div#icko div.icko-top {
+	background: transparent url("/cms/common/images/common/decko_porady-icko-top.png") no-repeat scroll top center;
+	height: 15px;
+}
+
+div#icko div.icko-content {
+	background: transparent url("/cms/common/images/common/decko_porady-icko-content.png") repeat-y scroll top center;
+	overflow: hidden;
+	padding: 0px 20px;
+}
+
+div#icko h2, div#icko h3 {
+	color: #96a02c;
+}
+
+div#icko h2 {
+	font-size: 30px;
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+
+div#icko h3 {
+	font-size: 18px;
+}
+div#icko h3 span {
+	float: none;
+}
+
+div#icko p {
+	color: #333;
+	font-size: 12px;
+	float: left;
+}
+
+div#icko p.bold {
+	font-weight: bold;
+}
+
+div#icko p.desc-s {
+	font-size: 14px;
+	clear: left;
+	padding-bottom: 10px;
+}
+div#icko p.desc-s.bold {
+	font-weight: bold;
+}
+
+div#icko p.desc-l {
+	padding-bottom: 20px;
+	clear: left;
+}
+
+div#icko span {
+	color: #96a02c;
+	float: left;
+	font-size: 12px;
+}
+
+div#icko div.broadcast, div#icko div.broadcast + span, div#icko div.broadcast div {
+	float: right;
+}
+
+div#icko div.broadcast div {
+	clear: right;
+}
+
+div#icko div.broadcast div p {
+	padding-left: 4px;
+}
+
+div.icko #cboxMiddleLeft, div.icko #cboxMiddleRight, div.icko #cboxTopCenter, div.icko #cboxTopLeft,
+div.icko #cboxTopRight, div.icko #cboxBottomCenter, div.icko #cboxBottomLeft, div.icko #cboxBottomRight,
+div.icko #cboxContent {
+	background-color: transparent;
+}
+
+div.icko #cboxClose {
+    top: 12px;
+    right: 12px;
+    background: transparent url('/cms/common/images/common/ico-zavrit.png') no-repeat scroll left top;
+    width: 14px;
+    height: 11px;
+}
+
+div.icko #cboxClose:hover {
+    background-position: left bottom;
+}
+
+div.detail.video-detail a.icko, div.content.videa div.detail div.video a.icko, div.video-frame-w550 a.icko {
+	background: transparent url("/cms/common/images/common/icko.png") no-repeat scroll top center;
+	width: 30px;
+	height: 30px;
+	display: block;
+	bottom: 17px;
+	top: auto;
+	right: 20px;
+	left: auto;
+	position: absolute;
+}
+
+div.new-lay div.detail.video-detail a.icko {
+	bottom: 14px;
+	right: 25px;
+}
+
+div.detail.video-detail a.icko:hover, div.content.videa div.detail div.video a.icko:hover, a.vice:hover, a.vice.soutez:hover,
+a.skryt:hover, a.skryt.soutez:hover {
+	background-position: bottom center;
+}
+
+/* --- video ICKO  --- END --- */
+
+a.vice {
+	background: transparent url("/cms/common/images/common/btn-vice.png") no-repeat scroll top center;
+	width: 90px;
+	height: 30px;
+	display: block;
+}
+
+a.vice.soutez {
+	background: transparent url("/cms/common/images/common/btn-vice-soutez.png") no-repeat scroll top center;
+}
+
+a.skryt {
+	background: transparent url("/cms/common/images/common/btn-skryt.png") no-repeat scroll top center;
+	width: 90px;
+	height: 30px;
+	display: block;
+}
+
+a.skryt.soutez {
+	background: transparent url("/cms/common/images/common/btn-skryt-soutez.png") no-repeat scroll top center;
+}
+
+a.arrow-simple {
+	background: transparent url( /cms/videa/images/videa/sipka-doleva-scroll.png) no-repeat scroll left top;
+	width: 13px;
+	height: 28px;
+	display: block;
+}
+
+a.arrow-simple.prev {
+	background: transparent url( /cms/videa/images/videa/sipka-doleva-scroll.png) no-repeat scroll left top;
+}
+
+a.arrow-simple.next {
+	background: transparent url( /cms/videa/images/videa/sipka-doprava-scroll.png) no-repeat scroll left top;
+}
+
+a.arrow-simple:hover {
+	background-position: left bottom;
+}
+
+a.duringAnimation {
+    pointer-events: none;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.content.porad div.content-part {
+	width: 590px;
+}
+
+div.content.porad div.content-part.right {
+	float: right;
+}
+
+div.content.porad div.content-part.left {
+	float: left;
+}
+
+/* box pexeso - napr. porad Kdyby byly ryby */
+
+div.pexeso {
+	/*    background: url("/cms/common/images/common/bg-pexeso.png") no-repeat scroll left top transparent;*/
+    float: right;
+    height: 214px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    width: 550px;
+}
+
+a.btn-download {
+	background: transparent url( /cms/common/images/common/btn-stahnout.png) no-repeat scroll left top;
+	width: 120px;
+	height: 30px;
+	margin-top: 18px;
+	display: block;
+}
+
+a.btn-download-small {
+	background: transparent url( /cms/common/images/common/btn-stahnout_small.png) no-repeat scroll left top;
+	width: 40px;
+	height: 30px;
+	display: block;
+}
+
+a.btn-print-small {
+	background: transparent url( /cms/common/images/common/btn-tisk.png) no-repeat scroll left top;
+	width: 40px;
+	height: 30px;
+	display: block;
+}
+
+a.btn-download:hover, a.btn-download-small:hover, a.btn-print-small:hover {
+	background-position: left bottom;
+}
+
+#cboxTitle a.btn-download-small {
+    float: right;
+}
+
+a.btn-arrow {
+	width: 30px;
+	height: 30px;
+	display: block;
+}
+
+a.btn-arrow.left {
+	background: transparent url( /cms/common/images/common/sipka-doleva.png) no-repeat scroll left top;
+}
+
+a.btn-arrow.right {
+	background: transparent url( /cms/common/images/common/sipka-doprava.png) no-repeat scroll left top;
+}
+
+a.btn-arrow.left:hover, a.btn-arrow.right:hover, a.close.w40:hover, a.w190.btn-stahnout-pisnicku:hover, a.w190.btn-stahnout-text:hover, a.w164.btn-stahnout-text:hover {
+	background-position: left bottom;
+}
+
+a.close.w40 {
+    background: transparent url("/cms/common/images/common/btn-zavrit.png") no-repeat scroll left top;
+    display: block;
+	width: 40px;
+	height: 30px;
+}
+
+a.w164 {
+	width: 164px;
+	height: 30px;
+	display: block;
+}
+
+a.w190 {
+	width: 190px;
+	height: 30px;
+	display: block;
+}
+
+a.w190.btn-stahnout-pisnicku {
+    background: transparent url("/cms/common/images/common/btn-stahnout_pisnicku.png") no-repeat scroll left top;
+}
+
+a.w190.btn-stahnout-text {
+    background: transparent url("/cms/common/images/common/btn-stahnout_text.png") no-repeat scroll left top;
+}
+
+a.w164.btn-stahnout-text {
+    background: transparent url("/cms/common/images/common/btn-stahnout_text-w164.png") no-repeat scroll left top;
+}
+
+/* ..-frame-w290 - vypisy */
+
+div.game-frame-w290, div.programme-frame-w290 {
+	position: relative;
+	height: 162px;
+    width: 280px;
+	overflow: hidden;
+	padding: 5px 5px 3px;
+}
+
+div.game-frame-w290 a, div.programme-frame-w290 a {
+	line-height: 14px;
+    width: 221px;
+	height: 40px;
+    padding: 128px 25px 0px 44px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+}
+
+div.game-frame-w290 a {
+    background: url("/cms/hry/images/hry/ramecek-hry-vypis-w290_1.png") no-repeat scroll left top transparent;
+}
+
+div.game-frame-w290 a.knowledge {
+    background: url("/cms/hry/images/hry/ramecek-zarovka-vypis-w290.png") no-repeat scroll left top transparent;
+}
+
+div.game-frame-w290 div.ico-big {
+    display: none;
+}
+
+div.programme-frame-w290 a {
+    background: url("/cms/porady/images/porady/ramecek-vypis-w290.png") no-repeat scroll left top transparent;
+}
+
+div.game-frame-w290 a:hover, div.programme-frame-w290 a:hover {
+	background-position: left bottom;
+}
+
+div.game-frame-w290 div.ico-big, div.video-frame-w290 div.ico {
+	position: absolute;
+    left: 0px;
+    top: 0px;
+	width: 290px;
+	height: 124px;
+}
+
+div.game-frame-w290 img, div.programme-frame-w290 img {
+    height: 158px;
+    width: 280px;
+}
+
+div.game-frame-w290 a div, div.video-frame-w290 a div, div.programme-frame-w290 a div {
+    display: table-cell;
+    height: 34px;
+    overflow: hidden;
+    padding-right: 10px;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 13px;
+}
+
+.list div.game-frame-w290, .list div.programme-frame-w290 {
+    float: left;
+    margin-top: 20px;
+    margin-right: 13px;
+}
+
+.list div.game-frame-w290.last, .list div.programme-frame-w290.last {
+    margin-right: 0;
+}
+
+div.special-frame-w290 {
+    border-color: #ffa300;
+}
+
+/* napr. tamtam, maly pan */
+
+a.help {
+	background: transparent url("/cms/common/images/form/napoveda.png") scroll left top no-repeat;
+	width: 15px;
+	height: 15px;
+	float: right;
+	display: block;
+}
+
+a.help.disabled {
+	background: transparent url("/cms/common/images/form/napoveda-neaktivni.png") scroll left top no-repeat;
+}
+
+a.help:hover {
+	background-position: left bottom;
+}
+
+/* vertical scroll */
+
+.jspVerticalBar {
+    background-color: transparent;    
+    width: 30px;
+}
+
+.jspVerticalBar .jspDrag {
+    background: transparent url("/cms/common/images/common/scroll/vertical-drag.png") no-repeat scroll left top;
+    height: 104px !important;
+    width: 24px;
+    min-width: 24px;
+    margin-left: -8px;
+}
+
+/*.jspVerticalBar .jspDrag .jspDragBottom {
+    height: 22px;
+}*/
+
+.jspVerticalBar .jspTrack {
+    background-color: #d5e7fa;
+    background-image: none;
+    border: 11px solid #fff;
+    border-radius: 20px;    
+}
+
+.jspVerticalBar .jspTrack {
+    padding-bottom: 74px;
+}
+
+.jspVerticalBar .jspCap.jspCapBottom {
+    height: 98px;
+}
+
+.jspVerticalBar a.jspArrow {
+    width: 30px;
+    height: 13px;
+    display: block;
+}
+
+.jspVerticalBar a.jspArrow.jspArrowUp {
+    background: transparent url("/cms/common/images/common/arrows/arrow-up-w30.png") scroll no-repeat left top;
+}
+
+.jspVerticalBar a.jspArrow.jspArrowDown {
+    background: transparent url("/cms/common/images/common/arrows/arrow-down-w30.png") scroll no-repeat left top;
+}
+
+.jspVerticalBar a.jspArrow:hover {
+    background-position: left bottom !important;
+}
