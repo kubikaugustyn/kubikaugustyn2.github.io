@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Hry</title>
+    <meta name="description" content="Internetové hřiště České televize pro malé i velké děti." />
+    <meta property="og:title" content="Déčko" />
+    <meta property="og:description" content="Internetové hřiště České televize pro malé i velké děti." />
+    <meta property="og:image" content="https://decko.ceskatelevize.cz/cms/common/images/og-images/decko-fb-2-627.jpg" />
+    <meta property="og:image" content="https://decko.ceskatelevize.cz/cms/common/images/og-images/decko-fb-627.jpg" />
+    <meta property="og:type" content="website" />
+    <link rel="previewimage" href="https://decko.ceskatelevize.cz/cms/common/images/og-images/decko-fb-627.jpg" />
+    <link rel="shortcut icon" href="https://decko.ceskatelevize.cz/cms/common/images/common/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://decko.ceskatelevize.cz/cms/common/images/apple-touch-icon/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://decko.ceskatelevize.cz/cms/common/images/apple-touch-icon/apple-touch-icon-precomposed.png" />
+    <link rel="stylesheet" type="text/css" href="https://decko.ceskatelevize.cz/cms/common/js/jquery.jscrollpane.css?v=0" />
+    <link rel="stylesheet" type="text/css" href="https://decko.ceskatelevize.cz/cms/common/css/common.css?v=3.1.8.8" />
+    <link rel="stylesheet" type="text/css" href="https://decko.ceskatelevize.cz/cms/common/css/homepage2.css?v=v0.2.5" />
+    <link rel="stylesheet" type="text/css" href="https://decko.ceskatelevize.cz/cms/videa/css/videa.css?v=2.1.3.3" />
+    <link rel="stylesheet" type="text/css" href="https://decko.ceskatelevize.cz/cms/player/css/player.css?v=1.2" />
+    <link rel="stylesheet" type="text/css" href="https://decko.ceskatelevize.cz/cms/hry/css/hry.css?v=1.0.06" />
+    <link rel="stylesheet" type="text/css" href="https://decko.ceskatelevize.cz/cms/porady/css/porady.css?v=3.3.2.1" />
+    <link rel="stylesheet" type="text/css" href="https://decko.ceskatelevize.cz/cms/program/css/program.css?v=2.1.2.1" />
+    <link rel="stylesheet" type="text/css" href="https://decko.ceskatelevize.cz/cms/moje-decko/css/profil.css?v=2.1.2" />
+    <link rel="stylesheet" type="text/css" href="https://decko.ceskatelevize.cz/cms/videa/css/video-detail.css?v=1.0" />
+    <link rel="stylesheet" type="text/css" href="https://decko.ceskatelevize.cz/cms/common/css/colorbox.css?v=1.1.1" />
+    <script type="text/javascript" src="https://decko.ceskatelevize.cz/cms/common/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="https://decko.ceskatelevize.cz/cms/common/js/jquery-migrate-1.2.1.js"></script>
+    <script type="text/javascript" src="https://decko.ceskatelevize.cz/cms/common/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="https://decko.ceskatelevize.cz/cms/common/js/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="https://decko.ceskatelevize.cz/cms/common/js/swfobject.js"></script>
+    <script type="text/javascript" src="https://decko.ceskatelevize.cz/cms/common/js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="https://decko.ceskatelevize.cz/cms/common/js/mwheelIntent.js"></script>
+    <script type="text/javascript" src="https://decko.ceskatelevize.cz/cms/common/js/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="https://decko.ceskatelevize.cz/cms/common/js/jquery.animateSprite.min.js"></script>
+    <script type="text/javascript" src="https://decko.ceskatelevize.cz/cms/common/js/common.js?v=1.0.2.7"></script>
+    <script type="text/javascript" src="https://decko.ceskatelevize.cz/cms/videa/js/videos.js?v=1.1.8"></script>
+    <script type="text/javascript" src="https://decko.ceskatelevize.cz/cms/program/js/schedule.js?v=0.0"></script>
+    <script type="text/javascript" src="https://decko.ceskatelevize.cz/cms/porady/js/programmes.js?v=1.0"></script>
+    <script type="text/javascript" src="https://decko.ceskatelevize.cz/cms/hry/js/games.js?v=2.0.01"></script>
+    <script type="text/javascript" src="https://decko.ceskatelevize.cz/cms/hry/js/flash-app.js?v=1.1"></script>
+    <script type="text/javascript" src="https://decko.ceskatelevize.cz/cms/common/js/dp-app.min.js"></script>
+    <script type="text/javascript" src="https://decko.ceskatelevize.cz/cms/common/js/forms/jquery.validate/1.11.1/jquery.validate.js"></script>
+    <script type="text/javascript" src="https://decko.ceskatelevize.cz/cms/common/js/forms/jquery.validate/1.11.1/additional-methods.js"></script>
+    <script type="text/javascript" src="https://decko.ceskatelevize.cz/cms/common/js/ie-end-of-support.min.js"></script>
+    <script type="text/javascript" src="https://decko.ceskatelevize.cz/cms/layouts/js/dp.js"></script>
+</head>
+<body>
+    <div class="background subpage games">
+        <div class="header">
+            <div class="header-content"><a class="logo" href="https://decko.ceskatelevize.cz/" title="Hlavní stránka ČT :D – dětský web Déčko"></a><a class="home" href="https://decko.ceskatelevize.cz/"></a>
+                <div class="header-menu">
+                    <ul class="menu mainMenu">
+                        <li><a class="hry active" href="https://decko.ceskatelevize.cz/hry">Hry</a></li>
+                        <li><a class="videa" href="https://decko.ceskatelevize.cz/videa">Videa</a></li>
+                        <li><a class="porady" href="https://decko.ceskatelevize.cz/porady">Pořady</a></li>
+                        <li><a class="extra" href="https://decko.ceskatelevize.cz/extra">Extra</a></li>
+                        <li><a class="zive" href="https://decko.ceskatelevize.cz/zive">Živě</a></li>
+                        <li><a class="program" href="https://decko.ceskatelevize.cz/program">Program</a></li>
+                        <li><a class="piskoviste" href="https://decko.ceskatelevize.cz/kouzelna-skolka">Pro nejmenší</a></li>
+                    </ul>
+                </div>
+                <div class="login"><a href="https://decko.ceskatelevize.cz/prihlasit" class="prihlasit">Přihlásit se</a>
+                    <script type="text/javascript">
+                        /* <![CDATA[ */
+                        $(".login a[href$='prihlasit']").click(function(event) {
+                            event.preventDefault();
+                            var skinParam = "";
+                            var queryString = "";
+
+                            if (skinParam) {
+                                queryString = "?" + skinParam;
+                            }
+                            $.colorbox({
+                                innerHeight: "440px",
+                                innerWidth: "980px",
+                                scrolling: false,
+                                href: "https://decko.ceskatelevize.cz/prihlasit" + queryString,
+                                closeButton: true,
+                                className: "login",
+                                iframe: true,
+                                onOpen: function() {
+                                    parent.$("iframe").css("visibility", "hidden");
+                                },
+                                onClosed: function() {
+                                    parent.$("iframe").css("visibility", "visible");
+                                }
+                            });
+                        });
+                        /* ]]> */
+                    </script>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            $("div.header .header-content a").click(function() {
+                var title = $(this).attr("class");
+                dpAnalytics.trackEvent(document.title, 'Main Header', title);
+            });
+            /* ]]> */
+        </script>
+        <div class="outer wrapper">
+            <div class="shadow wrapper">
+                <div class="wrapper">
+                    <h2 class="h2-vypis clr-hry2 fl-l">Hry</h2>
+                    <div class="filter-buttons fl-l">
+                        <a href="https://decko.ceskatelevize.cz/hry" class="all active"><span>Všechny hry</span></a>
+                        <a href="https://decko.ceskatelevize.cz/hry/pro-nejmensi" class="pro-nejmensi"><span>Hry pro nejmenší</span></a>
+                        <a href="https://decko.ceskatelevize.cz/hry/stare" class="stare"><span>Staré hry</span></a>
+                    </div><br />
+                    <div class="content hry list online">
+                        <div class="bigger">
+                            <div class="hra-detail box w1200">
+                                <div class="box-top"></div>
+                                <div class="box-content">
+                                    <h2>&nbsp;</h2><a class="hry stranka-poradu">Stránka pořadu</a><a class="googlePlay" target="_blank"></a><a class="appStore" target="_blank"></a>
+                                    <div class="iframe-container"><iframe class="hra" frameborder="0" scrolling="no"></iframe></div>
+                                </div>
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Hra 01</div>
+                                </div>
+                                <a class="frame" href="http://decko.ceskatelevize.cz/hry/kouzelny-vlacek"></a>
+                                <input value="/URL_button_enabled/02/?closeButtonEnabled=true" type="hidden" class="id" />
+                                <input value="Hra 01" type="hidden" class="title" />
+                                <img src="https://decko.ceskatelevize.cz/hry/kouzelny-vlacek/pkg/Poster__Poster280x158.png" alt="Kouzelný vláček" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Vrána k Vráně sedá</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/vrana-k-vrane-seda"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.vranakvraneseda" class="googlePlay" target="_blank"></a><a href="https://apps.apple.com/us/app/vr%C3%A1na-k-vr%C3%A1n%C4%9B-sed%C3%A1/id1486603699?ls=1" class="appStore" target="_blank"></a></div><input value="2611487" type="hidden" class="id" /><input value="Vrána k Vráně sedá" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/kriminalka-5c" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/kriminalka-5c" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.vranakvraneseda" type="hidden" class="googlePlayUrl" /><input value="https://apps.apple.com/us/app/vr%C3%A1na-k-vr%C3%A1n%C4%9B-sed%C3%A1/id1486603699?ls=1" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/hry/vrana-k-vrane-seda/pkg/Poster__Poster280x158.png" alt="Vrána k Vráně sedá" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div>KIV</div>
+                                </div><a href="https://decko.ceskatelevize.cz/karel" target="_blank" class="frame"></a><img src="https://decko.ceskatelevize.cz/cms/karel/poster/poster__Poster280x158.jpg" alt="KIV" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Pexeso Hola niños!</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/pexeso-hola-ninos"></a><input value="2621847" type="hidden" class="id" /><input value="Pexeso Hola niños!" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/hola-ninos" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/hola-ninos" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/hry/pexeso-hola-ninos/pkg/Poster__Poster280x158.png" alt="Pexeso Hola niños!" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title icon-knowledge">
+                                    <div>Pod rozkvetlou třešní</div>
+                                </div><a href="https://decko.ceskatelevize.cz/pod-rozkvetlou-tresni" target="_blank" class="frame"></a><img src="https://decko.ceskatelevize.cz/cms/pod-rozkvetlou-tresni/poster/poster__Poster280x158.jpg" alt="Pod rozkvetlou třešní" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Drakobijec</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/drakobijec"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.drakobijec" class="googlePlay" target="_blank"></a><a href="https://apps.apple.com/us/app/drakobijec/id1492102570?ls=1" class="appStore" target="_blank"></a></div><input value="2734077" type="hidden" class="id" /><input value="Drakobijec" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/princezna-a-pul-kralovstvi" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/princezna-a-pul-kralovstvi" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.drakobijec" type="hidden" class="googlePlayUrl" /><input value="https://apps.apple.com/us/app/drakobijec/id1492102570?ls=1" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/hry/drakobijec/pkg/Poster__Poster280x158.png" alt="Drakobijec" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Hubertův rok</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/s-hubertem-do-lesa/hubertuv-rok"></a><input value="2655501" type="hidden" class="id" /><input value="Hubertův rok" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/s-hubertem-do-lesa" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/s-hubertem-do-lesa" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/s-hubertem-do-lesa/hubertuv-rok/pkg/Poster__Poster280x158.png" alt="Hubertův rok" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Plyšáci!</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/plysaci"></a><input value="2659971" type="hidden" class="id" /><input value="Plyšáci!" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/plysaci/pkg/Poster__Poster280x158.png" alt="Plyšáci!" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div>Duch minulosti</div>
+                                </div><a href="https://decko.ceskatelevize.cz/duch-minulosti" target="_blank" class="frame"></a><img src="https://decko.ceskatelevize.cz/cms/duch-minulosti/poster/poster__Poster280x158.jpg" alt="Duch minulosti" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Vánoce ve Zvěřinci</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/tercin-zvireci-svet/vanoce-ve-zverinci"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.zverinecvanocni2019" class="googlePlay" target="_blank"></a></div><input value="37996" type="hidden" class="id" /><input value="Vánoce ve Zvěřinci" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/tercin-zvireci-svet" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/tercin-zvireci-svet" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.zverinecvanocni2019" type="hidden" class="googlePlayUrl" /><img src="https://decko.ceskatelevize.cz/tercin-zvireci-svet/vanoce-ve-zverinci/pkg/Poster__Poster280x158.png" alt="Vánoce ve Zvěřinci" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Dobrodružství v Rudolfinu</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/dobrodruzstvi-v-rudolfinu"></a><input value="2645244" type="hidden" class="id" /><input value="Dobrodružství v Rudolfinu" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/dobrodruzstvi-s-orchestrem" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/dobrodruzstvi-s-orchestrem" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/hry/dobrodruzstvi-v-rudolfinu/pkg/Poster__Poster280x158.png" alt="Dobrodružství v Rudolfinu" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Hádej, špunte!</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/hadej-spunte"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.hadejspunte" class="googlePlay" target="_blank"></a><a href="https://apps.apple.com/us/app/h%C3%A1dej-%C5%A1punte/id1489621471?l=cs&amp;ls=1" class="appStore" target="_blank"></a></div><input value="2641525" type="hidden" class="id" /><input value="Hádej, špunte!" type="hidden" class="title" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.hadejspunte" type="hidden" class="googlePlayUrl" /><input value="https://apps.apple.com/us/app/h%C3%A1dej-%C5%A1punte/id1489621471?l=cs&amp;ls=1" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/hry/hadej-spunte/pkg/Poster__Poster280x158.png" alt="Hádej, špunte!" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Mozkovna</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/mozkovna"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.mozkovna" class="googlePlay" target="_blank"></a><a href="https://apps.apple.com/us/app/déčko-mozkovna/id1489285234?l=cs&amp;ls=1" class="appStore" target="_blank"></a></div><input value="2637669" type="hidden" class="id" /><input value="Mozkovna" type="hidden" class="title" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.mozkovna" type="hidden" class="googlePlayUrl" /><input value="https://apps.apple.com/us/app/déčko-mozkovna/id1489285234?l=cs&amp;ls=1" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/hry/mozkovna/pkg/Poster__Poster280x158.png" alt="Mozkovna" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Říkanky paní Zimy</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/rikanky-pani-zimy"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.rikankypanizimy" class="googlePlay" target="_blank"></a><a href="https://apps.apple.com/us/app/%C5%99%C3%ADkanky-pan%C3%AD-zimy/id1492435111?ls=1" class="appStore" target="_blank"></a></div><input value="2734195" type="hidden" class="id" /><input value="Říkanky paní Zimy" type="hidden" class="title" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.rikankypanizimy" type="hidden" class="googlePlayUrl" /><input value="https://apps.apple.com/us/app/%C5%99%C3%ADkanky-pan%C3%AD-zimy/id1492435111?ls=1" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/hry/rikanky-pani-zimy/pkg/Poster__Poster280x158.png" alt="Říkanky paní Zimy" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Rozbité zrcadlo</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/rozbite-zrcadlo"></a><input value="2671699" type="hidden" class="id" /><input value="Rozbité zrcadlo" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/carovny-kaminek" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/carovny-kaminek" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/hry/rozbite-zrcadlo/pkg/Poster__Poster280x158.png" alt="Rozbité zrcadlo" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="knowledge">Pohádkový kvíz</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/pohadkovykviz"></a><input value="2674289" type="hidden" class="id" /><input value="Pohádkový kvíz" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/pohadkovykviz/pkg/Poster__Poster280x158.png" alt="Pohádkový kvíz" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Kapela snů</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/kapela-snu"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.kapelasnu" class="googlePlay" target="_blank"></a><a href="https://apps.apple.com/us/app/kapela-snů/id1478391939" class="appStore" target="_blank"></a></div><input value="2519004" type="hidden" class="id" /><input value="Kapela snů" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/petka-z-garaze" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/petka-z-garaze" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.kapelasnu" type="hidden" class="googlePlayUrl" /><input value="https://apps.apple.com/us/app/kapela-snů/id1478391939" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/hry/kapela-snu/pkg/Poster__Poster280x158.png" alt="Kapela snů" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="knowledge">Kvíz: DOSVĚTA</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/dosveta-kviz"></a><input value="2610063" type="hidden" class="id" /><input value="Kvíz: DOSVĚTA" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/dosveta-kviz/pkg/Poster__Poster280x158.png" alt="Kvíz: DOSVĚTA" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="knowledge">Karaoke čtení - Kvíz</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/karaoke-cteni-kviz"></a><input value="2601423" type="hidden" class="id" /><input value="Karaoke čtení - Kvíz" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/karaoke-cteni" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/karaoke-cteni" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/hry/karaoke-cteni-kviz/pkg/Poster__Poster280x158.png" alt="Karaoke čtení - Kvíz" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Bzzz!</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/bzzz-hra"></a><input value="2367181" type="hidden" class="id" /><input value="Bzzz!" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/bzzz-hra/pkg/Poster__Poster280x158.png" alt="Bzzz!" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">HmyzoLab</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/hmyzolab"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.hmyzolab&amp;rdid=cz.ceskatelevize.hmyzolab" class="googlePlay" target="_blank"></a><a href="https://apps.apple.com/us/app/hmyzolab/id1470077884?ls=1" class="appStore" target="_blank"></a></div><input value="2361597" type="hidden" class="id" /><input value="HmyzoLab" type="hidden" class="title" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.hmyzolab&amp;rdid=cz.ceskatelevize.hmyzolab" type="hidden" class="googlePlayUrl" /><input value="https://apps.apple.com/us/app/hmyzolab/id1470077884?ls=1" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/hry/hmyzolab/pkg/Poster__Poster280x158.png" alt="HmyzoLab" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">AZ kvíz junior</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/az-kviz-junior/az-kviz-junior"></a><input value="1368167" type="hidden" class="id" /><input value="AZ kvíz junior" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/az-kviz-junior" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/az-kviz-junior" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/az-kviz-junior/az-kviz-junior/pkg/Poster__Poster280x158.png" alt="AZ kvíz junior" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Zvěřinec</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/tercin-zvireci-svet/zverinec"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.zverinec" class="googlePlay" target="_blank"></a><a href="https://apps.apple.com/us/app/zvěřinec-pet-doctor/id1477466205" class="appStore" target="_blank"></a></div><input value="187" type="hidden" class="id" /><input value="Zvěřinec" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/tercin-zvireci-svet" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/tercin-zvireci-svet" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.zverinec" type="hidden" class="googlePlayUrl" /><input value="https://apps.apple.com/us/app/zvěřinec-pet-doctor/id1477466205" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/tercin-zvireci-svet/zverinec/pkg/Poster__Poster280x158.png" alt="Zvěřinec" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">3Déčko Rallye</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/3decko-rallye"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.trideckorallye" class="googlePlay" target="_blank"></a><a href="https://itunes.apple.com/us/app/3d%C3%A9%C4%8Dko-rallye/id1459265957?ls=1&amp;mt=8" class="appStore" target="_blank"></a></div><input value="2189091" type="hidden" class="id" /><input value="3Déčko Rallye" type="hidden" class="title" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.trideckorallye" type="hidden" class="googlePlayUrl" /><input value="https://itunes.apple.com/us/app/3d%C3%A9%C4%8Dko-rallye/id1459265957?ls=1&amp;mt=8" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/hry/3decko-rallye/pkg/Poster__Poster280x158.png" alt="3Déčko Rallye" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Frnky frnk!</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/frnk-z-hnizda/frnky-frnk"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.frnkyfrnk" class="googlePlay" target="_blank"></a><a href="https://itunes.apple.com/us/app/frnky-frnk/id1459741836?l=cs&amp;ls=1&amp;mt=8" class="appStore" target="_blank"></a></div><input value="2192168" type="hidden" class="id" /><input value="Frnky frnk!" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/frnk-z-hnizda" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/frnk-z-hnizda" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.frnkyfrnk" type="hidden" class="googlePlayUrl" /><input value="https://itunes.apple.com/us/app/frnky-frnk/id1459741836?l=cs&amp;ls=1&amp;mt=8" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/frnk-z-hnizda/frnky-frnk/pkg/Poster__Poster280x158.png" alt="Frnky frnk!" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Kvízonauti</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/uz-tam-budem/kvizonauti"></a><input value="2147807" type="hidden" class="id" /><input value="Kvízonauti" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/uz-tam-budem" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/uz-tam-budem" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/uz-tam-budem/kvizonauti/pkg/Poster__Poster280x158.png" alt="Kvízonauti" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">V Galerii</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/v-galerii"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.vgalerii" class="googlePlay" target="_blank"></a></div><input value="2615575" type="hidden" class="id" /><input value="V Galerii" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/skobiciny" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/skobiciny" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.vgalerii" type="hidden" class="googlePlayUrl" /><img src="https://decko.ceskatelevize.cz/hry/v-galerii/pkg/Poster__Poster280x158.png" alt="V Galerii" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Anča a Pepík: To nebude hračka</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/anca-a-pepik/anca-pepik-to-nebude-hracka"></a><input value="1589075" type="hidden" class="id" /><input value="Anča a Pepík: To nebude hračka" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/anca-a-pepik" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/anca-a-pepik" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/anca-a-pepik/anca-pepik-to-nebude-hracka/pkg/Poster__Poster280x158.png" alt="Anča a Pepík: To nebude hračka" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Anča a Pepík v Čarovném lese</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/anca-a-pepik/anca-pepik-carovny-les"></a><input value="1284648" type="hidden" class="id" /><input value="Anča a Pepík v Čarovném lese" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/anca-a-pepik" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/anca-a-pepik" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/anca-a-pepik/anca-pepik-carovny-les/pkg/Poster__Poster280x158.png" alt="Anča a Pepík v Čarovném lese" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Písmenkové safari</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/africka-abeceda/pismenkove-safari"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.pismenkovesafari" class="googlePlay" target="_blank"></a><a href="https://itunes.apple.com/us/app/p%C3%ADsmenkov%C3%A9-safari/id1460126378?ls=1&amp;mt=8" class="appStore" target="_blank"></a></div><input value="2191334" type="hidden" class="id" /><input value="Písmenkové safari" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/africka-abeceda" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/africka-abeceda" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.pismenkovesafari" type="hidden" class="googlePlayUrl" /><input value="https://itunes.apple.com/us/app/p%C3%ADsmenkov%C3%A9-safari/id1460126378?ls=1&amp;mt=8" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/africka-abeceda/pismenkove-safari/pkg/Poster__Poster280x158.png" alt="Písmenkové safari" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="knowledge">Dějepic – kvíz</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/dejepic/dejepic-kviz"></a><input value="1501957" type="hidden" class="id" /><input value="Dějepic – kvíz" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/dejepic" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/dejepic" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/dejepic/dejepic-kviz/pkg/Poster__Poster280x158.png" alt="Dějepic – kvíz" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Kutej, špunte!</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/kutej-spunte"></a><input value="1409936" type="hidden" class="id" /><input value="Kutej, špunte!" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/kutej-spunte/pkg/Poster__Poster280x158.png" alt="Kutej, špunte!" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Lvíčata na sněhu</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/lvicata/lvicata-kviz"></a><input value="2100188" type="hidden" class="id" /><input value="Lvíčata na sněhu" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/lvicata" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/lvicata" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/lvicata/lvicata-kviz/pkg/Poster__Poster280x158.png" alt="Lvíčata na sněhu" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Skautská šifra</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/skautska-posta/skautska-sifra"></a><input value="2097972" type="hidden" class="id" /><input value="Skautská šifra" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/skautska-posta" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/skautska-posta" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/skautska-posta/skautska-sifra/pkg/Poster__Poster280x158.png" alt="Skautská šifra" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">StarDance: Hoď se do gala</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/stardance-hod-se-do-gala"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.stardancehodsedogala" class="googlePlay" target="_blank"></a><a href="https://itunes.apple.com/us/app/stardance-ho%C4%8F-se-do-gala/id1446877415?ls=1&amp;mt=8" class="appStore" target="_blank"></a></div><input value="2074339" type="hidden" class="id" /><input value="StarDance: Hoď se do gala" type="hidden" class="title" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.stardancehodsedogala" type="hidden" class="googlePlayUrl" /><input value="https://itunes.apple.com/us/app/stardance-ho%C4%8F-se-do-gala/id1446877415?ls=1&amp;mt=8" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/hry/stardance-hod-se-do-gala/pkg/Poster__Poster280x158.png" alt="StarDance: Hoď se do gala" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Mitzi und Maus</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/mitzi-und-maus"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.mitziundmaus" class="googlePlay" target="_blank"></a><a href="https://apps.apple.com/us/app/mitzi-und-maus/id1478888423?l=cs&amp;ls=1" class="appStore" target="_blank"></a></div><input value="2518999" type="hidden" class="id" /><input value="Mitzi und Maus" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/nemcina-s-mitzi-a-maus" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/nemcina-s-mitzi-a-maus" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.mitziundmaus" type="hidden" class="googlePlayUrl" /><input value="https://apps.apple.com/us/app/mitzi-und-maus/id1478888423?l=cs&amp;ls=1" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/hry/mitzi-und-maus/pkg/Poster__Poster280x158.png" alt="Mitzi und Maus" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Jedno čertované</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/certi-brko/jedno-certovane"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.jednocertovane" class="googlePlay" target="_blank"></a><a href="https://itunes.apple.com/us/app/jedno-%C4%8Dertovan%C3%A9/id1446023171?ls=1&amp;mt=8" class="appStore" target="_blank"></a></div><input value="2045930" type="hidden" class="id" /><input value="Jedno čertované" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/certi-brko" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/certi-brko" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.jednocertovane" type="hidden" class="googlePlayUrl" /><input value="https://itunes.apple.com/us/app/jedno-%C4%8Dertovan%C3%A9/id1446023171?ls=1&amp;mt=8" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/certi-brko/jedno-certovane/pkg/Poster__Poster280x158.png" alt="Jedno čertované" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Hvězdičky</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hvezdicky/hvezdicky"></a><input value="2016972" type="hidden" class="id" /><input value="Hvězdičky" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/hvezdicky" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/hvezdicky" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/hvezdicky/hvezdicky/pkg/Poster__Poster280x158.png" alt="Hvězdičky" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Za devatero sněhuláky</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/za-devatero-snehulaky"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.zadevaterosnehulaky" class="googlePlay" target="_blank"></a><a href="https://itunes.apple.com/us/app/za-devatero-sn%C4%9Bhul%C3%A1ky/id1443560971?ls=1&amp;mt=8" class="appStore" target="_blank"></a></div><input value="2016575" type="hidden" class="id" /><input value="Za devatero sněhuláky" type="hidden" class="title" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.zadevaterosnehulaky" type="hidden" class="googlePlayUrl" /><input value="https://itunes.apple.com/us/app/za-devatero-sn%C4%9Bhul%C3%A1ky/id1443560971?ls=1&amp;mt=8" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/hry/za-devatero-snehulaky/pkg/Poster__Poster280x158.png" alt="Za devatero sněhuláky" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Za devatero horami</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/za-devatero-horami"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.zadevaterohorami" class="googlePlay" target="_blank"></a><a href="https://itunes.apple.com/us/app/za-devatero-horami/id1436170778?ls=1&amp;mt=8" class="appStore" target="_blank"></a></div><input value="1815639" type="hidden" class="id" /><input value="Za devatero horami" type="hidden" class="title" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.zadevaterohorami" type="hidden" class="googlePlayUrl" /><input value="https://itunes.apple.com/us/app/za-devatero-horami/id1436170778?ls=1&amp;mt=8" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/hry/za-devatero-horami/pkg/Poster__Poster280x158.png" alt="Za devatero horami" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Barevná zima</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/barevna-zima"></a><input value="2028396" type="hidden" class="id" /><input value="Barevná zima" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/barevna-zima/pkg/Poster__Poster280x158.png" alt="Barevná zima" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Saky paky</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/saky-paky"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.sakypaky" class="googlePlay" target="_blank"></a><a href="https://apps.apple.com/us/app/saky-paky/id991299618?ls=1" class="appStore" target="_blank"></a></div><input value="420453" type="hidden" class="id" /><input value="Saky paky" type="hidden" class="title" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.sakypaky" type="hidden" class="googlePlayUrl" /><input value="https://apps.apple.com/us/app/saky-paky/id991299618?ls=1" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/hry/saky-paky/pkg/Poster__Poster280x158.png" alt="Saky paky" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">TGM: Tryskem k republice</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/tgm-tryskem-k-republice"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.tgm" class="googlePlay" target="_blank"></a><a href="https://itunes.apple.com/us/app/tgm-tryskem-k-republice/id1439904612?l=cs&amp;ls=1&amp;mt=8" class="appStore" target="_blank"></a></div><input value="2000519" type="hidden" class="id" /><input value="TGM: Tryskem k republice" type="hidden" class="title" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.tgm" type="hidden" class="googlePlayUrl" /><input value="https://itunes.apple.com/us/app/tgm-tryskem-k-republice/id1439904612?l=cs&amp;ls=1&amp;mt=8" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/hry/tgm-tryskem-k-republice/pkg/Poster__Poster280x158.png" alt="TGM: Tryskem k republice" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Ahoj, republiko! - kvíz</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/ahoj-republiko/ahoj-republiko-kviz"></a><input value="1997375" type="hidden" class="id" /><input value="Ahoj, republiko! - kvíz" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/ahoj-republiko" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/ahoj-republiko" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/ahoj-republiko/ahoj-republiko-kviz/pkg/Poster__Poster280x158.png" alt="Ahoj, republiko! - kvíz" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Nakrm Karla</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/tercin-zvireci-svet/nakrm-karla"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.nakrmkarlagame" class="googlePlay" target="_blank"></a><a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1363092580&amp;mt=8" class="appStore" target="_blank"></a></div><input value="1694350" type="hidden" class="id" /><input value="Nakrm Karla" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/tercin-zvireci-svet" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/tercin-zvireci-svet" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.nakrmkarlagame" type="hidden" class="googlePlayUrl" /><input value="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1363092580&amp;mt=8" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/tercin-zvireci-svet/nakrm-karla/pkg/Poster__Poster280x158.png" alt="Nakrm Karla" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Nakrm Růženku</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/tercin-zvireci-svet/nakrm-ruzenku"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.nakrmruzenku" class="googlePlay" target="_blank"></a><a href="https://itunes.apple.com/us/app/nakrm-r%C5%AF%C5%BEenku/id1445667811?ls=1&amp;mt=8" class="appStore" target="_blank"></a></div><input value="2045097" type="hidden" class="id" /><input value="Nakrm Růženku" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/tercin-zvireci-svet" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/tercin-zvireci-svet" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.nakrmruzenku" type="hidden" class="googlePlayUrl" /><input value="https://itunes.apple.com/us/app/nakrm-r%C5%AF%C5%BEenku/id1445667811?ls=1&amp;mt=8" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/tercin-zvireci-svet/nakrm-ruzenku/pkg/Poster__Poster280x158.png" alt="Nakrm Růženku" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Pexeso: Dr. Žako</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/dr-zako/pexeso-dr-zako"></a><input value="1986040" type="hidden" class="id" /><input value="Pexeso: Dr. Žako" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/dr-zako" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/dr-zako" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/dr-zako/pexeso-dr-zako/pkg/Poster__Poster280x158.png" alt="Pexeso: Dr. Žako" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Maťáci v nebezpečí</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/kaja-a-mat-ema-tika/mataci-v-nebezpeci"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.matacivnebezpeci" class="googlePlay" target="_blank"></a><a href="https://itunes.apple.com/us/app/ma%C5%A5%C3%A1ci-v-nebezpe%C4%8D%C3%AD/id1435506043?l=cs&amp;ls=1&amp;mt=8" class="appStore" target="_blank"></a></div><input value="1887765" type="hidden" class="id" /><input value="Maťáci v nebezpečí" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/kaja-a-mat-ema-tika" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/kaja-a-mat-ema-tika" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.matacivnebezpeci" type="hidden" class="googlePlayUrl" /><input value="https://itunes.apple.com/us/app/ma%C5%A5%C3%A1ci-v-nebezpe%C4%8D%C3%AD/id1435506043?l=cs&amp;ls=1&amp;mt=8" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/kaja-a-mat-ema-tika/mataci-v-nebezpeci/pkg/Poster__Poster280x158.png" alt="Maťáci v nebezpečí" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Kouzelník Žito</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/kouzelnik-zito/kouzelnik-zito"></a><input value="2100650" type="hidden" class="id" /><input value="Kouzelník Žito" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/kouzelnik-zito" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/kouzelnik-zito" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/kouzelnik-zito/kouzelnik-zito/pkg/Poster__Poster280x158.png" alt="Kouzelník Žito" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Poštovní auto</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/michalova-doprava/postovni-auto"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.postovniauto" class="googlePlay" target="_blank"></a><a href="https://apps.apple.com/us/app/poštovní-auto/id1463388238?l=cs&amp;ls=1" class="appStore" target="_blank"></a></div><input value="933355" type="hidden" class="id" /><input value="Poštovní auto" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/michalova-doprava" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/michalova-doprava" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.postovniauto" type="hidden" class="googlePlayUrl" /><input value="https://apps.apple.com/us/app/poštovní-auto/id1463388238?l=cs&amp;ls=1" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/michalova-doprava/postovni-auto/pkg/Poster__Poster280x158.png" alt="Poštovní auto" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="knowledge">Balónky</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/abecede-s-michalem/balonky"></a><input value="27" type="hidden" class="id" /><input value="Balónky" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/abecede-s-michalem" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/abecede-s-michalem" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/abecede-s-michalem/balonky/pkg/Poster__Poster280x158.png" alt="Balónky" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="knowledge">Písmenkový vláček</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/abecede-s-michalem/pismenkovy-vlacek"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.pismenkovyvlacek" class="googlePlay" target="_blank"></a></div><input value="35" type="hidden" class="id" /><input value="Písmenkový vláček" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/abecede-s-michalem" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/abecede-s-michalem" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.pismenkovyvlacek" type="hidden" class="googlePlayUrl" /><img src="https://decko.ceskatelevize.cz/abecede-s-michalem/pismenkovy-vlacek/pkg/Poster__Poster280x158.png" alt="Písmenkový vláček" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="knowledge">Kouzelný klobouk</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/abecede-s-michalem/kouzelny-klobouk"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.kouzelnyklobouk" class="googlePlay" target="_blank"></a></div><input value="31" type="hidden" class="id" /><input value="Kouzelný klobouk" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/abecede-s-michalem" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/abecede-s-michalem" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.kouzelnyklobouk" type="hidden" class="googlePlayUrl" /><img src="https://decko.ceskatelevize.cz/abecede-s-michalem/kouzelny-klobouk/pkg/Poster__Poster280x158.png" alt="Kouzelný klobouk" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Večerníčku, hop!</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/vecernicku-hop"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.vecernickuhop" class="googlePlay" target="_blank"></a><a href="https://itunes.apple.com/us/app/ve%C4%8Dern%C3%AD%C4%8Dku-hop/id1467178897?l=cs&amp;ls=1&amp;mt=8" class="appStore" target="_blank"></a></div><input value="420425" type="hidden" class="id" /><input value="Večerníčku, hop!" type="hidden" class="title" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.vecernickuhop" type="hidden" class="googlePlayUrl" /><input value="https://itunes.apple.com/us/app/ve%C4%8Dern%C3%AD%C4%8Dku-hop/id1467178897?l=cs&amp;ls=1&amp;mt=8" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/hry/vecernicku-hop/pkg/Poster__Poster280x158.png" alt="Večerníčku, hop!" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Večerníčkovo pexeso</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/vecernickovo-pexeso"></a><input value="167" type="hidden" class="id" /><input value="Večerníčkovo pexeso" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/vecernickovo-pexeso/pkg/Poster__Poster280x158.png" alt="Večerníčkovo pexeso" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">S marabu na babu</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/tarbici/s-marabu-na-babu"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.smarabunababu" class="googlePlay" target="_blank"></a></div><input value="1808471" type="hidden" class="id" /><input value="S marabu na babu" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/tarbici" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/tarbici" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.smarabunababu" type="hidden" class="googlePlayUrl" /><img src="https://decko.ceskatelevize.cz/tarbici/s-marabu-na-babu/pkg/Poster__Poster280x158.png" alt="S marabu na babu" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Trefovaná</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/trefovana"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.decko.trefovana" class="googlePlay" target="_blank"></a><a href="https://itunes.apple.com/us/app/trefovan%C3%A1/id992484797?l=cs&amp;ls=1&amp;mt=8" class="appStore" target="_blank"></a></div><input value="420559" type="hidden" class="id" /><input value="Trefovaná" type="hidden" class="title" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.decko.trefovana" type="hidden" class="googlePlayUrl" /><input value="https://itunes.apple.com/us/app/trefovan%C3%A1/id992484797?l=cs&amp;ls=1&amp;mt=8" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/hry/trefovana/pkg/Poster__Poster280x158.png" alt="Trefovaná" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Michalovy nálady</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/michalovy-nalady/michalovy-nalady"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.michalovynalady" class="googlePlay" target="_blank"></a><a href="https://itunes.apple.com/us/app/michalovy-n%C3%A1lady/id1372033688?mt=8&amp;ign-mpt=uo%3D4" class="appStore" target="_blank"></a></div><input value="1720838" type="hidden" class="id" /><input value="Michalovy nálady" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/michalovy-nalady" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/michalovy-nalady" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.michalovynalady" type="hidden" class="googlePlayUrl" /><input value="https://itunes.apple.com/us/app/michalovy-n%C3%A1lady/id1372033688?mt=8&amp;ign-mpt=uo%3D4" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/michalovy-nalady/michalovy-nalady/pkg/Poster__Poster280x158.png" alt="Michalovy nálady" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Boj o Hrad</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/boj-o-hrad"></a><input value="1660619" type="hidden" class="id" /><input value="Boj o Hrad" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/boj-o-hrad/pkg/Poster__Poster280x158.png" alt="Boj o Hrad" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Puzzle: Ovečky a špunti</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/puzzle-ovecky-a-spunti"></a><input value="1729381" type="hidden" class="id" /><input value="Puzzle: Ovečky a špunti" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/puzzle-ovecky-a-spunti/pkg/Poster__Poster280x158.png" alt="Puzzle: Ovečky a špunti" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Déčko pexeso</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/pexeso-na-funpage"></a><input value="1729406" type="hidden" class="id" /><input value="Déčko pexeso" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/pexeso-na-funpage/pkg/Poster__Poster280x158.png" alt="Déčko pexeso" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Bankovkovi: Cesta za pokladem</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/bankovkovi/bankovkovi-cesta-za-pokladem"></a><input value="1346931" type="hidden" class="id" /><input value="Bankovkovi: Cesta za pokladem" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/bankovkovi" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/bankovkovi" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/bankovkovi/bankovkovi-cesta-za-pokladem/pkg/Poster__Poster280x158.png" alt="Bankovkovi: Cesta za pokladem" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Bankovkovi: Jarní úklid</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/bankovkovi/bankovkovi-jarni-uklid"></a><input value="1690142" type="hidden" class="id" /><input value="Bankovkovi: Jarní úklid" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/bankovkovi" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/bankovkovi" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/bankovkovi/bankovkovi-jarni-uklid/pkg/Poster__Poster280x158.png" alt="Bankovkovi: Jarní úklid" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Frnkni z hnízda</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/frnk-z-hnizda/frnkni-z-hnizda"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.frnknizhnizdagame" class="googlePlay" target="_blank"></a><a href="https://itunes.apple.com/us/app/frnkni-z-hn%C3%ADzda/id1363124561?l=cs&amp;ls=1&amp;mt=8" class="appStore" target="_blank"></a></div><input value="1696338" type="hidden" class="id" /><input value="Frnkni z hnízda" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/frnk-z-hnizda" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/frnk-z-hnizda" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.frnknizhnizdagame" type="hidden" class="googlePlayUrl" /><input value="https://itunes.apple.com/us/app/frnkni-z-hn%C3%ADzda/id1363124561?l=cs&amp;ls=1&amp;mt=8" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/frnk-z-hnizda/frnkni-z-hnizda/pkg/Poster__Poster280x158.png" alt="Frnkni z hnízda" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Ty Brďo: Koulovačka!</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/ty-brdo/ty-brdo-koulovacka"></a><input value="1612700" type="hidden" class="id" /><input value="Ty Brďo: Koulovačka!" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/ty-brdo" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/ty-brdo" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/ty-brdo/ty-brdo-koulovacka/pkg/Poster__Poster280x158.png" alt="Ty Brďo: Koulovačka!" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Kouzelný domeček</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/kouzelna-skolka/kouzelny-domecek"></a><input value="1633294" type="hidden" class="id" /><input value="Kouzelný domeček" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/kouzelna-skolka" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/kouzelna-skolka" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/kouzelna-skolka/kouzelny-domecek/pkg/Poster__Poster280x158.png" alt="Kouzelný domeček" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="knowledge">Ovce hladce obrace</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/ovce-hladce-obrace-advent2017"></a><input value="1540238" type="hidden" class="id" /><input value="Ovce hladce obrace" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/ovce-hladce-obrace-advent2017/pkg/Poster__Poster280x158.png" alt="Ovce hladce obrace" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Jablko padání</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/andel-pane-2/jablko-padani"></a><input value="1638346" type="hidden" class="id" /><input value="Jablko padání" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/andel-pane-2" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/andel-pane-2" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/andel-pane-2/jablko-padani/pkg/Poster__Poster280x158.png" alt="Jablko padání" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Nejlepší přítel</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/nejlepsi-pritel/nejlepsi-pritel"></a><input value="1636680" type="hidden" class="id" /><input value="Nejlepší přítel" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/nejlepsi-pritel" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/nejlepsi-pritel" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/nejlepsi-pritel/nejlepsi-pritel/pkg/Poster__Poster280x158.png" alt="Nejlepší přítel" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="knowledge">Déčkotéka</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/cteni-do-ouska/deckoteka"></a><input value="1597547" type="hidden" class="id" /><input value="Déčkotéka" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/cteni-do-ouska" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/cteni-do-ouska" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/cteni-do-ouska/deckoteka/pkg/Poster__Poster280x158.png" alt="Déčkotéka" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Puzzle: Anděl Páně 2</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/andel-pane-2/puzzle-andel-pane"></a><input value="1576684" type="hidden" class="id" /><input value="Puzzle: Anděl Páně 2" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/andel-pane-2" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/andel-pane-2" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/andel-pane-2/puzzle-andel-pane/pkg/Poster__Poster280x158.png" alt="Puzzle: Anděl Páně 2" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Puzzle: Šmoulové</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/smoulove/puzzle-smoulove"></a><input value="1240122" type="hidden" class="id" /><input value="Puzzle: Šmoulové" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/smoulove" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/smoulove" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/smoulove/puzzle-smoulove/pkg/Poster__Poster280x158.png" alt="Puzzle: Šmoulové" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Puzzle: StarDance 2015</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/puzzle-stardance-2015"></a><input value="715635" type="hidden" class="id" /><input value="Puzzle: StarDance 2015" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/puzzle-stardance-2015/pkg/Poster__Poster280x158.png" alt="Puzzle: StarDance 2015" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Mazalové: Zmatek na hradě</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/mazalove/mazalove-zmatek-na-hrade"></a><input value="1516394" type="hidden" class="id" /><input value="Mazalové: Zmatek na hradě" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/mazalove" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/mazalove" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/mazalove/mazalove-zmatek-na-hrade/pkg/Poster__Poster280x158.png" alt="Mazalové: Zmatek na hradě" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Rytířský turnaj</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/korunni-princ/rytirsky-turnaj-advent2015"></a><input value="854274" type="hidden" class="id" /><input value="Rytířský turnaj" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/korunni-princ" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/korunni-princ" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/korunni-princ/rytirsky-turnaj-advent2015/pkg/Poster__Poster280x158.png" alt="Rytířský turnaj" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Pro slepičí kvoč</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/pro-slepici-kvoc"></a><input value="1690158" type="hidden" class="id" /><input value="Pro slepičí kvoč" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/pro-slepici-kvoc/pkg/Poster__Poster280x158.png" alt="Pro slepičí kvoč" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Čau Bambini: Pizza</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/cau-bambini/cau-bambini-pizza"></a><input value="1502146" type="hidden" class="id" /><input value="Čau Bambini: Pizza" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/cau-bambini" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/cau-bambini" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/cau-bambini/cau-bambini-pizza/pkg/Poster__Poster280x158.png" alt="Čau Bambini: Pizza" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="knowledge">Hudební kolotoč</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hudebni-perlicky/hudebni-kolotoc"></a><input value="1513099" type="hidden" class="id" /><input value="Hudební kolotoč" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/hudebni-perlicky" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/hudebni-perlicky" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/hudebni-perlicky/hudebni-kolotoc/pkg/Poster__Poster280x158.png" alt="Hudební kolotoč" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="knowledge">Hudební perličky - kvíz</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hudebni-perlicky/hudebni-perlicky-kviz"></a><input value="1501926" type="hidden" class="id" /><input value="Hudební perličky - kvíz" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/hudebni-perlicky" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/hudebni-perlicky" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/hudebni-perlicky/hudebni-perlicky-kviz/pkg/Poster__Poster280x158.png" alt="Hudební perličky - kvíz" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Ztracená reportáž</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/ztracena-reportaz"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.ztracenareportaz" class="googlePlay" target="_blank"></a><a href="https://itunes.apple.com/us/app/ztracen%C3%A1-report%C3%A1%C5%BE/id1459693294?l=cs&amp;ls=1&amp;mt=8" class="appStore" target="_blank"></a></div><input value="2192161" type="hidden" class="id" /><input value="Ztracená reportáž" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/kokoskovi-na-cestach" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/kokoskovi-na-cestach" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.ztracenareportaz" type="hidden" class="googlePlayUrl" /><input value="https://itunes.apple.com/us/app/ztracen%C3%A1-report%C3%A1%C5%BE/id1459693294?l=cs&amp;ls=1&amp;mt=8" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/hry/ztracena-reportaz/pkg/Poster__Poster280x158.png" alt="Ztracená reportáž" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">MiniUniGolf</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/tvminiuni/mini-uni-golf"></a><input value="837587" type="hidden" class="id" /><input value="MiniUniGolf" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/tvminiuni" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/tvminiuni" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/tvminiuni/mini-uni-golf/pkg/Poster__Poster280x158.png" alt="MiniUniGolf" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Kde je?</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/ovecka-shaun/kde-je-ovecka-shaun"></a><input value="1421167" type="hidden" class="id" /><input value="Kde je?" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/ovecka-shaun" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/ovecka-shaun" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/ovecka-shaun/kde-je-ovecka-shaun/pkg/Poster__Poster280x158.png" alt="Kde je?" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Kde je (v zimě)?</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/ovecka-shaun/kde-je-ovecka-shaun-vanoce"></a><input value="1552828" type="hidden" class="id" /><input value="Kde je (v zimě)?" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/ovecka-shaun" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/ovecka-shaun" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/ovecka-shaun/kde-je-ovecka-shaun-vanoce/pkg/Poster__Poster280x158.png" alt="Kde je (v zimě)?" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Ukradená vlajka</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/ukradena-vlajka"></a><input value="1373340" type="hidden" class="id" /><input value="Ukradená vlajka" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/ukradena-vlajka/pkg/Poster__Poster280x158.png" alt="Ukradená vlajka" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Kouzelný básničkomat</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/kouzelna-skolka/kouzelny-basnickomat"></a><input value="1284639" type="hidden" class="id" /><input value="Kouzelný básničkomat" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/kouzelna-skolka" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/kouzelna-skolka" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/kouzelna-skolka/kouzelny-basnickomat/pkg/Poster__Poster280x158.png" alt="Kouzelný básničkomat" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Najdi rozdíly</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/smoulove/najdi-rozdily-smoulove"></a><input value="1251318" type="hidden" class="id" /><input value="Najdi rozdíly" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/smoulove" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/smoulove" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/smoulove/najdi-rozdily-smoulove/pkg/Poster__Poster280x158.png" alt="Najdi rozdíly" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Šmoulí pexeso</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/smoulove/smouli-pexeso"></a><input value="1242886" type="hidden" class="id" /><input value="Šmoulí pexeso" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/smoulove" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/smoulove" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/smoulove/smouli-pexeso/pkg/Poster__Poster280x158.png" alt="Šmoulí pexeso" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Špunti na sněhu</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/spunti-na-snehu"></a><input value="1614148" type="hidden" class="id" /><input value="Špunti na sněhu" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/spunti-na-snehu/pkg/Poster__Poster280x158.png" alt="Špunti na sněhu" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Chytání vajec</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/chytani-vajec-js"></a><input value="1327262" type="hidden" class="id" /><input value="Chytání vajec" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/chytani-vajec-js/pkg/Poster__Poster280x158.png" alt="Chytání vajec" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Michalova zmrzlina</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/michalovy-barvy/michalova-vanocni-zmrzlina"></a><input value="1149134" type="hidden" class="id" /><input value="Michalova zmrzlina" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/michalovy-barvy" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/michalovy-barvy" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/michalovy-barvy/michalova-vanocni-zmrzlina/pkg/Poster__Poster280x158.png" alt="Michalova zmrzlina" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Sníh je fajn</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/kombajn-je-fajn/snih-je-fajn"></a><input value="1146880" type="hidden" class="id" /><input value="Sníh je fajn" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/kombajn-je-fajn" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/kombajn-je-fajn" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/kombajn-je-fajn/snih-je-fajn/pkg/Poster__Poster280x158.png" alt="Sníh je fajn" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Pole je fajn</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/kombajn-je-fajn/pole-je-fajn"></a><input value="1090452" type="hidden" class="id" /><input value="Pole je fajn" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/kombajn-je-fajn" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/kombajn-je-fajn" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/kombajn-je-fajn/pole-je-fajn/pkg/Poster__Poster280x158.png" alt="Pole je fajn" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Zachraň princeznu!</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/pravy-rytir/zachran-princeznu"></a><input value="1222546" type="hidden" class="id" /><input value="Zachraň princeznu!" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/pravy-rytir" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/pravy-rytir" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/pravy-rytir/zachran-princeznu/pkg/Poster__Poster280x158.png" alt="Zachraň princeznu!" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">S Hubertem do sněhu</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/s-hubertem-do-lesa/s-hubertem-do-snehu-advent2016"></a><input value="1213375" type="hidden" class="id" /><input value="S Hubertem do sněhu" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/s-hubertem-do-lesa" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/s-hubertem-do-lesa" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/s-hubertem-do-lesa/s-hubertem-do-snehu-advent2016/pkg/Poster__Poster280x158.png" alt="S Hubertem do sněhu" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="knowledge">Zachraňme Zemi - kvíz</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/zachranme-zemi/zachranme-zemi-kviz"></a><input value="962315" type="hidden" class="id" /><input value="Zachraňme Zemi - kvíz" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/zachranme-zemi" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/zachranme-zemi" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/zachranme-zemi/zachranme-zemi-kviz/pkg/Poster__Poster280x158.jpg" alt="Zachraňme Zemi - kvíz" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Policejní hlídka</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/detska-dopravni-policie/policejni-hlidka"></a><input value="1216942" type="hidden" class="id" /><input value="Policejní hlídka" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/detska-dopravni-policie" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/detska-dopravni-policie" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/detska-dopravni-policie/policejni-hlidka/pkg/Poster__Poster280x158.png" alt="Policejní hlídka" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Rybaření s Jakubem</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/s-jakubem-v-prirode/rybareni-s-jakubem-advent2015"></a><input value="839178" type="hidden" class="id" /><input value="Rybaření s Jakubem" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/s-jakubem-v-prirode" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/s-jakubem-v-prirode" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/s-jakubem-v-prirode/rybareni-s-jakubem-advent2015/pkg/Poster__Poster280x158.png" alt="Rybaření s Jakubem" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="knowledge">Sám v muzeu: Loupež v galerii</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/sam-v-muzeu/sam-v-muzeu-advent2015"></a><input value="820448" type="hidden" class="id" /><input value="Sám v muzeu: Loupež v galerii" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/sam-v-muzeu" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/sam-v-muzeu" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/sam-v-muzeu/sam-v-muzeu-advent2015/pkg/Poster__Poster280x158.png" alt="Sám v muzeu: Loupež v galerii" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Sám v muzeu: Na stopě umění</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/sam-v-muzeu/sam-v-muzeu-na-stope-umeni"></a><input value="1161292" type="hidden" class="id" /><input value="Sám v muzeu: Na stopě umění" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/sam-v-muzeu" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/sam-v-muzeu" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/sam-v-muzeu/sam-v-muzeu-na-stope-umeni/pkg/Poster__Poster280x158.png" alt="Sám v muzeu: Na stopě umění" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Rosa a Dara spravují auto</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/rosa-a-dara/rosa-a-dara-spravuji-auto-advent2015"></a><input value="830794" type="hidden" class="id" /><input value="Rosa a Dara spravují auto" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/rosa-a-dara" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/rosa-a-dara" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/rosa-a-dara/rosa-a-dara-spravuji-auto-advent2015/pkg/Poster__Poster280x158.png" alt="Rosa a Dara spravují auto" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Převlékání postaviček</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/rosa-a-dara/prevlekani-postavicek"></a><input value="712944" type="hidden" class="id" /><input value="Převlékání postaviček" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/rosa-a-dara" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/rosa-a-dara" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/rosa-a-dara/prevlekani-postavicek/pkg/Poster__Poster280x158.png" alt="Převlékání postaviček" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="knowledge">Zprávičky: Kvíz</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/zpravicky/zpravicky-kviz"></a><input value="890104" type="hidden" class="id" /><input value="Zprávičky: Kvíz" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/zpravicky" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/zpravicky" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/zpravicky/zpravicky-kviz/pkg/Poster__Poster280x158.jpg" alt="Zprávičky: Kvíz" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Pohádkové ÁbécéDéčko</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/pohadkove-abecedecko"></a><input value="365246" type="hidden" class="id" /><input value="Pohádkové ÁbécéDéčko" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/pohadkove-abecedecko/pkg/Poster__Poster280x158.jpg" alt="Pohádkové ÁbécéDéčko" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Lichožraní</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/lichozrouti/lichozrani"></a><input value="1113476" type="hidden" class="id" /><input value="Lichožraní" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/lichozrouti" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/lichozrouti" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/lichozrouti/lichozrani/pkg/Poster__Poster280x158.png" alt="Lichožraní" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Tanči jako hvězda s Honzou Onderem</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/tanecni-hratky-s-honzou-onderem/tanci-jako-hvezda-stardance-2016"></a><input value="1104196" type="hidden" class="id" /><input value="Tanči jako hvězda s Honzou Onderem" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/tanecni-hratky-s-honzou-onderem" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/tanecni-hratky-s-honzou-onderem" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/tanecni-hratky-s-honzou-onderem/tanci-jako-hvezda-stardance-2016/pkg/Poster__Poster280x158.png" alt="Tanči jako hvězda s Honzou Onderem" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Král sjezdovky</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/lvicata/kral-sjezdovky-advent-2014"></a><input value="320364" type="hidden" class="id" /><input value="Král sjezdovky" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/lvicata" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/lvicata" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/lvicata/kral-sjezdovky-advent-2014/pkg/Poster__Poster280x158.png" alt="Král sjezdovky" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Prasátko Peppa: Piškvorky</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/prasatko-peppa/prasatko-peppa-piskvorky"></a><input value="1099644" type="hidden" class="id" /><input value="Prasátko Peppa: Piškvorky" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/prasatko-peppa" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/prasatko-peppa" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/prasatko-peppa/prasatko-peppa-piskvorky/pkg/Poster__Poster280x158.png" alt="Prasátko Peppa: Piškvorky" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Prasátko Peppa: Počítání na ledě</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/prasatko-peppa/prasatko-peppa-pocitani-na-lede"></a><input value="1099639" type="hidden" class="id" /><input value="Prasátko Peppa: Počítání na ledě" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/prasatko-peppa" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/prasatko-peppa" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/prasatko-peppa/prasatko-peppa-pocitani-na-lede/pkg/Poster__Poster280x158.png" alt="Prasátko Peppa: Počítání na ledě" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Prasátko Peppa: Blátivé kaluže</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/prasatko-peppa/prasatko-peppa-blative-kaluze"></a><input value="1099634" type="hidden" class="id" /><input value="Prasátko Peppa: Blátivé kaluže" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/prasatko-peppa" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/prasatko-peppa" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/prasatko-peppa/prasatko-peppa-blative-kaluze/pkg/Poster__Poster280x158.png" alt="Prasátko Peppa: Blátivé kaluže" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Popletená zima</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/kouzelna-skolka/popletena-zima-advent-2014"></a><input value="311831" type="hidden" class="id" /><input value="Popletená zima" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/kouzelna-skolka" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/kouzelna-skolka" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/kouzelna-skolka/popletena-zima-advent-2014/pkg/Poster__Poster280x158.png" alt="Popletená zima" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Teleskop</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/teleskop/teleskop-game"></a><input value="1086270" type="hidden" class="id" /><input value="Teleskop" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/teleskop" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/teleskop" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/teleskop/teleskop-game/pkg/Poster__Poster280x158.png" alt="Teleskop" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="knowledge">Krysí kvíz</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/desive-dejiny/krysi-kviz"></a><input value="369129" type="hidden" class="id" /><input value="Krysí kvíz" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/desive-dejiny" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/desive-dejiny" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/desive-dejiny/krysi-kviz/pkg/Poster__Poster280x158.jpg" alt="Krysí kvíz" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Pexeso strýčka Tontona</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/strycek-tonton/pexeso-strycka-tontona"></a><input value="1081392" type="hidden" class="id" /><input value="Pexeso strýčka Tontona" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/strycek-tonton" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/strycek-tonton" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/strycek-tonton/pexeso-strycka-tontona/pkg/Poster__Poster280x158.png" alt="Pexeso strýčka Tontona" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="knowledge">U6 Aréna Mozků - Kvíz</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/u6/arena-mozku-kviz"></a><input value="366291" type="hidden" class="id" /><input value="U6 Aréna Mozků - Kvíz" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/u6" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/u6" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/u6/arena-mozku-kviz/pkg/Poster__Poster280x158.jpg" alt="U6 Aréna Mozků - Kvíz" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="knowledge">U6 - Laboratoř poznání</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/u6-uzasny-svet-vedy/arena-laborator-poznani"></a><input value="1084974" type="hidden" class="id" /><input value="U6 - Laboratoř poznání" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/u6-uzasny-svet-vedy" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/u6-uzasny-svet-vedy" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/u6-uzasny-svet-vedy/arena-laborator-poznani/pkg/Poster__Poster280x158.jpg" alt="U6 - Laboratoř poznání" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="knowledge">Blaženčin muzejní kvíz</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/sam-v-muzeu/blazencin-muzejni-kviz"></a><input value="692617" type="hidden" class="id" /><input value="Blaženčin muzejní kvíz" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/sam-v-muzeu" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/sam-v-muzeu" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/sam-v-muzeu/blazencin-muzejni-kviz/pkg/Poster__Poster280x158.jpg" alt="Blaženčin muzejní kvíz" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="knowledge">ÁbécéDéčko s Kapitánem Sluníčkem</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/abecedecko-slunicko"></a><input value="420565" type="hidden" class="id" /><input value="ÁbécéDéčko s Kapitánem Sluníčkem" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/abecedecko-slunicko/pkg/Poster__Poster280x158.jpg" alt="ÁbécéDéčko s Kapitánem Sluníčkem" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="knowledge">Všehvězd</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/vsehvezd"></a><input value="413783" type="hidden" class="id" /><input value="Všehvězd" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/vsehvezd/pkg/Poster__Poster280x158.jpg" alt="Všehvězd" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Moje zahrádka</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/moje-zahradka/moje-zahradka"></a><input value="1085911" type="hidden" class="id" /><input value="Moje zahrádka" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/moje-zahradka" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/moje-zahradka" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/moje-zahradka/moje-zahradka/pkg/Poster__Poster280x158.png" alt="Moje zahrádka" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="knowledge">Angličtina s Hurvínkem</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/anglictina-s-hurvinkem/anglictina-s-hurvinkem"></a><input value="280085" type="hidden" class="id" /><input value="Angličtina s Hurvínkem" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/anglictina-s-hurvinkem" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/anglictina-s-hurvinkem" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/anglictina-s-hurvinkem/anglictina-s-hurvinkem/pkg/Poster__Poster280x158.png" alt="Angličtina s Hurvínkem" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="knowledge">Kvíz: Letní hry 2016</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/loh-rio-kviz"></a><input value="1044716" type="hidden" class="id" /><input value="Kvíz: Letní hry 2016" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/loh-rio-kviz/pkg/Poster__Poster280x158.jpg" alt="Kvíz: Letní hry 2016" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Kouzelný výtah</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/jedna-dve-michal-jde/kouzelny-vytah"></a>
+                                <div class="gp-as"><a href="https://play.google.com/store/apps/details?id=cz.ceskatelevize.kouzelnyvytah" class="googlePlay" target="_blank"></a><a href="https://apps.apple.com/us/app/kouzeln%C3%BD-v%C3%BDtah/id1483182189?l=cs&amp;ls=1" class="appStore" target="_blank"></a></div><input value="262235" type="hidden" class="id" /><input value="Kouzelný výtah" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/jedna-dve-michal-jde" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/jedna-dve-michal-jde" type="hidden" class="micrositeUrl" /><input value="https://play.google.com/store/apps/details?id=cz.ceskatelevize.kouzelnyvytah" type="hidden" class="googlePlayUrl" /><input value="https://apps.apple.com/us/app/kouzeln%C3%BD-v%C3%BDtah/id1483182189?l=cs&amp;ls=1" type="hidden" class="appStoreUrl" /><img src="https://decko.ceskatelevize.cz/jedna-dve-michal-jde/kouzelny-vytah/pkg/Poster__Poster280x158.png" alt="Kouzelný výtah" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Pexeso o víle Amálce</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/rikani-o-vile-amalce/pexeso-o-vile-amalce"></a><input value="1040664" type="hidden" class="id" /><input value="Pexeso o víle Amálce" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/rikani-o-vile-amalce" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/rikani-o-vile-amalce" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/rikani-o-vile-amalce/pexeso-o-vile-amalce/pkg/Poster__Poster280x158.png" alt="Pexeso o víle Amálce" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Pexeso skřítka Racochejla</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/o-skritku-racochejlovi/pexeso-skritka-racochejla"></a><input value="1025338" type="hidden" class="id" /><input value="Pexeso skřítka Racochejla" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/o-skritku-racochejlovi" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/o-skritku-racochejlovi" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/o-skritku-racochejlovi/pexeso-skritka-racochejla/pkg/Poster__Poster280x158.png" alt="Pexeso skřítka Racochejla" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Ty Brďo! Zima</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/ty-brdo-zima"></a><input value="1146225" type="hidden" class="id" /><input value="Ty Brďo! Zima" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/ty-brdo-zima/pkg/Poster__Poster280x158.png" alt="Ty Brďo! Zima" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Vánoční teleskop</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/vanocni-teleskop"></a><input value="787866" type="hidden" class="id" /><input value="Vánoční teleskop" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/vanocni-teleskop/pkg/Poster__Poster280x158.png" alt="Vánoční teleskop" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Vláčková spojovačka</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/chuggington/vlackova-spojovacka"></a><input value="452564" type="hidden" class="id" /><input value="Vláčková spojovačka" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/chuggington" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/chuggington" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/chuggington/vlackova-spojovacka/pkg/Poster__Poster280x158.png" alt="Vláčková spojovačka" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="game">Zmatek na nádraží</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/chuggington/zmatek-na-nadrazi"></a><input value="471002" type="hidden" class="id" /><input value="Zmatek na nádraží" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/chuggington" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/chuggington" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/chuggington/zmatek-na-nadrazi/pkg/Poster__Poster280x158.png" alt="Zmatek na nádraží" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Roztoč to!</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/roztoc-to"></a><input value="962707" type="hidden" class="id" /><input value="Roztoč to!" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/roztoc-to/pkg/Poster__Poster280x158.png" alt="Roztoč to!" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Puzzle: Zahrádka pod hvězdami</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/zahradka-pod-hvezdami/puzzle-pod-hvezdami"></a><input value="1576699" type="hidden" class="id" /><input value="Puzzle: Zahrádka pod hvězdami" type="hidden" class="title" /><input value="http://decko.ceskatelevize.cz/zahradka-pod-hvezdami" type="hidden" class="programmePageUrl" /><input value="http://decko.ceskatelevize.cz/zahradka-pod-hvezdami" type="hidden" class="micrositeUrl" /><img src="https://decko.ceskatelevize.cz/zahradka-pod-hvezdami/puzzle-pod-hvezdami/pkg/Poster__Poster280x158.png" alt="Puzzle: Zahrádka pod hvězdami" />
+                            </div>
+                            <div class="item game-frame-w290 v2">
+                                <div class="title">
+                                    <div class="game">Zvířecí řečí</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/zvireci-reci"></a><input value="1216253" type="hidden" class="id" /><input value="Zvířecí řečí" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/zvireci-reci/pkg/Poster__Poster280x158.png" alt="Zvířecí řečí" />
+                            </div>
+                            <div class="item game-frame-w290 v2 last">
+                                <div class="title">
+                                    <div class="knowledge">Rozvrh hodin</div>
+                                </div><a class="frame" href="http://decko.ceskatelevize.cz/hry/rozvrh-hodin"></a><input value="676201" type="hidden" class="id" /><input value="Rozvrh hodin" type="hidden" class="title" /><img src="https://decko.ceskatelevize.cz/hry/rozvrh-hodin/pkg/Poster__Poster280x158.png" alt="Rozvrh hodin" />
+                            </div>
+                            <script type="text/javascript">
+                                //<![CDATA[
+                                $(function() {
+                                    $('div.item.game-frame-w290 a').click(function(event) {
+                                        if (DP.isFalse(this.target)) {
+                                            event.preventDefault();
+                                            expandGameListBox(this);
+                                        }
+                                    });
+                                });
+                                //]]>
+                            </script>
+                        </div>
+                        <div class="load-games-by-js"></div><input type="hidden" class="games-offset" value="0" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer with-extra ">
+        <div class="footer-content">
+            <div class="extra-strip"><a href="https://decko.ceskatelevize.cz/do-sveta" class="extra-strip__do-sveta"></a><a href="https://decko.ceskatelevize.cz/jazyky" class="fsbp">
+                    <p>Jazyky<br />s Bílou paní</p>
+                </a><a href="https://decko.ceskatelevize.cz/vecernicek#casolet" class="casolet">
+                    <p>Časolet</p>
+                </a><a href="https://decko.ceskatelevize.cz/div" class="div">
+                    <p>Duhový<br />institut věd</p>
+                </a><a href="https://decko.ceskatelevize.cz/karel" class="kiv">
+                    <p>KIV. Boží král</p>
+                </a></div>
+            <script type="text/javascript">
+                /* <![CDATA[ */
+                $("div.footer-content .extra-strip a").click(function() {
+                    var title = $(this).attr("href");
+                    dpAnalytics.trackEvent(document.title, 'Decko - Extra pruh', title);
+                });
+
+                $("div.header-content > a").click(function() {
+                    var title = $(this).attr("class");
+                    dpAnalytics.trackEvent(document.title, 'Decko - Header', title);
+                });
+                /* ]]> */
+            </script><a class="logo" href="https://decko.ceskatelevize.cz/"></a>
+            <p class="copyright"><a href="https://decko.ceskatelevize.cz//www.ceskatelevize.cz/" target="_blank">© Česká televize 1996 - 2020</a><span>Při poskytování služeb nám pomáhají soubory cookie. Používáním webu vyjadřujete souhlas. <a class='cookiesBox'>Ochrana soukromí</a>.</span></p>
+            <ul class="menu left">
+                <li><a class="odecku" href="https://decko.ceskatelevize.cz/o-decku">O Déčku</a></li>
+                <li><a href="https://decko.ceskatelevize.cz/pravidla">Pravidla</a></li>
+                <li><a class="napistenam" href="https://decko.ceskatelevize.cz/napiste-nam">Napiš nám</a></li>
+                <li><a class="prorodice" href="https://decko.ceskatelevize.cz//www.ceskatelevize.cz/decko-pro-rodice/">Pro rodiče</a></li>
+            </ul>
+            <div class="footer-menu">
+                <ul class="menu mainMenu">
+                    <li><a class="hry active" href="https://decko.ceskatelevize.cz/hry">Hry</a></li>
+                    <li><a class="videa" href="https://decko.ceskatelevize.cz/videa">Videa</a></li>
+                    <li><a class="porady" href="https://decko.ceskatelevize.cz/porady">Pořady</a></li>
+                    <li><a class="extra" href="https://decko.ceskatelevize.cz/extra">Extra</a></li>
+                    <li><a class="zive" href="https://decko.ceskatelevize.cz/zive">Živě</a></li>
+                    <li><a class="program" href="https://decko.ceskatelevize.cz/program">Program</a></li>
+                    <li><a class="piskoviste" href="https://decko.ceskatelevize.cz/kouzelna-skolka">Pro nejmenší</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="doodle prouzek"></div>
+    </div>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        $("div.footer-content .footer-menu a").click(function() {
+            var title = $(this).attr("class");
+            dpAnalytics.trackEvent(document.title, 'Footer', title);
+        });
+        /* ]]> */
+    </script>
+    <script type="text/javascript">
+        var productionDevelopment = true;
+        $(".footer a.cookiesBox").colorbox({
+            innerHeight: "580px",
+            innerWidth: "670px",
+            scrolling: false,
+            href: "https://decko.ceskatelevize.cz/privacy/cookies",
+            closeButton: true,
+            className: "login",
+            iframe: false,
+            onOpen: function() {
+                parent.$("iframe").css("visibility", "hidden");
+                if (productionDevelopment) {
+                    dpAnalytics.trackEvent(document.title, 'Ochrana soukromí - footer', '');
+                }
+            },
+            onClosed: function() {
+                parent.$("iframe").css("visibility", "visible");
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var _dpAnEnabled = true;
+        var _dpAnInitialize = true;
+        var _dpAnPageSection = "decko";
+        var _dpAnPageName = "";
+        var _dpAnPageType = "";
+        var _dpAnProjectTags = "";
+        // init data layer mock
+        var dataLayer = dataLayer || [];
+        /* ]]> */
+    </script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PLJ99G" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script src="https://decko.ceskatelevize.cz/cms/layouts/js/analytics.js?v=1.0.19"></script>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var pp_gemius_identifier = 'zDflpLgyibJ3r_ZDdXk4GuVE7O7d.ES.zXtrIbaT.jD.v7';
+        // lines below shouldn't be edited
+        function gemius_pending(i) {
+            window[i] = window[i] || function() {
+                var x = window[i + '_pdata'] = window[i + '_pdata'] || [];
+                x[x.length] = arguments;
+            };
+        };
+        gemius_pending('gemius_hit');
+        gemius_pending('gemius_event');
+        gemius_pending('pp_gemius_hit');
+        gemius_pending('pp_gemius_event');
+        (function(d, t) {
+            try {
+                var gt = d.createElement(t),
+                    s = d.getElementsByTagName(t)[0];
+                gt.setAttribute('async', 'async');
+                gt.setAttribute('defer', 'defer');
+                gt.src = '//spir.hit.gemius.pl/xgemius.js';
+                s.parentNode.insertBefore(gt, s);
+            } catch (e) {}
+        })(document, 'script');
+        /* ]]> */
+    </script>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        $("a.stranka-poradu").click(function() {
+            var title = $(this).attr("href");
+            dpAnalytics.trackEvent('Hry', 'Stranka poradu', title);
+        });
+
+        // Mereni kliknuti na tlacitka kategorii her
+        document.querySelector('.filter-buttons a').addEventListener('click', function() {
+            var title = this.getAttribute('href');
+            dpAnalytics.trackEvent('Hry', 'Kategorie', title);
+        });
+        /* ]]> */
+    </script>
+</body>
+</html>
