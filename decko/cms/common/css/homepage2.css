@@ -1,0 +1,1706 @@
+/*@charset "utf-8";*/
+
+/*@font-face {
+                font-family: TV_Sans_Screen;
+                src:
+                src: url('../fonts/TV Sans Screen Regular.ttf'),
+                                url('TV Sans Screen Regular.otf');  .eot!
+}*/
+
+html, body {
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+}
+
+img {
+    border: none;
+}
+
+a, a * {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+    float: left;
+}
+
+body {
+    /*background: #eef2fe url( /cms/hp/images/hp/bg-copy_3.jpg) repeat scroll center top;*/
+    /* DEFAULT */
+    background: #1c2b46 url( /cms/hp/images/hp/bg-dark_1.jpg) repeat-y scroll center top;
+    font-family: Verdana, "Bitstream Vera Sans", "DejaVu Sans", Tahoma, Geneva, Arial, Sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+div.background.subpage,
+body.zive .content {
+    background: url(/cms/hp/images/advent2019/img-footer.png) center bottom no-repeat, linear-gradient(#c8d6ec,#e7f0fa) !important;
+	padding-bottom: 80px;
+}
+
+div.background.hp {
+    background: url(/cms/hp/images/advent2019/img-footer.png) center bottom no-repeat,
+        url(/cms/hp/images/advent2019/img-top.png) center 127px no-repeat,
+        /*linear-gradient(#c8d6ec,#e7f0fa) !important;*/
+        linear-gradient(#0e2245, #2b5497) !important;
+    /*padding-bottom: 50px;*/
+}
+
+
+
+/*div.background.hp {
+     ROZBZUÄŒ DÃ‰ÄŒKO 23. 5. 2019
+    background:
+		url(/cms/rozbzuc-decko-data/images/decko-pages/rozbzuc-decko-bgr-bottom-4.png) center bottom no-repeat,
+                url(/cms/rozbzuc-decko-data/images/decko-pages/rozbzuc-decko-bgr-top-4.png) 48% 84px no-repeat,
+                url(/cms/rozbzuc-decko-data/images/decko-pages/fleky-hp.png) center top repeat-y,
+                linear-gradient(#b3a597,#c1caca);
+}*/
+
+/*div.background.subpage, body.zive {
+     ROZBZUÄŒ DÃ‰ÄŒKO 2019
+   background: linear-gradient(rgb(200, 214, 236), rgb(231, 240, 250)) !important;
+}*/
+
+body.no-background {
+    background: none;
+}
+
+div.background {
+    /*	background: transparent url( /cms/hp/images/hp/stin-copy_1.png) repeat-x scroll center bottom;*/
+    /*background: transparent url( /cms/hp/images/hp/stin-copy_1.png) repeat-x scroll center bottom;*/
+    min-width: 1200px;
+    min-height: 100%;
+    /*padding-bottom: 0px;*/
+}
+
+.zima div.background {
+    background: transparent url( /cms/hp/images/hp/vlocky-copy.png) repeat-y scroll center top;
+}
+
+/* zastavte roboty 2016 */
+
+div.background.hp.zr2016 {
+    background: #000 url( /cms/hp/images/zr-2016/bg-zr-world.jpg) no-repeat scroll center 55px;
+}
+
+div.background.hp.zr2016.bg-2016-08-31, div.background.hp.zr2016.bg-2016-09-01, div.background.hp.zr2016.bg-2016-09-02, div.background.hp.zr2016.bg-2016-09-03 {
+    background: transparent url("/cms/hp/images/hp/stin-copy_1.png") repeat-x scroll center bottom;
+}
+
+div.background.hp.zr2016.bg-2016-08-31 .wrapper {
+    position: static;
+}
+
+.zr2016 .wrapper {
+    position: relative;
+}
+
+.zr2016 a.zr2016 {
+    width: 320px;
+    height: 330px;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.zr2016 div.linky {
+    width: 620px;
+    height: 210px;
+    margin-top: 119px;
+}
+
+.zr2016 div.linky ul li {
+    width: 214px;
+    height: 206px;
+}
+
+.zr2016 div.linky ul li.hry {
+    background: transparent url( /cms/hp/images/zr-2016/btn-hry.png) no-repeat scroll center 25px;
+}
+
+.zr2016 div.linky ul li.porady {
+    background: transparent url( /cms/hp/images/zr-2016/btn-porady.png) no-repeat scroll center 25px;
+}
+
+.zr2016 div.linky ul li.videa {
+    background: transparent url( /cms/hp/images/zr-2016/btn-videa.png) no-repeat scroll center 25px;
+}
+
+.zr2016 div.linky ul li:hover {
+    height: 200px;
+    background-position: center bottom !important;
+}
+
+@font-face {
+    font-family: divFont;
+    src: url( /cms/zastavte-roboty/font/Kelson_Sans_Regular.otf );
+}
+
+.zr2016 #zr-progress-bar {
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    font-family: divFont;
+}
+
+#zr-motive {
+    position: absolute;
+    top: -54px;
+    left: -256px;
+}
+
+#zr-motive.ok {
+    left: -120px;
+    top: -10px;
+}
+
+.ok .motive-wrapper {
+    width: 500px;
+    height: 386px;
+}
+
+.motive-wrapper {
+    width: 700px;
+    height: 540px;
+    position: relative;
+}
+
+.motive-wrapper img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+}
+
+/* zr - header animation */
+.alert-img
+{
+    animation-name:alert;
+    animation-duration:1s;
+    animation-timing-function:linear;
+    animation-delay:0s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    animation-play-state:running;
+    /* Safari and Chrome: */
+    -webkit-animation-name:alert;
+    -webkit-animation-duration:1s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay:0s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:alternate;
+    -webkit-animation-play-state:running;
+}
+@keyframes alert
+{
+    0%   {opacity: 1;}
+    50% {opacity: 0.3;}
+    100% {opacity: 1;}
+}
+@-webkit-keyframes alert /* Safari and Chrome */
+{
+    0%   {opacity: 1;}
+    50% {opacity: 0.3;}
+    100%   {opacity: 1;}
+}
+
+.motive {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    animation-duration:1.5s;
+    animation-timing-function:ease-in-out;
+    animation-delay:1s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    animation-play-state:running;
+    /* Safari and Chrome: */
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration:1.5s;
+    -webkit-animation-timing-function:ease-in-out;
+    -webkit-animation-delay:1s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:alternate;
+    -webkit-animation-play-state:running;
+}
+
+@keyframes pulse
+{
+    0%   {opacity: 1;}
+    50% {opacity: 0.8;}
+    100% {opacity: 1;}
+}
+@-webkit-keyframes pulse /* Safari and Chrome */
+{
+    0%   {opacity: 1;}
+    50% {opacity: 0.8;}
+    100% {opacity: 1;}
+}
+
+
+/* jaro ! */
+/*div.background.hp, div.background.subpage {
+    	background: #eef2fe url( /cms/hp/images/hp/bg-copy_3.jpg) repeat scroll center top;
+}*/
+/*
+div.background.hp {
+    background: transparent url( /cms/hp/images/hp/bublinky.png) no-repeat scroll center 50px;
+}
+*/
+/* ! jaro */
+
+body.zima {
+    background: transparent url(/cms/hp/images/hp/bg-copy_1.jpg) repeat scroll center bottom;
+}
+
+/*div.background.program {
+        background: transparent url("/cms/hp/images/program/bg-white-shadow.jpg") repeat-x scroll left 55px;
+}*/
+
+div.wrapper {
+    min-height: 100%;
+    /*	min-height: 1078px;*/
+}
+
+div.wrapper.outer {
+    /*	background: transparent url( /cms/hp/images/hp/stin-copy_1.png) repeat-x scroll center bottom;*/
+    /*	background: transparent url( /cms/hp/images/hp/kostky.png) repeat scroll center top;  jaro */
+    min-width: 100%;
+    padding-bottom: 70px !important;
+    position: relative;
+}
+
+.subpage div.wrapper.outer {
+	padding-bottom: 170px !important;
+}
+
+.zima div.wrapper.outer {
+    /*padding-bottom: 360px;*/
+}
+
+div.shadow.wrapper {
+    background: transparent url( /cms/hp/images/hp/shadow-top.png ) repeat-x scroll center top;
+    min-width: 100%;
+}
+
+div.wrapper, div.footer div.footer-content, div.footer > div {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+div.footer div.footer-content {
+    height: 100%;
+}
+
+div.footer div.footer-content, div.footer > div {
+    position: relative;
+}
+
+.zima div.footer div.footer-content {
+    height: 358px;
+}
+
+div.header {
+    background-color: #fff;
+    overflow: hidden;
+    width: 100%;
+}
+
+div.header div.header-content, div.header > div  {
+    margin: 0px auto;
+    height: 50px;
+    position: relative;
+    width: 1200px;
+}
+
+div.header a.logo {
+    background: transparent url( /cms/hp/images/hp/logo.png) no-repeat scroll left top;
+    width: 89px;
+    height: 40px;
+    position: absolute;
+    left: 0px;
+    top: 8px;
+}
+
+/* --- Menu --- START --- */
+
+div.header ul.mainMenu {
+    position: absolute;
+    left: 163px;
+    top: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*div.header ul.menu li, div.footer-menu ul.menu li {
+        margin-right: 1px;
+}*/
+
+ul.mainMenu a {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    line-height: 46px;
+    height: 46px;
+    text-decoration: none;
+    font-size: 11px;
+    -webkit-transition: all 0.25s ease-out;  /*Safari */
+    transition: all 0.25s ease-out;
+
+}
+
+/*div.footer div.footer-menu ul.menu li:last-child, .zima div.footer div.footer-menu ul.menu li {
+        background: none;
+}*/
+
+div.header a.home {
+    background: transparent url( /cms/common/images/ico-home.png) no-repeat scroll left top;
+    width: 40px;
+    height: 50px;
+    position: absolute;
+    left: 110px;
+    top: 0px;
+}
+
+ul.mainMenu a.hry {
+    background: transparent url( /cms/common/images/header-menu2.png) no-repeat scroll left bottom;
+    border-top: #e34444 4px solid;
+    color: #e34444;
+    padding-left: 42px;
+    width: 35px;
+}
+
+div.header-menu ul.mainMenu a.hry:hover, div.header-menu ul.mainMenu a.hry.active {
+    background-position: left -4px;
+}
+
+ul.mainMenu a.videa {
+    background: transparent url( /cms/common/images/header-menu2.png) no-repeat scroll -77px bottom;
+    border-top: #4b88cf 4px solid;
+    padding-left: 42px;
+    color: #4b88cf;
+    width: 49px;
+}
+
+div.header-menu ul.mainMenu a.videa:hover, div.header-menu ul.mainMenu a.videa.active {
+    background-position: -77px -4px;
+}
+
+ul.mainMenu a.porady {
+    background: transparent url( /cms/common/images/header-menu2.png) no-repeat scroll -168px bottom;
+    border-top: #a6ae3a 4px solid;
+    color: #a6ae3a;
+    padding-left: 42px;
+    width: 60px;
+}
+
+div.header-menu ul.mainMenu a.porady:hover, div.header-menu ul.mainMenu a.porady.active {
+    background-position: -168px -4px;
+}
+
+ul.mainMenu a.extra {
+    border-top: #ffa300 4px solid;
+    color: #ffa300;
+    background: transparent url( /cms/common/images/header-menu2.png) no-repeat scroll -270px bottom;
+    padding-left: 37px;
+    width: 49px;
+}
+
+div.header-menu ul.mainMenu a.extra:hover, div.header-menu ul.mainMenu a.extra.active {
+    background-position: -270px -4px;
+}
+
+/*ul.menu a.souteze:hover, div.header-menu ul.menu a.souteze.active {
+        background: #f17322 url( /cms/hp/images/hp/li-souteze-hover.png) no-repeat scroll 10px 10px;
+}
+
+div.header-menu ul.menu a.souteze {
+        background: transparent url( /cms/hp/images/hp/li-souteze.png) no-repeat scroll 10px 10px;
+        color: #f17322;
+        border-top: #f17322 4px solid;
+        background-color: transparent;
+}*/
+ul.mainMenu a.zive {
+    background: transparent url( /cms/common/images/header-menu2.png) no-repeat scroll -356px bottom;
+    border-top: #4b88cf 4px solid;
+    color: #4b88cf;
+    padding-left: 39px;
+    width: 38px;
+}
+
+div.header-menu ul.mainMenu a.zive:hover, div.header-menu ul.mainMenu a.zive.active {
+    background-position: -356px -4px;
+}
+
+ul.mainMenu a.program {
+    background: transparent url( /cms/common/images/header-menu2.png) no-repeat scroll -433px bottom;
+    border-top: #a6ae3a 4px solid;
+    color: #a6ae3a;
+    padding-left: 37px;
+    width: 70px;
+}
+
+div.header-menu ul.mainMenu a.program:hover, div.header-menu ul.mainMenu a.program.active {
+    background-position: -433px -4px;
+}
+
+/*div.footer-menu ul.mainMenu a.program:hover, div.header-menu ul.mainMenu a.program.active {
+        background: transparent url( /cms/hp/images/hp/li-program_1.png) no-repeat scroll 10px 15px;
+        color: #ffa300;
+        width: 70px;
+}*/
+
+ul.mainMenu a.piskoviste {
+    background: transparent url( /cms/common/images/header-menu3.png) no-repeat scroll -544px bottom;
+    border-top: #f46c30 4px solid;
+    color: #f46c30;
+    padding-left: 35px;
+    width: 104px;
+}
+
+div.header-menu ul.mainMenu a.piskoviste:hover, div.header-menu ul.mainMenu a.piskoviste.active {
+    background-position: -544px -4px;
+}
+
+/*div.footer-menu ul.mainMenu a.piskoviste:hover, div.header-menu ul.mainMenu a.piskoviste.active {
+        background: transparent url( /cms/hp/images/hp/li-mrnata_1.png) no-repeat scroll 12px 15px;
+        color: #f46c30;
+        width: 85px;
+}*/
+
+div.footer-menu ul.mainMenu a {
+    border-top: none;
+}
+
+div.footer-menu ul.mainMenu a:hover, div.footer-menu ul.mainMenu a.active {
+    text-decoration: underline;
+}
+
+div.header-menu ul.mainMenu a:hover, div.header-menu ul.mainMenu a.active {
+    color: #fff !important;
+    animation-direction: reverse;
+}
+
+/* --- Menu --- END --- */
+
+div.header div.login {
+    float: right;
+}
+
+div.header div.login > a {
+    background: transparent url( /cms/hp/images/hp/btn-login.png) no-repeat scroll right top;
+    color: #f17322;
+    text-transform: uppercase;
+    font-size: 11px;
+    width: 126px;
+    line-height: 32px;
+    float: right;
+    text-align: center;
+    margin-top: 9px;
+    text-decoration: none;
+}
+
+div.header div.login > a:hover,
+div.header div.login > a.active {
+    background-position: right bottom;
+}
+
+div.header div.login div {
+    background: transparent url( /cms/hp/images/hp/bg-login.png) no-repeat scroll right top;
+    float: right;
+    width: 236px;
+    height: 32px;
+    position: relative;
+    margin: 12px 10px 0px 0px;
+}
+
+div.header div.login input {
+    border: none;
+    position: absolute;
+    top: 6px;
+    left: 7px;
+    width: 196px;
+}
+
+div.header div.login div a {  /* Hledat */
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 2px;
+    right: 0px;
+}
+
+div.linky {
+    margin: 30px auto 0;
+    height: 170px;
+    position: relative;
+}
+
+div.linky {
+   margin-left: 307px;
+   padding-top: 34px;
+   box-sizing:border-box;
+}
+
+/*div.linky.vB {
+    width: 1060px;
+}*/
+
+div.linky ul li a {
+    width: 168px;
+    height: 169px;
+}
+
+div.linky ul li.hry {
+    background: transparent url( /cms/common/images/mainLinks.png) no-repeat scroll 0 1px;
+}
+
+div.linky ul li.hry:hover {
+    background-position: 0 bottom;
+}
+
+div.linky ul li.videa {
+    background: transparent url( /cms/common/images/mainLinks.png) no-repeat scroll -168px 1px;
+}
+
+div.linky ul li.videa:hover {
+    background-position: -168px bottom;
+}
+
+div.linky ul li.porady {
+    background: transparent url( /cms/common/images/mainLinks.png) no-repeat scroll -336px 1px;
+}
+
+div.linky ul li.porady:hover {
+    background-position: -336px bottom;
+}
+
+div.linky ul li.pro-nejmensi {
+    background: transparent url( /cms/common/images/mainLinks.png) no-repeat scroll -504px 1px;
+}
+
+div.linky ul li.pro-nejmensi:hover {
+    background-position: -504px bottom;
+}
+
+/* Content --- START --- */
+
+div.content {
+    overflow: hidden !important;
+    /* padding-bottom: 335px; */
+    clear: both !important;
+    min-height: 100%;
+
+}
+
+.hp-content {
+    margin-bottom: 160px;
+   /* padding-bottom: 0 !important;*/
+}
+
+div.content.porad div.content {
+    min-height: 0px;
+    padding-bottom: 0px;
+}
+
+div.background.hp div.content > div {
+    float: left;
+    width: 50%;
+}
+
+div.content div.velky-napravo div.big {
+    float: right;
+}
+
+div.big, div.small, div.middle, div.bigger div.item, div.smaller div.item {
+    position: relative;
+    float: left;
+    padding: 5px;
+    /*    margin-top: 10px;*/
+    overflow: hidden;
+}
+
+div.smaller div.item {
+    margin-right: 10px;
+}
+
+div.bigger div.item {
+    margin-right: 13px;
+}
+
+div.big, div.small, div.middle {
+    margin: 10px 7px 0px 0px;
+}
+
+div.bigger div.item.last, div.smaller div.item.last {
+    margin-right: 0px;
+}
+
+div.bigger div.item.last {
+    margin-left: 1px;
+}
+
+div.content div.video div.ico, div.content div.ico-big {
+    background: transparent url( /cms/hp/images/hp/ico-content-play.png) no-repeat scroll center center;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+}
+
+div.content.videa div.smaller div.item div.ico {
+    background: transparent url( /cms/hp/images/hp/ico-play.png) no-repeat scroll center center;
+    top: 16px;
+    left: 80px;
+}
+
+div.content div.big div.ico {
+    top: 123px;
+    left: 160px;
+}
+
+div.content div.small div.ico {
+    top: 30px;
+    left: 62px;
+}
+
+div.content div.middle div.ico {
+    top: 123px;
+    left: 68px;
+}
+
+div.content div.hra div.ico {
+    background: transparent url( /cms/hp/images/hp/ico-content-game.png) no-repeat scroll center center;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+}
+
+div.content div.hra.knowledge div.ico {
+    background: transparent url( /cms/hp/images/hp/ico-content-knowledge.png) no-repeat scroll center center;
+    height: 76px;
+    width: 76px;
+}
+
+div.content div.big div.ico.knowledge {
+    top: 118px;
+}
+
+div.hp div.content div.soutez div.ico, div.hp div.content div.piskoviste div.ico, div.hp div.content div.porad div.ico {
+    display: none;
+}
+
+/*div.big > a, div.small > a, div.middle > a, div.bigger > div > a, div.smaller > div > a,
+div.hp-tile a {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #fff;
+    line-height: 16px;
+    font-size: 80%;
+}*/
+
+div.hp-tile a {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #fff;
+    line-height: 16px;
+    font-size: 12px;
+    border: transparent 5px solid;
+    border-radius: 10px;
+    width: inherit;
+    height: inherit;
+    padding: 0px;
+}
+
+div.hp-tile a:hover {
+    background: rgba(255,255,255, 0.1);
+}
+
+div.hp-tile div.title {
+    display: flex;
+    min-height: 50px;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: inherit;
+}
+
+div.hp-tile div.title span {
+    color: #fff;
+    font-size: 14px;
+    text-shadow: 1px 1px 1px #777;
+    padding-left: 46px;
+    margin: auto 0px;
+    padding: 4px 0px 3px 46px;
+    line-height: 18px;
+}
+
+div.hp-tile.advent div.title span {
+    color: #f46c30;
+    text-shadow: none;
+    background: transparent url(/cms/common/images/ico-advent-hp.png) no-repeat scroll 16px center;
+}
+
+div.hp-tile.hra div.title {
+    background: #b73543;
+    background: -webkit-linear-gradient(left, #b73543 , #df5463);
+    background: -o-linear-gradient(right, #b73543 , #df5463);
+    background: -moz-linear-gradient(right, #b73543 , #df5463);
+    background: linear-gradient(to right, #b73543 , #df5463);
+}
+
+div.hp-tile.hra div.title span {
+    background: transparent url(/cms/hry/images/ico-game.png) no-repeat scroll 12px center;
+}
+
+div.hp-tile.hra.knowledge div.title span {
+    background: transparent url(/cms/hry/images/ico-knowledge.png) no-repeat scroll 12px center;
+}
+
+div.hp-tile.video div.title {
+    background: #235d99; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #235d99 , #6191c4); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #235d99 , #6191c4); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #235d99 , #6191c4); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #235d99 , #6191c4); /* Standard syntax */
+}
+
+div.hp-tile.video div.title span {
+    background: transparent url( /cms/videa/images/icons/ico-video.png) no-repeat scroll 12px center;
+}
+
+div.hp-tile.porad div.title {
+    background: #8a9327; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #8a9327 , #aeb840); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #8a9327 , #aeb840); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #8a9327 , #aeb840); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #8a9327 , #aeb840); /* Standard syntax */
+}
+
+div.hp-tile.porad div.title span {
+    background: transparent url( /cms/porady/images/ico-programme.png) no-repeat scroll 12px center;
+}
+
+div.hp-tile.special div.title,
+div.hp-tile.soutez div.title {
+    background: #ffa300; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #ff9000 , #faae26); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #ff9000 , #faae26); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #ff9000 , #faae26); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #ff9000 , #faae26); /* Standard syntax */
+}
+
+div.hp-tile.special div.title span,
+div.hp-tile.soutez div.title span {
+    background: transparent url( /cms/extra/images/ico-extra.png) no-repeat scroll 12px center;
+}
+
+
+
+
+div.hp-tile.advent div.title {
+    background: #fff; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #fff , #ccc); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #fff , #ccc); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #fff , #ccc); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #fff , #ccc); /* Standard syntax */
+}
+
+div.hp-tile.advent div.title span {
+    /*background: transparent url( /cms/extra/images/ico-extra.png) no-repeat scroll 12px center;*/
+}
+
+
+
+
+
+
+div.hp-tile div.isNew {
+    /*	background: transparent url( /cms/hp/images/hp/nove.png) no-repeat scroll right top;*/
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+div.hp-tile.porad div.isNew {
+    background: transparent url( /cms/hp/images/hp/ruzek-zeleny.png) no-repeat scroll right top;
+}
+
+div.hp-tile.hra div.isNew {
+    background: transparent url( /cms/hp/images/hp/ruzek-cerveny.png) no-repeat scroll right top;
+}
+
+div.hp-tile.video div.isNew {
+    background: transparent url( /cms/hp/images/hp/ruzek-modry.png) no-repeat scroll right top;
+}
+
+div.hp-tile.soutez div.isNew, div.hp-tile.special div.isNew {
+    background: transparent url( /cms/hp/images/hp/ruzek-oranzovy.png) no-repeat scroll right top;
+}
+
+div.content div.hp-tile div.broadcastTime {
+    position: absolute;
+    color: #96a02c;
+    /*	text-shadow: #777 1px 1px;*/
+    text-align: center;
+    font-weight: bold;
+    left: 0px;
+    bottom: 100%;
+    background-color: #fff;
+    padding-right: 0px;
+    height: 0px;
+    overflow: hidden;
+    -webkit-transition: height 0.25s ease-out 0s; /* Safari */
+    transition: height 0.25s ease-out 0s;
+}
+
+div.content div.hp-tile:hover.big div.broadcastTime {
+    height: 40px;
+}
+
+div.content div.hp-tile:hover.small div.broadcastTime {
+    height: 30px;
+}
+
+div.hp-tile.big div.broadcastTime {
+    font-size: 18px;
+    width: 380px;
+    line-height: 40px;
+}
+
+div.hp-tile.small div.broadcastTime {
+    font-size: 14px;
+    width: 185px;
+    line-height: 30px;
+}
+
+div.hp-tile.big {
+    width: 380px;
+    height: 308px;
+}
+
+div.content div.hp-tile.hra a {
+    border-color: #e34444;
+}
+
+div.content div.hp-tile.special a,
+div.content div.hp-tile.soutez a {
+    border-color: #ffa300;
+}
+
+div.content div.hp-tile.porad a {
+    border-color: #a6ae3a;
+}
+
+div.content div.hp-tile.video a {
+    border-color: #4b88cf;
+}
+
+div.content div.hp-tile.advent a {
+    border-color: #ffffff;
+}
+
+div.content div.hp-tile.big img {
+    width: 380px;
+    height: 258px;
+}
+
+div.content div.hp-tile.small {
+    width: 185px;
+    height: 144px;
+}
+
+div.content div.hp-tile.small img {
+    width: 185px;
+    height: 94px;
+}
+
+div.content div.middle {
+    width: 185px;
+    height: 312px;
+}
+
+div.content div.middle a {
+    width: 149px;
+    height: 42px;
+    padding-top: 276px;
+    padding-left: 46px;
+}
+
+div.content div.middle.hra a {
+    background: transparent url( /cms/hp/images/hp/ramecky-hp-stredni-hry.png) no-repeat scroll right top;
+}
+
+div.content div.middle.special a {
+    background: transparent url( /cms/hp/images/hp/ramecky-hp-stredni-ostatni.png) no-repeat scroll right top;
+}
+
+div.content div.middle.porad a {
+    background: transparent url( /cms/hp/images/hp/ramecky-hp-stredni-porady.png) no-repeat scroll right top;
+}
+
+div.content div.middle.soutez a {
+    background: transparent url( /cms/hp/images/hp/ramecky-hp-stredni-souteze.png) no-repeat scroll right top;
+}
+
+div.content div.middle.video a {
+    background: transparent url( /cms/hp/images/hp/ramecky-hp-stredni-videa.png) no-repeat scroll right top;
+}
+
+div.content div.middle img {
+    width: 185px;
+    height: 308px;
+}
+
+/* Content --- END --- */
+
+div.footer {
+    /*background: transparent url( /cms/hp/images/hp/bg-footer-repeat-white.png) repeat-x scroll center 64px;*/
+	background: #fff;
+    /*margin-top: -136px;*/
+    min-width: 1200px;
+    height: 136px;
+    position: relative;
+}
+
+.zima div.footer {
+    background: transparent url( /cms/hp/images/hp/bg-footer-hory_2.png) repeat-x scroll center bottom;
+    margin-top: -360px;
+    height: 360px;
+}
+
+div.footer div.duhacek-motive {
+    background: transparent url( /cms/hp/images/hp/papousek-footer.png) no-repeat scroll center bottom;
+    width: 53px;
+    height: 54px;
+    right: 140px;
+    top: 11px;
+    position: absolute;
+}
+
+div.footer div.duhacek-motive-zima {
+    background: transparent url(/cms/common/images/footer-extra/duhak.png) no-repeat scroll center bottom;
+    width: 53px;
+    height: 80px;
+    right: 40px;
+    top: -252px;
+    position: absolute;
+}
+
+div.footer.with-extra div.duhacek-motive-zima {
+    top: -415px;
+}
+
+div.footer div.snih-motive {
+    background: transparent url(/cms/common/images/footer-extra/snih.png) no-repeat scroll center top;
+    width: 100%;
+    height: 98px;
+    right: 0;
+    bottom: 136px;
+    position: absolute;
+    left: 0;
+}
+
+div.footer.with-extra div.snih-motive {
+    bottom: 299px;
+}
+
+.zima div.footer div.duhacek-motive {
+    display: none;
+}
+
+div.footer.bg-2014-08-29 {
+    background: transparent url( /cms/hp/images/hp/bg-footer_3.png) no-repeat scroll center bottom;
+}
+
+div.footer a.logo {
+    background: transparent url( /cms/common/images/logo-footer.png) no-repeat scroll center center;
+    position: absolute;
+    left: 0px;
+    bottom: 60px;
+    width: 72px;
+    height: 62px;
+}
+
+.zima div.footer a.logo {
+    background: transparent url( /cms/hp/images/hp/logo-footer_2.png) no-repeat scroll center center;
+}
+
+div.footer div.footer-content p.copyright {
+    color: #a6a6a6;
+    font-size: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    z-index: 10;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    line-height: 12px;
+}
+
+div.footer div.footer-content p.copyright span {
+    border-left: 1px solid #a6a6a6;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+div.footer div.footer-content p.copyright a,
+div.footer div.footer-content p.copyright span a:hover {
+    text-decoration: none;
+    color: #a6a6a6;
+}
+
+div.footer div.footer-content p.copyright span a {
+    text-decoration: underline;
+}
+
+div.footer ul.menu.left {
+    position: absolute;
+    bottom: 82px;
+    left: 62px;
+}
+
+div.footer ul.menu.left li {
+    /*	background: transparent url( /cms/hp/images/hp/splitter.png) no-repeat scroll left center;*/
+    padding: 6px 5px 6px 5px;
+}
+
+div.footer ul.menu.left li:first-child {
+    margin-left: 20px;
+}
+
+div.footer ul.menu.left a {
+    color: #f17322;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+div.footer ul.menu.left li a {
+    padding: 2px;
+}
+
+/*div.footer ul.menu.left li a.odecku {
+    background: transparent url( /cms/hp/images/hp/li-odecku.png) no-repeat scroll 10px 20px;
+}
+
+div.footer ul.menu.left li a.napistenam {
+    background: transparent url( /cms/hp/images/hp/li-napistenam.png) no-repeat scroll left center;
+}
+
+div.footer ul.menu.left li a.prorodice {
+    background: transparent url( /cms/hp/images/hp/li-prorodice.png) no-repeat scroll 7px center;
+    margin-left: -7px;
+}
+div.footer ul.menu.left li a.napoveda {
+    background: transparent url( /cms/hp/images/hp/li-napoveda.png) no-repeat scroll 4px 1px;
+}*/
+
+div.footer ul.menu.left li a:hover, div.footer p a {
+    text-decoration: underline;
+}
+
+div.footer div.footer-menu {
+    position: absolute;
+    bottom: 76px;
+    right: 0px;
+}
+
+div.footer a.piskoviste-footer {
+    background: transparent url( /cms/hp/images/hp/piskoviste-footer_1.jpg) no-repeat scroll center top;
+    position: absolute;
+    bottom: 0px;
+    left: 24px;
+    width: 1152px;
+    height: 120px;
+}
+
+body.zima div.footer a.piskoviste-footer {
+    background: transparent url( /cms/hp/images/hp/piskoviste-footer.jpg) no-repeat scroll center top;
+}
+
+div.footer a.piskoviste-footer:hover, body.zima div.footer a.piskoviste-footer:hover {
+    background-position: center bottom;
+}
+
+/*ul.menu a
+{
+  background: #FFD362;
+  border: 2px solid #D89E10;
+  padding: 1em;
+  margin: 0 auto 1.5em auto;
+  width: 75%;
+  background-color: white;
+
+   WebKit
+  -webkit-transition-property: background;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: linear;
+
+   Opera 10.5+
+  -o-transition-property: background;
+  -o-transition-duration: 0.5s;
+  -o-transition-timing-function: linear;
+
+   Pro lepsi casy
+  transition-property: background;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+
+}
+
+ul.menu a:hover
+{
+  background-color: red;
+}*/
+
+/* Login --- START --- */
+
+div.footer.login {
+    background: transparent url( /cms/hp/images/hp/bg-footer-login.png) no-repeat scroll center top;
+    overflow: hidden;
+}
+
+div.footer.login > div {
+    margin-top: 0px;
+    height: 133px;
+}
+
+div.footer.login img.avatar {
+    margin: 20px 0px 0px 10px;
+}
+
+div.footer.login span {
+    position: absolute;
+    top: 88px;
+    left: 155px;
+    color: #477bb1;
+    font-weight: bold;
+    font-size: 95%;
+}
+
+div.footer.login div.skore {
+    position: absolute;
+    top: 100px;
+    left: 270px;
+}
+
+div.footer.login div.skore div {
+    background: transparent url( /cms/hp/images/hp/footer-login-duhovky.png) no-repeat scroll left center;
+    color: #f16523;
+    font-size: 80%;
+    float: left;
+    padding-left: 20px;
+    margin-left: 12px;
+}
+
+div.footer.login div.skore div:first-child {
+    background-image: url( /cms/hp/images/hp/footer-login-body.png);
+}
+
+div.footer.login ul {
+    text-align: center;
+    position: absolute;
+    top: 75px;
+    right: 30px;
+}
+
+div.footer.login ul li {
+    background: transparent url( /cms/hp/images/hp/bg-login-li.png) no-repeat scroll center center;
+    width: 102px;
+    height: 32px;
+    margin-right: 6px;
+}
+
+div.footer.login ul li a {
+    padding: 0px 15px 0px 15px;
+    color: #f16523;
+    font-size: 75%;
+    margin: 0px;
+    line-height: 32px;
+}
+
+div.footer.login div > a {
+    position: absolute;
+    right: 0px;
+    bottom: 15px;
+}
+
+/* Login --- END --- */
+
+
+div.doodle {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    width: 100%;
+    min-width: 1200px;
+    height: 250px;
+    background: transparent url(/cms/hp/images/hp/doodle-uni.jpg) no-repeat scroll center center;
+}
+
+div.doodle.special {
+    background: transparent url(/cms/hp/images/hp/doodle_2.jpg) no-repeat scroll center center;
+}
+
+div.doodle.special.test {
+    background: transparent url(/cms/hp/images/hp/doodle_3.jpg) no-repeat scroll center center;
+}
+
+div.doodle.special.den-deti {
+    background: transparent url(/cms/hp/images/hp/doodle-den-deti.jpg) no-repeat scroll center center;
+}
+
+div.doodle.special.zachranteduhu2 {
+    background: transparent url(/cms/hp/images/hp/doodle_3.jpg) no-repeat scroll center center;
+}
+
+div.doodle.special.narozeniny {
+    background: transparent url(/cms/hp/images/hp/doodle-narozeniny.jpg) no-repeat scroll center center;
+}
+div.doodle.detidecku {
+    background: transparent url(/cms/hp/images/hp/doodle-deti-decku.jpg) no-repeat scroll center center;
+}
+div.doodle.lumiere {
+    background: transparent url(/cms/hp/images/hp/doodle-lumiere.jpg) no-repeat scroll center center;
+}
+div.doodle.podzim {
+    background: transparent url(/cms/hp/images/hp/doodle-podzim.jpg) no-repeat scroll center center;
+}
+div.doodle.podzim.dve {
+    background: transparent url(/cms/hp/images/hp/doodle-podzim_1.jpg) no-repeat scroll center center;
+}
+div.doodle.vznik-csr {
+    background: transparent url(/cms/hp/images/hp/doodle-vznik_csr.jpg) no-repeat scroll center center;
+}
+div.doodle.listopad17 {
+    background: transparent url(/cms/hp/images/hp/doodle-17_listopad.jpg) no-repeat scroll center center;
+}
+div.doodle.svVit {
+    background: transparent url(/cms/hp/images/hp/doodle-svVit.jpg) no-repeat scroll center center;
+}
+div.doodle.zima {
+    background: transparent url(/cms/hp/images/hp/doodle-zimni.jpg) no-repeat scroll center center;
+}
+div.doodle.advent {
+    background: transparent url(/cms/hp/images/hp/doodle-advent.jpg) no-repeat scroll center center;
+}
+div.doodle.advent.dva {
+    background: transparent url(/cms/hp/images/hp/advent-doodle2.jpg) no-repeat scroll center center;
+}
+div.doodle.vecernicek {
+    background: transparent url(/cms/hp/images/hp/doodle-vecernicek.jpg) no-repeat scroll center center;
+}
+div.doodle.d-duhacek {
+    background: transparent url(/cms/hp/images/hp/duhacek-doodle.jpg) no-repeat scroll center center;
+}
+div.doodle.nemcova {
+    background: transparent url(/cms/hp/images/hp/doodle-nemcova.jpg) no-repeat scroll center center;
+}
+div.doodle.duhacek-rumcajs {
+    background: transparent url(/cms/hp/images/hp/decko_doodle-duhacek-rumcajs.jpg) no-repeat scroll center center;
+}
+div.doodle.tgm {
+    background: transparent url(/cms/hp/images/hp/doodle-TGM.jpg) no-repeat scroll center center;
+}
+div.doodle.einstein {
+    background: transparent url(/cms/hp/images/hp/doodle-einstein.jpg) no-repeat scroll center center;
+}
+div.doodle.hus {
+    background: transparent url(/cms/hp/images/hp/doodle-hus.jpg) no-repeat scroll center center;
+}
+div.doodle.narozeniny2 {
+    background: transparent url(/cms/hp/images/hp/doodle-narozeniny2.jpg) no-repeat scroll center center;
+}
+div.doodle.div {
+    background: transparent url(/cms/hp/images/hp/doodle-div.jpg) no-repeat scroll center center;
+}
+div.doodle.advent2015 {
+    background: transparent url(/cms/hp/images/hp/doodle-advent.jpg) no-repeat scroll center center;
+}
+div.doodle.miler {
+    background: transparent url(/cms/hp/images/hp/doodle-Miler.jpg) no-repeat scroll center center;
+}
+div.doodle.velikonoce2016 {
+    background: transparent url(/cms/hp/images/hp/doodle-velikonoce2016.jpg) no-repeat scroll center center;
+}
+div.doodle.gagarin {
+    background: transparent url(/cms/hp/images/hp/doodle-Gagarin.jpg) no-repeat scroll center center;
+}
+div.doodle.kiv {
+    background: transparent url(/cms/hp/images/hp/doodle-kiv.jpg) no-repeat scroll center center;
+}
+div.doodle.karel {
+    background: transparent url(/cms/hp/images/hp/doodle-karel.jpg) no-repeat scroll center center;
+}
+div.doodle.denDeti {
+    background: transparent url(/cms/hp/images/hp/doodle-den_deti.jpg) no-repeat scroll center center;
+}
+div.doodle.nd {
+    background: transparent url(/cms/hp/images/hp/doodle-ND.jpg) no-repeat scroll center center;
+}
+div.doodle.narozeniny3 {
+    background: transparent url(/cms/hp/images/hp/img-header.png) no-repeat scroll center top;
+    height: 480px;
+}
+div.doodle.havel {
+    background: transparent url(/cms/hp/images/hp/doodle-havel.jpg) no-repeat scroll center top;
+    height: 480px;
+}
+
+div.doodle a {
+    display: block;
+    width: 100%;
+    min-width: 1200px;
+    height: 250px;
+}
+
+div.doodle.narozeniny3 a {
+    background: transparent url(/cms/hp/images/hp/logo_1.png) no-repeat scroll center top;
+    display: block;
+    width: 290px;
+    min-width: auto;
+    height: 284px;
+}
+
+div.doodle.prouzek {
+    background: transparent url(/cms/hp/images/hp/duhovy-prouzek.png) repeat-x scroll center center;
+    top: 300px;
+    height: 2px;
+}
+
+div.footer div.doodle.prouzek {
+    top: auto;
+    bottom: 0px;
+    width: 100%;
+}
+
+/* div NEW */
+
+div.content a div.new {
+    background: transparent url(/cms/hp/images/hp/nove.png) no-repeat scroll left top;
+    width: 72px;
+    height: 45px !important;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+/* div NEW end */
+
+/* div broadcastTime */
+
+div.content div.big a div.time {
+    background: transparent url(/cms/hp/images/hp/prouzek-vysilani-velky.png) no-repeat scroll left top;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 20px;
+    text-shadow: #888 1px 1px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    display: none;
+}
+
+/* div broadcastTime end */
+
+
+/* karta cernobil */
+
+div.content div div.bottom {
+    border-top: 1px solid #fff;
+}
+
+div.content div.big.cernobil a {
+    background: transparent url( /cms/hp/images/img-cernobilo-2.png) no-repeat scroll top left;
+}
+
+div.content div.big.cernobil a:hover {
+    background-position: bottom left;
+}
+
+div.content div.big.cernobil div.bottom {
+    border: none;
+}
+
+/* footer with EXTRA */
+
+.footer.with-extra {
+    background: #fcf1c9 url( /cms/hp/images/hp/bg-footer-repeat-white-extra.png) repeat-x scroll center 64px;
+    background-position: center 152px;
+    border-top: #fdd77a 1px solid;
+    height: 298px;
+    margin-top: /*-142px*/ 0!important;
+    overflow: visible;
+    position: relative;
+}
+
+div.footer.with-extra div.footer-content, div.footer > div {
+    overflow: visible;
+}
+
+.footer.with-extra .extra-strip {
+    display: flex;
+}
+
+.footer.with-extra .extra-strip a {
+    color: #ff9900;
+    /*text-shadow: #888 1px 1px;*/
+    height: 150px;
+    font-size: 18px;
+    font-weight: bold;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* float: left; */
+    margin: 0px auto;
+}
+
+.footer.with-extra .extra-strip a p {
+    margin: auto;
+    line-height: 20px;
+}
+
+.footer.with-extra .extra-strip a:last-child {
+    margin-right: 0px;
+}
+
+.footer.with-extra .extra-strip a:first-child {
+    margin-left: 0px;
+}
+
+div.footer.with-extra div.duhacek-motive {
+    top: -54px;
+}
+
+div.footer.with-extra a.deckovize {
+    background: transparent url( /cms/common/images/footer-extra/ico-extra-deckovize.png) no-repeat scroll top left;
+    width: 173px;
+}
+
+div.footer.with-extra a.stardance {
+    background: transparent url( /cms/common/images/footer-extra/ico-extra-stardance.png) no-repeat scroll top left;
+    width: 210px;
+}
+
+div.footer.with-extra a.pd {
+    background: transparent url( /cms/common/images/footer-extra/ico-extra-probud-decko.png) no-repeat scroll top left;
+    width: 80px;
+}
+
+div.footer.with-extra a.ap {
+    background: transparent url( /cms/common/images/footer-extra/ico-extra-ap.png) no-repeat scroll top left;
+    padding-left: 64px;
+}
+
+div.footer.with-extra a.ap:hover {
+    color: #d05b48;
+}
+
+div.footer.with-extra a.advent17 {
+    background: transparent url( /cms/common/images/footer-extra/ico-advent17.png) no-repeat scroll top left;
+    width: 179px;
+}
+
+div.footer.with-extra a.div {
+    background: transparent url( /cms/common/images/footer-extra/ico-extra-div.png) no-repeat scroll top left;
+    padding-left: 64px;
+}
+
+div.footer.with-extra a.div:hover {
+    color: #175180;
+}
+
+div.footer.with-extra a.kiv {
+    background: transparent url( /cms/common/images/footer-extra/ico-extra-kiv.png) no-repeat scroll top left;
+    padding-left: 54px;
+}
+
+div.footer.with-extra a.kiv:hover {
+    color: #844212;
+}
+
+div.footer.with-extra a.advent18 {
+    background: transparent url( /cms/common/images/footer-extra/ico-advent18.png) no-repeat scroll top left;
+    width: 156px;
+}
+
+div.footer.with-extra a.skautska-posta {
+    background: transparent url( /cms/common/images/footer-extra/ico-extra-skautska-posta.png) no-repeat scroll top left;
+    width: 180px;
+}
+
+div.footer.with-extra a.ovecka-jedee {
+    background: transparent url( /cms/common/images/footer-extra/ico-ovecka-jede.png) no-repeat scroll top left;
+    padding-left: 56px;
+    width: 91px;
+}
+
+div.footer.with-extra a.sezente-ovecky {
+    background: transparent url( /cms/common/images/footer-extra/ico-extra-sezente-ovecky.png) no-repeat scroll top left;
+    padding-left: 56px;
+    width: 34px;
+}
+
+div.footer.with-extra a.rok-dee {
+    background: transparent url( /cms/common/images/footer-extra/ico-extra-rok-dee.png) no-repeat scroll top left;
+    padding-left: 56px;
+}
+
+div.footer.with-extra a.pod-rozkvetlou-tresni {
+	background: transparent url( /cms/common/images/footer-extra/ico-extra-pod-rozkvetlou-tresni.png) no-repeat scroll top left;
+	width: 194px;
+}
+
+div.footer.with-extra a.velikonoce2019 {
+	background: transparent url( /cms/common/images/footer-extra/ico-extra-velikonocni_kalendar2019.png) no-repeat scroll top left;
+	width: 165px;
+}
+
+div.footer.with-extra a.rd19 {
+	background: transparent url( /cms/common/images/footer-extra/ico-bzz.png) no-repeat scroll top left;
+	width: 113px;
+}
+
+div.footer.with-extra a.extra-strip__do-sveta {
+	background: transparent url( /cms/common/images/footer-extra/ico-extra-do-sveta.png) no-repeat scroll top left;
+	width: 147px;
+}
+
+div.footer.with-extra a.extra-strip__advent19 {
+	background: transparent url( /cms/common/images/footer-extra/ico-advent19.png) no-repeat scroll top left;
+	width: 153px;
+}
+
+
+
+div.footer.with-extra a.rok-dee:hover {
+    color: #e34444;
+}
+
+div.footer.with-extra a.rok-dee:hover span.c2 {
+    color: #4b88cf;
+}
+
+div.footer.with-extra a.rok-dee:hover span.c3 {
+    color: #a6ae3a;
+}
+
+div.footer.with-extra a.rok-dee:hover span.c4 {
+    color: #ff9900;
+}
+
+div.footer.with-extra a.rok-dee:hover span.c5 {
+    color: #fa6c2d;
+}
+
+div.footer.with-extra a.fsbp {
+    background: transparent url( /cms/common/images/footer-extra/ico-extra-fsbp.png) no-repeat scroll top left;
+    padding-left: 42px;
+}
+
+div.footer.with-extra a.fsbp:hover {
+    color: #1893b6;
+}
+
+div.footer.with-extra a.casolet {
+    background: transparent url( /cms/common/images/footer-extra/ico-extra-casolet.png) no-repeat scroll top left;
+    padding-left: 54px;
+}
+
+div.footer.with-extra a.casolet:hover {
+    color: #0a82a9;
+}
+
+div.footer.with-extra .extra-strip a:hover {
+    background-position: bottom left !important;
+}
+
+/* footer with EXTRA - end */
+
+/* anim fix*/
+
+div.background.hp div.content > div {
+    float: left;
+    width: 593px;
+}
+
+div.background.hp div.content > div:not(.velky-napravo) .big + .small,
+div.background.hp div.content > div:not(.velky-napravo) .big + .small + .small {
+    float: right;
+}
+
+div.big, div.small, div.middle {
+    margin: 10px 0px 0px 0px;
+}
+
+div.background.hp div.content > div.lastInRow {
+    float: right;
+}
+
+div.background.hp div.wrapper {
+    width: 1193px;
+}
+
+/* ================ MimoÅ™Ã¡dnÃ© zprÃ¡vy ================ */
+.mimoradne-zpravy {
+  font-family: Verdana;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 1193px;
+  height: 40px;
+  margin: 40px auto 0 auto;
+  padding-left: 25px;
+  border-radius: 10px;
+  background: url(/cms/hp/images/hp/bg_mimoradne_zpravy.png) no-repeat;
+}
+
+.mimoradne-zpravy:hover {
+    text-decoration:none !important;
+}
+
+.bez-nadpisu {
+  background: #fff url(/cms/hp/images/hp/bgr-mimoradne-zpravy-kratke.png) no-repeat;
+}
+
+.mimoradne-zpravy h2 {
+text-shadow: 1px 1px 9px rgba(64, 64, 64, 0.15);
+color: #fffff9;
+font-size: 14px;
+font-weight: 700;
+line-height: 18px;
+text-transform: uppercase;
+text-align: center;
+}
+
+
+.mimoradne-zpravy p {
+color: #0856a9;
+font-family: Verdana;
+font-size: 17px;
+font-weight: 700;
+padding-left: 110px;
+}
+
+.mimoradne-zpravy p:hover {
+    text-decoration:underline !important;
+}
+/* ================ Konec - MimoÅ™Ã¡dnÃ© zprÃ¡vy ================ */
+

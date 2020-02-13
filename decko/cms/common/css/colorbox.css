@@ -1,0 +1,133 @@
+/*
+    ColorBox Core Style
+    The following rules are the styles that are consistant between themes.
+    Avoid changing this area to maintain compatability with future versions of ColorBox.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative; background: #fff;}
+#cboxLoadedContent{overflow:auto;}
+#cboxLoadedContent iframe{display:block; width:100%; height:100%; border:0;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+
+#cboxOverlay{
+	background:url(/cms/common/images/common/bg-lightbox.png) repeat 0 0;
+}
+#colorbox{
+	outline: none;
+}
+#cboxTopLeft{
+	width:10px; height:10px; background-color: #fff;
+}
+#cboxTopRight{
+	width:10px; height:10px; background-color: #fff;
+}
+#cboxBottomLeft{
+	width:10px; height:50px; background-color: #fff;
+}
+#cboxBottomRight{
+	width:10px; height:50px; background-color: #fff;
+}
+#cboxMiddleLeft{
+	width:10px; background-color: #fff;
+}
+#cboxMiddleRight{
+	width:10px; background-color: #fff;
+}
+#cboxTopCenter{
+	height:10px; background-color: #fff;
+}
+#cboxBottomCenter{
+	height:50px; background-color: #fff;
+}
+#cboxLoadedContent{}
+#cboxTitle{
+	position:absolute; bottom:-30px; right:10px; display: block; text-align:right; width:100%; color:#949494;
+}
+#cboxCurrent{
+	position:absolute; bottom:-30px; left:0px; color:#949494;
+}
+#cboxSlideshow{
+	position:absolute; bottom:4px; right:30px; color:#0092ef;
+}
+#cboxPrevious{
+	position:absolute; border: none; top: 50%; left:-32px;
+	background:url(/cms/common/images/common/ico-lightbox-prev.png) no-repeat 0px 0px;
+	width:52px; height:52px; text-indent:-9999px;
+}
+#cboxPrevious:hover{
+	background-position: bottom left;
+}
+#cboxNext{
+	position:absolute; border: none; top: 50%; right:-32px;
+	background:url(/cms/common/images/common/ico-lightbox-next.png) no-repeat 0px 0px;
+	width:52px; height:52px; text-indent:-9999px;
+}
+#cboxPrevious:hover, #cboxNext:hover{
+	background-position: bottom left;
+}
+#cboxNext.comeTomorrow{
+	background-image: url(/cms/common/images/colorbox/cboxNext_comeTomorrow.png); cursor: default ;
+}
+#cboxPrevious.comeYesterday{
+	background-image: url(/cms/common/images/colorbox/cboxPrevious_comeYesterday.png) !important; cursor: default ;
+}
+/*#cboxLoadingOverlay{background:url(images/colorbox/loading_background.png) no-repeat center center;}*/
+#cboxLoadingOverlay{
+	background:none;
+}
+/* #cboxLoadingGraphic{background:url(images/colorbox/loading.gif) no-repeat center center;} */
+/*#cboxClose{z-index: 100000; position:absolute; top:-24px; right: -24px; background:url(images/colorbox/cboxClose.png) no-repeat top left; width:37px; height:37px; text-indent:-9999px;}*/
+#cboxClose{
+	z-index: 100000; border: none; position:absolute; top:-27px; right: -35px;
+	background:url(/cms/common/images/common/ico-lightbox-close.png) no-repeat top left;
+	width:52px; height:52px; text-indent:-9999px;
+}
+#cboxClose:hover{
+	background-position:bottom left;
+}
+
+div.login #cboxMiddleLeft, div.login #cboxMiddleRight, div.login #cboxTopCenter, div.login #cboxTopLeft,
+div.login #cboxTopRight, div.login #cboxBottomCenter, div.login #cboxBottomLeft, div.login #cboxBottomRight,
+div.login #cboxContent {
+	background-color: transparent;
+}
+
+div.login #cboxClose {
+    top: 8px;
+    right: 8px;
+    background: url( /cms/common/images/login/decko-registrace-close.png) no-repeat scroll center center transparent;
+    width: 18px;
+    height: 18px;
+}
+
+.clb-game #cboxTopLeft {
+	background: url( /cms/common/images/colorbox/border-radius-top-left.png) no-repeat scroll center center transparent;
+}
+.clb-game #cboxTopCenter {
+	background: url( /cms/common/images/colorbox/rainbow-horizontal-repeat.png) repeat-x scroll top center #fff;
+}
+.clb-game #cboxBottomCenter {
+	background: url( /cms/common/images/colorbox/rainbow-horizontal-repeat.png) repeat-x scroll bottom center #fff;
+	height: 10px;
+}
+.clb-game #cboxTopRight {
+	background: url( /cms/common/images/colorbox/border-radius-top-right.png) no-repeat scroll center center transparent;
+}
+.clb-game #cboxMiddleLeft {
+	background: url( /cms/common/images/colorbox/rainbow-vertical-repeat.png) repeat-y scroll center left #fff;
+}
+.clb-game #cboxMiddleRight {
+	background: url( /cms/common/images/colorbox/rainbow-vertical-repeat.png) repeat-y scroll center right #fff;
+}
+.clb-game #cboxBottomLeft {
+	background: url( /cms/common/images/colorbox/border-radius-bottom-left.png) no-repeat scroll center center transparent;
+	height: 10px;
+}
+.clb-game #cboxBottomRight {
+	background: url( /cms/common/images/colorbox/border-radius-bottom-right.png) no-repeat scroll center center transparent;
+	height: 10px;
+}

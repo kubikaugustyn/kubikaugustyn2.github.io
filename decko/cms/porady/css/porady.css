@@ -1,0 +1,2324 @@
+div.top.porady div.static {
+    background-color: #eff0e2;
+}
+
+div.top.porady div.bg-bottom {
+    background: transparent url( /cms/porady/images/porady/bg-top-bottom-bottom.png) no-repeat scroll left bottom;
+}
+
+div.top.porady div.top-bottom {
+    background: transparent url( /cms/porady/images/porady/bg-top-bottom-bottom.png) no-repeat scroll left bottom;
+}
+
+div.top.porady ul.menu li a, div.top.porady h2 {
+    color: #96a02c;
+}
+
+div.top.porady h2 {
+    background: transparent url( /cms/porady/images/porady/bg-top-shadow.png) repeat-x scroll right top;
+}
+
+div.top.porady div.hledat a {
+    background: transparent url( /cms/porady/images/porady/ico-hledat.png) no-repeat scroll 2px center;
+}
+
+div.top.porady ul.menu li.nove {
+    background: transparent url( /cms/porady/images/porady/porady-nove.png) no-repeat scroll center top;
+}
+
+div.top.porady ul.menu li.nove:hover, div.top.porady ul.menu li.nove.active {
+    background: transparent url( /cms/porady/images/porady/porady-nove-hover.png) no-repeat scroll center top;
+}
+
+div.top.porady ul.menu li.nej {
+    background: transparent url( /cms/porady/images/porady/porady-nej.png) no-repeat scroll center top;
+}
+
+div.top.porady ul.menu li.nej:hover, div.top.porady ul.menu li.nej.active {
+    background: transparent url( /cms/porady/images/porady/porady-nej-hover.png) no-repeat scroll center top;
+}
+
+div.top.porady ul.menu li.nazev {
+    background: transparent url( /cms/porady/images/porady/top-nazev.png) no-repeat scroll center top;
+}
+
+div.top.porady ul.menu li.nazev:hover, div.top.porady ul.menu li.nazev.active {
+    background: transparent url( /cms/porady/images/porady/top-nazev-hover.png) no-repeat scroll center top;
+}
+
+div.top.porady ul.menu li.tema {
+    background: transparent url( /cms/porady/images/porady/top-tema.png) no-repeat scroll center top;
+}
+
+div.top.porady ul.menu li.tema:hover, div.top ul.menu li.tema.active {
+    background: transparent url( /cms/porady/images/porady/top-temai-hover.png) no-repeat scroll center top;
+}
+
+div.top.porady ul.menu li.program {
+    background: transparent url( /cms/porady/images/porady/top-program.png) no-repeat scroll center top;
+}
+
+div.top.porady ul.menu li.program:hover, div.top ul.menu li.program.active {
+    background: transparent url( /cms/porady/images/porady/top-program-hover.png) no-repeat scroll center top;
+}
+
+div.top.porady ul.menu li.oblibene {
+    background: transparent url( /cms/porady/images/porady/top-oblibene.png) no-repeat scroll center top;
+    margin-left: 630px;
+}
+
+div.top.porady ul.menu li.oblibene:hover, div.top ul.menu li.oblibene.active {
+    background: transparent url( /cms/porady/images/porady/top-oblibene-hover.png) no-repeat scroll center top;
+}
+
+div.top.porady div.top-bottom > div {
+    background: #eff0e2 url( /cms/porady/images/porady/bg-top-bottom-shadow.png) repeat-x scroll left 22px;
+}
+
+div.content.porady ul.buttons li a {
+    color: #8b942a;
+}
+
+div.content.porady ul.buttons li.nejnovejsi a {
+    background: transparent url( /cms/porady/images/porady/ico-nejnovejsi.png) no-repeat scroll 22px center;
+}
+
+div.content.porady ul.buttons li.nejnovejsi:hover a, div.content.porady ul.buttons li.nejnovejsi:active a {
+    background: transparent url( /cms/videa/images/videa/ico-nejnovejsi-hover.png) no-repeat scroll 22px center;
+}
+
+div.content.porady ul.buttons li.nejnovejsi + li a {
+    background: transparent url( /cms/porady/images/porady/ico-nejsledovanejsi.png) no-repeat scroll 11px 9px;
+}
+
+div.content.porady ul.buttons li.nejnovejsi + li:hover a, div.content.porady ul.buttons li.nejnovejsi + li:active a {
+    background: transparent url( /cms/videa/images/videa/ico-nejhranejsi-hover.png) no-repeat scroll 13px 11px;
+}
+
+div.content.porady ul.buttons li.ostatni a {
+    background: transparent url( /cms/porady/images/porady/ico-ostatni.png) no-repeat scroll 12px 8px;
+}
+
+div.content.porady ul.buttons li.ostatni:hover a, div.content.porady ul.buttons li.ostatni:active a {
+    background: transparent url( /cms/videa/images/videa/ico-ostatni-hover.png) no-repeat scroll 12px 8px;
+}
+
+div.content.porady ul.buttons li:hover, div.content.porady ul.buttons li:active {
+    background: transparent url( /cms/porady/images/porady/bg-button-w142-hover.png) no-repeat scroll right top;
+}
+
+div.content.porady ul.buttons li.ostatni:hover, div.content.porady ul.buttons li.ostatni:active {
+    background: transparent url( /cms/porady/images/porady/bg-button-w202-hover.png) no-repeat scroll right top;
+}
+
+div.content.porady ul.buttons li:hover a, div.content.porady ul.buttons li:active a {
+    color: #fff;
+}
+
+div.content.porady a.dalsi {
+    background: transparent url( /cms/porady/images/porady/porady-bg-button-dalsi.png) no-repeat scroll right top;
+    margin-top: 20px;
+}
+
+div.content.porady a.dalsi:hover {
+    background-position: right bottom;
+}
+
+div.content.porady div div.bottom {
+    background: transparent url( /cms/hp/images/hp/bg-content-porady.png) no-repeat scroll left top;
+    width: 282px;
+    height: 36px;
+}
+
+/* Porady --- Podle nazvu --- START */
+
+div.top.porady div.top-bottom div.nazev {
+    height: 195px;
+}
+
+div.top.porady div.top-bottom div.nazev img.ukazatel {
+    left: 550px;
+}
+
+div.top.porady div.top-bottom div.nazev ul.abeceda li a, div.porady div.top-bottom ul li a {
+    color: #96a02c;
+}
+
+div.top div.top-bottom div.nazev ul.abeceda li:hover a, div.top div.top-bottom div.nazev ul.abeceda li.active a {
+    color: #fff;
+}
+
+div.top.porady div.top-bottom div.nazev ul.abeceda li.wide:hover, div.top.porady div.top-bottom div.nazev ul.abeceda li.wide.active {
+    background: transparent url( /cms/porady/images/porady/bg-letter-wide-hover.png) no-repeat scroll left center;
+}
+
+div.top.porady div.top-bottom div.nazev ul.abeceda li:hover, div.top.porady div.top-bottom div.nazev ul.abeceda li.active {
+    background: transparent url( /cms/porady/images/porady/bg-letter-hover.png) no-repeat scroll left center;
+}
+
+div.top.porady div.top-bottom div.vysledky ul li.r0 {
+    color: #acae93;
+}
+
+div.top.porady div.top-bottom ul li a {
+    color: #96a02c;
+}
+
+div.top.porady div.top-bottom ul li:hover {
+    background: transparent url( /cms/porady/images/porady/bg-button-w235.png) no-repeat scroll left center;
+}
+
+/* Porady --- Podle nazvu --- END */
+
+/* --- Porady --- Podle tematu --- START */
+
+div.top.porady div.top-bottom div.zajem {
+    height: 155px;
+}
+
+div.top.porady div.top-bottom div.zajem img.ukazatel {
+    right: 502px;
+}
+
+div.top.porady div.top-bottom ul.tema li.c1.r1 a {
+    background: transparent url( /cms/porady/images/porady/ico-zvirata-priroda.png) no-repeat scroll 3px 4px;
+}
+
+div.top.porady div.top-bottom ul.tema li.c1.r2 a {
+    background: transparent url( /cms/porady/images/porady/ico-veda-technika.png) no-repeat scroll 3px 3px;
+}
+
+div.top.porady div.top-bottom ul.tema li.c1.r3 a {
+    background: transparent url( /cms/porady/images/porady/ico-sport.png) no-repeat scroll 3px 5px;
+}
+
+div.top.porady div.top-bottom ul.tema li.c1.r4 a {
+    background: transparent url( /cms/porady/images/porady/ico-magaziny.png) no-repeat scroll 3px 4px;
+}
+
+div.top.porady div.top-bottom ul.tema li.c1.r4:hover a, div.top.porady div.top-bottom ul.tema li.c1.r4:active a {
+    background: transparent url( /cms/common/images/common/ico-magaziny-hover.png) no-repeat scroll 3px 4px;
+}
+
+div.top.porady div.top-bottom ul.tema li.c2.r1 a {
+    background: transparent url( /cms/porady/images/porady/ico-umeni.png) no-repeat scroll 3px 5px;
+}
+
+div.top.porady div.top-bottom ul.tema li.c2.r2 a {
+    background: transparent url( /cms/porady/images/porady/ico-lide-spolecnost.png) no-repeat scroll 3px 4px;
+}
+
+div.top.porady div.top-bottom ul.tema li.c2.r3 a {
+    background: transparent url( /cms/porady/images/porady/ico-zabava.png) no-repeat scroll 3px center;
+}
+
+div.top.porady div.top-bottom ul.tema li.c2.r4 a {
+    background: transparent url( /cms/porady/images/porady/ico-poznavani.png) no-repeat scroll 3px center;
+}
+
+div.top.porady div.top-bottom ul.tema li.c2.r4:hover a, div.top.porady div.top-bottom ul.tema li.c2.r4:active a {
+    background: transparent url( /cms/common/images/common/ico-poznavani-hover.png) no-repeat scroll 3px center;
+}
+
+div.top.porady div.top-bottom ul.tema li.c3.r1 a {
+    background: transparent url( /cms/porady/images/porady/ico-zahady-dobrodruzstvi.png) no-repeat scroll 3px center;
+}
+
+div.top.porady div.top-bottom ul.tema li.c3.r2 a {
+    background: transparent url( /cms/porady/images/porady/ico-jidlo-vareni.png) no-repeat scroll 3px 4px;
+}
+
+div.top.porady div.top-bottom ul.tema li.c3.r3 a {
+    background: transparent url( /cms/porady/images/porady/ico-pohadky.png) no-repeat scroll 3px center;
+}
+
+div.top.porady div.top-bottom ul.tema li.c3.r4 a {
+    background: transparent url( /cms/porady/images/porady/ico-serialy.png) no-repeat scroll 3px 5px;
+}
+
+div.top.porady div.top-bottom ul.tema li.c3.r4:hover a, div.top.porady div.top-bottom ul.tema li.c3.r4:active a {
+    background: transparent url( /cms/common/images/common/ico-serialy-hover.png) no-repeat scroll 3px 5px;
+}
+
+div.top.porady div.top-bottom ul.tema li.c4.r1 a {
+    background: transparent url( /cms/porady/images/porady/ico-zemepis-cestovani.png) no-repeat scroll 3px 4px;
+}
+
+div.top.porady div.top-bottom ul.tema li.c4.r2 a {
+    background: transparent url( /cms/porady/images/porady/ico-historie.png) no-repeat scroll 1px 5px;
+}
+
+div.top.porady div.top-bottom ul.tema li.c4.r3 a {
+    background: transparent url( /cms/porady/images/porady/ico-lidske-telo-zdravi.png) no-repeat scroll 3px 5px;
+}
+
+div.top.porady div.top-bottom ul.tema li.c4.r4 a {
+    background: transparent url( /cms/porady/images/porady/ico-zpravy.png) no-repeat scroll 3px 5px;
+}
+
+div.top.porady div.top-bottom ul.tema li.c4.r4:hover a, div.top.porady div.top-bottom ul.tema li.c4.r4:active a {
+    background: transparent url( /cms/common/images/common/ico-zpravy-hover.png) no-repeat scroll 3px 5px;
+}
+
+div.top.porady div.top-bottom ul.tema li.c5.r1 a {
+    background: transparent url( /cms/porady/images/porady/ico-pro-nejmensi.png) no-repeat scroll 3px 4px;
+}
+
+div.top.porady div.top-bottom ul.tema li.c5.r2 a {
+    background: transparent url( /cms/porady/images/porady/ico-animovane.png) no-repeat scroll 3px center;
+}
+
+div.top.porady div.top-bottom ul.tema li.c5.r2:hover a, div.top.porady div.top-bottom ul.tema li.c5.r2:active a {
+    background: transparent url( /cms/common/images/common/ico-animovane-hover.png) no-repeat scroll 3px center;
+}
+
+div.top.porady div.top-bottom ul.tema li.c5.r3 a {
+    background: transparent url( /cms/porady/images/porady/ico-filmy.png) no-repeat scroll 3px center;
+}
+
+div.top.porady div.top-bottom ul.tema li.c5.r3:hover a, div.top.porady div.top-bottom ul.tema li.c5.r3:active a {
+    background: transparent url( /cms/common/images/common/ico-filmy-hover.png) no-repeat scroll 3px center;
+}
+
+/* --- Porady --- Podle tematu --- END */
+
+/* --- Porady --- Oblibene --- START */
+
+div.content.porady.oblibene div.smaller div.item {
+    overflow: visible;
+}
+
+div.content.porady div div.item a.remove {
+    background: transparent url( /cms/porady/images/porady/oblibene-odebrat.png) no-repeat scroll left top;
+    left: 211px;
+    top: -7px;
+}
+
+div.content.porady div div.item a.remove:hover {
+    background: transparent url( /cms/porady/images/porady/oblibene-odebrat-hover.png) no-repeat scroll left top;
+}
+
+/* --- Porady --- Oblibene --- END */
+
+/* --- Porady --- Detail --- START */
+
+div.top.porady.det {
+    /*	background: transparent url( /cms/porady/images/porady/bg-top-porad-eff0e2.png) no-repeat scroll left bottom;*/
+    background: transparent url( /cms/porady/images/layout_2-0/bg-top-porad.png) no-repeat scroll left bottom;
+    margin-top: 0px;
+    height: 544px;
+    position: relative;
+    overflow: hidden;
+}
+
+div.top.porady.det.bez-videa {
+    height: 230px;
+}
+
+div.top.porady.det div.motive {
+    position: absolute;
+    top: 0px;
+    left: 2px;
+    width: 100%;
+    height: 100%;
+}
+
+div.top.porady.det h2 {
+    background: transparent url( /cms/porady/images/porady/bg-det-shadow.png) repeat-x scroll right top;
+    position: absolute;
+    margin-top: 4px;
+}
+
+div.top.porady.det div.video {
+    /*	background: transparent url("/cms/videa/images/videa/frame-video.png") no-repeat scroll left top;*/
+    height: 364px;
+    width: 550px;
+    position: relative;
+    padding: 0px;
+    /*width: 570px;*/
+    /*height: 370px;*/
+    /*float: left;*/
+    /*padding-left: 10px;*/
+}
+
+div.top.porady.det div.video-detail div.dily {
+    top: 148px;
+}
+
+div.top.porady.det div.video-detail div.inner-two-rows {
+    top: 252px;
+    height: 302px;
+}
+
+div.top.porady.det div.video-detail div.inner-two-rows .jspVerticalBar {
+    display: none;
+}
+
+div.top.porady.det div.video-detail div.dily div.inner div.column {
+    width: 169px;
+}
+
+div.top.porady.det div.video-detail {
+    background: none;
+    padding: 30px 0px 0px 0px;
+    width: 100%;
+    height: 517px;
+}
+
+div.top.porady.det div.video-detail span.datum,
+div.top.porady.det div.video-detail a.stranka-poradu {
+    display: none;
+}
+
+div.top.porady.det div.text {
+    float: right;
+    width: 480px;
+    height: 115px;
+    padding: 130px 40px 0px 0px;
+    overflow: hidden;
+}
+
+div.top.porady.det div.text p {
+    text-align: left;
+    line-height: 16px;
+    color: #666666;
+}
+
+div.top.porady.det div.programmeNextBroadcastDate {
+    background: transparent url( /cms/porady/images/porady/bg-vysilaci-cas.png) no-repeat scroll left top;
+    float: right;
+    color: #fff;
+    /*	width: 161px;*/
+    line-height: 36px;
+    position: absolute;
+    top: 90px;
+    right: 2px;
+    padding: 0px 20px 0px 50px;
+    font-weight: bold;
+    font-size: 85%;
+    overflow: hidden;
+    height: 36px;
+}
+
+div.top.porady.det div.video a.video-play {
+    height: 364px;
+    width: 550px;
+    position: absolute;
+    cursor: pointer;
+}
+
+div.top.porady.det div.video a.video-play:hover {
+    background-position: bottom left;
+}
+
+div.top.porady.det div.video a.video-play span {
+    background: transparent url( /cms/porady/images/porady/ico-det-play.png) no-repeat scroll left center;
+    padding: 5px 0px 5px 35px;
+    font-weight: normal;
+}
+
+div.top.porady.det p {
+    /*width: 375px;*/
+    /*padding-left: 30px;*/
+    font-size: 70%;
+    /*margin-top: 0px;*/
+    text-align: center;
+}
+
+div.top.porady.det h2 {
+    background-image: none; /*"!!!*/
+    color: #96a02c;
+    width: 100%;
+    text-align: center;
+    text-shadow: 1px 1px 2px #fff;
+    font-size: 215%;
+    padding: 5px 0px 0px 0px;
+}
+
+div.detail.video-detail h1 {
+    clear: both;
+    color: #96A02C;
+    font-size: 215%;
+    font-weight: bolder;
+    line-height: 29px;
+    padding: 5px 0 20px;
+    text-align: center;
+    text-shadow: 1px 1px 2px #FFFFFF;
+    width: 100%;
+}
+
+div.top.porady.det div.apndx, div.top.porady.det div.motto {
+    position: absolute;
+    width: 500px;
+    font-size: 110%;
+    padding: 0px 350px 0px 350px;
+    text-align: center;
+    text-shadow: 1px 1px 2px #fff;
+    overflow: hidden;
+}
+
+div.top.porady.det div.motto {
+    font-size: 18px;
+    top: 62px;
+    max-height: 23px;
+}
+
+div.top.porady.det p.motto {
+    color: #666666;
+    font-size: 90%;
+    text-align: center;
+}
+
+div.top.porady.det div.apndx {
+    top: 90px;
+    line-height: 14px;
+    font-size: 16px;
+    max-height: 28px;
+}
+
+div.top.porady.det h3 {
+    color: #96a02c;
+    font-size: 19px;
+}
+
+div.top.porady.det h4 {
+    font-weight: normal;
+    font-size: 83%;
+    text-align: center;
+    color: #4e4e4c;
+    text-shadow: 1px 1px 2px #fff;
+    padding-top: 0px;
+    margin-top: 0px;
+    line-height: 14px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body.spackovi div.top.porady.det h4 {
+    width: 385px;
+}
+
+div.top.porady.det ul.icons {
+    position: absolute;
+    bottom: 0px;
+    right: 16px;
+}
+
+div.top.porady.det ul.icons li {
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
+}
+
+div.top.porady.det ul.icons li a {
+    width: 32px;
+    height: 32px;
+}
+
+div.top.porady.det ul.icons li a img {
+    padding: 0px;
+}
+
+div.top.porady.det div.video div.ico {
+    top: 130px;
+    left: 255px;
+    display: block;
+}
+
+div.top.porady ul.hodnoceni {
+    float: left;
+    position: absolute;
+    top: 0px;
+    right: 30px;
+}
+
+div.top.porady span.body {
+    position: absolute;
+    bottom: 18px;
+    right: 38px;
+}
+
+div.top.porady div.icons span.body {
+    padding-left: 24px;
+    font-size: 80%;
+    line-height: 48px;
+    float: left;
+}
+
+div.top.porady div.icons span.body {
+    background: transparent url( /cms/porady/images/porady/ico-smile-4-hover.png) no-repeat scroll 2px center;
+    color: #96a02c;
+}
+
+div.top.porady ul.hodnoceni li.h0 {
+    background-image: url( /cms/porady/images/porady/ico-smile-0.png);
+}
+
+div.top.porady ul.hodnoceni li.h0:hover {
+    background-image: url( /cms/porady/images/porady/ico-smile-0-hover.png);
+}
+
+div.top.porady ul.hodnoceni li.h1 {
+    background-image: url( /cms/porady/images/porady/ico-smile-1.png);
+}
+
+div.top.porady ul.hodnoceni li.h1:hover {
+    background-image: url( /cms/porady/images/porady/ico-smile-1-hover.png);
+}
+
+div.top.porady ul.hodnoceni li.h2 {
+    background-image: url( /cms/porady/images/porady/ico-smile-2.png);
+}
+
+div.top.porady ul.hodnoceni li.h2:hover {
+    background-image: url( /cms/porady/images/porady/ico-smile-2-hover.png);
+}
+
+div.top.porady ul.hodnoceni li.h3 {
+    background-image: url( /cms/porady/images/porady/ico-smile-3.png);
+}
+
+div.top.porady ul.hodnoceni li.h3:hover {
+    background-image: url( /cms/porady/images/porady/ico-smile-3-hover.png);
+}
+
+div.top.porady ul.hodnoceni li.h4 {
+    background-image: url( /cms/porady/images/porady/ico-smile-4.png);
+}
+
+div.top.porady ul.hodnoceni li.h4:hover {
+    background-image: url( /cms/porady/images/porady/ico-smile-4-hover.png);
+}
+
+div.top.porady.det ul.kotvy {
+    position: absolute;
+    top: 25px;
+    right: 45px;
+}
+
+div.top.porady.det ul.kotvy li {
+    margin-right: 2px;
+}
+
+div.content.porady div.left, div.content.porady div.right {
+    width: 50%;
+    padding: 10px 0px 10px 0px;
+}
+
+div.content.porady div.left {
+    float: left;
+}
+
+div.content.porady div.right {
+    float: right;
+}
+
+div.content.porady div.right > div {
+    float: right;
+}
+
+div.content.porady div.video, div.content.porady div.fotogalerie, div.content.porady div.text {
+    background: transparent url( /cms/porady/images/porady/ramecek-top-w580.png) no-repeat scroll center top;
+    width: 580px;
+    position: relative;
+    overflow: hidden;
+}
+
+div.content.porady div.video {
+    height: 532px;
+}
+
+div.content div.bigger.game.count3 {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.content.porady div.fotogalerie {
+    height: 301px;
+    margin-top: 10px;
+}
+
+div.content.porady div.text {
+    height: 145px;
+}
+
+div.content.porady div.left h3, div.content.porady div.right h3 {
+    color: #96a02c;
+    margin: 5px 0px 0px 0px;
+}
+
+div.content.porady div.video div.bottom, div.content.porady div.fotogalerie div.bottom, div.content.porady div.text div.bottom {
+    background: transparent url( /cms/porady/images/porady/ramecek-bottom-w580.png) no-repeat scroll center bottom;
+    left: 0px;
+    bottom: 0px;
+    width: 580px;
+    height: 16px;
+    border: none;
+}
+
+div.content.porady div.video div.video-middle, div.content.porady div.fotogalerie div.video-middle, div.content.porady div.text div.video-middle {
+    background: transparent url( /cms/porady/images/porady/ramecek-middle-w580.png) no-repeat scroll left bottom;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    width: 560px;
+    /*height: 500px;*/
+    overflow: hidden;
+    padding: 0px 10px 6px 10px;
+}
+
+div.content.porady div.fotogalerie div.video-middle {
+    /*height: 315px;*/
+    padding-left: 25px;
+}
+
+div.content.porady div.text div.video-middle {
+    /*height: 130px;*/
+    padding: 20px 15px 0px 20px;
+}
+
+div.content.porady div.text div.video-middle p {
+    font-size: 75%;
+    color: #666666;
+}
+
+div.content.porady div.video div.video-middle a.detail {
+    width: 560px;
+    height: 360px;
+    display: block;
+    color: #fff;
+}
+
+div.content.porady div.video div.ico-play {
+    top: 125px;
+    left: 255px;
+}
+
+div.content.porady div.video span {
+    background: transparent url( /cms/porady/images/porady/bg-info.png) no-repeat scroll left bottom;
+    line-height: 44px;
+    padding-left: 40px;
+    margin-top: -5px;
+}
+
+div.top.porady div.dalsi-dily {
+    overflow: hidden;
+    position: absolute;
+    width: 520px;
+    right: 10px;
+    bottom: 75px;
+}
+
+div.top.porady.det div.dalsi-dily > div {
+    position: relative;
+    text-align: center;
+    width: 155px;
+    height: 92px;
+    float: left;
+    margin: 10px 10px 0px 0px;
+}
+
+div.top.porady.det div.dalsi-dily > div > a {
+    background: transparent url( /cms/porady/images/porady/detail-dily.png) no-repeat scroll left top;
+    position: absolute;
+    width: 155px;
+    height: 22px;
+    left: 0px;
+    color: #fff;
+    padding-top: 70px;
+    font-size: 75%;
+}
+
+div.top.porady.det div.dily div.inner div.column div a:hover {
+    background-position: left bottom;
+}
+
+div.porad-detail div.icons {
+    position: absolute;
+    top: 16px;
+    right: 53px;
+}
+
+div.porad-detail div.uroven {
+    right: 180px;
+    position: absolute;
+    top: 42px;
+    color: #999999;
+    font-size: 80%;
+}
+
+div.porad-detail div.ico {
+    background: transparent url( /cms/porady/images/porady/ico-game-big.png) no-repeat scroll left top;
+    position: absolute;
+    left: 538px;
+    top: 300px;
+    width: 125px;
+    height: 125px;
+}
+
+div.content.porady div.fotogalerie div.video-middle > div {
+    width: 170px;
+    height: 100px;
+    position: relative;
+    float: left;
+    margin: 20px 10px 0px 0px;
+}
+
+div.content.porady div.fotogalerie div.video-middle > div a {
+    background: transparent url( /cms/porady/images/porady/detail-fotogalerie.png) no-repeat scroll left top;
+    position: absolute;
+    width: 170px;
+    height: 100px;
+}
+
+div.content.porady div.fotogalerie div.video-middle > div a:hover {
+    background: transparent url( /cms/porady/images/porady/detail-fotogalerie-hover.png) no-repeat scroll left top;
+}
+
+div.content.porady div.fotogalerie div.video-middle > div img {
+    padding: 5px;
+}
+
+div.content.porady div.vsechna-videa {
+    background: transparent url( /cms/porady/images/porady/bg-button-110x28.png) no-repeat scroll center center;
+    height: 28px;
+    line-height: 28px;
+    width: 110px;
+    float: right;
+    margin: 10px 45px 0px 0px;
+}
+
+div.content.porady div.vsechna-videa a {
+    text-align: center;
+    font-size: 80%;
+    color: #fff;
+    display: block;
+}
+
+div.content.porady div.vsechna-videa a:hover {
+    background: transparent url( /cms/porady/images/porady/bg-button-110x28-hover.png) no-repeat scroll center center;
+    text-decoration: none;
+    color: #4b88cf;
+}
+
+div.content.porady a.prev, div.content.porady a.next {
+    position: absolute;
+    bottom: 75px;
+    /*	width: 32px;
+            height: 32px;*/
+}
+
+div.content.porady a.prev {
+    left: 10px;
+}
+
+div.content.porady a.next {
+    right: 10px;
+}
+
+/* --- Porady --- Detail --- END */
+
+
+/* --- Porady --- Detail NEW --- START */
+
+div.floating {
+    float: left;
+}
+
+div.clearing {
+    clear: both;
+}
+
+div.size-50 {
+    /*width: 50%;*/
+    width: 550px;
+}
+
+div.size-50.clearing + div.size-50, div.size-50 + div.article-box {
+    float: right;
+}
+
+span.id {
+    display: none;
+}
+
+div.character-box {
+    background: transparent url(/cms/porady/images/porady/bg-box-590x220.png) no-repeat scroll left top;
+    height: 220px;
+    overflow: hidden;
+    padding: 0px 20px 0px 20px;
+    margin-top: 20px;
+    font-size: 95%;
+}
+
+div.characters-box {
+    padding: 0px;
+    overflow: hidden;
+    /*padding: 0px 20px 0px 20px;*/
+    margin-top: 20px;
+    font-size: 95%;
+    position:relative;
+}
+
+div.characters-box.size-100 {
+    background: transparent url(/cms/porady/images/porady/bg-box-1200-bottom.png) no-repeat scroll left bottom;
+    width: 1200px;
+    /*padding: 0px 30px 0px 30px;*/
+    /*min-height: 280px;*/
+    padding-bottom: 15px;
+}
+
+div.characters-box.size-50 {
+    background: transparent url(/cms/porady/images/porady/box-w590-bottom.png) no-repeat scroll left bottom;
+    width: 590px;
+    padding-bottom: 15px;
+}
+
+div.characters-box.size-50 div.char-inner {
+    background: transparent url( /cms/porady/images/porady/box-w590.png) no-repeat scroll center top;
+    padding: 10px 20px 15px 20px;
+    /*	height: 218px;*/
+    width: 550px;
+}
+
+div.characters-box.size-50.count2 div.reel-container {
+    margin-left: 105px;
+}
+
+div.characters-box.size-50.count4 div.reel-container div.reel {
+    left: 5px;
+}
+
+div.characters-box.size-100 div.char-inner {
+    background: transparent url( /cms/porady/images/porady/bg-box-1200-shadow.png) no-repeat scroll center top;
+    padding: 0px 82px 5px 82px;
+    width: 1036px;
+    /*	height: 218px;*/
+}
+
+div.characters-box h2, div.character-box h2, div.photos-box h2, div.article-box h2, div.moderator-box h2, .porad h2.box-h2 {
+    color: #96a02c;
+    text-shadow: none;
+    font-size: 19px;
+    padding-top: 15px;
+}
+div.characters-box.size-100 h2 {
+    margin-left: -50px;
+}
+div.characters-box.size-50.count3 div.reel-container div.reel {
+    left: 18px;
+}
+div.characters-box.size-50.count4 h2 {
+    padding-left: 10px;
+}
+div.characters-box.size-50.count4 div.char-inner {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 570px;
+}
+div.characters-box.size-50.count4 div.character-thumbnail {
+    margin: 5px -4px;
+}
+div.characters-box.size-50.scroll div.reel-container {
+    margin-left: 30px;
+    width: 500px;
+}
+div.characters-box.size-50.scroll a.prev {
+    top: 123px;
+    left: 25px
+}
+div.characters-box.size-50.scroll a.next {
+    top: 123px;
+    right: 20px;
+}
+
+div.box h2, body.tvminiuni div.tv-mini-uni-form h2 {
+    color: #96a02c;
+    text-shadow: none;
+    font-size: 19px;
+    padding-top: 5px;
+}
+
+div.box.soutez h2 {
+    color: #f17322;
+}
+
+div.box .box-content h2 {
+    padding-top: 0px;
+}
+
+div.characters-box div.char-inner > div {
+    padding-top: 15px;
+}
+
+div.characters-box a.next,
+div.characters-box a.prev {
+    background: transparent url( /cms/videa/images/videa/sipka-doleva-scroll.png) no-repeat scroll left top;
+    width: 13px;
+    height: 28px;
+    position: absolute;
+    top: 110px;
+    left: 35px;
+
+}
+
+div.characters-box a.next {
+    background: transparent url( /cms/videa/images/videa/sipka-doprava-scroll.png) no-repeat scroll left top;
+    right: 35px;
+    left: auto;
+}
+
+div.characters-box a.prev:hover, div.characters-box a.next:hover {
+    background-position: left bottom;
+}
+
+a.close {
+    background: transparent url( /cms/common/images/common/ico-zavrit.png) no-repeat scroll left top;
+    width: 14px;
+    height: 11px;
+    display: block;
+}
+
+div.characters-box a.close {
+    position: absolute;
+    right: 30px;
+    top: 275px;
+}
+
+a.close:hover {
+    background-position: left bottom;
+}
+
+div.character-box a.close {
+    display: none;
+}
+
+div.character-thumbnail {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 150px;
+    height: 180px;
+    margin: 5px 10px 5px 10px;
+}
+
+div.character-thumbnail a {
+    /*	background: transparent url( /cms/porady/images/porady/bg-img-characters.png) no-repeat scroll center top;*/
+    background: transparent url( /cms/porady/images/layout_2-0/bg-img-characters.png) no-repeat scroll left top;
+    /*height: 15px;*/
+    width: 138px;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding-top: 154px;
+    color: #96a02c;
+    font-size: 80%;
+    text-align: center;
+}
+
+div.characters-box div.character-thumbnail a:hover {
+    background-position: left -199px;
+}
+
+div.characters-box.inactive div.character-thumbnail a {
+    pointer-events: none;
+    cursor: default;
+}
+
+/* ma audio ale nema popisky */
+div.characters-box.inactive.audio div.character-thumbnail a {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/*  // smazat!!  */
+div.characters-box.noscroll div.character-thumbnail a:hover {
+    background-position: left top;
+    cursor: default;
+}
+
+div.character-box div.character-thumbnail a:hover {
+    cursor: default;
+}
+
+div.character-thumbnail > img {
+    width: 130px;
+    height: 130px;
+    padding: 4px 4px 12px;
+}
+
+div.characters-box div.reel-container {
+    min-height: 180px;
+    overflow: hidden;
+    position: relative;
+}
+
+div.characters-box div.reel-container div.reel {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+div.characters-box.count4 div.reel-container div.reel {
+    left: 175px;
+}
+
+div.characters-box div.character-detail {
+    clear: both;
+    margin-top: 15px;
+    display: none;
+}
+
+div.character-box div.character-detail {
+    padding: 10px;
+    overflow: hidden;
+    max-height: 148px;
+}
+
+div.characters-box.count4 div.character-detail {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+div.character-box a.next, div.character-box a.prev {
+    display: none;
+}
+
+div.photos-box {
+    overflow: hidden;
+}
+div.photos-box.box {
+    height: auto;
+}
+
+div.photos-box.size-50.lines2 {
+    background: transparent url(/cms/porady/images/porady/bg-box-590x290.png) no-repeat scroll left top;
+}
+div.photos-box.size-100, div.character-detail {
+    color: #666666;
+    line-height: 20px;
+}
+div.photos-box.size-100 .photos, div.character-detail {
+    font-size: 85%;
+}
+
+div.photos-box.scroll .photos {
+    height: 136px;
+}
+
+div.photos-box.scroll .photos.with-title {
+    height: 186px;
+}
+
+div.box .photos.with-title .photo-frame-w164 p {
+    font-size: 12px;
+    line-height: 20px;
+    padding-top: 6px;
+}
+
+.photos.with-title div.photo-frame-w164 p a {
+    position: relative;
+    background: none;
+    height: auto;
+}
+
+div.photos-box h2 {
+    padding-bottom: 15px;
+}
+
+div.photos-box div.photo, div.photo-frame-w164 {
+    width: 160px;
+    height: 90px;
+    float: left;
+    position: relative;
+    margin: 5px;
+    padding: 2px;
+}
+
+.reverseOrder div.photo-frame-w164 {
+    float: right;
+}
+
+div.photos-box.tapety div.photo-frame-w164 {
+    height: auto;
+    margin-right: 20px;
+}
+
+div.photos-box.tapety div.photo-frame-w164:last-child {
+    margin-right: 0px;
+}
+
+.with-title div.photo-frame-w164 {
+    height: 136px;
+}
+
+.with-title div.photo-frame-w164 a div {
+    color: #96a02c;
+    padding-top: 106px;
+    font-size: 11px;
+}
+
+div.photo-frame-w164.winner a div {
+    background: transparent url("/cms/duhacek-data/images/ico-vyherce-duhacek.png") no-repeat scroll left 110px;    
+    padding-left: 18px;
+    color: #f17322;
+}
+
+div.photos-box div.photo a {
+    /*	background: transparent url( /cms/porady/images/porady/detail-fotogalerie.png) no-repeat scroll center top;*/
+    background: transparent url( /cms/porady/images/layout_2-0/foto-ramecek.png) no-repeat scroll left top;
+    width: 164px;
+    height: 94px;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+div.photos-box div.photo a:hover {
+    background-position: center bottom;
+}
+
+div.photos-box div.photo > img, div.photo-frame-w164 img {
+    width: 160px;
+    height: 90px;
+}
+
+div.photo-frame-w228 img {
+    width: 224px;
+    height: 126px;
+}
+
+/* photo-frame-w284 */
+
+div.photo-frame-w284 {
+    width: 280px;
+    height: 158px;
+    float: left;
+    position: relative;
+    margin: 5px;
+    padding: 2px;
+}
+
+div.photo-frame-w284 a {
+    background: url("/cms/common/images/common/frame_foto-ramecek.png") no-repeat scroll left top transparent;
+    display: block;
+    height: 162px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 284px;
+}
+div.photo-frame-w284 a:hover {
+    background-position: bottom left;
+}
+
+div.photo-frame-w284 img {
+    width: 280px;
+    height: 158px;
+}
+
+/* */
+
+div.photos-box.tapety div.photo,
+.layout_2-0 div.photos-box.tapety div.photo {
+    height: 180px;
+}
+div.photos-box.tapety div.photo-frame-w164 div.title {
+    color: #96a02c;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+}
+
+div.photos-box.tapety div.photo-frame-w164 div.download a {
+    color: #96a02c;
+    position: relative;
+    text-decoration: underline;
+    font-size: 12px;
+    background: none;
+    height: 24px;
+    width: auto;
+}
+
+div.photos-box.tapety div.photo-frame-w164 div.download a:first-child {
+    padding-top: 8px;
+}
+
+div.photos-box.tapety div.photo-frame-w164 div.download a:hover {
+    text-decoration: none;
+}
+
+div.photos-box.tapety.count5 div.container {
+    margin-left: 120px;
+}
+div.photos-box.tapety.count5 div.photo {
+    /* height: 180px; */
+    width: 170px;
+}
+
+div.article-box {
+    background: transparent url( /cms/porady/images/porady/bg-box-590x200.png) no-repeat scroll center top;
+    overflow: hidden;
+    padding: 0px 90px 0px 20px;
+    width: 480px;
+    height: 200px;
+    margin-top: 15px;
+    position: relative;
+}
+
+div.article-box h2 {
+    background: transparent url( /cms/hp/images/hp/li-souteze.png) no-repeat scroll left 15px;
+    color: #f17322;
+    padding-left: 30px;
+}
+
+div.article-box img {
+    padding: 5px;
+    float: left;
+}
+
+div.article-box p {
+    color: #666666;
+    font-size: 70%;
+    margin: 0px 0px 0px 5px;
+    line-height: 16px;
+}
+
+div.article-box p.win {
+    color: #333333;
+    width: 400px;
+}
+
+div.article-box h3 {
+    color: #f17322;
+    font-size: 88%;
+    font-weight: normal;
+    margin: -5px 0px 0px 5px;
+    clear: left;
+}
+
+div.article-box div.corner {
+    background: transparent url( /cms/porady/images/porady/rnb-corner.png) no-repeat scroll right bottom;
+    width: 155px;
+    height: 155px;
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+}
+
+div.moderator-box {
+    background: transparent url( /cms/porady/images/porady/bg-box-590x230.png) no-repeat scroll center top;
+    overflow: hidden;
+    padding: 0px 20px 0px 20px;
+    width: 550px;
+    height: 230px;
+    margin-top: 15px;
+    position: relative;
+}
+
+div.moderator-box > div {
+    background: transparent url( /cms/porady/images/porady/bg-img-characters.png) no-repeat scroll center top;
+    position: absolute;
+    width: 138px;
+    top: 50px;
+    left: 30px;
+}
+
+div.moderator-box > div span {
+    color: #96a02c;
+    font-size: 80%;
+    padding-top: 150px;
+    display: block;
+    text-align: center;
+}
+
+div.moderator-box img {
+    position: absolute;
+    top: 58px;
+    left: 37px;
+}
+
+div.moderator-box p {
+    float: right;
+    width: 375px;
+    color: #747474;
+    font-size: 80%;
+    padding-top: 35px;
+}
+
+/* --- Porady --- Detail NEW --- END */
+
+/* --- Porady --- START --- */
+
+div.content.porad {
+    /*	background: #eef2fe url( /cms/hp/images/hp/bg-copy_3.jpg) repeat scroll center bottom;*/
+    /*background: url("/cms/hp/images/hp/stin-copy_1.png") repeat-x scroll center bottom transparent;*/
+    /* padding-bottom: 200px; ROZBZUC DECKO */
+    min-width: 1200px;
+}
+
+.zima div.content.porad {
+    background: transparent url( /cms/hp/images/hp/bg-copy_1.jpg) repeat scroll center bottom;
+}
+
+div.content.porad div.background {
+    margin-bottom: 186px;
+    background: none;
+    /*min-height: 1000px;*/
+}
+
+.characters-box.size-50 div.character-detail, .characters-box.size-100 div.character-detail {
+    padding-top: 45px;
+}
+
+body.vecernicek div.motive {
+    background: transparent url( /cms/porady/images/porady-content/bg-top-vecernicek.jpg) no-repeat scroll left top;
+}
+
+body.vecernicek .background {
+    background: #134158 url( /cms/porady/images/porady-content/bg-vecernicek.jpg) no-repeat fixed center 55px;
+}
+
+/* Porady --- BOXy --- START */
+
+div.content.porad div.lexikon, div.content.porad div.banner, div.content.porad div.banner2  {
+    margin-top: 20px;
+    overflow: hidden;
+    width: 590px;
+}
+
+div.content.porad div.banner a img:hover {
+    opacity: 0.8;
+}
+
+div.content.porad div.banner2 a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+div.content.porad div.banner2 a:hover {
+    background-position: left bottom;
+}
+
+div.content.porad div.lexikon img.lexikon, div.lexikon img.lexikon-item {
+    float: left;
+}
+
+div.content.porad div.lexikon a.jspArrow {
+    background: transparent url( /cms/porady/images/porady/sipka-doleva-lexikon_1.png) no-repeat scroll center top;
+    width: 53px;
+    height: 56px;
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 70px;
+    z-index: 9999;
+}
+
+div.content.porad div.lexikon .lexikon-item ul {
+    padding-left: 16px;
+    overflow: hidden;
+}
+
+div.content.porad div.lexikon .lexikon-item ul li {
+    list-style: disc outside none;
+    clear: left;
+}
+
+div.content.porad div.lexikon .lexikon-item ul li ul {
+  padding-left: 0px;
+}
+
+div.content.porad div.lexikon .lexikon-item ul li ul li::before {
+  content: "• ";
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+div.content.porad div.lexikon a.jspArrow.jspDisabled {
+    display: none;
+}
+
+div.content.porad div.lexikon a.jspArrowRight {
+    background: transparent url( /cms/porady/images/porady/sipka-doprava-lexikon_1.png) no-repeat scroll center top;
+    right: 15px;
+}
+
+div.content.porad div.lexikon a.jspArrow:hover {
+    background-position: center bottom;
+}
+
+div.content.porad div.lexikon div.jspTrack,
+div.content.porad div.lexikon .jspVerticalBar {
+    display: none;
+}
+
+div.content.porad div.lexikon div.container {
+    min-width: 590px;
+}
+
+div.content.porad div.lexikon .jspHorizontalBar {
+    height: 100%;
+}
+
+/* lexikon 2.0 automatic */
+
+
+div.lexikon.automatic div.text {
+    bottom: 2px;
+    left: 2px;
+    position: absolute;
+    width: 586px;
+    z-index: 9;
+}
+
+div.lexikon.automatic div.text > div {
+    padding: 92px 20px 0px;
+    overflow: hidden;
+    cursor: text;
+    border-radius: 10px;
+    background: url("/cms/porady/images/lexikon/stin-nejvetsi-h800.png") repeat-x scroll left top transparent;
+    padding-top: 244px;
+}
+
+div.lexikon.automatic div.lexikon-item {
+    float: left;
+    height: 420px;
+    overflow: hidden;
+    position: relative;
+    width: 590px;
+    border-radius: 10px;
+}
+
+div.lexikon.automatic.h470 div.lexikon-item {
+    height: 470px;
+}
+
+div.lexikon.automatic div.lexikon-item img {
+    padding: 2px;
+}
+
+div.lexikon.automatic div.lexikon-item.imageType img {
+    padding: 0px;
+    border-radius: 0px;
+}
+
+div.lexikon.automatic div.lexikon-item div.frame {
+    background: url("/cms/common/images/common/lexikon-ramecek.png") no-repeat scroll left top transparent;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 590px;
+    height: 100%;
+    /*	height: 420px;*/
+}
+
+div.lexikon.automatic.h470 div.lexikon-item div.frame {
+    background: url("/cms/common/images/common/lexikon-ramecek-470.png") no-repeat scroll left top transparent;
+    height: 470px;
+}
+
+div.lexikon.automatic.h470 div.lexikon-item {
+    height: 470px;
+}
+
+div.lexikon.automatic.h435 div.lexikon-item div.frame {
+    background: url("/cms/common/images/common/lexikon-ramecek-435.png") no-repeat scroll left top transparent;
+    height: 435px;
+}
+
+div.lexikon.automatic.h435 div.lexikon-item {
+    height: 435px;
+}
+
+div.lexikon.automatic div.text div.headline, div.lexikon.automatic div.text h2 {
+    color: #bcc636;
+    font-size: 20px;
+    line-height: 32px;
+    padding: 0px 0px 15px;
+    text-shadow: none;
+    clear: both;
+    font-weight: bold;
+}
+
+div.content.porad div.lexikon.automatic div.text div.p {
+    display: none;
+}
+
+div.lexikon.automatic div.text p, div.lexikon.automatic div.text div.p {
+    color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+    padding-bottom: 15px;
+}
+
+div.lexikon.automatic div.text div.p span {
+    color: #bcbcbc;
+}
+
+div.lexikon.automatic div.text div.p span.green {
+    color: #96a02c;
+}
+
+div.lexikon.automatic div.text div.p span.author {
+    font-size: 9px;
+}
+
+div.box {
+    background: transparent url(/cms/porady/images/porady/bg-box-w590-bottom.png) no-repeat scroll left bottom;
+    padding: 0px 0px 15px 0px;
+    width: 590px;
+    margin-top: 20px;
+    /*	float: left;*/
+}
+
+div.box.w386 {
+    background: transparent url(/cms/porady/images/porady/bg-box-w386-bottom.png) no-repeat scroll left bottom;
+    width: 386px;
+}
+
+div.box.dark {
+    background: transparent url(/cms/porady/images/porady/bg-box-w590-bottom-dark.png) no-repeat scroll left bottom;
+}
+
+div.box div.box-top {
+    background: transparent url(/cms/porady/images/porady/bg-box-w590-top.png) no-repeat scroll left top;
+    height: 15px;
+    width: 100%;
+}
+
+div.box.w386 div.box-top {
+    background: transparent url(/cms/porady/images/porady/bg-box-w386-top.png) no-repeat scroll left top;
+}
+
+div.box.dark div.box-top {
+    background: transparent url(/cms/porady/images/porady/bg-box-w590-top-dark.png) no-repeat scroll left top;
+}
+
+div.box div.box-content {
+    background: transparent url(/cms/porady/images/porady/bg-box-w590-content.png) repeat-y scroll left top;
+    padding: 10px 20px 12px 20px;
+    overflow: hidden;
+}
+
+div.box.w386 div.box-content {
+    background: transparent url(/cms/porady/images/porady/bg-box-w386-content.png) repeat-y scroll left top;
+    padding: 10px 30px 12px;
+}
+
+div.box.dark div.box-content {
+    background: transparent url(/cms/porady/images/porady/bg-box-w590-content-dark.png) repeat-y scroll left top;
+}
+
+div.box.w480 {
+    background: transparent url(/cms/porady/images/porady/bg-box-w480-bottom.png) no-repeat scroll left bottom;
+    width: 480px;
+}
+
+div.box.w480 div.box-top {
+    background: transparent url(/cms/porady/images/porady/bg-box-w480-top.png) no-repeat scroll left top;
+}
+
+div.box.w480 div.box-content {
+    background: transparent url(/cms/porady/images/porady/bg-box-w480-content.png) repeat-y scroll left top;
+}
+
+div.box.w980 {
+    background: transparent url(/cms/porady/images/porady/bg-box-w980-registrace-bottom.png) no-repeat scroll left bottom;
+    padding: 0px 0px 15px 0px;
+    width: 980px;
+}
+
+div.box.w980 div.box-top {
+    background: transparent url(/cms/porady/images/porady/bg-box-w980-registrace-top.png) no-repeat scroll left top;
+    height: 15px;
+    width: 100%;
+}
+
+div.box.w980 div.box-content {
+    background: transparent url(/cms/porady/images/porady/bg-box-w980-registrace-content.png) repeat-y scroll left top;
+    padding: 10px 20px;
+    overflow: hidden;
+    min-height: 280px;
+}
+
+div.box.w1000.dark {
+    background: transparent url(/cms/porady/images/porady/bg-box-nastaveni-w1000-f9f9f9-bottom.png) no-repeat scroll left bottom;
+    padding: 0px 0px 15px 0px;
+    width: 1000px;
+}
+
+div.box.w1000.dark div.box-top {
+    background: transparent url(/cms/porady/images/porady/bg-box-nastaveni-w1000-f9f9f9-top.png) no-repeat scroll left top;
+    height: 15px;
+    width: 100%;
+}
+
+div.box.w1000.dark div.box-content {
+    background: transparent url(/cms/porady/images/porady/bg-box-nastaveni-w1000-f9f9f9-content.png) repeat-y scroll left top;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+div.box.w1200, div.box.photos-box.size-100 {
+    background: transparent url(/cms/porady/images/porady/bg-box-1200-bottom.png) no-repeat scroll left bottom;
+    width: 1200px;
+    clear: both;
+}
+
+div.box.w1200 div.box-top, div.box.photos-box.size-100 div.box-top {
+    background: transparent url(/cms/porady/images/porady/bg-box-top-w1200.png) no-repeat scroll left top;
+    width: 1200px;
+}
+
+div.box.w1200 div.box-content, div.box.photos-box.size-100 div.box-content {
+    background: transparent url(/cms/porady/images/porady/bg-box-w1200-content.png) repeat-y scroll left top;
+}
+
+div.box.soutez h3 {
+    background: transparent url(/cms/hp/images/hp/li-souteze.png) no-repeat scroll left top ;
+    color: #f17322;
+    font-size: 19px;
+    padding-left: 30px;
+    line-height: 26px;
+}
+
+div.box.soutez h4 {
+    color: #f17322;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+div.box.soutez p {
+    color: #666666;
+    line-height: 22px;
+    font-size: 90%;
+}
+
+div.soutez p a, div.box.soutez a {
+    color: #f17322;
+    text-decoration: none;
+}
+div.soutez .orange {
+    color: #f17322;
+}
+
+div.soutez p a:hover, div.box.soutez p a:hover {
+    text-decoration: underline;
+}
+
+div.box.oneshot h2, div.box.oneshot h3 {
+    color: #96a02c;
+    clear: left;
+}
+
+div.box.oneshot h3 {
+    font-size: 90%;
+}
+
+div.box.oneshot h2 {
+    padding: 5px 0px 5px 0px;
+    text-shadow: 1px 1px 2px #fff;
+}
+
+div.box.oneshot p, div.box.oneshot label {
+    color: #666666;
+}
+
+div.box.oneshot label {
+    float: left;
+    line-height: 50px;
+    min-width: 120px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+div.box.oneshot .formline {
+    width:99%;
+    float:left;
+}
+
+div.content.porad div.box.wifina-moderator h2, body.zet-box div.box h2 {
+    color: #96a02c;
+    text-shadow: none;
+    font-size: 19px;
+    padding: 0px 0px 10px 5px;
+}
+
+body.zet-box div.box h2 {
+    font-size: 110%;
+    padding-left: 0px;
+}
+
+div.box.oneshot #myform input[type=text] {
+    background: transparent url(/cms/porady/images/porady/bg-input.png) no-repeat scroll left top ;
+    /*	width: 220px;
+            height: 40px;
+            float: left;
+            margin-top: 10px;
+            display: block;
+            border: none;*/
+    border: medium none;
+    display: block;
+    float: left;
+    font-weight: bold;
+    height: 40px;
+    margin-top: 10px;
+    padding: 0 10px;
+    width: 200px;
+}
+
+div.box.oneshot #myform input[type=file] {
+    clear: left;
+}
+
+div.box.oneshot #myform input[type=submit] {
+    /*background: transparent url(/cms/porady/images/porady/button-w220.png) no-repeat scroll left top ;*/
+    border: medium none;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    /*        margin-left: 140px;
+                    margin-top: 10px;*/
+    text-align: center;
+    width: 220px;
+}
+
+/* šikulové START */
+div.content.porad div.box-next-time {
+    background: transparent url(/cms/porady/images/porady/bg-box-next-time.png) no-repeat scroll left top;
+    width: 100%;
+    height: 310px;
+    text-align: center;
+}
+div.content.porad div.box-next-time .item {
+    float: left;
+    width: 292px;
+    margin: 0 54px;
+}
+div.content.porad div.box-next-time h3 {
+    color: #96a02c;
+    margin: 20px 0 25px 0;
+}
+div.content.porad div.box-next-time p {
+    color: #96a02c;
+    font-size: 95%;
+    margin: 15px 0 0 0;
+}
+/* šikulové END */
+
+/* --- Porady --- END --- */
+
+
+div.box span.green {
+    color: #96a02c;
+    font-weight: bold;
+}
+
+div.box p a {
+    color: #96a02d;
+    text-decoration: underline;
+}
+
+div.box p a:hover {
+    text-decoration: none;
+}
+
+/* Layout 2.0 */
+
+.layout_2-0 div.broadcast-header {
+    height: 170px;
+    position: relative;
+    /*    overflow: visible;*/
+}
+
+.layout_2-0 div.broadcast-header h1, .layout_2-0 div.broadcast-header h2 {
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px 2px #111;
+}
+
+.layout_2-0 div.broadcast-header h1 {
+    font-size: 48px;
+    padding-top: 28px;
+    line-height: 58px;
+}
+
+.layout_2-0 div.broadcast-header h2 {
+    font-size: 19px;
+    padding-top: 10px;
+    font-weight: normal;
+}
+
+.layout_2-0 div.broadcast-header div.wrapper {
+    position: relative;
+    height: 100%;
+}
+
+div.content.layout_2-0 div.top.porady.det div.video {
+    background: none;
+    top: 15px;
+    left: 20px;
+    width: 550px;
+    height: 364px;
+    padding: 0px;
+}
+
+.layout_2-0 div.broadcast-header div.shadow {
+    background: transparent url( /cms/porady/images/layout_2-0/shadow-top.png) repeat-x scroll left top;
+    position: absolute;
+    height: 5px;
+    /* top: 50px; */
+    top: 0;
+    left: 0px;
+    bottom: auto;
+    width: 100%;
+    opacity: 0.6;
+}
+
+.layout_2-0 div.broadcast-header div.shadow.bottom {
+    background: transparent url( /cms/porady/images/layout_2-0/shadow-top.png) repeat-x scroll left top;
+    /* top: 220px; */
+    top: 170px;
+    border: none;
+    width: 100%;
+    opacity: 0.6;
+    height: 5px;
+}
+
+div.content div.detail div.video div.video-container {
+    background: transparent url( /cms/porady/images/layout_2-0/video-ramecek.png) no-repeat scroll top left;
+    height: 364px;
+    width: 550px;
+}
+
+div.content.layout_2-0.video-related div.detail {
+    padding: 30px 15px;
+    width: 1142px;
+}
+
+div.content div.detail div.video div.video-container:hover {
+    background-position: bottom left;
+}
+
+div.content div.detail div.video div.video-container iframe {
+    height: 297px;
+    overflow: hidden;
+    width: 528px;
+    margin: 11px;
+}
+
+div.content.video-related div.detail div.video div.video-container iframe {
+    margin: 0px;
+}
+
+div.content.video-related div.video-detail div.video-shadow {
+    top: 55px;
+}
+
+div.content.layout_2-0.video-related div.detail div.dily {
+    top: 70px;
+}
+
+div.content.video-related div.detail h2 {
+    height: 40px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+
+div.content.layout_2-0.video-related a.stranka-poradu {
+    top: -5px;
+    right: 22px;
+}
+
+.layout_2-0 div.top.porady.det div.video a.video-play:hover img {
+    opacity: 1;
+}
+
+div.top.porady.det div.video-shadow, div.video-detail div.video-shadow  {
+    background: url( /cms/porady/images/layout_2-0/stin-dily.png) no-repeat scroll left top transparent;
+    height: 340px;
+    position: absolute;
+    right: 55px;
+    top: 0px;
+    width: 10px;
+}
+
+div.top.porady.det.row1 div.video-detail div.video-shadow {
+    background: url("/cms/porady/images/layout_2-0/stin-dily-maly.png") no-repeat scroll left top transparent;
+    height: 118px;
+    top: 228px;
+}
+
+div.top.porady.det.row2 div.video-detail div.video-shadow {
+    background: url("/cms/porady/images/layout_2-0/stin-dily-2radky.png") no-repeat scroll left top transparent;
+    height: 226px;
+    top: 124px;
+}
+
+div.video-detail div.video-shadow {
+    right: 35px;
+    top: 105px;
+}
+
+.list div.video-detail div.video-shadow {
+    top: 80px;
+}
+
+.layout_2-0 div.top.porady.det {
+    background: none;
+    padding: 0px;
+    width: 1200px;
+    margin-bottom: 0px;
+    height: 380px;
+    overflow: visible;
+}
+
+.layout_2-0 div.top.porady.det > h2 {
+    text-shadow: #777 1px 1px;
+    padding-top: 8px;
+    color: #fff;
+    text-align: left;
+}
+
+.layout_2-0 div.top.porady.det div.video-detail div.dily {
+    top: 15px;
+    right: 55px;
+}
+
+div.content.layout_2-0 div.detail div.dily {
+    top: 121px;
+    width: 550px;
+}
+
+.layout_2-0 div.programmeNextBroadcastDate {
+    background: transparent url( /cms/porady/images/porady/bg-cas-vysilani-right.png) no-repeat scroll right center;
+    width: auto;
+    height: 36px;
+    color: #a6ae3a;
+    position: absolute;
+    font-weight: bold;
+    line-height: 34px;
+    padding-right: 15px;
+    right: 0px;
+    bottom: 16px;
+}
+
+.layout_2-0 div.programmeNextBroadcastDate div.pnbd-left {
+    background: transparent url( /cms/porady/images/porady/bg-cas-vysilani-left.png) no-repeat scroll left center;
+    width: 56px;
+    height: 36px;
+    float: left;
+}
+
+.layout_2-0 div.programmeNextBroadcastDate div.pnbd-time {
+    background: transparent url( /cms/porady/images/porady/bg-cas-vysilani-content.png) repeat-x scroll left center;
+    height: 36px;
+    float: left;
+    min-width: 130px;
+    text-align: center;
+}
+
+.layout_2-0 div.top.porady.det div.video-detail div.dily div.inner div.column div a.icko,
+div.content.layout_2-0 div.detail div.dily div.inner div a.icko,
+div.top.porady.det div.video-detail div.dily div.inner div.column div a.icko {
+    background: url("/cms/videa/images/videa/icko-dily.png") no-repeat scroll left top transparent;
+    height: 16px;
+    left: auto;
+    padding: 0;
+    position: absolute;
+    right: 7px;
+    top: 70px;
+    width: 16px;
+}
+
+.layout_2-0 div.detail.video-detail a.icko, div.content.videa div.detail div.video a.icko {
+    bottom: 17px;
+    right: 17px;
+}
+
+.layout_2-0 div.top.porady.det div.video-detail div.dily div.inner div.column div a.icko:hover,
+.layout_2-0 div.top.porady.det div.video-detail div.dily div.inner div.column div a:hover,
+div.content.layout_2-0 div.detail div.video div.video-container:hover,
+div.top.porady.det div.video-detail div.dily div.inner div.column div a.icko:hover,
+div.content.layout_2-0 div.detail div.dily div.inner div a:hover {
+    background-position: left bottom;
+}
+
+.layout_2-0 div.top.porady.det p {
+    font-size: 85%;
+    text-align: left;
+    color: #666666;
+    position: absolute;
+    top: 0px;
+    width: 380px;
+    left: 175px;
+    line-height: 20px;
+}
+
+.layout_2-0 div.top.porady.det p.txt span {
+    color: #999;
+}
+
+.layout_2-0 div.content div.detail div.video img {
+    height: 297px;
+    width: 528px;
+}
+
+div.video-detail div.video div.video-title {
+    position: absolute;
+    top: 310px;
+    left: 52px;
+    max-width: 434px;
+    color: #fff;
+    padding: 0px;
+}
+
+.layout_2-0 div.content div.detail div.video div.video-container {
+    left: 7px;
+    top: 7px;
+}
+
+.layout_2-0 div.content div.detail div.video div.video-container iframe {
+    height: 297px;
+    overflow: hidden;
+    width: 528px;
+}
+
+.layout_2-0 p.motto, .layout_2-0 div.detail.video-detail h1,
+.layout_2-0 div.top.porady.det div.programmeNextBroadcastDate,
+.layout_2-0 div.top.porady.det div.video div.ico {
+    display: none;
+}
+
+.layout_2-0 div.top.porady.det div.video-detail {
+    height: 430px;
+    padding: 0px;
+}
+
+.layout_2-0 div.detail.video-detail a.dily-prev {
+    left: 0px;
+}
+
+.layout_2-0 div.detail.video-detail a.dily-next {
+    right: 0px;
+}
+
+.layout_2-0 div.character-thumbnail a {
+    background: url("/cms/porady/images/layout_2-0/bg-img-characters.png") no-repeat scroll left top transparent;
+}
+
+.layout_2-0 div.character-thumbnail div.ico {
+    background: url("/cms/porady/images/porady/char-box-ico-play.png") no-repeat scroll center center transparent;
+    width: 138px;
+    height: 138px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.layout_2-0 div.character-thumbnail div.ico.paused {
+    background: url("/cms/porady/images/porady/char-box-ico-pause.png") no-repeat scroll center center transparent;
+}
+
+.layout_2-0 div.photos-box div.photo {
+    height: 90px;
+    padding: 2px;
+    width: 160px;
+}
+
+.layout_2-0 div.photos-box div.photo a, div.photo-frame-w164 a {
+    background: url("/cms/porady/images/layout_2-0/foto-ramecek.png") no-repeat scroll left top transparent;
+    display: block;
+    height: 94px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 164px;
+}
+
+div.photo-frame-w228 {
+    width: 224px;
+    height: 126px;
+    float: left;
+    position: relative;
+    margin: 5px;
+    padding: 2px;
+}
+
+div.photo-frame-w228 a {
+    background: url("/cms/porady/images/layout_2-0/frame-w228.png") no-repeat scroll left top transparent;
+    display: block;
+    height: 130px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 228px;
+}
+
+div.photo-frame-w164 a.play div.ico {
+    background: url("/cms/porady/images/porady/char-box-ico-play.png") no-repeat scroll center center transparent;
+    height: 94px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 164px;
+}
+
+div.photo-frame-w164 a.play.on div.ico {
+    background: url("/cms/porady/images/porady/char-box-ico-pause.png") no-repeat scroll center center transparent;
+}
+
+.layout_2-0 div.photos-box div.photo a:hover, div.photo-frame-w164 a:hover, div.photo-frame-w228 a:hover {
+    background-position: bottom left;
+}
+
+.layout_2-0 div.photos-box div.photo div.download a:hover {
+    background-image: none;
+}
+
+.layout_2-0 div.character-thumbnail > img {
+    height: 130px;
+    padding: 4px 4px 12px;
+    width: 130px;
+}
+.layout_2-0 div.characters-box div.character-thumbnail a:hover {
+    background-position: left -199px;
+}
+
+div.photos div.photo div {
+    color: #666;
+    font-size: 11px;
+    padding-top: 5px;
+}
+
+/* box Pisnicky */
+
+div.box.pisnicky div.box-content {
+    padding-bottom: 0px;
+}
+
+div.box.pisnicky div.box-content > div {
+    height: 46px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+div.box.pisnicky div.box-content div a.play {
+    background: transparent url("/cms/porad-kdyby-byly-ryby-data/images/play.png") no-repeat scroll left top;
+    color: #666;
+    float: left;
+    font-size: 14px;
+    height: 22px;
+    margin-top: 12px;
+    padding-left: 40px;
+}
+
+div.box.pisnicky div.box-content div a.play.on {
+    background: transparent url("/cms/porad-kdyby-byly-ryby-data/images/pauza.png") no-repeat scroll left top;
+    color: #96A02C;
+    font-weight: bold;
+}
+
+div.box.pisnicky div.box-content h2 {
+    background: transparent url("/cms/porad-mazalove-data/images/img-audio-box.png") no-repeat scroll 100px center;
+    padding-bottom: 16px;
+}
+
+div.box.pisnicky div.box-content div a.download {
+    background: transparent url("/cms/porad-kdyby-byly-ryby-data/images/ikona-download.png") no-repeat scroll left center;
+    font-size: 12px;
+    line-height: 46px;
+    padding-left: 25px;
+    text-decoration: underline;
+    color: #96a02c;
+}
+
+div.box.pisnicky div.box-content div a.download:hover {
+    text-decoration: none;
+}
+
+div.box.pisnicky div.box-content p.info {
+    font-size: 12px;
+    padding-top: 12px;
+}
+
+div.box.pisnicky div.box-content p.info span {
+    color: #999;
+}
+
+div.box.pisnicky div.box-content div a.play:hover, div.box.pisnicky div.box-content div a.play.on {
+    background-position: left bottom;
+}
+
+/* box Pisnicky -- end */
+
+/* programme frame v2.0 */
+
+.programme-frame-w290.v2 {    
+    width: 280px;
+    height: 208px;
+    float: left;
+    margin: 0px 13px 20px 0px;
+    margin-top: 0px !important;
+    position: relative;
+    padding: 5px !important;
+}
+
+.programme-frame-w290.v2 a {   
+    border: #a6ae3a 5px solid;
+    border-radius: 10px;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: none;
+    padding: 0px;
+}
+
+.programme-frame-w290.v2 div {    
+    background: #8a9327; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #8a9327 , #aeb840); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #8a9327 , #aeb840); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #8a9327 , #aeb840); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #8a9327 , #aeb840); /* Standard syntax */
+    display: flex;
+    min-height: 46px;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;    
+    width: inherit;
+    padding: 2px 0px;
+}
+
+.programme-frame-w290.v2 div span {
+    background:  transparent url( /cms/porady/images/ico-programme.png) no-repeat scroll 12px center;
+    color: #fff;
+    font-size: 14px;
+    text-shadow: 1px 1px 1px #777;
+    padding-left: 46px;
+    margin: auto 0px;
+    padding: 4px 0px 4px 46px;
+    line-height: 18px;
+}
+
+.programme-frame-w290.v2 img {
+    width: 280px;
+    height: 158px;
+}
+
+.programme-frame-w290.v2 a:hover {
+    background: rgba(255,255,255, 0.1);
+}
+
+
+
+
+
