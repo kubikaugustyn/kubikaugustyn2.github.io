@@ -1,0 +1,20 @@
+body {
+    background-color: lightblue;
+}
+
+#button_panel {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    z-index: 1000;
+    background-color: red;
+    height: 36px;
+}
+
+.posi_absolute {
+    position: absolute;
+}
+
+.down {
+    top: 150px;
+}

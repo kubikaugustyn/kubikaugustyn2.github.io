@@ -1,0 +1,33 @@
+body {
+    background-color: lightblue;
+}
+
+.button_panel {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    z-index: 1000;
+    <!--background-color: red;-->
+    height: 40px;
+}
+
+.button_panel_img {
+    height: 40px;
+    width: 40px;
+}
+
+.closeButtonEnabled_true {
+    width: 120px;
+}
+
+.closeButtonEnabled_false {
+    width: 80px;
+}
+
+.posi_absolute {
+    position: absolute;
+}
+
+.down {
+    top: 150px;
+}
