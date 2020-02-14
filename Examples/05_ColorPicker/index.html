@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    /* **********************************************************
+    //
+    // https://css-tricks.com/converting-color-spaces-in-javascript/
+    //
+     **************************************************************/
+    function RGBToHex(r,g,b) {
+  r = r.toString(16);
+  g = g.toString(16);
+  b = b.toString(16);
+
+  if (r.length == 1)
+    r = "0" + r;
+  if (g.length == 1)
+    g = "0" + g;
+  if (b.length == 1)
+    b = "0" + b;
+
+  return "#" + r + g + b;
+}
+
+function pad(num, size) {
+    var s = num + "";
+    while (s.length < size) s = "0" + s;
+    return s;
+}
+
+function RGBToColorComponents(rgb) {
+  // Choose correct separator
+  var separator = rgb.indexOf(",") > -1 ? "," : " ";
+
+  // Turn "rgb(r,g,b)" into [r,g,b]
+  var rgbStringItems = rgb.substr(4).split(")")[0].split(separator)
+
+  var rgbItems = rgbStringItems.map(function (item) { return parseInt(item) })
+
+  return rgbItems
+}
+
+
+function RGBToHex(rgb) {
+  var rgb = RGBToColorComponents(rgb)
+  var r = pad((rgb[0]).toString(16), 2),
+      g = pad((rgb[1]).toString(16), 2),
+      b = pad((rgb[2]).toString(16), 2)
+
+  return "#" + r + g + b;
+}
+
+
+function RGBToHSL(r,g,b) {
+  // Make r, g, and b fractions of 1
+  r /= 255;
+  g /= 255;
+  b /= 255;
+
+  // Find greatest and smallest channel values
+  var cmin = Math.min(r,g,b),
+      cmax = Math.max(r,g,b),
+      delta = cmax - cmin,
+      h = 0,
+      s = 0,
+      l = 0;
+
+// Calculate hue
+  // No difference
+  if (delta == 0)
+    h = 0;
+  // Red is max
+  else if (cmax == r)
+    h = ((g - b) / delta) % 6;
+  // Green is max
+  else if (cmax == g)
+    h = (b - r) / delta + 2;
+  // Blue is max
+  else
+    h = (r - g) / delta + 4;
+
+  h = Math.round(h * 60);
+
+  // Make negative hues positive behind 360°
+  if (h < 0)
+      h += 360;
+
+  // Calculate lightness
+  l = (cmax + cmin) / 2;
+
+  // Calculate saturation
+  s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
+
+  // Multiply l and s by 100
+  s = +(s * 100).toFixed(1);
+  l = +(l * 100).toFixed(1);
+
+  return "hsl(" + h + "," + s + "%," + l + "%)";
+}
+
+
+function getStyle(element, property) {
+  return window.getComputedStyle ? window.getComputedStyle(element, null).getPropertyValue(property) : element.style[property.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); })];
+}
+
+    function cssTest() {
+        console.log("cssTest...")
+        var testDiv = document.getElementById("pickedColor")
+        console.log("testDiv:", testDiv)
+        testDiv.style.color = "blue"
+        var backgroundColorRGBComponents = RGBToColorComponents(getStyle(testDiv, "background-color"))
+        var testStyle = getStyle(testDiv, "background-color")
+        var hslColor = RGBToHSL(backgroundColorRGBComponents[0], backgroundColorRGBComponents[1], backgroundColorRGBComponents[2])
+        console.log("testStyle:", getStyle(testDiv, "background-color"))
+        console.log("hex color:", RGBToHex(getStyle(testDiv, "background-color")))
+    }
+</script>
+<style>
+    #pickedColor {
+        background-color: #000032;
+        color: rgb(0, 0, 50);
+        height: 50px;
+    }
+</style>
+<body onload="cssTest()">
+<div id="pickedColor">
+Test Text
+</div>
+</body>
+</html>
