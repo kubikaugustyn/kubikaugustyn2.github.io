@@ -3,20 +3,6 @@
     // https://css-tricks.com/converting-color-spaces-in-javascript/
     //
      **************************************************************/
-function RGBToHex(r,g,b) {
-  r = r.toString(16);
-  g = g.toString(16);
-  b = b.toString(16);
-
-  if (r.length == 1)
-    r = "0" + r;
-  if (g.length == 1)
-    g = "0" + g;
-  if (b.length == 1)
-    b = "0" + b;
-
-  return "#" + r + g + b;
-}
 
 function pad(num, size) {
     var s = num + "";
@@ -156,7 +142,14 @@ function loadColor() {
     console.log("hex color:", RGBToHex(getStyle(testDiv, "background-color")))
     loadColorsToInputs()
     function loadColorsToInputs() {
-        document.getElementById('colorName').value = ntc.name(RGBToHex(getStyle(testDiv, "background-color")))
+        if (ntc.name(RGBToHex(getStyle(testDiv, "background-color")))[1]) {
+            console.log('RGBToHex(getStyle(testDiv, "background-color")))[1]')
+            document.getElementById('colorName').value = ntc.name(RGBToHex(getStyle(testDiv, "background-color")))[1]
+        }
+        else if (ntc.name(RGBToHex(getStyle(testDiv, "background-color")))!=[1]) {
+            console.log('RGBToHex(getStyle(testDiv, "background-color")))!=[1]')
+            document.getElementById('colorName').value = ntc.name(RGBToHex(getStyle(testDiv, "background-color")))[0]
+        }
         //console.log(document.getElementById("pickedColor").style.backgroundColor)
         var hslColor1 = RGBToHSL1(backgroundColorRGBComponents[0], backgroundColorRGBComponents[1], backgroundColorRGBComponents[2])
         document.getElementById('R').value = RGBToColorComponents(getStyle(testDiv, "background-color"))[0]
@@ -167,4 +160,31 @@ function loadColor() {
         document.getElementById('S').value = hslColor1[1] + "%"
         document.getElementById('L').value = hslColor1[2] + "%"
     }
+}
+
+function colorName() {
+    console.log(document.getElementById('colorName').value)
+    document.getElementById('pickedColor').style.backgroundcolor = 'green'//document.getElementById('colorName').value
+    document.getElementById('pickedColor').style.backgroundcolor = 'blue'
+    console.log(document.getElementById('pickedColor'), document.getElementById('pickedColor').style)
+    /*document.getElementById('R').value = RGBToColorComponents(getStyle(testDiv, "background-color"))[0]
+    document.getElementById('G').value = RGBToColorComponents(getStyle(testDiv, "background-color"))[1]
+    document.getElementById('B').value = RGBToColorComponents(getStyle(testDiv, "background-color"))[2]
+    document.getElementById('Hex').value = RGBToHex(getStyle(testDiv, "background-color")).split('#')[1]
+    document.getElementById('H').value = hslColor1[0]
+    document.getElementById('S').value = hslColor1[1] + "%"
+    document.getElementById('L').value = hslColor1[2] + "%"*/
+
+}
+
+function RGB() {
+    console.log("rgb(", document.getElementById('R').value, ", ", document.getElementById('G').value, ", ", document.getElementById('B').value)
+}
+
+function Hex() {
+    console.log("hex ", document.getElementById('Hex').value)
+}
+
+function HSL() {
+    console.log("hsl(", document.getElementById('H').value, ", ", document.getElementById('S').value, ", ", document.getElementById('L').value)
 }
