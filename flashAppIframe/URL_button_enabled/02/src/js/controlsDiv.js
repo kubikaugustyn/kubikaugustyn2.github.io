@@ -14,12 +14,12 @@ function onLoadProc() {
         //If closeButtonEnabled = true
         if (params["closeButtonEnabled"] === "true") {
             console.log("closeButtonEnabled = true...")
-            document.getElementById('controlsDiv').innerHTML = '<div class="closeButtonEnabled_true"><img id="sound" class="button_panel_img" src="./src/img/soundIsOn.svg"><img id="fullScreen" class="button_panel_img" src="./src/img/fullScreenIsOff.svg"><img id="closeButton" class="button_panel_img" src="./src/img/closeButton.svg"></div>'
+            document.getElementById('controlsDiv').innerHTML = '<div class="closeButtonEnabled_true"><img id="sound" class="button_panel_img" src="/flashAppIframe/URL_button_enabled/02/src/img/soundIsOn.svg"><img id="fullScreen" class="button_panel_img" src="/flashAppIframe/URL_button_enabled/02/src/img/fullScreenIsOff.svg"><img id="closeButton" class="button_panel_img" src="/flashAppIframe/URL_button_enabled/02/src/img/closeButton.svg"></div>'
         }
         //If closeButtonEnabled = false
         else if (params["closeButtonEnabled"] === "false") {
             console.log("closeButtonEnabled = false...")
-            document.getElementById('controlsDiv').innerHTML = '<div class="closeButtonEnabled_false"><img id="sound" class="button_panel_img" src="./src/img/soundIsOn.svg"><img id="fullScreen" class="button_panel_img" src="./src/img/fullScreenIsOff.svg"></div>'
+            document.getElementById('controlsDiv').innerHTML = '<div class="closeButtonEnabled_false"><img id="sound" class="button_panel_img" src="/flashAppIframe/URL_button_enabled/02/src/img/soundIsOn.svg"><img id="fullScreen" class="button_panel_img" src="/flashAppIframe/URL_button_enabled/02/src/img/fullScreenIsOff.svg"></div>'
         }
         else if (params["closeButtonEnabled"] != "true") {
             if (params["closeButtonEnabled"] != "false") {
