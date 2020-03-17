@@ -1,0 +1,18 @@
+table {
+    border: outset 5px;
+    border-color: red;
+}
+
+td {
+    border: outset 5px;
+    border-color: green;
+}
+
+body {
+    background-color: lightblue;
+}
+
+.spand {
+    border: outset 5px;
+    border-color: orange;
+}

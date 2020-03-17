@@ -1,4 +1,4 @@
-console.log('test01.js...')
+console.log('01.js...')
 
 var navod = {
     0: {
@@ -47,5 +47,3 @@ var navod = {
         "img": "IMG_8613"
     }
 }
-
-//console.log(test01)
