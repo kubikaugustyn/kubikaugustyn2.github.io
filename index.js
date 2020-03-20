@@ -22,7 +22,9 @@ var pageVariants = {
 
     "editor" : "<a href='Editor.html'>Editor webu</a>",
 
-    "game" : "<a href='URL_button_enabled/index.html?closeButtonEnabled=true'>URL_button_enabled/index.html?buttonEnabled=true</a><br><a href='URL_button_enabled/index.html?closeButtonEnabled=false'>URL_button_enabled/index.html?buttonEnabled=false</a>"
+    "game" : "<a href='URL_button_enabled/index.html?closeButtonEnabled=true'>URL_button_enabled/index.html?buttonEnabled=true</a><br><a href='URL_button_enabled/index.html?closeButtonEnabled=false'>URL_button_enabled/index.html?buttonEnabled=false</a>",
+
+    "node" : "<a href='./node'>Node</a>"
 
     //další heslo a funkce k němu ("heslo" : "funkce")
 }
