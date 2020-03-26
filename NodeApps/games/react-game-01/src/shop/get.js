@@ -1,7 +1,7 @@
 import React from "react";
+import { coinCount, diamondCount } from "../count";
 
-export default function get(what, id1) {
-    console.log("Getting ", what);
-    console.log(id1);
-    //document.location.href = document.location.origin + "/getBox/" + what
+export default function get() {
+    console.log("coinCount: ", coinCount)
+    console.log("diamondCount: ", diamondCount)
 }
