@@ -1,7 +1,7 @@
 import React from 'react';
 import Shop from "./shop/shop"
 import Home from "./home"
-import SelectBrawler from "./selectBrawler";
+import SelectBrawler from "./selectBrawler/selectBrawler";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default function App() {

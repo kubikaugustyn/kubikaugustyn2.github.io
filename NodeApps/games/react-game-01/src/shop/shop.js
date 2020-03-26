@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 import "../index.css";
-import { coinCount, tab, diamondCount } from "../count";
 
 import Boxes from "./boxes";
 import GemsAndCoins from "./gemsAndCoins";
@@ -11,13 +10,12 @@ import Skins from "./skins";
 import StarSkins from "./starSkins";
 
 import { makeStyles } from '@material-ui/core/styles';
-import Toolbar from '@material-ui/core/Toolbar';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Avatar from '@material-ui/core/Avatar';
+import ThingsCountToolbar from "../thingsCountTooolbar"
 
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
@@ -66,19 +64,10 @@ export default function Shop() {
     setValue(newValue);
   };
 
-  const imgUrl = "https://kubikaugustyn.github.io/NodeApps/games/react-game-01/src/img/";
-
   return (
     <div className={classes.root}>
+      <ThingsCountToolbar />
       <Link to="/"><ArrowBackIosIcon /></Link><h1>Shop</h1>
-        <div className="bg-blue">
-            <AppBar position="static" className="right">
-                <Toolbar>
-                    <Avatar src={imgUrl + "Coin.png"} />{coinCount}{tab}
-                    <Avatar src={imgUrl + "Diamond.png"} />{diamondCount}{tab}
-                </Toolbar>
-            </AppBar>
-        </div>
         <div className="bg-yellow">
           <AppBar position="static" className="bg-gn-yl">
             <Tabs value={value} onChange={handleChange} className="bg-gn-yl text-black">

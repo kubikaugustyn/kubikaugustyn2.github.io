@@ -12,18 +12,18 @@ export default function gemsAndCoins() {
                     <tr>
                         <td>Coins<Coin /></td>
 
-                        <td>50Kč = 300<Coin /></td>
-                        <td>15<Diamond /> = 150<Coin /></td>
-                        <td>10<Diamond /> = 95<Coin /></td>
-                        <td>1<Diamond /> = 9<Coin /></td>
+                        <td>50Kč = 150<Coin /></td>
+                        <td>20<Diamond /> = 150<Coin /></td>
+                        <td>10<Diamond /> = 75<Coin /></td>
+                        <td>1<Diamond /> = 7<Coin /></td>
                     </tr>
                     <tr>
                         <td>Gems<Diamond /></td>
 
                         <td>50Kč = 30<Diamond /></td>
-                        <td>150<Coin /> = 15<Diamond /></td>
-                        <td>50<Coin /> = 4<Diamond /></td>
-                        <td>100<Coin /> = 9<Diamond /></td>
+                        <td>440<Coin /> = 15<Diamond /></td>
+                        <td>30<Coin /> = 1<Diamond /></td>
+                        <td>280<Coin /> = 9<Diamond /></td>
                     </tr>
                 </tbody>
             </table>

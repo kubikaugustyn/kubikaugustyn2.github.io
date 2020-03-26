@@ -1,13 +1,11 @@
 import React from 'react';
+//import { imgUrl, imgWidth } from "../count";
 
 export default function starSkins() {
-    const imgUrl = "https://kubikaugustyn.github.io/NodeApps/games/react-game-01/src/img/";
-    const imgWidth = "10%";
-
     return (
       <div>
         <div className="center">
-            <table>
+            {/*<table>
                 <tbody>
                     <tr>
                         <td><img width={imgWidth} alt="Box" src={imgUrl + "Box.png"} /></td>
@@ -18,7 +16,7 @@ export default function starSkins() {
                         <td><img width={imgWidth} alt="magicBox" src={imgUrl + "magicBox.png"} /></td>
                     </tr>
                 </tbody>
-            </table>
+            </table>*/}
         </div>
       </div>
     );

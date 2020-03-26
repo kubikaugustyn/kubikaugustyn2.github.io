@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import ThingsCountToolbar from "./thingsCountTooolbar"
 
 const elem = document.documentElement;
 
@@ -30,6 +31,7 @@ function closeFullscreen() {
 export default function home() {
   return (
       <div>
+        <ThingsCountToolbar />
         <h1>Home</h1>
         <Link to="/shop">Shop</Link><div> </div>
         <Link to="/selectBrawler">Select Brawler</Link><div> </div>
