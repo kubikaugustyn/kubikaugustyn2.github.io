@@ -1,5 +1,5 @@
 function controlDivsClick() {
-    console.log(window.event.srcElement.id)
+    //console.log(window.event.srcElement.id)
     if (window.event.srcElement.id === "sound") {
         console.log('Run changeSound()')
         changeSound()

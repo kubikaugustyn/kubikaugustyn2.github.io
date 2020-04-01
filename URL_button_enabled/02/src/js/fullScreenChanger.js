@@ -1,33 +1,56 @@
 var fulscreenVar = document.fullscreen
-var elem = document.documentElement;
+var element = document.documentElement;
+var fullscreenTypeImg
 
 function changeFullScreen() {
     console.log('Changing screen...')
-    console.log(document.onfullscreenchange = changeFullScreenDiv());
-    document.onfullscreenchange = changeFullScreenDiv();
+    document.onfullscreenchange = changeFullScreenVar();
+    console.log(document.onfullscreenchange = "document.onfullscreenchange...")
     if (fulscreenVar === true){
         closeFullscreen()
+        fullscreenTypeImg = "fullscreenIsOff.svg"
     }
     else if (fulscreenVar === false){
         openFullscreen()
+        fullscreenTypeImg = "fullscreenIsOn.svg"
     }
+    reloadButtonsDiv()
 }
 
-function changeFullScreenDiv() {
+function changeFullScreenVar() {
     fulscreenVar = document.fullscreen
-    console.log(fulscreenVar)
+    console.log("fulscreenVar:", fulscreenVar)
+    if (fulscreenVar === true){
+        fullscreenTypeImg = "fullscreenIsOff.svg"
+    }
+    else if (fulscreenVar === false){
+        fullscreenTypeImg = "fullscreenIsOn.svg"
+    }
+    reloadButtonsDiv()
+}
+
+function changeFullScreenVar1() {
+    fulscreenVar = document.fullscreen
+    console.log("fulscreenVar:", fulscreenVar)
+    if (fulscreenVar === true){
+        fullscreenTypeImg = "fullscreenIsOn.svg"
+    }
+    else if (fulscreenVar === false){
+        fullscreenTypeImg = "fullscreenIsOff.svg"
+    }
+    reloadButtonsDiv()
 }
 
 /* View in fullscreen */
 function openFullscreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.mozRequestFullScreen) { /* Firefox */
-    elem.mozRequestFullScreen();
-  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE/Edge */
-    elem.msRequestFullscreen();
+  if (element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if (element.mozRequestFullScreen) { /* Firefox */
+    element.mozRequestFullScreen();
+  } else if (element.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+    element.webkitRequestFullscreen();
+  } else if (element.msRequestFullscreen) { /* IE/Edge */
+    element.msRequestFullscreen();
   }
 }
 
