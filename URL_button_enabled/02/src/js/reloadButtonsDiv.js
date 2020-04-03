@@ -14,12 +14,12 @@ function reloadButtonsDiv() {
         //If closeButtonEnabled = true
         if (params["closeButtonEnabled"] === "true") {
             //           console.log("closeButtonEnabled = true...")
-            document.getElementById('controlsDiv').innerHTML = '<div class="closeButtonEnabled_true"><img alt="sound" id="sound" class="button_panel_img" src="./src/img/' + soundTypeImg + '"><img alt="fullscreen" id="fullScreen" class="button_panel_img" src="./src/img/' + fullscreenTypeImg + '"><img alt="closebutton" id="closeButton" class="button_panel_img" src="./src/img/closeButton.svg"></div>'
+            document.getElementById('controlsDiv').innerHTML = '<div class="closeButtonEnabled_true"><img alt="sound" id="sound" class="button_panel_img" src="https://kubikaugustyn.github.io/URL_button_enabled/02/src/img/' + soundTypeImg + '"><img alt="fullscreen" id="fullScreen" class="button_panel_img" src="https://kubikaugustyn.github.io/URL_button_enabled/02/src/img/' + fullscreenTypeImg + '"><img alt="closebutton" id="closeButton" class="button_panel_img" src="https://kubikaugustyn.github.io/URL_button_enabled/02/src/img/closeButton.svg"></div>'
         }
         //If closeButtonEnabled = false
         else if (params["closeButtonEnabled"] === "false") {
             //           console.log("closeButtonEnabled = false...")
-            document.getElementById('controlsDiv').innerHTML = '<div class="closeButtonEnabled_false"><img alt="sound" id="sound" class="button_panel_img" src="./src/img/' + soundTypeImg + '"><img alt="fulscreen" id="fullScreen" class="button_panel_img" src="./src/img/' + fullscreenTypeImg + '"></div>'
+            document.getElementById('controlsDiv').innerHTML = '<div class="closeButtonEnabled_false"><img alt="sound" id="sound" class="button_panel_img" src="https://kubikaugustyn.github.io/URL_button_enabled/02/src/img/' + soundTypeImg + '"><img alt="fulscreen" id="fullScreen" class="button_panel_img" src="https://kubikaugustyn.github.io/URL_button_enabled/02/src/img/' + fullscreenTypeImg + '"></div>'
         }
         //Else page not found
         else if (params["closeButtonEnabled"] != "true") {

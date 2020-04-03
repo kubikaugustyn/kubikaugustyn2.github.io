@@ -8,11 +8,11 @@ function changeFullScreen() {
     console.log(document.onfullscreenchange = "document.onfullscreenchange...")
     if (fulscreenVar === true){
         closeFullscreen()
-        fullscreenTypeImg = "fullscreenIsOff.svg"
+        fullscreenTypeImg = "fullScreenIsOff.svg"
     }
     else if (fulscreenVar === false){
         openFullscreen()
-        fullscreenTypeImg = "fullscreenIsOn.svg"
+        fullscreenTypeImg = "fullScreenIsOn.svg"
     }
     reloadButtonsDiv()
 }
@@ -21,10 +21,10 @@ function changeFullScreenVar() {
     fulscreenVar = document.fullscreen
     console.log("fulscreenVar:", fulscreenVar)
     if (fulscreenVar === true){
-        fullscreenTypeImg = "fullscreenIsOff.svg"
+        fullscreenTypeImg = "fullScreenIsOff.svg"
     }
     else if (fulscreenVar === false){
-        fullscreenTypeImg = "fullscreenIsOn.svg"
+        fullscreenTypeImg = "fullScreenIsOn.svg"
     }
     reloadButtonsDiv()
 }
@@ -33,10 +33,10 @@ function changeFullScreenVar1() {
     fulscreenVar = document.fullscreen
     console.log("fulscreenVar:", fulscreenVar)
     if (fulscreenVar === true){
-        fullscreenTypeImg = "fullscreenIsOn.svg"
+        fullscreenTypeImg = "fullScreenIsOn.svg"
     }
     else if (fulscreenVar === false){
-        fullscreenTypeImg = "fullscreenIsOff.svg"
+        fullscreenTypeImg = "fullScreenIsOff.svg"
     }
     reloadButtonsDiv()
 }
