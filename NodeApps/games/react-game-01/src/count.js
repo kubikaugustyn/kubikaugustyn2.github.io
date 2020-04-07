@@ -1,4 +1,5 @@
 import React from "react";
+import { params } from "./URLParser"
 
 export const coinCount = "7416469";
 export const diamondCount = "72194";
@@ -22,3 +23,19 @@ export const brawlers = {
     "dfx" : ""
 };
 export const brawlerCount = brawlers.myLength;
+export const selectedBrawler = params["brawler"];
+console.log("selectedBrawler:", selectedBrawler);
+
+var brawlerIsTrue;
+if (params !==["brawler"]){
+    brawlerIsTrue = false
+}
+
+var brawlerInd1;
+for (var inde = 0;inde<brawlers.myLength; inde++){
+    if (brawlers.name[inde] === params["brawler"]){
+        brawlerInd1 = inde
+    }
+}
+
+export const brawlerInd = brawlerInd1;

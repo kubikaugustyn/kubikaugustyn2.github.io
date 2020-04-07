@@ -67,7 +67,7 @@ export default function Shop() {
   return (
     <div className={classes.root}>
       <ThingsCountToolbar />
-      <Link to="/"><ArrowBackIosIcon /></Link><h1>Shop</h1>
+      <Link to={"/" + document.location.search}><ArrowBackIosIcon /></Link><h1>Shop</h1>
         <div className="bg-yellow">
           <AppBar position="static" className="bg-gn-yl">
             <Tabs value={value} onChange={handleChange} className="bg-gn-yl text-black">

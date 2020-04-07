@@ -44,3 +44,11 @@ body {
   width: 100px;
   background-color: red;
 }
+
+.selected {
+  background-color: yellow;
+}
+
+.no-underline {
+  text-decoration: none;
+}

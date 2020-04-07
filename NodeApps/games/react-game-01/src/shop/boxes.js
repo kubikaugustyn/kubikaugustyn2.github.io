@@ -1,5 +1,5 @@
 import React from 'react';
-import get from "./get"
+//import get from "./get"
 
 export default function boxes() {
   const imgUrl = "https://kubikaugustyn.github.io/NodeApps/games/react-game-01/src/img/";
