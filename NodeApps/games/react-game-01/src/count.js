@@ -3,6 +3,7 @@ import { params } from "./URLParser"
 
 export const coinCount = "7416469";
 export const diamondCount = "72194";
+export const cupCount = "48317";
 export const tab = <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>;
 export const imgWidth = "10%";
 export const imgUrl = "https://kubikaugustyn.github.io/NodeApps/games/react-game-01/src/img/";
@@ -26,16 +27,19 @@ export const brawlerCount = brawlers.myLength;
 export const selectedBrawler = params["brawler"];
 console.log("selectedBrawler:", selectedBrawler);
 
-var brawlerIsTrue;
-if (params !==["brawler"]){
-    brawlerIsTrue = false
-}
-
+var brawlerIsTrue = false;
 var brawlerInd1;
-for (var inde = 0;inde<brawlers.myLength; inde++){
-    if (brawlers.name[inde] === params["brawler"]){
-        brawlerInd1 = inde
+function zabalZbytecnosti1() {
+    if (params !==["brawler"]){
+        brawlerIsTrue = false
+    }
+    for (var inde = 0;inde<brawlerCount; inde++){
+        if (brawlers.name[inde] === params["brawler"]){
+            brawlerInd1 = inde
+        }
     }
 }
+zabalZbytecnosti1();
 
 export const brawlerInd = brawlerInd1;
+export const shopLink = "/shop?brawler=" + brawlers.name[brawlerInd];

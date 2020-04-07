@@ -24,6 +24,10 @@ body {
   background-color: blue;
 }
 
+.bg-lgBlue {
+  background-color: lightblue;
+}
+
 
 .text-black {
   color: black;
@@ -36,6 +40,11 @@ body {
 .right {
   position: absolute;
   right: 5px;
+  height: 60px;
+}
+
+.left {
+  left: 5px;
   height: 60px;
 }
 
