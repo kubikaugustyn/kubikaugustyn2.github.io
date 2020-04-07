@@ -10,8 +10,8 @@ export const brawlers = {
     "myLength" : "4",
     "imgURL" : {
         "0" : imgUrl + "arnoldImg.jpg",
-        "1" : imgUrl + "arnoldImg.jpg",
-        "2" : imgUrl + "arnoldImg.jpg",
+        "1" : imgUrl + "arnoldImg1.jpg",
+        "2" : imgUrl + "arnoldImg2.jpg",
         "3" : imgUrl + "arnoldImg.jpg"
     },
     "name" : {
