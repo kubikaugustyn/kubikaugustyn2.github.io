@@ -2,10 +2,15 @@ import React from 'react';
 import { trophyRoadsData } from './TrophyRoadsData'
 import {cara, cupCount, imgUrl} from '../count'
 import Avatar from "@material-ui/core/Avatar";
+import ThingsCountToolbar from "../ThingsCountTooolbar";
+import {Link} from "react-router-dom";
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 
-export default function SingleLineGridList() {
+export default function TrophyRoads() {
   return (
       <div>
+        <ThingsCountToolbar />
+        <Link to={"/" + document.location.search}><ArrowBackIosIcon /></Link><h1>Trophy roads</h1>
         {trophyRoadsData.map((trophyRoad, index) => {
             return (
                 <div key={index}>

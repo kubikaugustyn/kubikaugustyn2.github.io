@@ -6,6 +6,7 @@ class Box extends React.Component {
         super(props);
         this.boxTypeImgSrc = "";
         this.boxTypeImgAlt = "";
+        this.boxCount = props.boxCount;
         switch (props.boxType) {
             case 0:
                 this.boxTypeImgSrc = imgUrl + "Box.png";
@@ -30,7 +31,7 @@ class Box extends React.Component {
     }
 
     render() {
-        return <img alt={this.boxTypeImgAlt} src={this.boxTypeImgSrc} width={imgWidth} />;
+        return <span><img alt={this.boxTypeImgAlt} src={this.boxTypeImgSrc} width={imgWidth} />{this.boxCount}</span>;
     }
 }
 
