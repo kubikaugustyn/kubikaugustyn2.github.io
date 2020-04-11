@@ -1,9 +1,9 @@
 console.log("Checking index.js...")
 
 function openInNewTab(url) {
-            var win = window.open(url, '_blank');
-            win.focus();
-        }
+    var win = window.open(url, '_blank');
+    win.focus();
+}
 
 var pageVariants = {
     "aaa" : "<br><a href='https://decko.ceskatelevize.cz/hry/kutej-spunte'><img alt='Kutej špunte' src='Kutej_spunte.png'></a>",
@@ -22,7 +22,13 @@ var pageVariants = {
 
     "editor" : "<a href='Editor.html'>Editor webu</a>",
 
-    "game" : "<a href='URL_button_enabled/index.html?closeButtonEnabled=true'>URL_button_enabled/index.html?buttonEnabled=true</a><br><a href='URL_button_enabled/index.html?closeButtonEnabled=false'>URL_button_enabled/index.html?buttonEnabled=false</a>",
+    "game" : "" +
+        "<a href='URL_button_enabled/index.html?closeButtonEnabled=true'>" +
+            "URL_button_enabled/index.html?buttonEnabled=true" +
+        "</a><br>" +
+        "<a href='URL_button_enabled/index.html?closeButtonEnabled=false'>" +
+            "URL_button_enabled/index.html?buttonEnabled=false" +
+        "</a>",
 
     "node" : "<a href='./node'>Node</a>"
 
@@ -39,3 +45,34 @@ function onKeyPress() {
 
 //zobrazí v consoli hesla (pageVariants)
 //console.log(pageVariants)
+
+function showNext(nextID) {
+    switch(nextID){
+        case'next1':
+            document.getElementById(nextID).innerHTML = "" +
+                "<button onclick='download(\"index.html\")'>" +
+                "Download index.html" +
+                "</button><br>" +
+                "<button onclick='download(\"view_source_index.html\")'>" +
+                "Download view-source:index.html" +
+                "</button><br>" +
+                "<button onclick='download(\"view_full_source_index.html.txt\")'>" +
+                "Download view-full-source:index.html" +
+                "</button><br>";
+        default:
+            return
+    }
+}
+
+function download(file){
+   fetch(document.location.origin) //To functionally in localhost and http://kubikaugustyn.github.io/
+      .then(response => {
+          response.blob().then(blob => {
+            var url = window.URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = file;
+            a.click();
+          });
+    });
+}

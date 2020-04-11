@@ -6,7 +6,6 @@
     <script>
         console.log("Checking index.html...")
     </script>
-    <script type="text/javascript" src="index.js"></script>
     <style type="text/css">
         body {
             background-color: lightblue;
