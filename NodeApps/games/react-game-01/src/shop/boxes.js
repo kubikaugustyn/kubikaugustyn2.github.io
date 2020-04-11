@@ -1,10 +1,8 @@
 import React from 'react';
 //import get from "./get"
+import { imgUrl, imgWidth } from "../count";
 
 export default function boxes() {
-  const imgUrl = "https://kubikaugustyn.github.io/NodeApps/games/react-game-01/src/img/";
-  const imgWidth = "10%";
-
   return (
       <div>
         <div className="center">

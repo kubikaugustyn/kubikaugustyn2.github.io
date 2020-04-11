@@ -1,5 +1,6 @@
 import React from "react";
 import { params } from "./URLParser"
+import MaximizeSharpIcon from '@material-ui/icons/MaximizeSharp';
 
 export const coinCount = "7416469";
 export const diamondCount = "72194";
@@ -26,7 +27,6 @@ export const brawlers = {
 export const brawlerCount = brawlers.myLength;
 export const selectedBrawler = params["brawler"];
 console.log("selectedBrawler:", selectedBrawler);
-
 var brawlerIsTrue = false;
 var brawlerInd1;
 function zabalZbytecnosti1() {
@@ -40,6 +40,8 @@ function zabalZbytecnosti1() {
     }
 }
 zabalZbytecnosti1();
-
 export const brawlerInd = brawlerInd1;
 export const shopLink = "/shop?brawler=" + brawlers.name[brawlerInd];
+export const cara = (<span>
+       <MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon /><MaximizeSharpIcon />
+    </span>);

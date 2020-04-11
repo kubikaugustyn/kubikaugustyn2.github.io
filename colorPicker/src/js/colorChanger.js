@@ -152,6 +152,7 @@ function loadColor() {
         }
         //console.log(document.getElementById("pickedColor").style.backgroundColor)
         var hslColor1 = RGBToHSL1(backgroundColorRGBComponents[0], backgroundColorRGBComponents[1], backgroundColorRGBComponents[2])
+        document.getElementById('colorName').value = document.getElementById("pickedColor").style.backgroundColor
         document.getElementById('R').value = RGBToColorComponents(getStyle(testDiv, "background-color"))[0]
         document.getElementById('G').value = RGBToColorComponents(getStyle(testDiv, "background-color"))[1]
         document.getElementById('B').value = RGBToColorComponents(getStyle(testDiv, "background-color"))[2]
@@ -164,8 +165,8 @@ function loadColor() {
 
 function colorName() {
     console.log(document.getElementById('colorName').value)
-    document.getElementById('pickedColor').style.backgroundcolor = 'green'//document.getElementById('colorName').value
-    document.getElementById('pickedColor').style.backgroundcolor = 'blue'
+    document.getElementById('pickedColor').backgroundcolor = /*'green'*/document.getElementById('colorName').value
+    //document.getElementById('pickedColor').style.backgroundcolor = 'blue'
     console.log(document.getElementById('pickedColor'), document.getElementById('pickedColor').style)
     /*document.getElementById('R').value = RGBToColorComponents(getStyle(testDiv, "background-color"))[0]
     document.getElementById('G').value = RGBToColorComponents(getStyle(testDiv, "background-color"))[1]

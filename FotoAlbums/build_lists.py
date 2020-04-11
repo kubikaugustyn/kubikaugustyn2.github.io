@@ -26,7 +26,7 @@ def processDirectory(directory, indent=""):
         if os.path.isdir(fullName):
             if not directoryProcessed:
                 directoryProcessed = True
-                print indent, directory
+                print(indent, directory)
 
             processDirectory(fullName, indent + "    ")
             listDir["directories"].append(name)
@@ -43,7 +43,7 @@ def processDirectory(directory, indent=""):
     else:
         msg = directory
 
-    print indent, "%s, %d directories, %d images." % (msg, len(listDir["directories"]), len(listDir["images"]))
+    print(indent, "%s, %d directories, %d images." % (msg, len(listDir["directories"]), len(listDir["images"])))
 
 
 if __name__ == "__main__":
