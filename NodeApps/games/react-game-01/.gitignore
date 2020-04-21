@@ -23,8 +23,3 @@ yarn-error.log*
 /node_modules
 /build
 /public
-.gitignore
-package-lock.json
-package.json
-yarn-error.log
-yarn.lock
