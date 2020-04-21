@@ -52,9 +52,11 @@ export default function Home() {
   const classes = useStyles();
   function play() {
       if(brawlers.name[brawlerInd]!=="undefined"){
+          //console.log("brawlers.name[brawlerInd]:", brawlers.name[brawlerInd])
           document.location.pathname = "/play/" + brawlers.name[brawlerInd]
       }
   }
+
   return (
       <div>
         <ThingsCountToolbar />
@@ -65,7 +67,16 @@ export default function Home() {
             <button onClick={openFullscreen}>Open fullscreen</button><br />
             <button onClick={closeFullscreen}>Close fullscreen</button><br />
             <h1>{brawlers.name[brawlerInd]}</h1><br/>
-            <img alt={brawlers.name[brawlerInd]} src={brawlers.imgURL[brawlerInd]} />
+            {window.innerHeight <= 615 ?
+                <span> </span>
+                :
+                <img id="brawlerImg" alt={brawlers.name[brawlerInd]} src={brawlers.imgURL[brawlerInd]}/>
+            }
+            {window.innerHeight <= 650 && window.innerHeight > 400 && document.getElementById("brawlerImg") ?
+                <img alt={brawlers.name[brawlerInd]} src={brawlers.imgURL[brawlerInd]}/>
+                :
+                <span> </span>
+            }
         </center>
         <div className={classes.root + " right"}>
             <Button variant="contained" color="secondary" onClick={play.bind(this)}>Play</Button>

@@ -27,9 +27,10 @@ export const brawlers = {
 export const brawlerCount = brawlers.myLength;
 export const selectedBrawler = params["brawler"];
 console.log("selectedBrawler:", selectedBrawler);
-var brawlerIsTrue = false;
 var brawlerInd1;
 function zabalZbytecnosti1() {
+    // eslint-disable-next-line no-unused-vars
+    let brawlerIsTrue = false;
     if (params !==["brawler"]){
         brawlerIsTrue = false
     }

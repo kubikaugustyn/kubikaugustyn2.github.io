@@ -2,12 +2,13 @@ import React from 'react';
 import Shop from "./shop/Shop"
 import Home from "./home"
 import SelectBrawler from "./selectBrawler/selectBrawler";
-import SelectBrawler1 from "./selectBrawler/brawler/SelectBrawler1"
 import {  BrowserRouter as Router,  Switch,  Route} from "react-router-dom";
 import "./URLParser"
 import TryBrawler from "./try/tryBrawler";
 import PlayWithBrawler from "./play/playWithBrawler";
 import TrophyRoads from "./TrophyRoads/TrophyRoads";
+import LoginAndLogout from "./loginAndLogout"
+import Users from "./users"
 
 
 export default function App() {
@@ -18,6 +19,12 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+          <Route path="/users">
+            <Users />
+          </Route>
+          <Route path="/login">
+            <LoginAndLogout />
+          </Route>
           <Route path="/trophyRoads">
             <TrophyRoads />
           </Route>
@@ -26,9 +33,6 @@ export default function App() {
           </Route>
           <Route path="/try">
             <TryBrawler />
-          </Route>
-          <Route path="/selectBrawler1">
-            <SelectBrawler1 />
           </Route>
           <Route path="/shop">
             <Shop />
