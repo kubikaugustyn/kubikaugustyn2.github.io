@@ -10,6 +10,7 @@ export default function TrophyRoads() {
   return (
       <div>
         <ThingsCountToolbar />
+        <br /><br /><br />
         <Link to={"/" + document.location.search}><ArrowBackIosIcon /></Link><h1>Trophy roads</h1>
         {trophyRoadsData.map((trophyRoad, index) => {
             return (

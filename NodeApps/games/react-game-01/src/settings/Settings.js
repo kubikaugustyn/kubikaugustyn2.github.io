@@ -1,30 +1,27 @@
 import React from 'react';
-import "./index.css";
-import "./App.css"
-import clsx from 'clsx';
-import firebase, {auth, provider} from "./firebase";
-import {coinCount, diamondCount, tab, imgUrl, shopLink, cupCount, brawlerInd, brawlers} from "./count";
-import SettingsIcon from '@material-ui/icons/Settings';
+import "../index.css";
+import "../App.css"
+import firebase, {auth, provider} from "../firebase";
+import {coinCount, diamondCount, tab, imgUrl, shopLink, cupCount, brawlerInd, brawlers} from "../count";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Avatar from "@material-ui/core/Avatar";
-import MenuIcon from '@material-ui/icons/Menu';
 import Link from '@material-ui/core/Link';
 import Button from "@material-ui/core/Button";
-import Drawer from "@material-ui/core/Drawer";
 import { makeStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
 import ReloadIcon from '@material-ui/icons/Replay';
 import Tooltip from '@material-ui/core/Tooltip';
 import Dialog from "@material-ui/core/Dialog";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogActions from '@material-ui/core/DialogActions';
+import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
       margin: theme.spacing(1),
+      width: '25ch',
     },
   },
   list: {
@@ -35,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-class ThingsCountTollbar extends React.Component {
+class Settings extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -47,8 +44,8 @@ class ThingsCountTollbar extends React.Component {
           right: false,
           users: {},
           selectedValue: "",
-          open: false//,
-          //savedUsers: this.state.users
+          open: false,
+          open1: true
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -57,6 +54,12 @@ class ThingsCountTollbar extends React.Component {
         };
         this.handleClose = () => {
             this.setState({open: false});
+        };
+        this.handleClickOpen1 = () => {
+            this.setState({open1: true});
+        };
+        this.handleClose1 = () => {
+            this.setState({open1: false});
         };
         this.login = this.login.bind(this);
         this.logout = this.logout.bind(this);
@@ -69,19 +72,8 @@ class ThingsCountTollbar extends React.Component {
             this.setState({...this.state, [anchor]: open});
         };
         this.copyIdToClipboard = this.copyIdToClipboard.bind(this);
-        this.list = (anchor) => (
-            <div className={clsx(this.classes.list, {[this.classes.fullList]: anchor === 'top' || anchor === 'bottom',})} role="presentation" onClick={this.toggleDrawer(anchor, false)} onKeyDown={this.toggleDrawer(anchor, false)}>
-                <List>
-                    <span className="center">
-                        <SettingsIcon cursor="pointer" color="primary" onClick={() => document.location.pathname = "/settings"} />
-                    </span>
-                </List>
-            </div>
-        );
-        //this.e = "";
         this.thisUserIsExist = false;
         this.userId1 = null;
-        //this.savedUsers = this.state.users;
     }
     handleChange(e) {
         this.setState({ [e.target.name]: e.target.value })
@@ -169,9 +161,18 @@ class ThingsCountTollbar extends React.Component {
             //alert("Copied the text: " + id);
         }
     };
+    deleteUser(){
+        if (document.getElementById("deleteUserInput").value === "DELETE"){
+            console.log("Deleting user...");
+            this.handleClose1.bind(this)
+        }
+        else {
+            document.getElementById("deleteUserInput").value = ""
+        }
+    }
     render() {
-        let home;
-        if (document.location.pathname === "/") {home = true}
+        let settings;
+        if (document.location.pathname === "/settings") {settings = true}
         if (this.state.user) {
             this.thisUserIsExist = false;
             for (var inde = 0; inde < this.state.users.length; inde++) {
@@ -181,10 +182,6 @@ class ThingsCountTollbar extends React.Component {
                 }
             }
         }
-        /*if (this.state.users !== this.state.savedUsers){
-            this.logout();
-            this.reload();
-        }*/
         return (
             <div>
                 <Dialog open={this.state.open} aria-labelledby="alert-dialog-title" aria-describedby="alert-dialog-description">
@@ -240,53 +237,46 @@ class ThingsCountTollbar extends React.Component {
                       </Button>
                     </DialogActions>
                   </Dialog>
+                <Dialog open={this.state.open1} aria-labelledby="alert-dialog-title" aria-describedby="alert-dialog-description">
+                    <DialogTitle id="alert-dialog-title">{"Delete user"}</DialogTitle>
+                    <DialogContent>
+                        Please write to next input text : <b>DELETE</b><br /><br />
+                        <TextField id="deleteUserInput" label="Write: DELETE" variant="outlined" />
+                        <Button onClick={this.deleteUser} color="primary">
+                            Delete user
+                        </Button>
+                    </DialogContent>
+                    <DialogActions>
+                      <Button onClick={this.handleClose1} color="primary">
+                        Cancel
+                      </Button>
+                    </DialogActions>
+                  </Dialog>
                 <div className="bg-blue">
                     <AppBar position="fixed" className="right">
                         <Toolbar>
                             <Tooltip title="Reload">
                                 <Button color="secondary" onClick={this.reload}><ReloadIcon color="secondary"/></Button>
                             </Tooltip>
-                            {home ?
-                                <span className="left">
-                                    <Button color="secondary" onClick={this.handleClickOpen}>
-                                        User data
-                                    </Button>
-
-                                    {['left'].map((anchor) => (
-                                        <React.Fragment key={anchor}>
-                                            <Button onClick={this.toggleDrawer(anchor, true)}><MenuIcon/></Button>
-                                            <Drawer anchor={anchor} open={this.state[anchor]} onClose={this.toggleDrawer(anchor, false)}>
-                                                {this.list(anchor)}
-                                            </Drawer>
-                                        </React.Fragment>
-                                    ))}
-                                </span>
-                                :
-                                <span> </span>
-                            }
                             <Link className="no-underline" href={"/trophyRoads?brawler=" + brawlers.name[brawlerInd]}><span className="text-black"><Avatar src={imgUrl + "Cup.jpg"}/>{cupCount}{tab}</span></Link>
                             <Link className="no-underline" href={shopLink}><span className="text-black"><Avatar src={imgUrl + "Coin.png"}/>{coinCount}{tab}</span></Link>
                             <Link className="no-underline" href={shopLink}><span className="text-black"><Avatar src={imgUrl + "Diamond.png"}/>{diamondCount}{tab}</span></Link>
-                            {home ?
-                                <span className="right">
-                                  {['right'].map((anchor) => (
-                                      <React.Fragment key={anchor}>
-                                          <Button onClick={this.toggleDrawer(anchor, true)}><SettingsIcon/></Button>
-                                          <Drawer anchor={anchor} open={this.state[anchor]} onClose={this.toggleDrawer(anchor, false)}>
-                                              {this.list(anchor)}
-                                          </Drawer>
-                                      </React.Fragment>
-                                  ))}
-                                </span>
-                                :
-                                <span> </span>
-                            }
                         </Toolbar>
                     </AppBar>
                 </div>
+
+                <br /><br /><br />
+
+                <Button color="secondary" onClick={this.handleClickOpen}>
+                    User data
+                </Button>
+
+                <Button color="secondary" onClick={this.handleClickOpen1}>
+                    Delete user
+                </Button>
             </div>
         );
     }
 }
 
-export default ThingsCountTollbar
+export default Settings

@@ -19,6 +19,7 @@ export default function SelectBrawler() {
             </Route>
             <Route path={match.path}>
                 <ThingsCountToolbar  />
+                <br /><br /><br />
                 <Link to={"/" + document.location.search}><ArrowBackIosIcon /></Link><h1>selectBrawler</h1>
                 <BrawlerList />
             </Route>

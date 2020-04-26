@@ -8,6 +8,7 @@ import GemsAndCoins from "./gemsAndCoins";
 import PowerPoints from "./powerPoints";
 import Skins from "./skins";
 import StarSkins from "./starSkins";
+import ThingsCountToolbar from "../ThingsCountTooolbar"
 
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -15,8 +16,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import ThingsCountToolbar from "../ThingsCountTooolbar"
-
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
 function TabPanel(props) {
@@ -67,6 +66,7 @@ export default function Shop() {
   return (
     <div className={classes.root}>
       <ThingsCountToolbar />
+      <br /><br /><br />
       <Link to={"/" + document.location.search}><ArrowBackIosIcon /></Link><h1>Shop</h1>
       <div className="bg-yellow">
         <AppBar position="static" className="bg-gn-yl">

@@ -3,7 +3,7 @@ import './App.css';
 //import './loginAndLogout.css'
 import firebase, { auth, provider } from './firebase.js';
 
-class LoginAndLogout extends Component {
+class Users extends Component {
   constructor() {
     super();
     this.state = {
@@ -86,9 +86,10 @@ class LoginAndLogout extends Component {
                           <li key={item.id}>
                             <h3>{item.title}</h3>
                             <p>Uživatel: {item.user}
-                              {item.user === this.state.user.displayName || item.user === this.state.user.email ?
+                              <button onClick={() => this.removeItem(item.id)}>Smazat uživatele</button>
+                              {/*item.user === this.state.user.displayName || item.user === this.state.user.email ?
                                 <button onClick={() => this.removeItem(item.id)}>Odebrat uživatele</button>
-                              : null}
+                              : null*/}
                             </p>
                           </li>
                         )
@@ -106,4 +107,4 @@ class LoginAndLogout extends Component {
   }
 }
 
-export default LoginAndLogout
+export default Users

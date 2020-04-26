@@ -9,6 +9,7 @@ import PlayWithBrawler from "./play/playWithBrawler";
 import TrophyRoads from "./TrophyRoads/TrophyRoads";
 import LoginAndLogout from "./loginAndLogout"
 import Users from "./users"
+import Settings from "./settings/Settings";
 
 
 export default function App() {
@@ -19,30 +20,15 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="/login">
-            <LoginAndLogout />
-          </Route>
-          <Route path="/trophyRoads">
-            <TrophyRoads />
-          </Route>
-          <Route path="/play">
-            <PlayWithBrawler />
-          </Route>
-          <Route path="/try">
-            <TryBrawler />
-          </Route>
-          <Route path="/shop">
-            <Shop />
-          </Route>
-          <Route path="/selectBrawler">
-            <SelectBrawler />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+          <Route path="/settings"><Settings /></Route>
+          <Route path="/users"><Users /></Route>
+          <Route path="/login"><LoginAndLogout /></Route>
+          <Route path="/trophyRoads"><TrophyRoads /></Route>
+          <Route path="/play"><PlayWithBrawler /></Route>
+          <Route path="/try"><TryBrawler /></Route>
+          <Route path="/shop"><Shop /></Route>
+          <Route path="/selectBrawler"><SelectBrawler /></Route>
+          <Route path="/"><Home /></Route>
         </Switch>
       </div>
     </Router>

@@ -20,8 +20,9 @@ export default function Brawler() {
   }
 
   return (
-          <div>
+    <div>
       <ThingsCountToolbar  />
+      <br /><br /><br />
       <Link to={"/selectBrawler/" + document.location.search}><ArrowBackIosIcon /></Link>
       <center>
         <h1>{brawler}</h1>
