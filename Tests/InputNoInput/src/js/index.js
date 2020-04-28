@@ -37,17 +37,40 @@ function cursorBlinkingVisible() {
 }
 
 function cursorBlinkingInvisible() {
-    bodyInnerHTMLSplit[cursorIndex] = bodyInnerHTMLSplit[cursorIndex].replace('<b>|</b>', '')
+    //var bodyInnerHtml1 = document.body.innerHTML
+
+    var bodyInnerHTML1 = bodyInnerHTML
+    //bodyInnerHTML = bodyInnerHTML.replace('<b>|</b>', '') //split('<b>|</b>')/*Split[cursorIndex]*/
+
+    var a = bodyInnerHTML1.split('<b>|</b>').length - 1
+    for (var ind = 0; ind < a;ind++){
+        bodyInnerHTML1 = bodyInnerHTML1.replace('<b>|</b>', '')
+        console.log("bodyInnerHTML1:", bodyInnerHTML1)
+    }
+    console.log('')
+
 
     //console.log("Po cursorBlinkingInvisible:", bodyInnerHTMLSplit)
+    //console.log("bodyInnerHTML.split(cursor)[0] + bodyInnerHTML.split(cursor)[1]:", bodyInnerHTML.split(cursor)[0] + bodyInnerHTML.split(cursor)[1])
+    //console.log("document.body.innerHTML:", document.body.innerHTML)
+    /*console.log("bodyInnerHtml1.split(cursor):", bodyInnerHtml1.split(cursor))
+    var bodyInnerHtml2
 
-    bodyInnerHTML = ""
+    for (var i = 0; i < bodyInnerHtml1.split(cursor).length; i++) {
+        if (bodyInnerHtml1.split(cursor) !== [i] || bodyInnerHtml1.split(cursor)[i] !== "" || bodyInnerHtml1.split(cursor)[i] !== undefined || bodyInnerHtml1.split(cursor)[i] !== null) {
+            bodyInnerHtml2 += bodyInnerHtml1.split(cursor)[i]
+        }
+        //console.log(bodyInnerHTMLSplit[i])
+    }*/
 
-    for (var i = 0; i < bodyInnerHTMLSplit.length; i++) {
+    /*for (var i = 0; i < bodyInnerHTMLSplit.length; i++) {
         bodyInnerHTML += bodyInnerHTMLSplit[i]
         //console.log(bodyInnerHTMLSplit[i])
-    }
+    }*/
 
+    //console.log("bodyInnerHtml2:", bodyInnerHtml2)
+    bodyInnerHTML = bodyInnerHTML1
+    //console.log("document.body.innerHTML:", document.body.innerHTML, bodyInnerHtml2)
     reloadBody(bodyInnerHTML)
 
     setTimeout(function() {cursorBlinkingVisible()}, cursorTimeout)
