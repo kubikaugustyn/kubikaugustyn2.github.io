@@ -32,9 +32,6 @@ var pageVariants = {
 
     "node" : "<a href='./node'>Node</a>",
 
-    "edu" : "<a href='./edupage'>Edupage</a>",
-    "edupage" : "<a href='./edupage'>Edupage</a>"
-
     //další heslo a funkce k němu ("heslo" : "funkce")
 }
 
