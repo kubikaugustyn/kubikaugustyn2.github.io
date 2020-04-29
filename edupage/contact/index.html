@@ -7,7 +7,7 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss/news">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss/news.xml">
     <link rel="shortcut icon" href="../global/pics/favicon.ico">
     <title>Kontakt | Základní škola Roudnice nad Labem, Karla Jeřábka 941, okres Litoměřice</title>
 
@@ -27,8 +27,7 @@
     <link rel="stylesheet" href="../skin/pics/css/layoutDefault.css?v=4668a2">
     <link rel="stylesheet" href="../elearn/pics/skin/css/contact.css?v=8c0213" id="cssFor_contact">
     <link rel="stylesheet" href="../elearn/pics/skin/css/skin.css?v=e5e78f" id="cssFor_skin">
-    <style type="text/css" id="mainCssStyle">
-    </style>
+    <style type="text/css" id="mainCssStyle"></style>
 
     <script type="text/javascript" src="../skin/pics/js/skinResponsiveScripts.js?v=995b97"></script>
     <link href="../global/pics/gfonts/Open_Sans/font.css?v=609110" type="text/css" rel="stylesheet" />
@@ -119,7 +118,6 @@
     </script>
 
 </head>
-
 <body id="docbody" class="   ">
     <div class="topDiv">
         <div class="edubarMainSkin">
@@ -254,48 +252,54 @@
                                                             Pokud máte jakékoli dotazy ohledně studia na naší škole, napište nám zprávu prostřednictvím tohoto formuláře. Vaše otázky rádi zodpovíme. <ul class="skgdWriteusList">
                                                                 <li>
                                                                     <label>
-                                                                        <span class="skgdWriteusLabel">Jméno:</span><span class="skgdWriteusValue">
+                                                                        <span class="skgdWriteusLabel">Jméno:</span>
+                                                                        <span class="skgdWriteusValue">
                                                                             <input class="skgdWriteusInput" type="text" name="meno" value="">
-                                                                            <span class="skgdWriteusErrorDiv" data-field="meno"><span>
-                                                                                </span>
+                                                                            <span class="skgdWriteusErrorDiv" data-field="meno">
+                                                                            </span>
+                                                                        </span>
                                                                     </label>
                                                                 </li>
                                                                 <li>
                                                                     <label>
-                                                                        <span class="skgdWriteusLabel">Příjmení:</span><span class="skgdWriteusValue">
+                                                                        <span class="skgdWriteusLabel">Příjmení:</span>
+                                                                        <span class="skgdWriteusValue">
                                                                             <input class="skgdWriteusInput" type="text" name="priezvisko" value="">
-                                                                            <span class="skgdWriteusErrorDiv" data-field="priezvisko"><span>
-                                                                                </span>
+                                                                            <span class="skgdWriteusErrorDiv" data-field="priezvisko"></span>
+                                                                        </span>
                                                                     </label>
                                                                 </li>
 
                                                                 <li>
                                                                     <label>
-                                                                        <span class="skgdWriteusLabel">Váš email:</span><span class="skgdWriteusValue">
+                                                                        <span class="skgdWriteusLabel">Váš email:</span>
+                                                                        <span class="skgdWriteusValue">
                                                                             <input class="skgdWriteusInput" type="text" name="email" value="">
-                                                                            <span class="skgdWriteusErrorDiv" data-field="email"><span>
-                                                                                </span>
+                                                                            <span class="skgdWriteusErrorDiv" data-field="email"></span>
+                                                                        </span>
                                                                     </label>
                                                                 </li>
 
                                                                 <li>
                                                                     <label>
-                                                                        <span class="skgdWriteusLabel">Vaše otázky, připomínky:</span><span class="skgdWriteusValue">
+                                                                        <span class="skgdWriteusLabel">Vaše otázky, připomínky:</span>
+                                                                        <span class="skgdWriteusValue">
                                                                             <textarea name="otazky" class="skgdWriteusInput skgdWriteusTextarea"></textarea>
-                                                                            <span class="skgdWriteusErrorDiv" data-field="otazky"><span>
-                                                                                </span>
+                                                                            <span class="skgdWriteusErrorDiv" data-field="otazky"></span>
+                                                                        </span>
                                                                     </label>
                                                                 </li>
 
 
                                                                 <li>
                                                                     <label>
-                                                                        <span class="skgdWriteusLabel">Opište prosím text z obrázku:</span><span class="skgdWriteusValue">
+                                                                        <span class="skgdWriteusLabel">Opište prosím text z obrázku:</span>
+                                                                        <span class="skgdWriteusValue">
                                                                             <input class="skgdWriteusInput" type="text" name="ctxt" value="">
                                                                             <br>
                                                                             <img src="../captcha.png?t=zl1jIA2F2pQJ0zxA%2F2HA6A%3D%3D&amp;m=db0695bc341348b738f67ba4c31ccb2701ed6c53" alt="" class="skgdCaptchaImg">
-                                                                            <span class="skgdWriteusErrorDiv" data-field="ctxt"><span>
-                                                                                </span>
+                                                                            <span class="skgdWriteusErrorDiv" data-field="ctxt"></span>
+                                                                        </span>
                                                                     </label>
                                                                 </li>
                                                                 <li>
@@ -316,7 +320,7 @@
                                                                     $j.post('/contact/?wid=contact_WriteUs_1&akcia=verifyAndSend', postData, function(obj) {
                                                                         elem.find('.loadingDiv').hide();
                                                                         var fields = ['meno', 'priezvisko', 'email', 'otazky', 'ctxt'];
-                                                                        if (obj["status"] == 'sent') {
+                                                                        if (obj["status"] === 'sent') {
                                                                             elem.find('.skgdWriteusErrorDiv').hide();
                                                                             elem.find('.skgdWriteusInput').toggleClass('skgdWriteusError', false).val('');
                                                                             alert(ls(2737));
@@ -324,7 +328,7 @@
                                                                             elem.find('.skgdWriteusInput').toggleClass('skgdWriteusError', false)
                                                                             elem.find('.skgdWriteusErrorDiv').hide();
                                                                             for (var s in obj) {
-                                                                                if (s == 'status' || s == 'csrc') continue;
+                                                                                if (s === 'status' || s === 'csrc') continue;
                                                                                 var div = elem.find('.skgdWriteusErrorDiv[data-field="' + et(s) + '"]');
                                                                                 div.html(et(obj[s])).show();
                                                                                 elem.find('.skgdWriteusInput[name="' + et(s) + '"]').toggleClass('skgdWriteusError', true);
@@ -362,7 +366,7 @@
                                     var ga = document.createElement('script');
                                     ga.type = 'text/javascript';
                                     ga.async = true;
-                                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                                    ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
                                     var s = document.getElementsByTagName('script')[0];
                                     s.parentNode.insertBefore(ga, s);
                                 })();
@@ -455,5 +459,4 @@
         </div>
     </div>
 </body>
-
 </html>
