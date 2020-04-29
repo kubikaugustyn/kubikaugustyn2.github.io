@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  	<channel>
+		<title>Základní škola Roudnice nad Labem, Karla Jeřábka 941, okres Litoměřice</title>
+		<link>https://zskjerabka-rce.edupage.org/</link>
+		<description>Novinky</description>
+		<language>cz</language>
+		<pubDate>Wed, 29 Apr 2020 14:41:08 GMT</pubDate>
+		<lastBuildDate>Wed, 29 Apr 2020 14:41:08 GMT</lastBuildDate>
+		<image>
+			<title>Základní škola Roudnice nad Labem, Karla Jeřábka 941, okres Litoměřice</title>
+			<url>https://zskjerabka-rce.edupage.org/rss/pics/rss.png</url>
+			<link>https://zskjerabka-rce.edupage.org/</link>
+		</image>
+			<item>
+			<title>Rozvrh</title>
+			<link>https://zskjerabka-rce.edupage.org/news/?newid=3#news-3</link>
+			<description>Podívejte se nebo vytiskněte Váš aktuální rozvrh. Rozvrh byl naposledy zveřejněn: 6. 3. 2020</description>    		<pubDate>Tue, 5 Jun 2018 22:02:46 GMT</pubDate>
+			<category>AUTO3</category>
+		</item>
+			<item>
+			<title>Suplování</title>
+			<link>https://zskjerabka-rce.edupage.org/news/?newid=2#news-2</link>
+			<description>Podívejte se na suplování a jiné každodenní změny v rozvrhu. Poslední suplování bylo vypublikováno: 18. 3. 2020</description>    		<pubDate>Tue, 5 Jun 2018 22:02:46 GMT</pubDate>
+			<category>AUTO2</category>
+		</item>
+			<item>
+			<title>Uživatelské účty</title>
+			<link>https://zskjerabka-rce.edupage.org/news/?newid=1#news-1</link>
+			<description>Je možné, že některé části stránky uvidíte pouze po přihlášení. Pokud jste heslo zapomněli, použijte prosím odkaz &quot;Neznám přihlašovací jméno nebo heslo&quot; a zadejte Váš email. Pokud jste heslo ze školy ještě nedostali,  vyčkejte prosím, dokud škola systém nezprovozní.</description>    		<pubDate>Tue, 5 Jun 2018 22:02:46 GMT</pubDate>
+			<category>AUTO1</category>
+		</item>
+	</channel>
+</rss>

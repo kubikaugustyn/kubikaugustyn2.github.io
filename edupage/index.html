@@ -7,7 +7,7 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="./rss/news">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="./rss/news.xml">
     <link rel="shortcut icon" href="./global/pics/favicon.ico">
     <title>Základní škola Roudnice nad Labem, Karla Jeřábka 941, okres Litoměřice</title>
 
@@ -104,7 +104,9 @@
             return 1;
         };
         ASC.ASC_sy2str = function(dm) {
-            if (!dm || dm == '') return '';
+            if (!dm || dm === '') {
+                return ''
+            }
             var y = parseInt(dm, 10);
             return y + '/' + (y + 1);
         };
@@ -130,9 +132,18 @@
                             <div class="skgd composite skgdContainer" id="skin_Container_1" data-sgid="skin_Container_1">
                                 <section class="skgd composite skgdSection visualEdit inlineEditable sgsp" id="skin_Section_2" data-sgid="skin_Section_2">
                                     <ul class="skgd composite hbox responsive500 valign-middle" id="skin_BoxH_1" data-sgid="skin_BoxH_1">
-                                        <li style="width:66.67%;" class="compositeInner"><a class="skgd composite ihoverable" id="skin_Link_1" data-sgid="skin_Link_1" href="./" title=""><img class="skgd skgdLogoImg" id="skin_Logo_1" data-sgid="skin_Logo_1" src="./global/pics/skins/logo/thumbs/max1920x1920trlogo11.png" alt="Domovská stránka">
-                                                <div class="skgd composite" id="skin_Div_5" data-sgid="skin_Div_5"><span class="skgd" id="skin_LogoText_1" data-sgid="skin_LogoText_1"><span style="font-size:86%;line-height: 120%;display:inline-block;">Základní škola Roudnice nad Labem, Karla Jeřábka 941, okres Litoměřice</span></span></div>
-                                            </a></li>
+                                        <li style="width:66.67%;" class="compositeInner">
+                                            <a class="skgd composite ihoverable" id="skin_Link_1" data-sgid="skin_Link_1" href="./" title="">
+                                                <img class="skgd skgdLogoImg" id="skin_Logo_1" data-sgid="skin_Logo_1" src="./global/pics/skins/logo/thumbs/max1920x1920trlogo11.png" alt="Domovská stránka">
+                                                <div class="skgd composite" id="skin_Div_5" data-sgid="skin_Div_5">
+                                                    <span class="skgd" id="skin_LogoText_1" data-sgid="skin_LogoText_1">
+                                                        <span style="font-size:86%;line-height: 120%;display:inline-block;">
+                                                            Základní škola Roudnice nad Labem, Karla Jeřábka 941, okres Litoměřice
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </li>
                                         <li style="width:33.33%;" class="compositeInner">
                                             <div class="skgd composite" id="skin_Div_6" data-sgid="skin_Div_6">
                                                 <div class="skgd composite" id="skin_Div_7" data-sgid="skin_Div_7">
@@ -199,7 +210,13 @@
                                                             <div class="skgd composite" id="home_Div_1" data-sgid="home_Div_1">
                                                                 <ul class="skgd composite hbox static valign-top" id="home_BoxH_1" data-sgid="home_BoxH_1">
                                                                     <li style="width:50.00%;max-width:70px;" class="compositeInner"><img class="skgd skgdLogoImg" id="home_Logo_2" data-sgid="home_Logo_2" src="./global/pics/skins/logo/thumbs/max1920x1920trlogo11.png" alt="Domovská stránka"></li>
-                                                                    <li style="width:50.00%;" class="compositeInner"><span class="skgd" id="home_LogoText_2" data-sgid="home_LogoText_2"><span style="font-size:86%;line-height: 120%;display:inline-block;">Základní škola Roudnice nad Labem, Karla Jeřábka 941, okres Litoměřice</span></span></li>
+                                                                    <li style="width:50.00%;" class="compositeInner">
+                                                                        <span class="skgd" id="home_LogoText_2" data-sgid="home_LogoText_2">
+                                                                            <span style="font-size:86%;line-height: 120%;display:inline-block;">
+                                                                                Základní škola Roudnice nad Labem, Karla Jeřábka 941, okres Litoměřice
+                                                                            </span>
+                                                                        </span>
+                                                                    </li>
                                                                 </ul>
                                                             </div>
                                                             <div class="skgd composite" id="home_Div_2" data-sgid="home_Div_2"></div>
@@ -217,106 +234,156 @@
                                                         <li class="skgd skgdli-home_ListItem_1-home_ListItem_1 composite skgdLi" id="home_ListItem_1-0" data-sgid="home_ListItem_1-0" data-listItemId=""><a class="skgd skgdli-home_ListItem_1-home_Link_2 composite ihoverable" id="home_Link_2-0" data-sgid="home_Link_2-0" href="./timetable/" title="">
                                                                 <div class="skgd skgdli-home_ListItem_1-home_Div_7 composite" id="home_Div_7-0" data-sgid="home_Div_7-0">
                                                                     <div class="skgd skgdli-home_ListItem_1-home_Div_8 composite" id="home_Div_8-0" data-sgid="home_Div_8-0"></div><img class="skgd skgdli-home_ListItem_1-home_DFImage_2" id="home_DFImage_2-0" data-sgid="home_DFImage_2-0" src="./global/pics/skins/slide1900/thumbs/fill640x480trslide3.jpg" alt="{#1001}"><div class="skgd skgdli-home_ListItem_1-home_Div_9 composite" id="home_Div_9-0" data-sgid="home_Div_9-0" ><span class="skgd skgdli-home_ListItem_1-home_DFText_2" id="home_DFText_2-0" data-sgid="home_DFText_2-0" >Rozvrh</span></div></div></a></li><li class="skgd skgdli-home_ListItem_1-home_ListItem_1 composite skgdLi" id="home_ListItem_1-1" data-sgid="home_ListItem_1-1"  data-listItemId="1"><a class="skgd skgdli-home_ListItem_1-home_Link_2 composite ihoverable" id="home_Link_2-1" data-sgid="home_Link_2-1"  href="./substitution/" title=""><div class="skgd skgdli-home_ListItem_1-home_Div_7 composite" id="home_Div_7-1" data-sgid="home_Div_7-1" ><div class="skgd skgdli-home_ListItem_1-home_Div_8 composite" id="home_Div_8-1" data-sgid="home_Div_8-1" ></div><img class="skgd skgdli-home_ListItem_1-home_DFImage_2" id="home_DFImage_2-1" data-sgid="home_DFImage_2-1"  src="./global/pics/skins/slide1900/thumbs/fill640x480trslide22.jpg" alt="{#1003}"><div class="skgd skgdli-home_ListItem_1-home_Div_9 composite" id="home_Div_9-1" data-sgid="home_Div_9-1" ><span class="skgd skgdli-home_ListItem_1-home_DFText_2" id="home_DFText_2-1" data-sgid="home_DFText_2-1" >Suplování</span></div></div></a></li></ul></li><li style="flex:250px 1 1;"  class="compositeInner"><ul class="skgd composite" id="home_BoxV_2" data-sgid="home_BoxV_2" ><li class="compositeInner"><h2 class="skgd inlineEditable" id="home_Heading_2" data-sgid="home_Heading_2" >Přihlášení</h2></li><li class="compositeInner"><div class="skgd skgdLogin verticalForm" id="home_Login_1" data-sgid="home_Login_1" >
-<form action="https:https://zskjerabka-rce.edupage.org/login/edubarLogin.php" method="post">
-		<input type="hidden" name="csrfauth" value="265a53723bbad27bf1c202361f8182da6f3a7b25d715b42f116de25d7d4d8390495208f0">
-				<ul class="skgdFormList">
-			<li>
-				
-				<span class="skgdFormLabel">
-					<label for="home_Login_1e1">Uživatelské jméno:</label>
-				</span><span class="skgdFormValue">
-					<input id="home_Login_1e1" class="skgdFormInput" type="text" name="username" value="OndrejAugustyn">					
-				</span>				
-			</li>		
-			
-			<li>
-				
-				<span class="skgdFormLabel">
-					<label for="home_Login_1e2">Heslo:</label>
-				</span><span class="skgdFormValue">
-					<input id="home_Login_1e2" class="skgdFormInput" type="password" name="password" value="">					
-				</span>
-				
-			</li>
-					
-			<li>
-				<span class="skgdFormLabel"></span><span class="skgdFormValue skgdSubmitRow">							
-										<input type="submit" class="skgdFormSubmit" value="Přihlášení">		
-				</span>	
-			</li>		
-			<li>
-				<span class="skgdFormLabel"></span>				
-				<span class="skgdFormValue skgdLostPasswordRow">
-					<a class="lostPasswordBtn" style="cursor:pointer">Neznám přihlašovací jméno nebo heslo</a>
-					
-					
-									</span>		
+                                                                        <form action="https:https://zskjerabka-rce.edupage.org/login/edubarLogin.php" method="post">
+                                                                                <input type="hidden" name="csrfauth" value="265a53723bbad27bf1c202361f8182da6f3a7b25d715b42f116de25d7d4d8390495208f0">
+                                                                                    <ul class="skgdFormList">
+                                                                                        <li>
+                                                                                            <span class="skgdFormLabel">
+                                                                                                <label for="home_Login_1e1">Uživatelské jméno:</label>
+                                                                                            </span>
+                                                                                            <span class="skgdFormValue">
+                                                                                                <input id="home_Login_1e1" class="skgdFormInput" type="text" name="username" value="OndrejAugustyn">
+                                                                                            </span>
+                                                                                        </li>
+                                                                                    <li>
+                                                                                        <span class="skgdFormLabel">
+                                                                                            <label for="home_Login_1e2">Heslo:</label>
+                                                                                        </span>
+                                                                                        <span class="skgdFormValue">
+                                                                                            <input id="home_Login_1e2" class="skgdFormInput" type="password" name="password" value="">
+                                                                                        </span>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <span class="skgdFormLabel"></span><span class="skgdFormValue skgdSubmitRow">
+                                                                                            <input type="submit" class="skgdFormSubmit" value="Přihlášení">
+                                                                                        </span>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <span class="skgdFormLabel"></span>
+                                                                                        <span class="skgdFormValue skgdLostPasswordRow">
+                                                                                            <a class="lostPasswordBtn" style="cursor:pointer">Neznám přihlašovací jméno nebo heslo</a>
 
-							</li>	
-		</ul>	
-	</form><script type="text/javascript">
-$j(document).ready(function($) {		
-	var elem = $('#home_Login_1');		
-	elem.find('.lostPasswordBtn').on('click',function() {
-			
-		barNewDialog({
-			'source': '/portal/?cmd=LostPassword',
-			'title': ls(1589)
-		});
-	});
-	});
-</script></div></li></ul></li></ul></section></li></ul></main>		<script type="text/javascript">		
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-402716-3']);
-		  _gaq.push(['_setSampleRate', '20']);
-		  _gaq.push(['_setDomainName', 'edupage.org']);
-		  _gaq.push(['_setAllowLinker', true]);		  
-		  _gaq.push(['_setCustomVar',1,"edupage", "zskjerabka-rce", 3]);
-		  _gaq.push(['_setCustomVar',2,"okres", "", 3]);
-		  		  _gaq.push(['_setCustomVar',3,"module","",3]);
-		  _gaq.push(['_setCustomVar',4,"typ", "", 3]);
-		  _gaq.push(['_setCustomVar',5,"logged", "0", 3]);		  		  
-		  _gaq.push(['_setVar',"edupage24"]);		  
-		  _gaq.push(['_trackPageview']);
-		  (function() {
-		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		    ga.src = ('https:' == document.location.protocol ? 'https:https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();		
-		</script>
-			<div id="reklama_down"></div>	
-	
-			<script type="text/javascript">			
-			$j(document).ready(function($) {
-				var accepted = localStorage.getItem('euCookieAccepted') || sessionStorage.getItem('euCookieAccepted');
-				if (!accepted) {
-					var s = '';
-					s += '<div class="eu-cookie-panel">';
-						s += ls(7818);
-						s += '<div style="text-align: right;margin-top: 10px;">';						
-							s += '<a class="flat-button flat-button-green eu-cookie-closeBtn">'+lset(1573)+'</a>';
-						s += '</div>';
-					s += '</div>';
-					var elem = $(s).prependTo($('body'));
-					
-					elem.find('.eu-cookie-closeBtn').click(function() {
-						localStorage.setItem('euCookieAccepted','1');
-						sessionStorage.setItem('euCookieAccepted','1');
-						elem.fadeOut('fast',function() {
-							elem.remove();
-						});
-					});
-				}
-				
-			});
-		</script>
-		</div></div></div><div class="skgd composite" id="skin_Div_10" data-sgid="skin_Div_10" ><div class="skgd composite skgdContainer" id="skin_Container_4" data-sgid="skin_Container_4" ><ul class="skgd composite sgbox sgsp skgdListH1 responsive" id="skin_SectionGroup_1" data-sgid="skin_SectionGroup_1" ><li class="compositeInner skgdListLi" style="padding-right:1em;padding-bottom:1em"><section class="skgd composite skgdSection visualEdit inlineEditable sgsp" id="skin_Section_5" data-sgid="skin_Section_5" ><ul class="skgd composite" id="skin_BoxV_5" data-sgid="skin_BoxV_5" ><li class="compositeInner"><h2 class="skgd inlineEditable" id="skin_Heading_2" data-sgid="skin_Heading_2" >Kontakty</h2></li><li class="compositeInner"><ul class="skgd composite skgdList responsive skgd-fa-ul contact" id="skin_Contact_2" data-sgid="skin_Contact_2" ><li class="skgd skgdli-skin_ListItem_2-skin_ListItem_2 composite skgdLi skgd-fa-li fa-building" id="skin_ListItem_2-school_name" data-sgid="skin_ListItem_2-school_name"  data-listItemId="school_name"><div class="skgd skgdli-skin_ListItem_2-skin_Text_2" id="skin_Text_2-school_name" data-sgid="skin_Text_2-school_name" >Základní škola Roudnice nad Labem, Karla Jeřábka 941, okres Litoměřice</div></li><li class="skgd skgdli-skin_ListItem_2-skin_ListItem_2 composite skgdLi skgd-fa-li fa-envelope" id="skin_ListItem_2-school_email" data-sgid="skin_ListItem_2-school_email"  data-listItemId="school_email"><div class="skgd skgdli-skin_ListItem_2-skin_Text_2" id="skin_Text_2-school_email" data-sgid="skin_Text_2-school_email" >ludmila.betkova@zskjerabka-rce.cz</div></li><li class="skgd skgdli-skin_ListItem_2-skin_ListItem_2 composite skgdLi skgd-fa-li fa-info" id="skin_ListItem_2-webmaster_email" data-sgid="skin_ListItem_2-webmaster_email"  data-listItemId="webmaster_email"><div class="skgd skgdli-skin_ListItem_2-skin_Text_2" id="skin_Text_2-webmaster_email" data-sgid="skin_Text_2-webmaster_email" >jan.skola@zskjerabka-rce.cz</div></li><li class="skgd skgdli-skin_ListItem_2-skin_ListItem_2 composite skgdLi skgd-fa-li fa-phone" id="skin_ListItem_2-school_phone" data-sgid="skin_ListItem_2-school_phone"  data-listItemId="school_phone"><div class="skgd skgdli-skin_ListItem_2-skin_Text_2" id="skin_Text_2-school_phone" data-sgid="skin_Text_2-school_phone" >+420 412 871 366</div></li><li class="skgd skgdli-skin_ListItem_2-skin_ListItem_2 composite skgdLi skgd-fa-li fa-map-marker" id="skin_ListItem_2-school_address" data-sgid="skin_ListItem_2-school_address"  data-listItemId="school_address"><div class="skgd skgdli-skin_ListItem_2-skin_Text_2" id="skin_Text_2-school_address" data-sgid="skin_Text_2-school_address" >Karla Jeřábka 941
-Roudnice nad Labem
-413 01</div></li></ul></li></ul></section></li></ul></div></div><div class="skgd composite" id="skin_Div_11" data-sgid="skin_Div_11" ><div class="skgd composite skgdContainer" id="skin_Container_5" data-sgid="skin_Container_5" ><ul class="skgd composite hbox static valign-top" id="skin_BoxH_2" data-sgid="skin_BoxH_2" ><li style="width:50.00%;"  class="compositeInner"><div class="skgd" id="skin_BlindFriendly_1" data-sgid="skin_BlindFriendly_1" ><a href="./?blindFriendly=1" style="color:inherit">
-			<i class="fa fa-blind" aria-hidden="true"></i> 
-							Bezbariérová verze					</a>
-		
-		<a class="skgdChangeFontSize" data-change="1" title="Zvětšit velikost písma"><i class="fa fa-fw fa-font"></i>+</a>
-		<a class="skgdChangeFontSize" data-change="-1" title="Zmenšit velikost písma"><i class="fa fa-fw fa-font"></i>-</a></div></li><li style="width:50.00%;"  class="compositeInner"><div class="skgd plainText" id="skin_Html_1" data-sgid="skin_Html_1" ><p>Powered by <a href="http:https://www.edupage.org" target="_blank">aSc EduPage</a></p></div></li></ul></div></div></div></div></div></body>
-			</html>
+
+                                                                                        </span>
+                                                                                    </li>
+                                                                                </ul>
+                                                                        </form>
+                                                                            <script type="text/javascript">
+                                                                                $j(document).ready(function($) {
+                                                                                    var elem = $('#home_Login_1');
+                                                                                    elem.find('.lostPasswordBtn').on('click',function() {
+
+                                                                                        barNewDialog({
+                                                                                            'source': '/portal/?cmd=LostPassword',
+                                                                                            'title': ls(1589)
+                                                                                        });
+                                                                                    });
+                                                                                });
+                                                                            </script>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </section>
+                                                </li>
+                                            </ul>
+                                        </main>
+                                        <script type="text/javascript">
+                                            var _gaq = _gaq || [];
+                                            _gaq.push(['_setAccount', 'UA-402716-3']);
+                                            _gaq.push(['_setSampleRate', '20']);
+                                            _gaq.push(['_setDomainName', 'edupage.org']);
+                                            _gaq.push(['_setAllowLinker', true]);
+                                            _gaq.push(['_setCustomVar',1,"edupage", "zskjerabka-rce", 3]);
+                                            _gaq.push(['_setCustomVar',2,"okres", "", 3]);
+                                            _gaq.push(['_setCustomVar',3,"module","",3]);
+                                            _gaq.push(['_setCustomVar',4,"typ", "", 3]);
+                                            _gaq.push(['_setCustomVar',5,"logged", "0", 3]);
+                                            _gaq.push(['_setVar',"edupage24"]);
+                                            _gaq.push(['_trackPageview']);
+                                            (function() {
+                                                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                                                ga.src = (document.location.protocol == 'https:' ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+                                                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                                            })();
+                                        </script>
+			                            <div id="reklama_down"></div>
+                                        <script type="text/javascript">
+                                            $j(document).ready(function($) {
+                                                var accepted = localStorage.getItem('euCookieAccepted') || sessionStorage.getItem('euCookieAccepted');
+                                                if (!accepted) {
+                                                    var s = '';
+                                                    s += '<div class="eu-cookie-panel">';
+                                                        s += ls(7818);
+                                                        s += '<div style="text-align: right;margin-top: 10px;">';
+                                                            s += '<a class="flat-button flat-button-green eu-cookie-closeBtn">'+lset(1573)+'</a>';
+                                                        s += '</div>';
+                                                    s += '</div>';
+                                                    var elem = $(s).prependTo($('body'));
+
+                                                    elem.find('.eu-cookie-closeBtn').click(function() {
+                                                        localStorage.setItem('euCookieAccepted','1');
+                                                        sessionStorage.setItem('euCookieAccepted','1');
+                                                        elem.fadeOut('fast',function() {
+                                                            elem.remove();
+                                                        });
+                                                    });
+                                                }
+
+                                            });
+                                        </script>
+                                    </div>
+                    </div>
+                </div>
+                <div class="skgd composite" id="skin_Div_10" data-sgid="skin_Div_10" >
+                    <div class="skgd composite skgdContainer" id="skin_Container_4" data-sgid="skin_Container_4" >
+                        <ul class="skgd composite sgbox sgsp skgdListH1 responsive" id="skin_SectionGroup_1" data-sgid="skin_SectionGroup_1" >
+                            <li class="compositeInner skgdListLi" style="padding-right:1em;padding-bottom:1em">
+                                <section class="skgd composite skgdSection visualEdit inlineEditable sgsp" id="skin_Section_5" data-sgid="skin_Section_5" >
+                                    <ul class="skgd composite" id="skin_BoxV_5" data-sgid="skin_BoxV_5" >
+                                        <li class="compositeInner">
+                                            <h2 class="skgd inlineEditable" id="skin_Heading_2" data-sgid="skin_Heading_2" >Kontakty</h2>
+                                        </li>
+                                        <li class="compositeInner">
+                                            <ul class="skgd composite skgdList responsive skgd-fa-ul contact" id="skin_Contact_2" data-sgid="skin_Contact_2" >
+                                                <li class="skgd skgdli-skin_ListItem_2-skin_ListItem_2 composite skgdLi skgd-fa-li fa-building" id="skin_ListItem_2-school_name" data-sgid="skin_ListItem_2-school_name"  data-listItemId="school_name">
+                                                    <div class="skgd skgdli-skin_ListItem_2-skin_Text_2" id="skin_Text_2-school_name" data-sgid="skin_Text_2-school_name" >Základní škola Roudnice nad Labem, Karla Jeřábka 941, okres Litoměřice</div>
+                                                </li>
+                                                <li class="skgd skgdli-skin_ListItem_2-skin_ListItem_2 composite skgdLi skgd-fa-li fa-envelope" id="skin_ListItem_2-school_email" data-sgid="skin_ListItem_2-school_email"  data-listItemId="school_email">
+                                                    <div class="skgd skgdli-skin_ListItem_2-skin_Text_2" id="skin_Text_2-school_email" data-sgid="skin_Text_2-school_email" >ludmila.betkova@zskjerabka-rce.cz</div>
+                                                </li>
+                                                <li class="skgd skgdli-skin_ListItem_2-skin_ListItem_2 composite skgdLi skgd-fa-li fa-info" id="skin_ListItem_2-webmaster_email" data-sgid="skin_ListItem_2-webmaster_email"  data-listItemId="webmaster_email">
+                                                    <div class="skgd skgdli-skin_ListItem_2-skin_Text_2" id="skin_Text_2-webmaster_email" data-sgid="skin_Text_2-webmaster_email" >jan.skola@zskjerabka-rce.cz</div>
+                                                </li>
+                                                <li class="skgd skgdli-skin_ListItem_2-skin_ListItem_2 composite skgdLi skgd-fa-li fa-phone" id="skin_ListItem_2-school_phone" data-sgid="skin_ListItem_2-school_phone"  data-listItemId="school_phone">
+                                                    <div class="skgd skgdli-skin_ListItem_2-skin_Text_2" id="skin_Text_2-school_phone" data-sgid="skin_Text_2-school_phone" >+420 412 871 366</div>
+                                                </li>
+                                                <li class="skgd skgdli-skin_ListItem_2-skin_ListItem_2 composite skgdLi skgd-fa-li fa-map-marker" id="skin_ListItem_2-school_address" data-sgid="skin_ListItem_2-school_address"  data-listItemId="school_address">
+                                                    <div class="skgd skgdli-skin_ListItem_2-skin_Text_2" id="skin_Text_2-school_address" data-sgid="skin_Text_2-school_address" >Karla Jeřábka 941 Roudnice nad Labem 413 01</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skgd composite" id="skin_Div_11" data-sgid="skin_Div_11" >
+                    <div class="skgd composite skgdContainer" id="skin_Container_5" data-sgid="skin_Container_5" >
+                        <ul class="skgd composite hbox static valign-top" id="skin_BoxH_2" data-sgid="skin_BoxH_2" >
+                            <li style="width:50.00%;" class="compositeInner">
+                                <div class="skgd" id="skin_BlindFriendly_1" data-sgid="skin_BlindFriendly_1" >
+                                    <a href="./?blindFriendly=1" style="color:inherit">
+                                        <i class="fa fa-blind" aria-hidden="true"></i>
+                                        Bezbariérová verze
+                                    </a>
+                                    <a class="skgdChangeFontSize" data-change="1" title="Zvětšit velikost písma"><i class="fa fa-fw fa-font"></i>+</a>
+                                    <a class="skgdChangeFontSize" data-change="-1" title="Zmenšit velikost písma"><i class="fa fa-fw fa-font"></i>-</a></div></li><li style="width:50.00%;"  class="compositeInner"><div class="skgd plainText" id="skin_Html_1" data-sgid="skin_Html_1" ><p>Powered by <a href="http:https://www.edupage.org" target="_blank">aSc EduPage</a></p></div></li></ul></div></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 			
