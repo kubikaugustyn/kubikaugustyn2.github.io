@@ -3,46 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Loading</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+    </style>
     <script>
-        var loading = document.getElementById("loading")
+        var loadingInner
         var loadingIco1 = "|";
         var loadingIco2 = "/";
         var loadingIco3 = "-";
-        var loadingIco4 = document.getElementById("loadingIco4a8")
+        var loadingIco4
         var loadingIco5 = "|";
         var loadingIco6 = "/";
         var loadingIco7 = "-";
-        var loadingIco8 = document.getElementById("loadingIco4a8")
+        var loadingIco8
         var loadingIndex = 1
+
+        var timeout = 25
+
+        function onLoad(){
+            loadingInner = document.getElementById("loading").innerHTML
+            loadingIco4 = document.getElementById("loadingIco4a8").innerHTML
+            loadingIco8 = document.getElementById("loadingIco4a8").innerHTML
+            loadingFunction()
+        }
 
         function loadingFunction() {
             switch (loadingIndex) {
                 case 1:
-                    loading.innerText = loadingIco1
+                    loadingInner = loadingIco1
                     break
                 case 2:
-                    loading.innerText = loadingIco2
+                    loadingInner = loadingIco2
                     break
                 case 3:
-                    loading.innerText = loadingIco3
+                    loadingInner = loadingIco3
                     break
                 case 4:
-                    loading.innerText = loadingIco4
+                    loadingInner = loadingIco4
                     break
                 case 5:
-                    loading.innerText = loadingIco5
+                    loadingInner = loadingIco5
                     break
                 case 6:
-                    loading.innerText = loadingIco6
+                    loadingInner = loadingIco6
                     break
                 case 7:
-                    loading.innerText = loadingIco7
+                    loadingInner = loadingIco7
                     break
                 case 8:
-                    loading.innerText = loadingIco8
+                    loadingInner = loadingIco8
                     break
                 default:
-                    loading.innerText = "error"
+                    loadingInner = "error"
             }
 
             loadingIndex++
@@ -50,12 +64,13 @@
                 loadingIndex = 1
             }
 
-            setTimeout(function(){loadingFunction()}, 2000)
+            document.getElementById("loading").innerHTML = loadingInner
+
+            setTimeout(function(){loadingFunction()}, timeout)
         }
     </script>
-    <script id="script"></script>
 </head>
-<body onload="loadingFunction()">
+<body onload="onLoad()">
 <div id="loading"></div>
 <div style="visibility: hidden" id="loadingIco4a8">\</div>
 </body>
