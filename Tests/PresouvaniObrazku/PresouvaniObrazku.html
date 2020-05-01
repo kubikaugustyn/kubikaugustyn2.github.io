@@ -5,50 +5,50 @@
     <title>Přesouvání Obrázku</title>
     <style>
         .obrazek {
-            border: outset 2pt;
             position: absolute;
-            top: 100px;
-            left: 100px;
         }
     </style>
     <script>
-        var x1 = window.event.x
+        var x1
 
-        var y1 = window.event.y
+        var y1
 
         var obrazek
 
-        function loadProc() {
-            obrazek = document.getElementById("Obrazek")
-        }
+        function Zacatek(a) {
+            obrazek = a
+            x1 = window.event.x
+            y1 = window.event.y
 
-        function Zacatek() {
-            setCapture()
             obrazek.onmousemove = Presun//()
             obrazek.onmouseup = Konec//()
         }
 
         function Presun() {
-            obrazek.style.left = x1 + "px"
-            obrazek.style.top = y1 + "px"
+            x1 = window.event.x
+            y1 = window.event.y
+
+            var x2 = parseInt(obrazek.width/2)
+            var x3 = parseInt(x1) - parseInt(x2)
+            var y2 = parseInt(obrazek.height/2)
+            var y3 = parseInt(y1) - parseInt(y2)
+            if (window.innerWidth >= x3) {
+                obrazek.style.left = x3 + "px"
+            }
+            if (window.innerHeight >= y3) {
+                obrazek.style.top = y3 + "px"
+            }
         }
 
         function Konec() {
-            relaseCapture()
             obrazek.onmousemove = ""
             obrazek.onmouseup = ""
         }
-
-        function relaseCapture() {
-            console.log("relaseCapture...")
-        }
-
-        function setCapture() {
-            console.log("setCapture...")
-        }
     </script>
 </head>
-<body onload="loadProc()">
-    <img class="obrazek" id="Obrazek" onmousemove="Zacatek(this)" onmousedown="Zacatek(this)" alt="Motýl" src="butterfly.jpg">
+<body>
+    <img class="obrazek" onmousemove="Zacatek(this)" onmousedown="Zacatek(this)" alt="Motýl" src="butterfly.jpg">
+    <img class="obrazek" onmousemove="Zacatek(this)" onmousedown="Zacatek(this)" alt="Motýl" src="butterfly.jpg">
+    <img class="obrazek" onmousemove="Zacatek(this)" onmousedown="Zacatek(this)" alt="Motýl" src="butterfly.jpg">
 </body>
 </html>
