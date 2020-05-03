@@ -32,6 +32,8 @@ var pageVariants = {
 
     "node" : "<a href='./node'>Node</a>",
 
+    "loading" : "<a href='./loading'>Loading</a>"
+
     //další heslo a funkce k němu ("heslo" : "funkce")
 }
 

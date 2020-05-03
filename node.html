@@ -11,6 +11,10 @@
 </head>
 <body>
 <a href='https://fun-food-friens.firebaseapp.com/'>Fun food friends example</a><br>
-<a href='./node_game01.html?isAuthorized=true&hosting=true&web=kubikaugustyn.github.io'>Node Game 01</a><br>
+<a id="GameA" href=''>Node Game 01</a><br>
+<script>
+    var a = document.getElementById('GameA')
+    a.href = "./node_game01?isAuthorized=" + (document.location.host === "kubikaugustyn.github.io") + "&hosting=" + (document.location.host === "kubikaugustyn.github.io") + "&web=" + document.location.host
+</script>
 </body>
 </html>
