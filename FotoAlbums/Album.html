@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Album</title>
-    <script src="src/js/browser.min.js"></script>
-    <script src="src/js/react.min.js"></script>
-    <script src="src/js/react-dom.js"></script>
-    <script src="src/js/browser.min.js"></script>
+    <script src="./src/js/browser.min.js"></script>
+    <script src="./src/js/react.min.js"></script>
+    <script src="./src/js/react-dom.js"></script>
+    <script src="./src/js/browser.min.js"></script>
     <style>
         .FrammedImage {
             box-shadow: 0.3em 0.3em 0.3em #888888;
@@ -18,7 +18,6 @@
             margin: 0.3em;
             __width: 128px;
         }
-
     </style>
 </head>
 <body>
@@ -27,7 +26,7 @@
 <script type="text/babel">
     var PreviewImage =  React.createClass({
         render: function () {
-            return <a href={this.props.imageName}><img className="FrammedImage" src={this.props.imageName} /></a>
+            return <a href={"./" + this.props.imageName}><img className="FrammedImage" src={this.props.imageName} alt={this.props.imageName} /></a>
         }
     });
 
@@ -85,7 +84,7 @@ var ImagePreviews = React.createClass({
 });
 
 
-ReactDOM.render(<ImagePreviews jsonURL="01_Jaro2019Zabreh/01_Tuesday/listdir.json" />, document.getElementById('like_button_container'));
+ReactDOM.render(<ImagePreviews jsonURL="./01_Jaro2019Zabreh/01_Tuesday/listdir.json" />, document.getElementById('like_button_container'));
 </script>
 </body>
 </html>
