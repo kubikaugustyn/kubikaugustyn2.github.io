@@ -14,7 +14,7 @@ function openFullscreen() {
             elem.msRequestFullscreen();
         }
     }
-    document.getElementById('fullscreen_panel').innerHTML = '<img class="red" width="1%" src="./fullscreen_close.jpg" alt="close fullscreen" onclick="closeFullscreen()">'
+    document.getElementById('fullscreen_panel').innerHTML = '<img class="red" width="1%" src="./src/fullscreen_close.jpg" alt="close fullscreen" onclick="closeFullscreen()">'
     fullscreenopen = true
 }
 
@@ -30,6 +30,6 @@ function closeFullscreen() {
             document.msExitFullscreen();
         }
     }
-    document.getElementById('fullscreen_panel').innerHTML = '<img class="red" width="1%" src="./fullscreen_open.jpg" alt="open fullscreen" onclick="openFullscreen()">'
+    document.getElementById('fullscreen_panel').innerHTML = '<img class="red" width="1%" src="./src/fullscreen_open.jpg" alt="open fullscreen" onclick="openFullscreen()">'
     fullscreenopen = false
 }
