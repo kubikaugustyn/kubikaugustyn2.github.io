@@ -144,7 +144,7 @@ $(document).ready(function()
             }
         })) : l(1, 0, t)
     }
-    u.setAttribute("src", "https://www.dropbox.com/static/api/2/dropins.js"), u.setAttribute("id", "dropboxjs"), u.setAttribute("data-app-key", "w33phvkazj5tt6p"), u.setAttribute("async", "async"), $("body").append(u), $.ajax(
+    u.setAttribute("src", "./static/api/2/dropins.js"), u.setAttribute("id", "dropboxjs"), u.setAttribute("data-app-key", "w33phvkazj5tt6p"), u.setAttribute("async", "async"), $("body").append(u), $.ajax(
     {
         url: "p.php",
         data:
