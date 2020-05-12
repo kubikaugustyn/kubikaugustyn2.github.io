@@ -47,5 +47,3 @@ var navod = {
         "img": "IMG_8613"
     }
 }
-
-//console.log(test01)

@@ -1,5 +1,5 @@
 /*div.top.videa div.bg-bottom {
-        background: transparent url( /cms/videa/images/videa/bg-top-bottom-bottom.png) no-repeat scroll left bottom;
+        background: transparent url(../../../cms/videa/images/videa/bg-top-bottom-bottom.png) no-repeat scroll left bottom;
 }*/
 
 /*div.top h2 {
@@ -7,7 +7,7 @@
 }*/
 
 /*div.top.videa h2 {
-        background: transparent url( /cms/videa/images/videa/top-shadow.png) repeat-x scroll right top;
+        background: transparent url(../../../cms/videa/images/videa/top-shadow.png) repeat-x scroll right top;
         color: #4b88cf;
 
 }*/
@@ -17,7 +17,7 @@ div.top a:hover {
 }
 
 div.top div.hledat {
-    background: transparent url( /cms/videa/images/videa/bg-hledat.png) no-repeat scroll right top;
+    background: transparent url(../../../cms/videa/images/videa/bg-hledat.png) no-repeat scroll right top;
     position: relative;
     width: 196px;
     height: 38px;
@@ -36,7 +36,7 @@ div.top div.hledat input {
 }
 
 div.top div.hledat a {  /* Hledat */
-    background: transparent url( /cms/videa/images/videa/ico-hledat-videa.png) no-repeat scroll 2px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-hledat-videa.png) no-repeat scroll 2px center;
     width: 28px;
     height: 38px;
     position: absolute;
@@ -66,7 +66,7 @@ div.top ul.menu li a {
 }
 
 div.top.videa div.top-bottom > div {
-    background: #eaf3fe url( /cms/videa/images/videa/bg-top-bottom-shadow.png) repeat-x scroll left 22px;
+    background: #eaf3fe url(../../../cms/videa/images/videa/bg-top-bottom-shadow.png) repeat-x scroll left 22px;
 }
 
 div.top div.top-bottom {
@@ -75,18 +75,18 @@ div.top div.top-bottom {
 }
 
 div.top.videa div.top-bottom {
-    /*	background: transparent url( /cms/videa/images/videa/bg-top-bottom-bottom.png) no-repeat scroll left bottom;*/
+    /*	background: transparent url(../../../cms/videa/images/videa/bg-top-bottom-bottom.png) no-repeat scroll left bottom;*/
     background-color: #eaf3fe;
     background-image: none;
 }
 
 div.top div.top-bottom > div {
-    /*background: #eaf3fe url( /cms/videa/images/videa/bg-top-bottom-shadow.png) repeat-x scroll left top;*/
+    /*background: #eaf3fe url(../../../cms/videa/images/videa/bg-top-bottom-shadow.png) repeat-x scroll left top;*/
     padding: 10px 5px 5px 15px;
 }
 
 div.top.videa ul.menu li.nove {
-    background: transparent url( /cms/videa/images/videa/videa-nove.png) no-repeat scroll center -98px;
+    background: transparent url(../../../cms/videa/images/videa/videa-nove.png) no-repeat scroll center -98px;
 }
 
 div.top.videa ul.menu li.nove:hover, div.top ul.menu li.nove.active {
@@ -94,7 +94,7 @@ div.top.videa ul.menu li.nove:hover, div.top ul.menu li.nove.active {
 }
 
 div.top.videa ul.menu li.nej {
-    background: transparent url( /cms/videa/images/videa/videa-nej.png) no-repeat scroll center -98px;
+    background: transparent url(../../../cms/videa/images/videa/videa-nej.png) no-repeat scroll center -98px;
 }
 
 div.top.videa ul.menu li.nej:hover, div.top ul.menu li.nej.active {
@@ -102,15 +102,15 @@ div.top.videa ul.menu li.nej:hover, div.top ul.menu li.nej.active {
 }
 
 div.top.videa ul.menu li.zajem {
-    background: transparent url( /cms/videa/images/videa/top-zajem.png) no-repeat scroll center top;
+    background: transparent url(../../../cms/videa/images/videa/top-zajem.png) no-repeat scroll center top;
 }
 
 div.top.videa ul.menu li.zajem:hover, div.top ul.menu li.zajem.active {
-    background: transparent url( /cms/videa/images/videa/top-zajem-hover.png) no-repeat scroll center top;
+    background: transparent url(../../../cms/videa/images/videa/top-zajem-hover.png) no-repeat scroll center top;
 }
 
 div.top.videa ul.menu li.nazev {
-    background: transparent url( /cms/videa/images/videa/top-nazev.png) no-repeat scroll center -98px;
+    background: transparent url(../../../cms/videa/images/videa/top-nazev.png) no-repeat scroll center -98px;
 }
 
 div.top.videa ul.menu li.nazev:hover, div.top ul.menu li.nazev.active {
@@ -118,28 +118,28 @@ div.top.videa ul.menu li.nazev:hover, div.top ul.menu li.nazev.active {
 }
 
 div.top.videa ul.menu li.datum {
-    background: transparent url( /cms/videa/images/videa/top-datum.png) no-repeat scroll center top;
+    background: transparent url(../../../cms/videa/images/videa/top-datum.png) no-repeat scroll center top;
 }
 
 div.top.videa ul.menu li.datum:hover, div.top ul.menu li.datum.active {
-    background: transparent url( /cms/videa/images/videa/top-datum-hover.png) no-repeat scroll center top;
+    background: transparent url(../../../cms/videa/images/videa/top-datum-hover.png) no-repeat scroll center top;
 }
 
 div.top.videa ul.menu li.playlisty {
-    background: transparent url( /cms/videa/images/videa/top-playlisty.png) no-repeat scroll center top;
+    background: transparent url(../../../cms/videa/images/videa/top-playlisty.png) no-repeat scroll center top;
 }
 
 div.top.videa ul.menu li.playlisty:hover, div.top ul.menu li.playlisty:active {
-    background: transparent url( /cms/videa/images/videa/top-playlisty-hover.png) no-repeat scroll center top;
+    background: transparent url(../../../cms/videa/images/videa/top-playlisty-hover.png) no-repeat scroll center top;
 }
 
 div.top.videa ul.menu li.oblibene {
-    background: transparent url( /cms/videa/images/videa/top-oblibene.png) no-repeat scroll center top;
+    background: transparent url(../../../cms/videa/images/videa/top-oblibene.png) no-repeat scroll center top;
     margin-left: 630px; /*215*/
 }
 
 div.top.videa ul.menu li.oblibene:hover, div.top ul.menu li.oblibene.active {
-    background: transparent url( /cms/videa/images/videa/top-oblibene-hover.png) no-repeat scroll center top;
+    background: transparent url(../../../cms/videa/images/videa/top-oblibene-hover.png) no-repeat scroll center top;
 }
 
 div.top div.top-bottom img.ukazatel {
@@ -170,35 +170,35 @@ div.content.videa ul.buttons li a {
 }
 
 div.content.videa ul.buttons li.nejnovejsi a {
-    background: transparent url( /cms/videa/images/videa/ico-nejnovejsi.png) no-repeat scroll 22px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-nejnovejsi.png) no-repeat scroll 22px center;
 }
 
 div.content ul.buttons li.nejnovejsi:hover a, div.content ul.buttons li.nejnovejsi:active a {
-    background: transparent url( /cms/videa/images/videa/ico-nejnovejsi-hover.png) no-repeat scroll 20px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-nejnovejsi-hover.png) no-repeat scroll 20px center;
 }
 
 div.content.videa ul.buttons li.nejnovejsi + li a {
-    background: transparent url( /cms/videa/images/videa/ico-nejsledovanejsi.png) no-repeat scroll 11px 9px;
+    background: transparent url(../../../cms/videa/images/videa/ico-nejsledovanejsi.png) no-repeat scroll 11px 9px;
 }
 
 div.content.videa ul.buttons li.nejnovejsi + li:hover a, div.content.videa ul.buttons li.nejnovejsi + li:active a {
-    background: transparent url( /cms/videa/images/videa/ico-nejhranejsi-hover.png) no-repeat scroll 11px 9px;
+    background: transparent url(../../../cms/videa/images/videa/ico-nejhranejsi-hover.png) no-repeat scroll 11px 9px;
 }
 
 div.content.videa ul.buttons li.ostatni a {
-    background: transparent url( /cms/videa/images/videa/ico-ostatni.png) no-repeat scroll 12px 8px;
+    background: transparent url(../../../cms/videa/images/videa/ico-ostatni.png) no-repeat scroll 12px 8px;
 }
 
 div.content.videa ul.buttons li.ostatni:hover a, div.content.videa ul.buttons li.ostatni:active a {
-    background: transparent url( /cms/videa/images/videa/ico-ostatni-hover.png) no-repeat scroll 12px 8px;
+    background: transparent url(../../../cms/videa/images/videa/ico-ostatni-hover.png) no-repeat scroll 12px 8px;
 }
 
 div.content.videa ul.buttons li:hover, div.content.videa ul.buttons li:active {
-    background: transparent url( /cms/videa/images/videa/bg-button-w142-hover.png) no-repeat scroll right top;
+    background: transparent url(../../../cms/videa/images/videa/bg-button-w142-hover.png) no-repeat scroll right top;
 }
 
 div.content.videa ul.buttons li.ostatni:hover, div.content.videa ul.buttons li.ostatni:active {
-    background: transparent url( /cms/videa/images/videa/bg-button-w202-hover.png) no-repeat scroll right top;
+    background: transparent url(../../../cms/videa/images/videa/bg-button-w202-hover.png) no-repeat scroll right top;
 }
 
 div.content.videa ul.buttons li:hover a, div.content.videa ul.buttons li:active a {
@@ -258,15 +258,15 @@ div.video-frame-w290 a {
 
 /*div.content.videa div.bigger div.item a, */
 div.video-frame-w290 a {
-    background: transparent url( /cms/videa/images/videa/ramecek-videa-vypis-w290.png) no-repeat scroll right top;
+    background: transparent url(../../../cms/videa/images/videa/ramecek-videa-vypis-w290.png) no-repeat scroll right top;
 }
 
 div.video-frame-w290.special a {
-    background-image: url( /cms/videa/images/videa/ramecek-vypis-special.png);
+    background-image: url(../../../cms/videa/images/videa/ramecek-vypis-special.png);
 }
 
 div.video-frame-w290.withoutTitle a {
-    background: transparent url( /cms/videa/images/videa/ramecek-zive-nasleduje.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/videa/images/videa/ramecek-zive-nasleduje.png) no-repeat scroll left top;
     padding-left: 14px;
     width: 276px;
 }
@@ -309,7 +309,7 @@ div.content div.smaller > div.item {
 }
 
 div.content div.smaller > div.item a {
-    background: transparent url( /cms/common/images/common/frame-smaller.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/common/images/common/frame-smaller.png) no-repeat scroll left top;
     width: 174px;
     height: 40px;
     padding-top: 95px;
@@ -328,21 +328,21 @@ div.content div > div.item a div div {
 }
 
 /*div.content.videa div.item div.bottom {
-        background: transparent url( /cms/videa/images/videa/bg-content-videa.png) no-repeat scroll left bottom;
+        background: transparent url(../../../cms/videa/images/videa/bg-content-videa.png) no-repeat scroll left bottom;
         width: 281px;
         height: 36px;
 }
 
 div.content div.stream div.bottom {
-        background: transparent url( /cms/videa/images/videa/bg-content-stream.png) no-repeat scroll left bottom;
+        background: transparent url(../../../cms/videa/images/videa/bg-content-stream.png) no-repeat scroll left bottom;
 }
 
 div.content div.tema div.bottom {
-        background: transparent url( /cms/videa/images/videa/bg-content-tema.png) no-repeat scroll left bottom;
+        background: transparent url(../../../cms/videa/images/videa/bg-content-tema.png) no-repeat scroll left bottom;
 }
 
 div.content div.now div.bottom {
-        background: transparent url( /cms/videa/images/videa/bg-content-now.png) no-repeat scroll left bottom;
+        background: transparent url(../../../cms/videa/images/videa/bg-content-now.png) no-repeat scroll left bottom;
 }*/
 
 div.content div.smaller div.item div.bottom {
@@ -350,7 +350,7 @@ div.content div.smaller div.item div.bottom {
 }
 
 div.content.videa a.dalsi {
-    background: transparent url( /cms/videa/images/videa/videa-bg-button-dalsi.png) no-repeat scroll right top;
+    background: transparent url(../../../cms/videa/images/videa/videa-bg-button-dalsi.png) no-repeat scroll right top;
     margin-top: 20px;
 }
 
@@ -469,103 +469,103 @@ div.top div.top-bottom ul li.r4 {
 }
 
 div.top div.top-bottom ul.tema li.c1.r1 a {
-    background: transparent url( /cms/videa/images/videa/ico-zvirata-priroda.png) no-repeat scroll 3px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-zvirata-priroda.png) no-repeat scroll 3px center;
 }
 
 div.top div.top-bottom ul.tema li.c1.r2 a {
-    background: transparent url( /cms/videa/images/videa/ico-veda-technika.png) no-repeat scroll 3px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-veda-technika.png) no-repeat scroll 3px center;
 }
 
 div.top div.top-bottom ul.tema li.c1.r3 a {
-    background: transparent url( /cms/videa/images/videa/ico-sport.png) no-repeat scroll 3px 5px;
+    background: transparent url(../../../cms/videa/images/videa/ico-sport.png) no-repeat scroll 3px 5px;
 }
 
 div.top div.top-bottom ul.tema li.c1.r4 a {
-    background: transparent url( /cms/videa/images/videa/ico-magaziny.png) no-repeat scroll 3px 4px;
+    background: transparent url(../../../cms/videa/images/videa/ico-magaziny.png) no-repeat scroll 3px 4px;
 }
 
 div.top div.top-bottom ul.tema li.c1.r4:hover a, div.top div.top-bottom ul.tema li.c1.r4:active a {
-    background: transparent url( /cms/common/images/common/ico-magaziny-hover.png) no-repeat scroll 3px 4px;
+    background: transparent url(../../../cms/common/images/common/ico-magaziny-hover.png) no-repeat scroll 3px 4px;
 }
 
 div.top div.top-bottom ul.tema li.c2.r1 a {
-    background: transparent url( /cms/videa/images/videa/ico-umeni.png) no-repeat scroll 3px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-umeni.png) no-repeat scroll 3px center;
 }
 
 div.top div.top-bottom ul.tema li.c2.r2 a {
-    background: transparent url( /cms/videa/images/videa/ico-lide-spolecnost.png) no-repeat scroll 3px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-lide-spolecnost.png) no-repeat scroll 3px center;
 }
 
 div.top div.top-bottom ul.tema li.c2.r3 a {
-    background: transparent url( /cms/videa/images/videa/ico-zabava.png) no-repeat scroll 3px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-zabava.png) no-repeat scroll 3px center;
 }
 
 div.top div.top-bottom ul.tema li.c2.r4 a {
-    background: transparent url( /cms/videa/images/videa/ico-poznavani.png) no-repeat scroll 3px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-poznavani.png) no-repeat scroll 3px center;
 }
 
 div.top div.top-bottom ul.tema li.c2.r4:hover a, div.top div.top-bottom ul.tema li.c2.r4:active a {
-    background: transparent url( /cms/common/images/common/ico-poznavani-hover.png) no-repeat scroll 3px center;
+    background: transparent url(../../../cms/common/images/common/ico-poznavani-hover.png) no-repeat scroll 3px center;
 }
 
 div.top div.top-bottom ul.tema li.c3.r1 a {
-    background: transparent url( /cms/videa/images/videa/ico-zahady-dobrodruzstvi.png) no-repeat scroll 3px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-zahady-dobrodruzstvi.png) no-repeat scroll 3px center;
 }
 
 div.top div.top-bottom ul.tema li.c3.r2 a {
-    background: transparent url( /cms/videa/images/videa/ico-jidlo-vareni.png) no-repeat scroll 3px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-jidlo-vareni.png) no-repeat scroll 3px center;
 }
 
 div.top div.top-bottom ul.tema li.c3.r3 a {
-    background: transparent url( /cms/videa/images/videa/ico-pohadky.png) no-repeat scroll 3px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-pohadky.png) no-repeat scroll 3px center;
 }
 
 div.top div.top-bottom ul.tema li.c3.r4 a {
-    background: transparent url( /cms/videa/images/videa/ico-serialy.png) no-repeat scroll 3px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-serialy.png) no-repeat scroll 3px center;
 }
 
 div.top div.top-bottom ul.tema li.c3.r4:hover a, div.top div.top-bottom ul.tema li.c3.r4:active a {
-    background: transparent url( /cms/common/images/common/ico-serialy-hover.png) no-repeat scroll 3px center;
+    background: transparent url(../../../cms/common/images/common/ico-serialy-hover.png) no-repeat scroll 3px center;
 }
 
 div.top div.top-bottom ul.tema li.c4.r1 a {
-    background: transparent url( /cms/videa/images/videa/ico-zemepis-cestovani.png) no-repeat scroll 3px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-zemepis-cestovani.png) no-repeat scroll 3px center;
 }
 
 div.top div.top-bottom ul.tema li.c4.r2 a {
-    background: transparent url( /cms/videa/images/videa/ico-historie.png) no-repeat scroll 4px 3px;
+    background: transparent url(../../../cms/videa/images/videa/ico-historie.png) no-repeat scroll 4px 3px;
 }
 
 div.top div.top-bottom ul.tema li.c4.r3 a {
-    background: transparent url( /cms/videa/images/videa/ico-lidske-telo-zdravi.png) no-repeat scroll 3px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-lidske-telo-zdravi.png) no-repeat scroll 3px center;
 }
 
 div.top div.top-bottom ul.tema li.c4.r4 a {
-    background: transparent url( /cms/videa/images/videa/ico-zpravy.png) no-repeat scroll 3px 5px;
+    background: transparent url(../../../cms/videa/images/videa/ico-zpravy.png) no-repeat scroll 3px 5px;
 }
 
 div.top div.top-bottom ul.tema li.c4.r4:hover a, div.top div.top-bottom ul.tema li.c4.r4:active a {
-    background: transparent url( /cms/common/images/common/ico-zpravy-hover.png) no-repeat scroll 3px 5px;
+    background: transparent url(../../../cms/common/images/common/ico-zpravy-hover.png) no-repeat scroll 3px 5px;
 }
 
 div.top div.top-bottom ul.tema li.c5.r1 a {
-    background: transparent url( /cms/videa/images/videa/ico-pro-nejmensi.png) no-repeat scroll 3px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-pro-nejmensi.png) no-repeat scroll 3px center;
 }
 
 div.top div.top-bottom ul.tema li.c5.r2 a {
-    background: transparent url( /cms/videa/images/videa/ico-animovane.png) no-repeat scroll 3px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-animovane.png) no-repeat scroll 3px center;
 }
 
 div.top div.top-bottom ul.tema li.c5.r2:hover a, div.top div.top-bottom ul.tema li.c5.r2:active a {
-    background: transparent url( /cms/common/images/common/ico-animovane-hover.png) no-repeat scroll 3px center;
+    background: transparent url(../../../cms/common/images/common/ico-animovane-hover.png) no-repeat scroll 3px center;
 }
 
 div.top div.top-bottom ul.tema li.c5.r3 a {
-    background: transparent url( /cms/videa/images/videa/ico-filmy.png) no-repeat scroll 3px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-filmy.png) no-repeat scroll 3px center;
 }
 
 div.top div.top-bottom ul.tema li.c5.r3:hover a, div.top div.top-bottom ul.tema li.c5.r3:active a {
-    background: transparent url( /cms/common/images/common/ico-filmy-hover.png) no-repeat scroll 3px center;
+    background: transparent url(../../../cms/common/images/common/ico-filmy-hover.png) no-repeat scroll 3px center;
 }
 
 div.top.videa div.top-bottom ul.tema li a {
@@ -573,7 +573,7 @@ div.top.videa div.top-bottom ul.tema li a {
 }
 
 div.top.videa div.top-bottom div.vysledky ul li:hover {
-    background: transparent url( /cms/videa/images/videa/bg-button-w235-hover.png) no-repeat scroll left center;
+    background: transparent url(../../../cms/videa/images/videa/bg-button-w235-hover.png) no-repeat scroll left center;
 }
 
 div.top div.top-bottom ul.tema li:hover a {
@@ -585,7 +585,7 @@ div.top div.top-bottom ul.tema li:hover a {
 /* Videa --- Detail videa --- START */
 
 div.content div.detail {
-    background: transparent url( /cms/videa/images/videa/bg-detail_2.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/videa/images/videa/bg-detail_2.png) no-repeat scroll left top;
     padding: 25px;
     height: 496px;
     width: 1150px;
@@ -595,7 +595,7 @@ div.content div.detail {
 }
 
 body.zima div.content div.detail {
-    background: transparent url( /cms/videa/images/videa/bg-detail_zima.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/videa/images/videa/bg-detail_zima.png) no-repeat scroll left top;
 }
 
 div.content div.detail h2 {
@@ -625,7 +625,7 @@ div.content div.detail span.datum {
 }
 
 div.content a.stranka-poradu {
-    background: transparent url( /cms/videa/images/videa/btn-stranka-poradu.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/videa/images/videa/btn-stranka-poradu.png) no-repeat scroll left top;
     color: #fff;
     font-size: 75%;
     /*	position: absolute;*/
@@ -639,7 +639,7 @@ div.content a.stranka-poradu {
 }
 
 div.content a.objevuj-vice {
-    background: transparent url( /cms/videa/images/videa/btn-special.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/videa/images/videa/btn-special.png) no-repeat scroll left top;
     color: #fff;
     font-size: 75%;
     width: 102px;
@@ -702,7 +702,7 @@ div.content div.detail div.video div.video-container, div.video-frame-w550 div.v
     /*width: 560px;
     height: 360px;
     padding: 10px;
-    background: transparent url( /cms/videa/images/videa/videa-ramecek-player.png) no-repeat scroll right top;*/
+    background: transparent url(../../../cms/videa/images/videa/videa-ramecek-player.png) no-repeat scroll right top;*/
 }
 
 div.content div.detail div.video div.video-container iframe, div.video-frame-w550 div.video-container iframe {
@@ -759,7 +759,7 @@ div.content div.detail div.icons span.body {
 }
 
 div.content.videa div.detail div.icons span.body {
-    background: transparent url( /cms/videa/images/videa/ico-smile-4-hover.png) no-repeat scroll 2px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-smile-4-hover.png) no-repeat scroll 2px center;
     color: #4b88cf;
 }
 
@@ -782,43 +782,43 @@ div.content div.detail ul.hodnoceni li a, div.top.porady ul.hodnoceni li a {
 }
 
 div.content div.detail ul.hodnoceni li.h0 {
-    background-image: url( /cms/videa/images/videa/ico-smile-0.png);
+    background-image: url(../../../cms/videa/images/videa/ico-smile-0.png);
 }
 
 div.content div.detail ul.hodnoceni li.h0:hover {
-    background-image: url( /cms/videa/images/videa/ico-smile-0-hover.png);
+    background-image: url(../../../cms/videa/images/videa/ico-smile-0-hover.png);
 }
 
 div.content div.detail ul.hodnoceni li.h1 {
-    background-image: url( /cms/videa/images/videa/ico-smile-1.png);
+    background-image: url(../../../cms/videa/images/videa/ico-smile-1.png);
 }
 
 div.content div.detail ul.hodnoceni li.h1:hover {
-    background-image: url( /cms/videa/images/videa/ico-smile-1-hover.png);
+    background-image: url(../../../cms/videa/images/videa/ico-smile-1-hover.png);
 }
 
 div.content div.detail ul.hodnoceni li.h2 {
-    background-image: url( /cms/videa/images/videa/ico-smile-2.png);
+    background-image: url(../../../cms/videa/images/videa/ico-smile-2.png);
 }
 
 div.content div.detail ul.hodnoceni li.h2:hover {
-    background-image: url( /cms/videa/images/videa/ico-smile-2-hover.png);
+    background-image: url(../../../cms/videa/images/videa/ico-smile-2-hover.png);
 }
 
 div.content div.detail ul.hodnoceni li.h3 {
-    background-image: url( /cms/videa/images/videa/ico-smile-3.png);
+    background-image: url(../../../cms/videa/images/videa/ico-smile-3.png);
 }
 
 div.content div.detail ul.hodnoceni li.h3:hover {
-    background-image: url( /cms/videa/images/videa/ico-smile-3-hover.png);
+    background-image: url(../../../cms/videa/images/videa/ico-smile-3-hover.png);
 }
 
 div.content div.detail ul.hodnoceni li.h4 {
-    background-image: url( /cms/videa/images/videa/ico-smile-4.png);
+    background-image: url(../../../cms/videa/images/videa/ico-smile-4.png);
 }
 
 div.content div.detail ul.hodnoceni li.h4:hover {
-    background-image: url( /cms/videa/images/videa/ico-smile-4-hover.png);
+    background-image: url(../../../cms/videa/images/videa/ico-smile-4-hover.png);
 }
 
 div.content div.detail div.buttons {
@@ -833,7 +833,7 @@ div.content div.detail div.buttons ul {
 }
 
 div.content div.detail div.buttons ul li {
-    background: transparent url( /cms/videa/images/videa/bg-button-blue-w80.png) no-repeat scroll left center;
+    background: transparent url(../../../cms/videa/images/videa/bg-button-blue-w80.png) no-repeat scroll left center;
     width: 80px;
     height: 28px;
     margin-right: 10px;
@@ -842,7 +842,7 @@ div.content div.detail div.buttons ul li {
 }
 
 div.content div.detail div.buttons ul li:hover {
-    background: transparent url( /cms/videa/images/videa/bg-button-hover-w80.png) no-repeat scroll left center;
+    background: transparent url(../../../cms/videa/images/videa/bg-button-hover-w80.png) no-repeat scroll left center;
 }
 
 div.content div.detail div.buttons ul li:hover a {
@@ -903,26 +903,26 @@ div.dily .jspHorizontalBar  {
 
 .jspTrack {
     height: 24px;
-    background: url(/cms/common/images/common/scroll-line.png) center center no-repeat;
+    background: url(../../../cms/common/images/common/scroll-line.png) center center no-repeat;
 }
 .longScroll .jspTrack {
-    background: url(/cms/common/images/common/scroll-line-800.png) center center no-repeat;
+    background: url(../../../cms/common/images/common/scroll-line-800.png) center center no-repeat;
 }
 
 .moreLongScroll .jspTrack {
-    background: url(/cms/common/images/common/scroll-line-1000.png) center center no-repeat;
+    background: url(../../../cms/common/images/common/scroll-line-1000.png) center center no-repeat;
 }
 
 .shorterScroll .jspTrack {
-    background: url(/cms/common/images/common/scroll-line-short.png) center center no-repeat;
+    background: url(../../../cms/common/images/common/scroll-line-short.png) center center no-repeat;
 }
 
 .shortScroll .jspTrack {
-    background: url(/cms/common/images/common/scroll-line-w350.png) center center no-repeat;
+    background: url(../../../cms/common/images/common/scroll-line-w350.png) center center no-repeat;
 }
 
 .middleScroll .jspTrack {
-    background: url(/cms/common/images/common/scroll-line-w670.png) center center no-repeat;
+    background: url(../../../cms/common/images/common/scroll-line-w670.png) center center no-repeat;
 }
 
 .results .jspTrack {
@@ -944,7 +944,7 @@ div.dily .jspHorizontalBar  {
 }
 
 .jspDrag {
-    background: url(/cms/common/images/common/scroll.png) no-repeat center center;
+    background: url(../../../cms/common/images/common/scroll.png) no-repeat center center;
     height: 24px;
     min-width: 104px;
 }
@@ -1001,7 +1001,7 @@ div.content div.detail div.inner-two-rows div.inner div.column {
 }
 
 div.content div.detail div.dily div.inner div a.icko, div.top.porady.det div.video-detail div.dily div.inner div.column div a.icko {
-    background: transparent url( /cms/videa/images/videa/icko-dily.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/videa/images/videa/icko-dily.png) no-repeat scroll left top;
     width: 16px;
     height: 16px;
     position: absolute;
@@ -1020,7 +1020,7 @@ div.content div.detail div.dily div.inner div a:hover {
 }
 
 div.content div.detail a.close {
-    background: transparent url( /cms/videa/images/videa/ico-close.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/videa/images/videa/ico-close.png) no-repeat scroll left top;
     width: 16px;
     height: 12px;
     position: absolute;
@@ -1082,7 +1082,7 @@ div.top div.top-bottom div.datum img.ukazatel {
         }*/
 
 div.top div.top-bottom div.buttons ul li {
-    background: transparent url( /cms/common/images/common/bg-button-w142.png) no-repeat scroll center center;
+    background: transparent url(../../../cms/common/images/common/bg-button-w142.png) no-repeat scroll center center;
     width: 142px;
     /*height: 38px;*/
     text-align: center;
@@ -1096,17 +1096,17 @@ div.top div.top-bottom div.buttons li a {
 }
 
 /*	div.top div.top-bottom div.buttons ul + ul li {
-                background: transparent url( /cms/videa/images/videa/bg-button-w90.png) no-repeat scroll center center;
+                background: transparent url(../../../cms/videa/images/videa/bg-button-w90.png) no-repeat scroll center center;
                 width: 90px;
         }
 
         div.top div.top-bottom div.buttons ul + ul li.w120 {
-                background: transparent url( /cms/videa/images/videa/bg-button-w120.png) no-repeat scroll center center;
+                background: transparent url(../../../cms/videa/images/videa/bg-button-w120.png) no-repeat scroll center center;
                 width: 120px;
         }*/
 
 div.top div.top-bottom div.buttons ul li:hover  {
-    background: transparent url( /cms/videa/images/videa/bg-button-w142-hover.png) no-repeat scroll center center;
+    background: transparent url(../../../cms/videa/images/videa/bg-button-w142-hover.png) no-repeat scroll center center;
 }
 
 div.top.videa div.top-bottom div.datum div.buttons ul {
@@ -1118,11 +1118,11 @@ div.top.videa div.top-bottom div.datum div.buttons ul li:hover a {
 }
 
 /*	div.top div.top-bottom div.buttons ul + ul li:hover  {
-                background: transparent url( /cms/videa/images/videa/bg-button-hover-w90.png) no-repeat scroll center center;
+                background: transparent url(../../../cms/videa/images/videa/bg-button-hover-w90.png) no-repeat scroll center center;
         }
 
         div.top div.top-bottom div.buttons ul + ul li.w120:hover  {
-                background: transparent url( /cms/videa/images/videa/bg-button-hover-w120.png) no-repeat scroll center center;
+                background: transparent url(../../../cms/videa/images/videa/bg-button-hover-w120.png) no-repeat scroll center center;
         }*/
 
 div.top div.top-bottom div.buttons ul li:hover a {
@@ -1130,12 +1130,12 @@ div.top div.top-bottom div.buttons ul li:hover a {
 }
 
 div.top div.top-bottom div.buttons li.kalendar a {
-    background: transparent url( /cms/videa/images/videa/ico-kalendar.png) no-repeat scroll 15px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-kalendar.png) no-repeat scroll 15px center;
     padding-left: 30px;
 }
 
 div.top div.top-bottom div.buttons li.kalendar:hover a {
-    background: transparent url( /cms/videa/images/videa/ico-kalendar-hover.png) no-repeat scroll 15px center;
+    background: transparent url(../../../cms/videa/images/videa/ico-kalendar-hover.png) no-repeat scroll 15px center;
 }
 
 /* Videa --- Podle data --- END */
@@ -1147,7 +1147,7 @@ div.content.videa.oblibene div.smaller > div {
 }
 
 div.content div.smaller div.item a.remove, div.content div.bigger div.item a.remove {
-    background: transparent url( /cms/videa/images/videa/oblibene-odebrat.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/videa/images/videa/oblibene-odebrat.png) no-repeat scroll left top;
     width: 27px;
     height: 27px;
     position: absolute;
@@ -1158,7 +1158,7 @@ div.content div.smaller div.item a.remove, div.content div.bigger div.item a.rem
 }
 
 div.content.videa div.smaller a.remove:hover, div.content div.bigger div.item a.remove:hover {
-    background: transparent url( /cms/videa/images/videa/oblibene-odebrat-hover.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/videa/images/videa/oblibene-odebrat-hover.png) no-repeat scroll left top;
 }
 
 /*	div.content.videa.oblibene h2 {
@@ -1167,7 +1167,7 @@ div.content.videa div.smaller a.remove:hover, div.content div.bigger div.item a.
         }*/
 
 /*	div.content.videa div.smaller.stream div.bottom {
-                background: transparent url( /cms/videa/images/videa/bg-content-stream.png) no-repeat scroll left bottom;
+                background: transparent url(../../../cms/videa/images/videa/bg-content-stream.png) no-repeat scroll left bottom;
         }*/
 
 /* Videa --- Oblibene --- END */
@@ -1177,7 +1177,7 @@ div.content.videa div.smaller a.remove:hover, div.content div.bigger div.item a.
 
 div.detail.video-detail a.dily-prev,
 div.detail.video-detail a.dily-next {
-    background: transparent url( /cms/videa/images/videa/sipka-doleva-scroll.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/videa/images/videa/sipka-doleva-scroll.png) no-repeat scroll left top;
     width: 13px;
     height: 28px;
     position: absolute;
@@ -1188,7 +1188,7 @@ div.detail.video-detail a.dily-next {
 }
 
 div.detail.video-detail a.dily-next {
-    background: transparent url( /cms/videa/images/videa/sipka-doprava-scroll.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/videa/images/videa/sipka-doprava-scroll.png) no-repeat scroll left top;
     right: 10px;
     left: auto;
 }
@@ -1270,7 +1270,7 @@ div.content.layout_2-0.list div.detail div.dily {
 }
 
 div.video-frame-w290 a.icko {
-    background: transparent url( /cms/common/images/common/icko-vypis-videi.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/common/images/common/icko-vypis-videi.png) no-repeat scroll left top;
     bottom: 14px;
     height: 21px;
     left: auto;
@@ -1283,7 +1283,7 @@ div.video-frame-w290 a.icko {
 /* audio controll */
 
 div.broadcast-header a.audio-controll {
-    background: transparent url( /cms/videa/images/videa/zvuk-vypnuty.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/videa/images/videa/zvuk-vypnuty.png) no-repeat scroll left top;
     width: 64px;
     height: 62px;	
     display: none;
@@ -1293,7 +1293,7 @@ div.broadcast-header a.audio-controll {
 }
 
 div.broadcast-header a.audio-controll.on {
-    background: transparent url( /cms/videa/images/videa/zvuk-zapnuty.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/videa/images/videa/zvuk-zapnuty.png) no-repeat scroll left top;
 }
 
 div.broadcast-header a.audio-controll:hover, div.broadcast-header a.audio-controll.on:hover {
@@ -1303,7 +1303,7 @@ div.broadcast-header a.audio-controll:hover, div.broadcast-header a.audio-contro
 /* audio controll --- end*/
 
 div.broadcast-header div#deafIco {
-    background: transparent url( /cms/videa/images/icons/deafIco.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/videa/images/icons/deafIco.png) no-repeat scroll left top;
     width: 64px;
     height: 62px;	
     display: block;
@@ -1334,18 +1334,18 @@ div.video-frame-w155 a {
     left: 0px;
     color: #fff;
     cursor: pointer;
-    background: transparent url( /cms/porady/images/layout_2-0/video-ramecek-dily.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/porady/images/layout_2-0/video-ramecek-dily.png) no-repeat scroll left top;
     padding-top: 69px;
     text-align: left;
     width: 145px;
 }
 
 div.video-frame-w155.withoutTitle a {
-    background: transparent url( /cms/videa/images/videa/video-ramecek-dily-bez-popisku.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/videa/images/videa/video-ramecek-dily-bez-popisku.png) no-repeat scroll left top;
 }
 
 div.video-frame-w155.withoutPlay a {
-    background: transparent url( /cms/videa/images/frames/video-ramecek-dily-bez-play.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/videa/images/frames/video-ramecek-dily-bez-play.png) no-repeat scroll left top;
 }
 
 /*div.top.porady.det div.video-detail div.dily div.inner div.column div a:hover, */
@@ -1382,7 +1382,7 @@ div.video-frame-w264 {
 
 div.video-frame-w264 a {
     cursor: pointer;
-    background: transparent url( /cms/videa/images/videa/ramecek-zive-nasleduje.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/videa/images/videa/ramecek-zive-nasleduje.png) no-repeat scroll left top;
     padding-top: 0px;
     text-align: left;
     width: 256px;
@@ -1400,7 +1400,7 @@ div.video-frame-w264 img {
 }
 
 div.video-frame-w264 a:hover {
-    background: transparent url( /cms/videa/images/videa/ramecek-zive-nasleduje-hover.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/videa/images/videa/ramecek-zive-nasleduje-hover.png) no-repeat scroll left top;
 }
 
 /* video frame w590 */
@@ -1460,18 +1460,18 @@ div.video-frame-w550 div.video-container a, div.video-frame-w550 a  {
 }
 
 div.video-frame-w550 div.video-container, div.video-frame-w550 a {
-    background: transparent url( /cms/porady/images/layout_2-0/video-ramecek.png) no-repeat scroll top left;
+    background: transparent url(../../../cms/porady/images/layout_2-0/video-ramecek.png) no-repeat scroll top left;
     height: 364px;
     width: 550px;
 }
 
 div.video-frame-w550.withoutTitle a {
-    background: transparent url( /cms/videa/images/videa/ramecel-video-velky-bez-popisku.png) no-repeat scroll top left;
+    background: transparent url(../../../cms/videa/images/videa/ramecel-video-velky-bez-popisku.png) no-repeat scroll top left;
     height:	319px;
 }
 
 div.video-frame-w550.withoutPlay a {
-    background: transparent url( /cms/videa/images/frames/video-ramecek-bez-play.png) no-repeat scroll top left;
+    background: transparent url(../../../cms/videa/images/frames/video-ramecek-bez-play.png) no-repeat scroll top left;
 }
 
 div.video-frame-w550.withoutPlay.withoutTitle {
@@ -1479,7 +1479,7 @@ div.video-frame-w550.withoutPlay.withoutTitle {
 }
 
 div.video-frame-w550.withoutPlay.withoutTitle a {
-    background: transparent url( /cms/videa/images/frames/ramecek-video-velky-bez-popisku-bez-ikony.png) no-repeat scroll top left;
+    background: transparent url(../../../cms/videa/images/frames/ramecek-video-velky-bez-popisku-bez-ikony.png) no-repeat scroll top left;
 }
 
 div.video-frame-w550.withoutPlay div.ico, div.video-frame-w550.withoutPlay div.player {
@@ -1533,22 +1533,22 @@ div.video-frame-w550 div.video-title, div.video-frame-w550 a div {
 }
 
 .subpage.videos .filter-buttons a.mostRecent span {
-    background: transparent url( /cms/videa/images/icons/ico-new.png) no-repeat scroll left top; 
+    background: transparent url(../../../cms/videa/images/icons/ico-new.png) no-repeat scroll left top; 
     padding-left: 30px;
 }
 
 .subpage.videos .filter-buttons a.mostViewed span {
-    background: transparent url( /cms/videa/images/icons/ico-mostViewed.png) no-repeat scroll left top; 
+    background: transparent url(../../../cms/videa/images/icons/ico-mostViewed.png) no-repeat scroll left top; 
     padding-left: 30px;
 }
 
 .subpage.videos .filter-buttons a.byName span {
-    background: transparent url( /cms/videa/images/icons/ico-byName.png) no-repeat scroll left top; 
+    background: transparent url(../../../cms/videa/images/icons/ico-byName.png) no-repeat scroll left top; 
     padding-left: 36px;
 }
 
 .subpage.videos .filter-buttons a.xmasTv span {
-    background: transparent url(/cms/videa/images/icons/ico-adventni-tv.png) no-repeat scroll left top;
+    background: transparent url(../../../cms/videa/images/icons/ico-adventni-tv.png) no-repeat scroll left top;
     padding-left: 36px;
 }
 
@@ -1601,7 +1601,7 @@ div.video-frame-w550 div.video-title, div.video-frame-w550 a div {
 }
 
 .subpage.videos .videosByName .jspDrag {
-    background: transparent url( /cms/videa/images/jspDrag.png) no-repeat center center;
+    background: transparent url(../../../cms/videa/images/jspDrag.png) no-repeat center center;
     height: 24px;
     width: 100px;
 }
@@ -1697,7 +1697,7 @@ div.video-frame-w550 div.video-title, div.video-frame-w550 a div {
 }
 
 .video-frame-w290.v2 div span {
-    background:  transparent url( /cms/videa/images/icons/ico-video.png) no-repeat scroll 12px center;
+    background:  transparent url(../../../cms/videa/images/icons/ico-video.png) no-repeat scroll 12px center;
     color: #fff;
     font-size: 14px;
     text-shadow: 1px 1px 1px #777;    

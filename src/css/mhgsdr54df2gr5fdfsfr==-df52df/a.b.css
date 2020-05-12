@@ -1,0 +1,8 @@
+body {
+    background-color: lightblue;
+}
+
+#loading {
+    position: absolute;
+    background-color: white;
+}

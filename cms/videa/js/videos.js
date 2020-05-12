@@ -20,7 +20,7 @@ function hideVideoDetail() {
 
 function recordVideoPlayback(videoId) {
     videoId = parseInt(videoId);
-    if (videoId > 0 !== true) {
+    if (!(videoId > 0)) {
         return;
     }
     $.post("/record-video-playback", {
