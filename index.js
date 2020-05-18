@@ -32,7 +32,9 @@ var pageVariants = {
 
     "node" : "<a href='./node'>Node</a>",
 
-    "loading" : "<a href='./loading'>Loading</a>"
+    "loading" : "<a href='./loading'>Loading</a>",
+
+    "downloads" : "<a href='./Downloads/downloads'>Downloads</a>"
 
     //další heslo a funkce k němu ("heslo" : "funkce")
 }
@@ -52,6 +54,7 @@ function showNext(nextID) {
     switch(nextID){
         case'next1':
             document.getElementById(nextID).innerHTML = "" +
+		"<a href='./Downloads/downloads'>Downloads</a><br>" +
                 "<button onclick='download(\"index.html\")'>" +
                 "Download index.html" +
                 "</button><br>" +
