@@ -1,4 +1,4 @@
-import "chrome://downloads/strings.m.js";
+import "./strings.m.js";
 import
 {
     Polymer,
