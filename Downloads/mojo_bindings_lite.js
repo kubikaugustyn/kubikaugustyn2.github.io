@@ -1,6 +1,19 @@
 // Copyright 2018 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
+var mojo = {
+  internal:{
+    globalScope:null,
+    interfaceSupport:{
+      ControlMessageHandler:null
+    },
+    exportModule: null
+  },
+  interfaceControl: {
+    RUN_MESSAGE_ID: null
+  }
+};
+
 'use strict';
 
 self.mojo = { internal: {} };
@@ -277,9 +290,9 @@ mojo.internal.Message = class {
    */
   constructor(flags, ordinal, requestId, paramStructSpec, value) {
     let headerSize, version;
-    if ((flags &
-         (mojo.internal.kMessageFlagExpectsResponse |
-          mojo.internal.kMessageFlagIsResponse)) == 0) {
+    if ((flags &&
+         (mojo.internal.kMessageFlagExpectsResponse ||
+          mojo.internal.kMessageFlagIsResponse)) === 0) {
       headerSize = mojo.internal.kMessageV0HeaderSize;
       version = 0;
     } else {

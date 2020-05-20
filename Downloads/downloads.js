@@ -1,40 +1,7 @@
 import "./strings.m.js";
-import
-{
-    Polymer,
-    dom,
-    html,
-    Base,
-    afterNextRender,
-    beforeNextRender,
-    useShadow,
-    Templatizer,
-    OptionalMutableDataBehavior,
-    animationFrame,
-    microTask,
-    idlePeriod,
-    flush,
-    Debouncer,
-    enqueueDebouncer,
-    matches,
-    translate
-}
-from "./polymer_bundled.min.js";
-import
-{
-    isIOS,
-    addSingletonGetter,
-    isWindows,
-    isMac,
-    addWebUIListener,
-    removeWebUIListener
-}
-from "./cr.m.js";
-import
-{
-    loadTimeData
-}
-from "./load_time_data.m.js";
+import { Polymer, dom, html, Base, afterNextRender, beforeNextRender, useShadow, Templatizer, OptionalMutableDataBehavior, animationFrame, microTask, idlePeriod, flush, Debouncer, enqueueDebouncer, matches, translate } from "./polymer_bundled.min.js";
+import { isIOS, addSingletonGetter, isWindows, isMac, addWebUIListener, removeWebUIListener } from "./cr.m.js";
+import { loadTimeData } from "./load_time_data.m.js";
 import "./mojo_bindings_lite.js";
 import "./downloads.mojom-lite.js";
 /**
@@ -47,10 +14,8 @@ found at http://polymer.github.io/CONTRIBUTORS.txt Code distributed by Google as
 part of the polymer project is also subject to an additional IP rights grant
 found at http://polymer.github.io/PATENTS.txt
 */
-class IronMeta
-{
-    constructor(options)
-    {
+class IronMeta {
+    constructor(options) {
         IronMeta[" "](options);
         this.type = options && options.type || "default";
         this.key = options && options.key;
@@ -59,8 +24,7 @@ class IronMeta
             this.value = options.value
         }
     }
-    get value()
-    {
+    get value() {
         var type = this.type;
         var key = this.key;
         if (type && key)
@@ -68,8 +32,7 @@ class IronMeta
             return IronMeta.types[type] && IronMeta.types[type][key]
         }
     }
-    set value(value)
-    {
+    set value(value) {
         var type = this.type;
         var key = this.key;
         if (type && key)
@@ -86,8 +49,7 @@ class IronMeta
             }
         }
     }
-    get list()
-    {
+    get list() {
         var type = this.type;
         if (type)
         {
@@ -102,8 +64,7 @@ class IronMeta
             }, this)
         }
     }
-    byKey(key)
-    {
+    byKey(key) {
         this.key = key;
         return this.value
     }
@@ -111,70 +72,55 @@ class IronMeta
 IronMeta[" "] = function() {};
 IronMeta.types = {};
 var metaDatas = IronMeta.types;
-Polymer(
-{
+Polymer({
     is: "iron-meta",
-    properties:
-    {
-        type:
-        {
+    properties: {
+        type: {
             type: String,
             value: "default"
         },
-        key:
-        {
+        key: {
             type: String
         },
-        value:
-        {
+        value: {
             type: String,
             notify: true
         },
-        self:
-        {
+        self: {
             type: Boolean,
             observer: "_selfChanged"
         },
-        __meta:
-        {
+        __meta: {
             type: Boolean,
             computed: "__computeMeta(type, key, value)"
         }
     },
-    hostAttributes:
-    {
+    hostAttributes: {
         hidden: true
     },
-    __computeMeta: function(type, key, value)
-    {
-        var meta = new IronMeta(
-        {
+    __computeMeta: function(type, key, value) {
+        var meta = new IronMeta({
             type: type,
             key: key
         });
-        if (value !== undefined && value !== meta.value)
-        {
+        if (value !== undefined && value !== meta.value) {
             meta.value = value
         }
-        else if (this.value !== meta.value)
-        {
+        else if (this.value !== meta.value) {
             this.value = meta.value
         }
         return meta
     },
-    get list()
-    {
+    get list() {
         return this.__meta && this.__meta.list
     },
-    _selfChanged: function(self)
-    {
+    _selfChanged: function(self) {
         if (self)
         {
             this.value = this
         }
     },
-    byKey: function(key)
-    {
+    byKey: function(key) {
         return new IronMeta(
         {
             type: this.type,
@@ -339,7 +285,9 @@ const template = html `<!--_html_template_start_--><iron-iconset-svg name="downl
       These icons are copied from Polymer's iron-icons and kept in sorted order.
       See http://goo.gl/Y1OdAq for instructions on adding additional icons.
       -->
-      <g id="remove-circle"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"></path></g>
+      <g id="remove-circle">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"></path>
+      </g>
     </defs>
   </svg>
 </iron-iconset-svg>
@@ -349,8 +297,7 @@ document.head.appendChild(template.content); // Copyright (c) 2012 The Chromium 
 // found in the LICENSE file.
 const CLASS_NAME = "focus-outline-visible";
 const docsToManager = new Map;
-class FocusOutlineManager
-{
+class FocusOutlineManager {
     constructor(doc)
     {
         this.focusByKeyboard_ = true;
@@ -368,8 +315,7 @@ class FocusOutlineManager
         doc.addEventListener("mousedown", onEvent.bind(this, false), true);
         this.updateVisibility()
     }
-    updateVisibility()
-    {
+    updateVisibility() {
         this.visible = this.focusByKeyboard_
     }
     set visible(visible)
@@ -437,8 +383,7 @@ var ARROW_KEY = /^arrow/;
 var SPACE_KEY = /^space(bar)?/;
 var ESC_KEY = /^escape$/;
 
-function transformKey(key, noSpecialChars)
-{
+function transformKey(key, noSpecialChars) {
     var validKey = "";
     if (key)
     {
@@ -474,8 +419,7 @@ function transformKey(key, noSpecialChars)
     return validKey
 }
 
-function transformKeyIdentifier(keyIdent)
-{
+function transformKeyIdentifier(keyIdent) {
     var validKey = "";
     if (keyIdent)
     {
@@ -496,8 +440,7 @@ function transformKeyIdentifier(keyIdent)
     return validKey
 }
 
-function transformKeyCode(keyCode)
-{
+function transformKeyCode(keyCode) {
     var validKey = "";
     if (Number(keyCode))
     {
@@ -525,8 +468,7 @@ function transformKeyCode(keyCode)
     return validKey
 }
 
-function normalizedKeyForEvent(keyEvent, noSpecialChars)
-{
+function normalizedKeyForEvent(keyEvent, noSpecialChars) {
     if (keyEvent.key)
     {
         return transformKey(keyEvent.key, noSpecialChars)
@@ -538,14 +480,12 @@ function normalizedKeyForEvent(keyEvent, noSpecialChars)
     return transformKeyIdentifier(keyEvent.keyIdentifier) || transformKeyCode(keyEvent.keyCode) || ""
 }
 
-function keyComboMatchesEvent(keyCombo, event)
-{
+function keyComboMatchesEvent(keyCombo, event) {
     var keyEvent = normalizedKeyForEvent(event, keyCombo.hasModifiers);
     return keyEvent === keyCombo.key && (!keyCombo.hasModifiers || !!event.shiftKey === !!keyCombo.shiftKey && !!event.ctrlKey === !!keyCombo.ctrlKey && !!event.altKey === !!keyCombo.altKey && !!event.metaKey === !!keyCombo.metaKey)
 }
 
-function parseKeyComboString(keyComboString)
-{
+function parseKeyComboString(keyComboString) {
     if (keyComboString.length === 1)
     {
         return {
@@ -576,16 +516,14 @@ function parseKeyComboString(keyComboString)
     })
 }
 
-function parseEventString(eventString)
-{
+function parseEventString(eventString) {
     return eventString.trim().split(" ").map(function(keyComboString)
     {
         return parseKeyComboString(keyComboString)
     })
 }
 const IronA11yKeysBehavior = {
-    properties:
-    {
+    properties: {
         keyEventTarget:
         {
             type: Object,
@@ -602,8 +540,7 @@ const IronA11yKeysBehavior = {
         _boundKeyHandlers:
         {
             type: Array,
-            value: function()
-            {
+            value: function() {
                 return []
             }
         },
@@ -617,34 +554,27 @@ const IronA11yKeysBehavior = {
         }
     },
     observers: ["_resetKeyEventListeners(keyEventTarget, _boundKeyHandlers)"],
-    keyBindings:
-    {},
-    registered: function()
-    {
+    keyBindings: {},
+    registered: function() {
         this._prepKeyBindings()
     },
-    attached: function()
-    {
+    attached: function() {
         this._listenKeyEventListeners()
     },
-    detached: function()
-    {
+    detached: function() {
         this._unlistenKeyEventListeners()
     },
-    addOwnKeyBinding: function(eventString, handlerName)
-    {
+    addOwnKeyBinding: function(eventString, handlerName) {
         this._imperativeKeyBindings[eventString] = handlerName;
         this._prepKeyBindings();
         this._resetKeyEventListeners()
     },
-    removeOwnKeyBindings: function()
-    {
+    removeOwnKeyBindings: function() {
         this._imperativeKeyBindings = {};
         this._prepKeyBindings();
         this._resetKeyEventListeners()
     },
-    keyboardEventMatchesKeys: function(event, eventString)
-    {
+    keyboardEventMatchesKeys: function(event, eventString) {
         var keyCombos = parseEventString(eventString);
         for (var i = 0; i < keyCombos.length; ++i)
         {
@@ -655,8 +585,7 @@ const IronA11yKeysBehavior = {
         }
         return false
     },
-    _collectKeyBindings: function()
-    {
+    _collectKeyBindings: function() {
         var keyBindings = this.behaviors.map(function(behavior)
         {
             return behavior.keyBindings
@@ -667,8 +596,7 @@ const IronA11yKeysBehavior = {
         }
         return keyBindings
     },
-    _prepKeyBindings: function()
-    {
+    _prepKeyBindings: function() {
         this._keyBindings = {};
         this._collectKeyBindings().forEach(function(keyBindings)
         {
@@ -691,24 +619,21 @@ const IronA11yKeysBehavior = {
             })
         }
     },
-    _addKeyBinding: function(eventString, handlerName)
-    {
+    _addKeyBinding: function(eventString, handlerName) {
         parseEventString(eventString).forEach(function(keyCombo)
         {
             this._keyBindings[keyCombo.event] = this._keyBindings[keyCombo.event] || [];
             this._keyBindings[keyCombo.event].push([keyCombo, handlerName])
         }, this)
     },
-    _resetKeyEventListeners: function()
-    {
+    _resetKeyEventListeners: function() {
         this._unlistenKeyEventListeners();
         if (this.isAttached)
         {
             this._listenKeyEventListeners()
         }
     },
-    _listenKeyEventListeners: function()
-    {
+    _listenKeyEventListeners: function() {
         if (!this.keyEventTarget)
         {
             return
@@ -721,8 +646,7 @@ const IronA11yKeysBehavior = {
             this.keyEventTarget.addEventListener(eventName, boundKeyHandler)
         }, this)
     },
-    _unlistenKeyEventListeners: function()
-    {
+    _unlistenKeyEventListeners: function() {
         var keyHandlerTuple;
         var keyEventTarget;
         var eventName;
@@ -736,22 +660,17 @@ const IronA11yKeysBehavior = {
             keyEventTarget.removeEventListener(eventName, boundKeyHandler)
         }
     },
-    _onKeyBindingEvent: function(keyBindings, event)
-    {
-        if (this.stopKeyboardEventPropagation)
-        {
+    _onKeyBindingEvent: function(keyBindings, event) {
+        if (this.stopKeyboardEventPropagation) {
             event.stopPropagation()
         }
-        if (event.defaultPrevented)
-        {
+        if (event.defaultPrevented) {
             return
         }
-        for (var i = 0; i < keyBindings.length; i++)
-        {
+        for (var i = 0; i < keyBindings.length; i++) {
             var keyCombo = keyBindings[i][0];
             var handlerName = keyBindings[i][1];
-            if (keyComboMatchesEvent(keyCombo, event))
-            {
+            if (keyComboMatchesEvent(keyCombo, event)) {
                 this._triggerKeyHandler(keyCombo, handlerName, event);
                 if (event.defaultPrevented)
                 {
@@ -760,32 +679,27 @@ const IronA11yKeysBehavior = {
             }
         }
     },
-    _triggerKeyHandler: function(keyCombo, handlerName, keyboardEvent)
-    {
+    _triggerKeyHandler: function(keyCombo, handlerName, keyboardEvent) {
         var detail = Object.create(keyCombo);
         detail.keyboardEvent = keyboardEvent;
-        var event = new CustomEvent(keyCombo.event,
-        {
+        var event = new CustomEvent(keyCombo.event, {
             detail: detail,
             cancelable: true
         });
         this[handlerName].call(this, event);
-        if (event.defaultPrevented)
-        {
+        if (event.defaultPrevented) {
             keyboardEvent.preventDefault()
         }
     }
 };
 var MAX_RADIUS_PX = 300;
 var MIN_DURATION_MS = 800;
-var distance = function(x1, y1, x2, y2)
-{
+var distance = function(x1, y1, x2, y2) {
     var xDelta = x1 - x2;
     var yDelta = y1 - y2;
     return Math.sqrt(xDelta * xDelta + yDelta * yDelta)
 };
-Polymer(
-{
+Polymer({
     _template: html `<!--css-build:shadow--><style scope="paper-ripple">:host {
   border-radius: inherit;
         bottom: 0;
@@ -1649,8 +1563,7 @@ document.body.appendChild(template$2.content.cloneNode(true));
 const $_documentContainer = document.createElement("template");
 $_documentContainer.innerHTML = `<custom-style>\n<style is="custom-style" css-build="shadow">html {\n  --google-blue-50-rgb: 232, 240, 254;  \n    --google-blue-50: rgb(var(--google-blue-50-rgb));\n    --google-blue-200-rgb: 174, 203, 250;  \n    --google-blue-200: rgb(var(--google-blue-200-rgb));\n    --google-blue-600-rgb: 26, 115, 232;  \n    --google-blue-600: rgb(var(--google-blue-600-rgb));\n\n    --google-grey-200-rgb: 232, 234, 237;  \n    --google-grey-200: rgb(var(--google-grey-200-rgb));\n    --google-grey-400-rgb: 189, 193, 198;  \n    --google-grey-400: rgb(var(--google-grey-400-rgb));\n    --google-grey-600-rgb: 128, 134, 139;  \n    --google-grey-600: rgb(var(--google-grey-600-rgb));\n    --google-grey-800-rgb: 60, 64, 67;  \n    --google-grey-800: rgb(var(--google-grey-800-rgb));\n    --google-grey-900-rgb: 32, 33, 36;  \n    --google-grey-900: rgb(var(--google-grey-900-rgb));\n    \n    --google-grey-900-white-4-percent: #292a2d;\n\n    --google-red-600-rgb: 217, 48, 37;  \n    --google-red-600: rgb(var(--google-red-600-rgb));\n\n    \n    --google-blue-refresh-100-rgb: 210, 227, 252;  \n    --google-blue-refresh-100: rgb(var(--google-blue-refresh-100-rgb));\n    --google-blue-refresh-300-rgb: 138, 180, 248;  \n    --google-blue-refresh-300: rgb(var(--google-blue-refresh-300-rgb));\n    --google-blue-refresh-500-rgb: 66, 133, 244;  \n    --google-blue-refresh-500: rgb(var(--google-blue-refresh-500-rgb));\n    --google-blue-refresh-700-rgb: 25, 103, 210;  \n    --google-blue-refresh-700: rgb(var(--google-blue-refresh-700-rgb));\n\n    --google-green-refresh-300-rgb: 129, 201, 149;  \n    --google-green-refresh-300: rgb(var(--google-green-refresh-300-rgb));\n    --google-green-refresh-700-rgb: 24, 128, 56;  \n    --google-green-refresh-700: rgb(var(--google-green-refresh-700-rgb));\n\n    --google-grey-refresh-100-rgb: 241, 243, 244;  \n    --google-grey-refresh-100: rgb(var(--google-grey-refresh-100-rgb));\n    --google-grey-refresh-300-rgb: 218, 220, 224;  \n    --google-grey-refresh-300: rgb(var(--google-grey-refresh-300-rgb));\n    --google-grey-refresh-500-rgb: 154, 160, 166;  \n    --google-grey-refresh-500: rgb(var(--google-grey-refresh-500-rgb));\n    --google-grey-refresh-700-rgb: 95, 99, 104;  \n    --google-grey-refresh-700: rgb(var(--google-grey-refresh-700-rgb));\n\n    --google-red-refresh-300-rgb: 242, 139, 130;  \n    --google-red-refresh-300: rgb(var(--google-red-refresh-300-rgb));\n\n    --google-yellow-refresh-300-rgb: 253, 214, 51;  \n    --google-yellow-refresh-300: rgb(var(--google-yellow-refresh-300-rgb));\n\n    --cr-primary-text-color: var(--google-grey-900);\n    --cr-secondary-text-color: var(--google-grey-refresh-700);\n\n    --cr-card-background-color: white;\n    --cr-card-shadow-color-rgb: var(--google-grey-800-rgb);\n\n    --cr-card-shadow: rgba(var(--cr-card-shadow-color-rgb), .3) 0 1px 2px 0,\n                      rgba(var(--cr-card-shadow-color-rgb), .15) 0 1px 3px 1px;\n\n    \n    --cr-card-elevation_-_box-shadow:  var(--cr-card-shadow);\n\n    --cr-checked-color: var(--google-blue-600);\n    --cr-focused-item-color: var(--google-grey-300);\n    --cr-form-field-label-color: var(--google-grey-refresh-700);\n    --cr-hairline-rgb: 0, 0, 0;\n    --cr-link-color: var(--google-blue-700);\n    --cr-menu-background-color: white;\n    --cr-menu-background-focus-color: var(--google-grey-200);\n    --cr-menu-shadow: 0 2px 6px var(--paper-grey-500);\n    --cr-separator-color: rgba(0, 0, 0, .06);\n    --cr-title-text-color: rgb(90, 90, 90);\n    --cr-toggle-color: var(--google-blue-500);\n    --cr-toolbar-background-color: var(--google-blue-700);\n}\n\n@media (prefers-color-scheme: dark) {\nhtml {\n  --cr-primary-text-color: var(--google-grey-200);\n      --cr-secondary-text-color: var(--google-grey-refresh-500);\n\n      --cr-card-background-color: var(--google-grey-900-white-4-percent);\n      --cr-card-shadow-color-rgb: 0, 0, 0;\n\n      --cr-checked-color: var(--google-blue-refresh-300);\n      --cr-form-field-label-color: var(--dark-secondary-color);\n      --cr-hairline-rgb: 255, 255, 255;\n      --cr-link-color: var(--google-blue-refresh-300);\n      --cr-menu-background-color: var(--google-grey-900);\n      --cr-menu-background-focus-color: rgba(var(--google-grey-800-rgb), .6);\n      --cr-menu-background-sheen: rgba(255, 255, 255, .06);  \n      --cr-menu-shadow: rgba(0, 0, 0, .3) 0 1px 2px 0,\n                        rgba(0, 0, 0, .15) 0 3px 6px 2px;\n      --cr-separator-color: rgba(255, 255, 255, .1);\n      \n      --cr-title-text-color: var(--cr-primary-text-color);\n      --cr-toolbar-background-color: var(--google-grey-900-white-4-percent);\n}\n\n}\n\nhtml {\n  --cr-button-edge-spacing: 12px;\n    --cr-button-height: 32px;\n\n    \n    --cr-controlled-by-spacing: 24px;\n\n    \n    --cr-default-input-max-width: 264px;\n\n    \n    --cr-icon-ripple-size: 36px;\n    --cr-icon-ripple-padding: 8px;\n\n    --cr-icon-size: 20px;\n\n    --cr-icon-height-width_-_height:  var(--cr-icon-size); --cr-icon-height-width_-_width:  var(--cr-icon-size);\n\n    --cr-icon-button-margin-start: 16px;\n\n    --cr-icon-ripple-margin: calc(var(--cr-icon-ripple-padding) * -1);\n\n    --cr-paper-icon-button-margin_-_margin-inline-end:  var(--cr-icon-ripple-margin); --cr-paper-icon-button-margin_-_margin-inline-start:  var(--cr-icon-button-margin-start);\n\n    --cr-secondary-text_-_color:  var(--cr-secondary-text-color); --cr-secondary-text_-_font-weight:  400;\n\n    \n    \n    --cr-section-min-height: 48px;\n    --cr-section-two-line-min-height: 64px;\n    --cr-section-three-line-min-height: 84px;\n\n    --cr-section-padding: 20px;\n    --cr-section-vertical-padding: 12px;\n    --cr-section-indent-width: 40px;\n    --cr-section-indent-padding: calc(\n        var(--cr-section-padding) + var(--cr-section-indent-width));\n\n    --cr-section_-_align-items:  center; --cr-section_-_border-top:  var(--cr-separator-line); --cr-section_-_display:  flex; --cr-section_-_min-height:  var(--cr-section-min-height); --cr-section_-_padding:  0 var(--cr-section-padding);\n\n    --cr-section-vertical-margin: 21px;\n\n    --cr-centered-card-max-width: 680px;\n    --cr-centered-card-width-percentage: 0.96;\n    --cr-centered-card-container_-_box-sizing:  border-box; --cr-centered-card-container_-_display:  block; --cr-centered-card-container_-_height: apply-shim-inherit; --cr-centered-card-container_-_margin:  0 auto; --cr-centered-card-container_-_max-width:  var(--cr-centered-card-max-width); --cr-centered-card-container_-_min-width:  550px; --cr-centered-card-container_-_position:  relative; --cr-centered-card-container_-_width:  calc(100% * var(--cr-centered-card-width-percentage));\n\n    --cr-text-elide_-_overflow:  hidden; --cr-text-elide_-_text-overflow:  ellipsis; --cr-text-elide_-_white-space:  nowrap;\n\n    --cr-tooltip_-_font-size:  92.31%; --cr-tooltip_-_font-weight:  500; --cr-tooltip_-_max-width:  330px; --cr-tooltip_-_min-width:  200px; --cr-tooltip_-_padding:  10px 8px;\n\n    --cr-selectable-focus_-_background-color:  var(--cr-focused-item-color); --cr-selectable-focus_-_outline:  none;\n\n    --cr-hairline: 1px solid rgba(var(--cr-hairline-rgb), .14);\n\n    --cr-separator-height: 1px;\n    --cr-separator-line: var(--cr-separator-height) solid\n        var(--cr-separator-color);\n\n    --cr-toolbar-overlay-animation-duration: 150ms;\n    --cr-toolbar-height: 56px;\n\n    --cr-container-shadow-height: 6px;\n    --cr-container-shadow-margin: calc(-1 * var(--cr-container-shadow-height));\n\n    --cr-container-shadow-max-opacity: 1;\n\n    \n    --cr-card-border-radius: 4px;\n    --cr-disabled-opacity: .38;\n    --cr-form-field-bottom-spacing: 16px;\n    --cr-form-field-label-font-size: .625rem;\n    --cr-form-field-label-height: 1em;\n    --cr-form-field-label-line-height: 1em;\n}\n\n</style>\n</custom-style>\n`;
 document.head.appendChild($_documentContainer.content); // Copyright 2019 The Chromium Authors. All rights reserved.
-Polymer(
-{
+Polymer({
     _template: html `<!--css-build:shadow--><!--_html_template_start_--><style include="cr-hidden-style" scope="cr-button">:host {
   --active-shadow-rgb: var(--google-grey-800-rgb);
         --active-shadow-action-rgb: var(--google-blue-refresh-500-rgb);
@@ -2080,8 +1993,7 @@ found at http://polymer.github.io/CONTRIBUTORS.txt Code distributed by Google as
 part of the polymer project is also subject to an additional IP rights grant
 found at http://polymer.github.io/PATENTS.txt
 */
-Polymer(
-{
+Polymer({
     _template: html `<!--css-build:shadow--><style scope="iron-icon">:host {
   display: var(--layout-inline_-_display);
         align-items: var(--layout-center-center_-_align-items); justify-content: var(--layout-center-center_-_justify-content);
@@ -2190,8 +2102,7 @@ Polymer(
         }
     }
 }); // Copyright 2018 The Chromium Authors. All rights reserved.
-Polymer(
-{
+Polymer({
     _template: html `<!--css-build:shadow--><!--_html_template_start_--><style scope="cr-icon-button">:host {
   --cr-icon-button-fill-color: var(--google-grey-refresh-700);
         --cr-icon-button-fill-color-focus: white;
@@ -2464,9 +2375,15 @@ const template$5 = html `<iron-iconset-svg name="cr20" size="20">
       <!--
       Keep these in sorted order by id="". See also http://goo.gl/Y1OdAq
       -->
-      <g id="domain"><path d="M2,3 L2,17 L11.8267655,17 L13.7904799,17 L18,17 L18,7 L12,7 L12,3 L2,3 Z M8,13 L10,13 L10,15 L8,15 L8,13 Z M4,13 L6,13 L6,15 L4,15 L4,13 Z M8,9 L10,9 L10,11 L8,11 L8,9 Z M4,9 L6,9 L6,11 L4,11 L4,9 Z M12,9 L16,9 L16,15 L12,15 L12,9 Z M12,11 L14,11 L14,13 L12,13 L12,11 Z M8,5 L10,5 L10,7 L8,7 L8,5 Z M4,5 L6,5 L6,7 L4,7 L4,5 Z"></path></g>
-      <g id="kite"><path d="M 10.32 2 L 4.63 8 l 4.92 7.5 l -0.4 0.6 c -0.04 0.07 -0.09 0.12 -0.14 0.18 c -0.24 0.25 -0.56 0.39 -0.9 0.39 c -0.34 0 -0.65 -0.13 -0.9 -0.39 a 1.35 1.35 0 0 1 -0.37 -0.94 a 2.72 2.72 0 0 0 -0.74 -1.88 a 2.44 2.44 0 0 0 -1.78 -0.78 H 4 v 1.38 h 0.33 c 0.34 0 0.65 0.14 0.9 0.39 c 0.24 0.26 0.37 0.59 0.37 0.95 c 0 0.71 0.26 1.38 0.74 1.88 c 0.48 0.5 1.11 0.78 1.78 0.78 c 0.67 0 1.31 -0.28 1.78 -0.78 c 0.11 -0.11 0.2 -0.23 0.28 -0.35 l 1.27 -1.94 L 16 8 L 10.32 2 z"></path></g>
-      <g id="menu"><path d="M2 4h16v2H2zM2 9h16v2H2zM2 14h16v2H2z"></path></g>
+      <g id="domain">
+        <path d="M2,3 L2,17 L11.8267655,17 L13.7904799,17 L18,17 L18,7 L12,7 L12,3 L2,3 Z M8,13 L10,13 L10,15 L8,15 L8,13 Z M4,13 L6,13 L6,15 L4,15 L4,13 Z M8,9 L10,9 L10,11 L8,11 L8,9 Z M4,9 L6,9 L6,11 L4,11 L4,9 Z M12,9 L16,9 L16,15 L12,15 L12,9 Z M12,11 L14,11 L14,13 L12,13 L12,11 Z M8,5 L10,5 L10,7 L8,7 L8,5 Z M4,5 L6,5 L6,7 L4,7 L4,5 Z"></path>
+      </g>
+      <g id="kite">
+        <path d="M 10.32 2 L 4.63 8 l 4.92 7.5 l -0.4 0.6 c -0.04 0.07 -0.09 0.12 -0.14 0.18 c -0.24 0.25 -0.56 0.39 -0.9 0.39 c -0.34 0 -0.65 -0.13 -0.9 -0.39 a 1.35 1.35 0 0 1 -0.37 -0.94 a 2.72 2.72 0 0 0 -0.74 -1.88 a 2.44 2.44 0 0 0 -1.78 -0.78 H 4 v 1.38 h 0.33 c 0.34 0 0.65 0.14 0.9 0.39 c 0.24 0.26 0.37 0.59 0.37 0.95 c 0 0.71 0.26 1.38 0.74 1.88 c 0.48 0.5 1.11 0.78 1.78 0.78 c 0.67 0 1.31 -0.28 1.78 -0.78 c 0.11 -0.11 0.2 -0.23 0.28 -0.35 l 1.27 -1.94 L 16 8 L 10.32 2 z"></path>
+      </g>
+      <g id="menu">
+        <path d="M2 4h16v2H2zM2 9h16v2H2zM2 14h16v2H2z"></path>
+      </g>
   </defs></svg>
 </iron-iconset-svg>
 <iron-iconset-svg name="cr" size="24">
@@ -2531,8 +2448,7 @@ const template$5 = html `<iron-iconset-svg name="cr20" size="20">
 document.head.appendChild(template$5.content); // Copyright 2014 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
-class ActionLink extends HTMLAnchorElement
-{
+class ActionLink extends HTMLAnchorElement {
     connectedCallback()
     {
         this.tabIndex = this.disabled ? -1 : 0;
@@ -2712,8 +2628,7 @@ found at http://polymer.github.io/CONTRIBUTORS.txt Code distributed by Google as
 part of the polymer project is also subject to an additional IP rights grant
 found at http://polymer.github.io/PATENTS.txt
 */
-Polymer(
-{
+Polymer({
     _template: html `<!--css-build:shadow--><style scope="paper-progress">:host {
   display: block;
         width: 200px;
@@ -2924,8 +2839,7 @@ found at http://polymer.github.io/CONTRIBUTORS.txt Code distributed by Google as
 part of the polymer project is also subject to an additional IP rights grant
 found at http://polymer.github.io/PATENTS.txt
 */
-var IronA11yAnnouncer = Polymer(
-{
+var IronA11yAnnouncer = Polymer({
     _template: html `<!--css-build:shadow--><style scope="iron-a11y-announcer">:host {
   display: inline-block;
         position: fixed;
@@ -2949,33 +2863,27 @@ var IronA11yAnnouncer = Polymer(
             value: ""
         }
     },
-    created: function()
-    {
-        if (!IronA11yAnnouncer.instance)
-        {
+    created: function() {
+        if (!IronA11yAnnouncer.instance) {
             IronA11yAnnouncer.instance = this
         }
         document.body.addEventListener("iron-announce", this._onIronAnnounce.bind(this))
     },
-    announce: function(text)
-    {
+    announce: function(text) {
         this._text = "";
         this.async(function()
         {
             this._text = text
         }, 100)
     },
-    _onIronAnnounce: function(event)
-    {
-        if (event.detail && event.detail.text)
-        {
+    _onIronAnnounce: function(event) {
+        if (event.detail && event.detail.text) {
             this.announce(event.detail.text)
         }
     }
 });
 IronA11yAnnouncer.instance = null;
-IronA11yAnnouncer.requestAvailability = function()
-{
+IronA11yAnnouncer.requestAvailability = function() {
     if (!IronA11yAnnouncer.instance)
     {
         IronA11yAnnouncer.instance = document.createElement("iron-a11y-announcer")
@@ -2984,8 +2892,7 @@ IronA11yAnnouncer.requestAvailability = function()
 }; // Copyright (c) 2013 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
-function assert(condition, opt_message)
-{
+function assert(condition, opt_message) {
     if (!condition)
     {
         let message = "Assertion failed";
@@ -3009,13 +2916,11 @@ function assert(condition, opt_message)
     return condition
 }
 
-function assertNotReached(opt_message)
-{
+function assertNotReached(opt_message) {
     assert(false, opt_message || "Unreachable code hit")
 }
 
-function assertInstanceof(value, type, opt_message)
-{
+function assertInstanceof(value, type, opt_message) {
     if (!(value instanceof type))
     {
         assertNotReached(opt_message || "Value " + value + " is not a[n] " + (type.name || typeof type))
@@ -3024,8 +2929,7 @@ function assertInstanceof(value, type, opt_message)
 } // Copyright (c) 2011 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
-var EventTracker = class
-{
+var EventTracker = class {
     constructor()
     {
         this.listeners_ = []
@@ -3064,8 +2968,7 @@ var EventTracker = class
         entry.target.removeEventListener(entry.eventType, entry.listener, entry.capture)
     }
 }; // Copyright 2017 The Chromium Authors. All rights reserved.
-Polymer(
-{
+Polymer({
     _template: html `<!--css-build:shadow--><!--_html_template_start_--><style scope="cr-toast">:host {
   --cr-toast-background: #323232;
         --cr-toast-button-color: var(--google-blue-300);
@@ -3190,18 +3093,15 @@ Polymer(
 }); // Copyright 2019 The Chromium Authors. All rights reserved.
 let toastManagerInstance = null;
 
-function getToastManager()
-{
+function getToastManager() {
     return assert(toastManagerInstance)
 }
 
-function setInstance(instance)
-{
+function setInstance(instance) {
     assert(!instance || !toastManagerInstance);
     toastManagerInstance = instance
 }
-let CrToastManagerElement = Polymer(
-{
+let CrToastManagerElement = Polymer({
     _template: html `<!--css-build:shadow--><!--_html_template_start_--><style scope="cr-toast-manager">#content {
   display: flex;
         flex: 1;
@@ -3290,16 +3190,13 @@ span {
 }); // Copyright 2017 The Chromium Authors. All rights reserved.
 let hideInk = false;
 assert(!isIOS, "pointerdown doesn't work on iOS");
-document.addEventListener("pointerdown", function()
-{
+document.addEventListener("pointerdown", function() {
     hideInk = true
 }, true);
-document.addEventListener("keydown", function()
-{
+document.addEventListener("keydown", function() {
     hideInk = false
 }, true);
-const focusWithoutInk = function(toFocus)
-{
+const focusWithoutInk = function(toFocus) {
     if (!("noink" in toFocus) || !hideInk)
     {
         toFocus.focus();
@@ -3314,8 +3211,7 @@ const focusWithoutInk = function(toFocus)
     toFocus.focus();
     toFocus.noink = noink
 }; // Copyright (c) 2012 The Chromium Authors. All rights reserved.
-function getDeepActiveElement()
-{
+function getDeepActiveElement() {
     let a = document.activeElement;
     while (a && a.shadowRoot && a.shadowRoot.activeElement)
     {
@@ -3324,26 +3220,21 @@ function getDeepActiveElement()
     return a
 }
 
-function isRTL()
-{
+function isRTL() {
     return document.documentElement.dir === "rtl"
 }
 
-function HTMLEscape(original)
-{
+function HTMLEscape(original) {
     return original.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;")
 } //   /* is_ios */
-function hasKeyModifiers(e)
-{
+function hasKeyModifiers(e) {
     return !!(e.altKey || e.ctrlKey || e.metaKey || e.shiftKey)
 }
 
-function isTextInputElement(el)
-{
+function isTextInputElement(el) {
     return el.tagName === "INPUT" || el.tagName === "TEXTAREA"
 } // Copyright 2014 The Chromium Authors. All rights reserved.
-class FocusRow
-{
+class FocusRow {
     constructor(root, boundary, delegate)
     {
         this.root = root;
@@ -3556,8 +3447,7 @@ class FocusRow
     }
 }
 FocusRow.ACTIVE_CLASS = "focus-row-active"; // Copyright 2017 The Chromium Authors. All rights reserved.
-class FocusRowBehaviorDelegate
-{
+class FocusRowBehaviorDelegate {
     constructor(listItem)
     {
         this.listItem_ = listItem
@@ -3585,8 +3475,7 @@ class FocusRowBehaviorDelegate
         return this.listItem_.overrideCustomEquivalent ? this.listItem_.getCustomEquivalent(sampleElement) : null
     }
 }
-class VirtualFocusRow extends FocusRow
-{
+class VirtualFocusRow extends FocusRow {
     constructor(root, delegate)
     {
         super(root, null, delegate)
@@ -3805,8 +3694,7 @@ const FocusRowBehavior = {
         }
     }
 }; // Copyright 2017 The Chromium Authors. All rights reserved.
-class BrowserProxy
-{
+class BrowserProxy {
     constructor()
     {
         this.callbackRouter = new downloads.mojom.PageCallbackRouter;
@@ -3842,15 +3730,13 @@ const States = {
     INTERRUPTED: "INTERRUPTED",
     MIXED_CONTENT: "MIXED_CONTENT"
 }; // Copyright 2016 The Chromium Authors. All rights reserved.
-function getFileIconUrl(filePath)
-{
+function getFileIconUrl(filePath) {
     const url = new URL("chrome://fileicon/");
     url.searchParams.set("path", filePath);
     url.searchParams.set("scale", window.devicePixelRatio + "x");
     return url.toString()
 } // Copyright 2016 The Chromium Authors. All rights reserved.
-var PromiseResolver = class
-{
+var PromiseResolver = class {
     constructor()
     {
         this.resolve_;
@@ -3903,8 +3789,7 @@ var PromiseResolver = class
         assertNotReached()
     }
 }; // Copyright 2018 The Chromium Authors. All rights reserved.
-class IconLoader
-{
+class IconLoader {
     constructor()
     {
         this.iconResolvers_ = {};
@@ -3936,8 +3821,7 @@ class IconLoader
     }
 }
 addSingletonGetter(IconLoader); // Copyright 2015 The Chromium Authors. All rights reserved.
-Polymer(
-{
+Polymer({
     is: "downloads-item",
     _template: html `<!--css-build:shadow--><!--_html_template_start_--><style include="action-link cr-hidden-style cr-icons" scope="downloads-item">:host {
   --controlled-by-active-color: #333;
@@ -4750,8 +4634,7 @@ const AnchorAlignment = {
 const DROPDOWN_ITEM_CLASS = "dropdown-item";
 const AFTER_END_OFFSET = 10;
 
-function getStartPointWithAnchor(start, end, menuLength, anchorAlignment, min, max)
-{
+function getStartPointWithAnchor(start, end, menuLength, anchorAlignment, min, max) {
     let startPoint = 0;
     switch (anchorAlignment)
     {
@@ -4783,8 +4666,7 @@ function getStartPointWithAnchor(start, end, menuLength, anchorAlignment, min, m
     return startPoint
 }
 
-function getDefaultShowConfig()
-{
+function getDefaultShowConfig() {
     return {
         top: 0,
         left: 0,
@@ -4798,8 +4680,7 @@ function getDefaultShowConfig()
         maxY: 0
     }
 }
-Polymer(
-{
+Polymer({
     _template: html `<!--css-build:shadow--><!--_html_template_start_--><style scope="cr-action-menu">:host dialog {
   background-color: var(--cr-menu-background-color);
         border: none;
@@ -5329,14 +5210,12 @@ const template$8 = html `<style include="paper-spinner-styles"></style>
   </div>
 `;
 template$8.setAttribute("strip-whitespace", "");
-Polymer(
-{
+Polymer({
     _template: template$8,
     is: "paper-spinner-lite",
     behaviors: [PaperSpinnerBehavior]
 }); // Copyright 2016 The Chromium Authors. All rights reserved.
-Polymer(
-{
+Polymer({
     _template: html `<!--css-build:shadow--><!--_html_template_start_--><style include="cr-shared-style cr-icons" scope="cr-toolbar-search-field">:host {
   align-items: center;
         display: flex;
@@ -5635,8 +5514,7 @@ found at http://polymer.github.io/CONTRIBUTORS.txt Code distributed by Google as
 part of the polymer project is also subject to an additional IP rights grant
 found at http://polymer.github.io/PATENTS.txt
 */
-Polymer(
-{
+Polymer({
     is: "iron-media-query",
     properties:
     {
@@ -5714,8 +5592,7 @@ Polymer(
         this._setQueryMatches(mq.matches)
     }
 }); // Copyright 2016 The Chromium Authors. All rights reserved.
-Polymer(
-{
+Polymer({
     _template: html `<!--css-build:shadow--><!--_html_template_start_--><style include="cr-icons cr-hidden-style" scope="cr-toolbar">:host {
   align-items: center;
         background-color: var(--cr-toolbar-background-color);
@@ -5976,8 +5853,7 @@ cr-icon-button {
         return showMenuPromo ? "" : title
     }
 }); // Copyright 2015 The Chromium Authors. All rights reserved.
-class SearchService
-{
+class SearchService {
     constructor()
     {
         this.searchTerms_ = [];
@@ -6024,8 +5900,7 @@ class SearchService
     }
 }
 addSingletonGetter(SearchService); // Copyright 2015 The Chromium Authors. All rights reserved.
-Polymer(
-{
+Polymer({
     is: "downloads-toolbar",
     _template: html `<!--css-build:shadow--><!--_html_template_start_--><style include="cr-hidden-style" scope="downloads-toolbar">:host {
   align-items: center;
@@ -6138,8 +6013,7 @@ cr-icon-button {
 }); // Copyright (c) 2012 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
-const parseHtmlSubset = function()
-{
+const parseHtmlSubset = function() {
     const allowedAttributes = {
         href(node, value)
         {
@@ -6310,8 +6184,7 @@ var WebUIListenerBehavior = {
         }
     }
 }; // Copyright 2018 The Chromium Authors. All rights reserved.
-Polymer(
-{
+Polymer({
     _template: html `<!--css-build:shadow--><!--_html_template_start_--><style scope="managed-footnote">:host {
   align-items: center;
         border-top: 1px solid var(--cr-separator-color);
