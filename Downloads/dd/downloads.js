@@ -1,6 +1,6 @@
 import"./strings.m.js";
 import{Polymer,dom,html,Base,afterNextRender,beforeNextRender,useShadow,Templatizer,OptionalMutableDataBehavior,animationFrame,microTask,idlePeriod,flush,Debouncer,enqueueDebouncer,matches,translate}
-from"./polymer/v3_0/polymer/polymer_bundled.min.js";
+from"./polymer_bundled.min.js";
 import{isIOS,addSingletonGetter,isWindows,isMac,addWebUIListener,removeWebUIListener}
 from"./cr.m.js";
 import{loadTimeData}
