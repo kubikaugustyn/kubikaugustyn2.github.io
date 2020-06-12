@@ -142,14 +142,14 @@ function page(to) {
     var srcIdPlu1 = srcId + 1
     if (to === "back") {
         //console.log("Back page")
-        document.getElementById('page' + srcIdMin1).style.visibility = "visible"
-        document.getElementById('page' + srcId).style.visibility = "hidden"
+        document.getElementById('page' + srcIdMin1).style.display = ""
+        document.getElementById('page' + srcId).style.display = "none"
     }
     else if (to === "next") {
         //console.log("Next page")
         if (document.getElementById('page' + srcIdPlu1)) {
-            document.getElementById('page' + srcIdPlu1).style.visibility = "visible"
-            document.getElementById('page' + srcId).style.visibility = "hidden"
+            document.getElementById('page' + srcIdPlu1).style.display = ""
+            document.getElementById('page' + srcId).style.display = "none"
         }
     }
 }
