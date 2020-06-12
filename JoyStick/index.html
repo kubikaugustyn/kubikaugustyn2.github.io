@@ -7,8 +7,9 @@
         <script src="./src/js/divsColors.js"></script>
 	</head>
 	<body>
-		<div id="container"></div>
+		<div id="container" style="position: absolute; right: 10px; bottom: 10px;"></div>
 		<div id="info">
+			<a href="./1">1</a>
 			<!--<a href="http://learningthreejs.com/blog/2011/12/26/let-s-make-a-3d-game-virtual-joystick/" target="_blank">VirtualJoystick.js</a>
 			A library javascript to provide a virtual joystick on touchscreen.
 			-
@@ -41,6 +42,10 @@
 			})
 
 			setInterval(function(){
+				document.getElementById("2").style.left = ""
+				document.getElementById("2").style.top = ""
+				document.getElementById("2").style.right = "100px"
+				document.getElementById("2").style.bottom = "100px;"
 			    loadDivsColors()
 				var outputElement	= document.getElementById('result');
 				outputElement.innerHTML	= '<b>Výsledek:</b> '

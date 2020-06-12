@@ -3,7 +3,7 @@ function loadDivsColors() {
     document.getElementById('left').style.backgroundColor = ''
     document.getElementById('right').style.backgroundColor = ''
     document.getElementById('down').style.backgroundColor = ''
-    console.log('loadDivsColors()...')
+    //console.log('loadDivsColors()...')
     joystick.right() ? document.getElementById('right').style.backgroundColor = 'green' : document.getElementById('down').style.backgroundColor = ''
     joystick.left() ? document.getElementById('left').style.backgroundColor = 'green' : document.getElementById('down').style.backgroundColor = ''
     joystick.up() ? document.getElementById('up').style.backgroundColor = 'green' : document.getElementById('down').style.backgroundColor = ''

@@ -26,7 +26,7 @@ function loadUserGuide() {
         if (navod[i]["kostky"] === "" && navod[i]["pocet"] === "") {
             navod[i]["img"] = "../src/img/postup/" + navod[i]["img"] + ".JPG"
             document.getElementById('strany').innerHTML += "" +
-                "<span style='visibility: hidden' id='page" + i + "'>" +
+                "<span style='display: none' id='page" + i + "'>" +
                 "<img height='100px' width='100px' src='" +
                 navod[i]["img"] +
                 "' alt='" + navod[i]["img"] +
@@ -77,7 +77,7 @@ function loadUserGuide() {
             }
             else if (items.length === 1){
                 document.getElementById('strany').innerHTML += "" +
-                    "<span style='visibility: hidden' id='page" + i + "'>"
+                    "<span style='display: none' id='page" + i + "'>"
                 document.getElementById('page' + i).innerHTML += "" +
                     "<table>" +
                     "<tbody>" +
@@ -97,7 +97,7 @@ function loadUserGuide() {
             }
             else if (items.length > 1){
                 document.getElementById('strany').innerHTML += "" +
-                    "<span style='visibility: hidden' id='page" + i + "'>"
+                    "<span style='display: none' id='page" + i + "'>"
                 document.getElementById('page' + i).innerHTML += "" +
                     "<table>" +
                     "<tbody>" +
@@ -133,7 +133,7 @@ function loadUserGuide() {
                 //"<hr>"
         }
     }
-    document.getElementById('page0').style.visibility = "visible"
+    document.getElementById('page0').style.display = ""
 }
 
 function page(to) {
