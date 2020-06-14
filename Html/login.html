@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
 	<head>
 		<title>Login Page</title>
 
@@ -22,7 +22,7 @@
 	</head>
 	<body>
 		<div class="container">
-			<form name="Form1" action="PoHeslu.html" method="POST" enctype="multipart/form-data" onreset="resetUserCredits(this)">
+			<form onclick="checkUserNameAndUserPassword(this)" onkeyup="checkUserNameAndUserPassword(this)" name="Form1" action="PoHeslu.html" method="POST" enctype="multipart/form-data" onreset="resetUserCredits(this)">
 				<div class="d-flex justify-content-center h-100">
 					<div class="card">
 						<div class="card-header">
@@ -48,9 +48,10 @@
 									<div id="UserNameIcon" style='font-family: "Font Awesome 5 Brands"'>
 										&#128274;
 									</div>
-
 								</div>
-
+								<div id="GoodUserNameAndUserPassword" style='font-family: "Font Awesome 5 Brands"'>
+									&#128274;
+								</div>
 								<div class="input-group form-group">
 
 									<div class="input-group-prepend">
@@ -70,10 +71,12 @@
 
 								<div>
 									<input id="Prihlasit" onclick="prihlasit(this)" type="submit" value="&#80;&rcaron;&#105;&#104;&#108;&aacute;&#115;&#105;&#116;" class="btn float-right login_btn" disabled><br><br>
-									<input type="reset" value="Vynulovat" class="btn float-right login_btn" disabled>
+									<div id="ResetButtonDiv">
+										<input onclick="setResetButton(); resetForm()" type="reset" value="Vynulovat" class="btn float-right login_btn" disabled>
+									</div>
 								</div>
 
-								<div class="id1, neviditelne" style='font-family: "Font Awesome 5 Brands"'>
+								<div class="id1, neviditelne" font-family="Font Awesome 5 Brands">
 									&#128273;&#128275;&#128272;&#128110;&#128271;
 								</div>
 

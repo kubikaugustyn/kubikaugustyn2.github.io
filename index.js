@@ -8,13 +8,13 @@ function openInNewTab(url) {
 var pageVariants = {
     "aaa" : "<br><a href='https://decko.ceskatelevize.cz/hry/kutej-spunte'><img alt='Kutej špunte' src='Kutej_spunte.png'></a>",
 
-    "bbb" : "Vítejte Paní učitelko (Pane učiteli)!!!<br><a href='PythonLessons/Html/UcitelPoHeslu.html'>Kubíkův web</a>",
+    "bbb" : "Vítejte Paní učitelko (Pane učiteli)!!!<br><a href='Html/UcitelPoHeslu.html'>Kubíkův web</a>",
 
-    "ccc": "Vítej Žáku!!!<br><a href='PythonLessons/Html/ZakPoHeslu.html'>Kubíkův web</a>",
+    "ccc": "Vítej Žáku!!!<br><a href='Html/ZakPoHeslu.html'>Kubíkův web</a>",
 
-    "dddd": "<a href='PythonLessons/Html/PoHeslu.html'>Kubíkův web</a>",
+    "dddd": "<a href='Html/PoHeslu.html'>Kubíkův web</a>",
 
-    "eee" : "Ahoj Ondro!!!<br><a href='PythonLessons/Ondra/Ondra1.html'>Ondráškův web</a>",
+    "eee" : "Ahoj Ondro!!!<br><a href='Ondra/Ondra1.html'>Ondráškův web</a>",
 
     "test" : "<a href='Testy.html'>Testy</a>",
 
