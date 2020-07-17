@@ -23,11 +23,11 @@ function loadUserGuide() {
     for (i = 0; i < navodLenght; i++) {
         var iA1 = i+1
         //console.log(navod[i])
-        if (navod[i]["kostky"] === "" && navod[i]["pocet"] === "") {
+        if (navod[i]["kostky"] === "" && navod[i]["pocet"] === "" && i === 0) {
             navod[i]["img"] = "../src/img/postup/" + navod[i]["img"] + ".JPG"
             document.getElementById('strany').innerHTML += "" +
                 "<span style='display: none' id='page" + i + "'>" +
-                "<img height='100px' width='100px' src='" +
+                "<img height='40%' width='40%' src='" +
                 navod[i]["img"] +
                 "' alt='" + navod[i]["img"] +
                 "'>" +
@@ -37,7 +37,23 @@ function loadUserGuide() {
                 "</span>"// +
                 //"<hr>"
         }
-        else {
+        else if (navod[i]["kostky"] === "" && navod[i]["pocet"] === "" && i > 0) {
+            navod[i]["img"] = "../src/img/postup/" + navod[i]["img"] + ".JPG"
+            document.getElementById('strany').innerHTML += "" +
+                "<span style='display: none' id='page" + i + "'>" +
+                "<button onclick='page(\"back\")' id='buttonPage" + i + "'>&lt;</button>" +
+                "<img height='40%' width='40%' src='" +
+                navod[i]["img"] +
+                "' alt='" + navod[i]["img"] +
+                "'>" +
+                "<button onclick='page(\"next\")' id='buttonPage" + i + "'>&gt;</button>" +
+                "<br>" +
+                "Strana " + iA1 +
+                "</span>"// +
+                //"<hr>"
+        }
+        else
+            {
             var kostkyLenght = navod[i]["kostky"].split(";").length
             function loadImgName() {
                 for (var index = 0; index < kostkyLenght; index++) {
@@ -122,7 +138,7 @@ function loadUserGuide() {
 
             document.getElementById('page' + i).innerHTML += "" +
                 "<button onclick='page(\"back\")' id='buttonPage" + i + "'>&lt;</button>" +
-                "<img height='100px' width='100px' src='" +
+                "<img height='40%' width='40%' src='" +
                 navod[i]["img"] +
                 "' alt='" + navod[i]["img"] +
                 "'>" +
@@ -133,7 +149,7 @@ function loadUserGuide() {
                 //"<hr>"
         }
     }
-    document.getElementById('page0').style.display = ""
+    document.getElementById('page' + document.location.search.split("?page=")[1]).style.display = ""
 }
 
 function page(to) {
@@ -144,12 +160,20 @@ function page(to) {
         //console.log("Back page")
         document.getElementById('page' + srcIdMin1).style.display = ""
         document.getElementById('page' + srcId).style.display = "none"
+        if (document.location.search !== "") {
+            var pageBez1 = parseInt(document.location.search.split("?page=")[1]) - 1
+            document.location.search = "?page=" + pageBez1
+        }
     }
     else if (to === "next") {
         //console.log("Next page")
         if (document.getElementById('page' + srcIdPlu1)) {
             document.getElementById('page' + srcIdPlu1).style.display = ""
             document.getElementById('page' + srcId).style.display = "none"
+            if (document.location.search !== "") {
+                var pageA1 = parseInt(document.location.search.split("?page=")[1]) + 1
+                document.location.search = "?page=" + pageA1
+            }
         }
     }
 }
