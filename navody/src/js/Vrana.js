@@ -182,267 +182,227 @@ var navod = [
         "img": "IMG_8621"
     },
     {
-        "kostky": "tmaveSede/IMG_",
-        "pocet": "",
+        "kostky": "tmaveSede/IMG_8991",
+        "pocet": "1",
         "img": "IMG_8622"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "tmaveSede/IMG_9018",
+        "pocet": "1",
         "img": "IMG_8623"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "modre/IMG_8970",
+        "pocet": "3",
         "img": "IMG_8624"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "tmaveSede/IMG_8991",
+        "pocet": "1",
         "img": "IMG_8625"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "modre/IMG_8926",
+        "pocet": "1",
         "img": "IMG_8626"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "modre/IMG_8926",
+        "pocet": "1",
         "img": "IMG_8627"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "cerne/IMG_",
+        "pocet": "2",
         "img": "IMG_8628"
     },
     {
-        "kostky": "/IMG_",
+        "kostky": "tmaveSede/IMG_",
         "pocet": "",
         "img": "IMG_8629"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "svetleSede/IMG_8891",
+        "pocet": "2",
         "img": "IMG_8630"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "modre/IMG_8983",
+        "pocet": "1",
         "img": "IMG_8631"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "modre/IMG_8983",
+        "pocet": "1",
         "img": "IMG_8632"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "svetleSede/IMG_8922",
+        "pocet": "1",
         "img": "IMG_8633"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "svetleSede/IMG_8922",
+        "pocet": "1",
         "img": "IMG_8634"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "zlate/IMG_8990",
+        "pocet": "1",
         "img": "IMG_8635"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "cerne/IMG_9005",
+        "pocet": "1",
         "img": "IMG_8636"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "tmaveSede/IMG_8885",
+        "pocet": "1",
         "img": "IMG_8637"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "tmaveSede/IMG_8885",
+        "pocet": "1",
         "img": "IMG_8638"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "modre/IMG_8898",
+        "pocet": "1",
         "img": "IMG_8639"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "svetleSede/IMG_8973",
+        "pocet": "1",
         "img": "IMG_8640"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "modre/IMG_8898",
+        "pocet": "1",
         "img": "IMG_8641"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "modre/IMG_8898",
+        "pocet": "1",
         "img": "IMG_8642"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "bile/IMG_8909",
+        "pocet": "2",
         "img": "IMG_8643"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "modre/IMG_8898",
+        "pocet": "2",
         "img": "IMG_8644"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "cerne/IMG_8967",
+        "pocet": "1",
         "img": "IMG_8645"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
-        "img": "IMG_8646"
-    },
-    {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "bile/IMG_8909",
+        "pocet": "2",
         "img": "IMG_8647"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "modre/IMG_8903",
+        "pocet": "1",
         "img": "IMG_8648"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
-        "img": "IMG_8649"
-    },
-    {
-        "kostky": "/IMG_",
-        "pocet": "",
-        "img": "IMG_8650"
-    },
-    {
-        "kostky": "/IMG_",
-        "pocet": "",
-        "img": "IMG_8651"
-    },
-    {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "modre/IMG_8948",
+        "pocet": "1",
         "img": "IMG_8652"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "modre/IMG_8948",
+        "pocet": "1",
         "img": "IMG_8653"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "modre/IMG_8948",
+        "pocet": "1",
         "img": "IMG_8654"
     },
     {
-        "kostky": "/IMG_",
+        "kostky": "",
         "pocet": "",
         "img": "IMG_8655"
     },
     {
-        "kostky": "/IMG_",
+        "kostky": "",
         "pocet": "",
         "img": "IMG_8656"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "cerne/IMG_8967",
+        "pocet": "1",
         "img": "IMG_8657"
     },
     {
-        "kostky": "/IMG_",
+        "kostky": "",
         "pocet": "",
         "img": "IMG_8658"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "modre/IMG_8923",
+        "pocet": "1",
         "img": "IMG_8659"
     },
     {
-        "kostky": "/IMG_",
+        "kostky": "",
         "pocet": "",
         "img": "IMG_8660"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "modre/IMG_8956",
+        "pocet": "2",
         "img": "IMG_8661"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "modre/IMG_8949",
+        "pocet": "2",
         "img": "IMG_8662"
     },
     {
-        "kostky": "/IMG_",
+        "kostky": "modre/IMG_",
         "pocet": "",
         "img": "IMG_8663"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "zlate/IMG_8988",
+        "pocet": "2",
         "img": "IMG_8664"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
-        "img": "IMG_8665"
-    },
-    {
-        "kostky": "/IMG_",
-        "pocet": "",
-        "img": "IMG_8666"
-    },
-    {
-        "kostky": "/IMG_",
-        "pocet": "",
-        "img": "IMG_8667"
-    },
-    {
-        "kostky": "/IMG_",
-        "pocet": "",
-        "img": "IMG_8668"
-    },
-    {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "cerne/IMG_9020",
+        "pocet": "2",
         "img": "IMG_8669"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "modre/IMG_8947",
+        "pocet": "2",
         "img": "IMG_8670"
     },
     {
-        "kostky": "/IMG_",
-        "pocet": "",
+        "kostky": "zlate/IMG_9006",
+        "pocet": "2",
         "img": "IMG_8671"
     },
     {
-        "kostky": "/IMG_",
+        "kostky": "",
         "pocet": "",
         "img": "IMG_8672"
     },
     {
-        "kostky": "/IMG_",
+        "kostky": "",
         "pocet": "",
         "img": "IMG_8673"
     },
     {
-        "kostky": "/IMG_",
+        "kostky": "",
         "pocet": "",
         "img": "IMG_8674"
     },

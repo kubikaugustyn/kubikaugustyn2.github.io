@@ -162,7 +162,7 @@ function page(to) {
         document.getElementById('page' + srcId).style.display = "none"
         if (document.location.search !== "") {
             var pageBez1 = parseInt(document.location.search.split("?page=")[1]) - 1
-            //document.location.search = "?page=" + pageBez1
+            document.location.search = "?page=" + pageBez1
         }
     }
     else if (to === "next") {
@@ -172,7 +172,7 @@ function page(to) {
             document.getElementById('page' + srcId).style.display = "none"
             if (document.location.search !== "") {
                 var pageA1 = parseInt(document.location.search.split("?page=")[1]) + 1
-                //document.location.search = "?page=" + pageA1
+                document.location.search = "?page=" + pageA1
             }
         }
     }
