@@ -12,10 +12,10 @@
     <script>
         var pageVariants = {
             "editorwebu" : "<br><a href='TataNarozeniny01/TataNarozeniny01.html'>Editor webu</a>"
-    }
+        }
 
     function onKeyPress() {
-        document.getElementById("poheslu").innerHTML = pageVariants[document.getElementById("heslo").value]
+        document.getElementById("poheslu").innerHTML = pageVariants[document.getElementById("heslo").value] || ""
     }
     </script>
 </head>
@@ -23,6 +23,7 @@
 <div><br><br><br><br><br><br></div>
 <input type="password" onkeyup="onKeyPress()" id="heslo">
 <div id="poheslu"></div>
+<a href="./Web%20Editor/Web_Editor.html">Editor Webu</a>
 
 <footer class="text-muted">
     <div class="container">

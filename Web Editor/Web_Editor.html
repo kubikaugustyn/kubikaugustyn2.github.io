@@ -3,45 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>c</title>
-    <style>@import "https://kubikaugustyn.github.io/src/css/min/bgr-clr.min.css";</style>
+    <!--<style>@import "https://kubikaugustyn.github.io/src/css/min/bgr-clr.min.css";</style>-->
     <style>@import "index.css";</style>
     <script src="index.js"></script>
 </head>
 <body onload="onLoad()">
-<div id="center">
-    <div id="controls_div">
-        <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green"
-                style="font-size:16px"
-                id="download_button" onclick="DownloadAsFile()
+<div id="left"><!-- onmousemove="LeftDivMouseChange(this)"-->
+    <div id="center">
+        <div id="controls_div">
+            <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green"
+                    style="font-size:16px"
+                    id="download_button" onclick="DownloadAsFile()
         ">
-            Download as Text File
-        </button>
-        <!--<button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green"
-                style="font-size:16px"
-                onclick="submitTryit(1);
-                ga('send', 'event', 'runCode', 'click');
-                snhb.queue.push(function(){googletag.pubads().setTargeting('page_section',(function () {var folder = location.pathname;folder = folder.replace('/', ''); folder = folder.substr(0, folder.indexOf('/')); return folder + 'tryitUA'; })());
-                snhb.startAuction(['try_it_leaderboard']);
-                });
+                Download as Text File
+            </button>
+            <!--<button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green"
+                    style="font-size:16px"
+                    onclick="submitTryit(1);
+                    ga('send', 'event', 'runCode', 'click');
+                    snhb.queue.push(function(){googletag.pubads().setTargeting('page_section',(function () {var folder = location.pathname;folder = folder.replace('/', ''); folder = folder.substr(0, folder.indexOf('/')); return folder + 'tryitUA'; })());
+                    snhb.startAuction(['try_it_leaderboard']);
+                    });
+            ">
+                Run »
+            </button>-->
+            <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green"
+                    style="font-size:16px"
+                    onclick="run(document.getElementById('IframeEdited'), 'a')
         ">
-            Run »
-        </button>-->
-        <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green"
-                style="font-size:16px"
-                onclick="run(document.getElementById('IframeEdited'), 'a')
+                Run »
+            </button>
+            <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green"
+                    style="font-size:16px"
+                    onclick="run('blank', 'b')
         ">
-            Run »
-        </button>
-        <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green"
-                style="font-size:16px"
-                onclick="run('blank', 'b')
-        ">
-            Run in new tab
-        </button>
+                Run in new tab
+            </button>
+        </div>
     </div>
-</div>
-<div id="left" onmousemove="LeftDivMouseChange(this)">
-<pre>
+    <br><br>
+    <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;

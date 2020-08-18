@@ -3,44 +3,31 @@
     width: 50%;
     overflow: hidden;
     text-align: center;
-    border: 10px solid black;
+    border: 10px;
     background-color: white;
-    --height: 266px;
+    height: 266px;
 }
-
 #left pre {
     text-align: left;
 }
-
 #left textarea {
     border: 0;
     padding: 0;
     resize: vertical;
 }
-
 #right {
     overflow: hidden;
     text-align: center;
-    border: 10px solid black;
+    border: 10px;
     --background-color: green;
-    height: 302px;
 }
-
-#right iframe {
-    border: 0;
-    height: 298px;
-    width: 635px;
-}
-
 #wrapper {
     border: 10px;
     --border-color: red;
 }
-
 #center {
     text-align: center;
 }
-
 #center #controls_div .w3-button {
     vertical-align: middle;
     overflow: hidden;
