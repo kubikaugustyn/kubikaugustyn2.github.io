@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>c</title>
+    <style>@import "https://kubikaugustyn.github.io/src/css/min/bgr-clr.min.css";</style>
+    <style>@import "index.css";</style>
+    <script src="index.js"></script>
+</head>
+<body onload="onLoad()">
+<div id="center">
+    <div id="controls_div">
+        <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green"
+                style="font-size:16px"
+                id="download_button" onclick="DownloadAsFile()
+        ">
+            Download as Text File
+        </button>
+        <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green"
+                style="font-size:16px"
+                onclick="run(document.getElementById('IframeEdited'), 'a')
+        ">
+            Run »
+        </button>
+        <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green"
+                style="font-size:16px"
+                onclick="run('blank', 'b')
+        ">
+            Run in new tab
+        </button>
+    </div>
+</div>
+<div id="left" onmousemove="LeftDivMouseChange(this)">
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+</pre>
+    <textarea id="head" style="height: 30px; width: 660px">
+   &lt;title&gt;Page title&lt;/title&gt;
+</textarea>
+    <pre>
+&lt;/head&gt;
+&lt;body&gt;
+</pre>
+    <textarea id="body" style="height: 30px; width: 660px">
+    &lt;h1&gt;Web editor&lt;/h1&gt;
+</textarea>
+    <pre>
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+<div id="right">
+    <iframe id="IframeEdited" src="Wiew_Edited_Web_Page.html"></iframe>
+    <script>
+        /*var url = "?" +
+            document.getElementById('body').value +
+            '&' +
+            document.getElementById('head').value
+        url = SearchAndReplace(SearchAndReplace(SearchAndReplace("" + url, "\n", ""), "\r", ""), "\t", "")
+        run(document.getElementById('IframeEdited'), 'a')
+        /*function download() {
+            var textToSave = getText();
+            setTimeout(function (){downloads(textToSave)}, 5000)
+            console.log(textToSave)
+        }*/
+        /*function downloads(textToSave) {
+            //console.log(textToSave)
+            textToSave = "data:attachment/text," + textToSave;
+            //console.log(textToSave)
+            var hiddenElement = document.createElement('a');
+            //var textToSave1 = textToSave;
+            hiddenElement.href = textToSave;
+            hiddenElement.target = '_blank';
+            hiddenElement.download = 'my_edited_html.html';
+            hiddenElement.click();
+        }*/
+        //document.getElementById('download_link').href = "./Wiew_Edited_Web_Page.html" + url
+        //document.getElementById('download_button').onclick = "getText()";
+    </script>
+</div>
+</body>
+</html>

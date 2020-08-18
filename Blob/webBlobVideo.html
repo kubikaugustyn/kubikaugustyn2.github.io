@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Untitled Document</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var elem = document.getElementById("myVideo");
+            var req = new XMLHttpRequest();
+            req.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    elem.appendChild(document.createElement("source"))
+                        .src = URL.createObjectURL(this.response);
+                }
+            };
+            //req.responseType = "arraybuffer"
+            req.responseType = "blob";
+            console.log(req.responseType)
+            req.open('GET', 'https://kubikaugustyn.github.io/ZitSvujSen.mp4', true);
+            req.send();
+        };
+    </script>
+</head>
+<body>
+<video id="myVideo" width="600" height="334" controls></video>
+</body>
+</html>

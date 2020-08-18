@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blob 1</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+
+<h1>My Page</h1>
+<p>Some paragraph.</p>
+<video id="playerVideo" width="320" height="240" autoplay="autoplay" muted>
+    Your browser does not support the video tag.
+</video>
+<br>
+<span id="blobURL"></span><br>
+<span id="download"></span>
+<script>
+    function setVideo(blob) {
+        var url = URL.createObjectURL(blob);
+        var video = document.getElementById('playerVideo');
+        video.type = "video/mp4";
+        video.src = url;
+        video.load();
+        download(url);
+    }
+
+    function download(blob_url) {
+        var fileName = "video.mp8";
+        var a = document.createElement('a');
+        a.href = blob_url;
+        a.download = fileName;
+        a.textContent = "DOWNLOAD " + fileName;
+        document.getElementById('blobURL').innerHTML = "BLOB URL: <b>" + blob_url + "</b>";
+        document.getElementById('download').appendChild(a);
+    }
+
+    $(document).ready(function () {
+        var xhr = new XMLHttpRequest();
+        xhr.responseType = 'blob';
+
+        xhr.onload = function () {
+            setVideo(xhr.response);
+        };
+
+        xhr.open('GET', 'https://cors-anywhere.herokuapp.com/http://techslides.com/demos/sample-videos/small.mp4');
+        xhr.send();
+
+    });
+</script>
+</body>
+</html>

@@ -9,6 +9,7 @@ function sendURL(URL) {
     fetch(`http://localhost:4000/download?URL=${URL}`, {
         method: 'GET'
     }).then(res => res.json())
-        .then(json => console.log(json));
+        .then(json => console.log(json))
+        .catch(e => console.log(e));
     window.location.href = `http://localhost:4000/download?URL=${URL}`;
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>d</title>
+    <style>@import "https://kubikaugustyn.github.io/src/css/min/bgr-clr.min.css";</style>
+    <script>
+        function onLoad() {
+            var body = document.location.search.split('?')[1].split('&')[0];
+            var head = document.location.search.split('?')[1].split('&')[1];
+
+            function SearchAndReplace(input, whatReplace, toWhatReplace) {
+                for (var i = 0; i === i, input.search(whatReplace) !== -1; i++) {
+                    input = input.replace(whatReplace, toWhatReplace)
+                }
+                return input
+            }
+
+            function SearchAndReplaceInBodyAndHead(whatReplace, toWhatReplace) {
+                body = SearchAndReplace(body, whatReplace, toWhatReplace)
+                head = SearchAndReplace(head, whatReplace, toWhatReplace)
+            }
+
+            SearchAndReplaceInBodyAndHead("%20", " ")
+            SearchAndReplaceInBodyAndHead("%3C", "<")
+            SearchAndReplaceInBodyAndHead("%3E", ">")
+            SearchAndReplaceInBodyAndHead("%C3%A1", "á")
+            document.body.innerHTML = body;
+            document.head.innerHTML = head;
+        }
+    </script>
+</head>
+<body onload="onLoad()">
+
+</body>
+</html>
