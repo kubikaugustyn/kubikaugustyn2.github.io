@@ -1,0 +1,279 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0.001;
+  }
+  99.9% {
+    opacity: 1.0;
+  }
+  100% {
+    opacity: inherit;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+#head {
+  background-color: black;
+  font-size: xx-large;
+  animation: fade-in ease 2s;
+  display: grid;
+  grid-template-columns: 1fr 5ex;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+}
+
+#logo {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 1;
+}
+
+#q {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 2;
+}
+
+#change-mode {
+  display: none;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row: 2;
+}
+
+#hints {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 3;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+body._pinnedToTop ul {
+  margin-top: 144px;
+}
+
+@media (min-width: 560px) {
+  #q {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  #change-mode {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 750px) {
+  body._pinnedToTop ul {
+    margin-top: 133px;
+  }
+}
+
+@media (min-width: 980px) {
+  body._pinnedToTop ul {
+    margin-top: 91px;
+  }
+
+  #head {
+    grid-template-columns: 450px 1fr 5ex;
+    grid-template-rows: 44px 1fr 1fr;
+  }
+
+  #logo {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  #q {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  #change-mode {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+
+  #hints {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+}
+
+@media (min-width: 100px) {
+
+  body._pinnedToTop #head {
+    grid-template-columns: minmax(200px, auto) 230px;
+    grid-template-rows: 1fr;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  body._pinnedToTop #logo {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: right;
+  }
+
+  body._pinnedToTop #q {
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  body._pinnedToTop #change-mode,
+  body._pinnedToTop #hints {
+    display: none;
+  }
+}
+
+#head._moving {
+  opacity: 0;
+  animation: fade-out ease 1s;
+}
+
+#head:not(._moving) {
+  opacity: inherit;
+}
+
+#head._pinnedToTop {
+  animation: fade-in ease 1s
+}
+
+#head h1 {
+  color: #555;
+  font: 26vw/21vw courier, monospace;
+  margin: 0;
+  padding: 0;
+  max-width: 500px;
+}
+
+@media (min-width: 400px) {
+  #head h1 {
+    font-size: 100px;
+    line-height: 110px;
+    margin-top: -10px;
+  }
+}
+
+#head._pinnedToTop h1 {
+  display: inline-block;
+  font: 6vw courier, monospace;
+  color: #aaa;
+  margin-bottom: -3px;
+}
+
+@media (min-width: 600px) {
+  #head._pinnedToTop h1 {
+    font-size: 36px;
+  }
+}
+
+#head h2 {
+  display: none;
+}
+
+@media (min-width: 400px) {
+  #head h2 {
+    display: block;
+    margin-left: 7px;
+    margin-top: -21px;
+    color: #aaa;
+    font: 22px/22px ImpactLabelReversedRegular, verdana;
+    max-width: 500px;
+  }
+
+  #head._pinnedToTop h2 {
+    display: none;
+  }
+}
+
+#head input {
+  background-color: #333333;
+  color: #FFFFFF;
+  font: xx-large/1.4 courier, monospaced;
+  padding: 0 8px;
+  border: none;
+}
+
+#head input:focus,
+#head select:focus {
+  outline-color: yellow;
+}
+
+#head select {
+  width: 11ex;
+}
+
+#head > p {
+  font: medium courier, monospace;
+  padding: 10px 2px 0 0;
+  color: #999;
+}
+
+#head p a,
+#head p a:link,
+#head p a:visited,
+#head p a:active {
+  background-color: #333;
+  color: #ccc;
+  text-decoration: none;
+  padding: 0 3px 1px 3px;
+  border-radius: 2px;
+  line-height: 1.1;
+  font-size: 21px;
+  box-shadow: 1px 1px #393939;
+}
+
+#head p a:hover {
+  background-color: #000;
+  color: white;
+  box-shadow: -1px -1px #393939;
+  position: relative;
+  left: 1px;
+  top: 1px;
+}
+
+#head a:hover {
+  color: yellow;
+}
+
+
+@media (min-width: 750px) {
+
+  #head._pinnedToTop h2 {
+    display: block;
+    margin-top: 3px;
+    font: 14px/14px ImpactLabelReversedRegular, verdana;
+  }
+
+  #head._pinnedToTop input {
+    width: 66vw;
+  }
+
+}
+
+@media (min-width: 1140px) {
+  #head h1 {
+    color: #fff;
+  }
+}
+
