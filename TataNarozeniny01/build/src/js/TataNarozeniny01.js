@@ -64,12 +64,6 @@ document.getElementById('body').innerHTML = makeInputInnerHTML
 function vymaz(covymaz) {
 document.getElementById(covymaz).value = ""
 }
-function cara() {
-return "<div class='divcara'></div>"
-}
-function button(classAttribute, onclickAttribute, innerHTML, afterButtonBr) {
-return "<button class='" + classAttribute + "' onclick='" + onclickAttribute + "'>" + innerHTML + "</button>" + (afterButtonBr ? "<br>" : "")
-}
 var makeElementInnerHTML =
 "<div class='divcenter center rounded'>Vytvořit<br>" +
 cara() +

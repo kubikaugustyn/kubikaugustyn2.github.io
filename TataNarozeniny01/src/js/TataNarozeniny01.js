@@ -81,19 +81,6 @@ function vymaz(covymaz) {
     document.getElementById(covymaz).value = ""
 }
 
-function cara() {
-    return "<div class='divcara'></div>"
-}
-
-function button(classAttribute, onclickAttribute, innerHTML, afterButtonBr) {
-    /*document.createElement("button")
-    buttonToReturn.className = classAttribute
-    buttonToReturn.onclick = onclickAttribute
-    buttonToReturn.innerHTML = innerHTML*/
-    //console.log("buttonToReturn: ", buttonToReturn)
-    return "<button class='" + classAttribute + "' onclick='" + onclickAttribute + "'>" + innerHTML + "</button>" + (afterButtonBr ? "<br>" : "")
-}
-
 var makeElementInnerHTML =
     "<div class='divcenter center rounded'>Vytvořit<br>" +
     cara() +
