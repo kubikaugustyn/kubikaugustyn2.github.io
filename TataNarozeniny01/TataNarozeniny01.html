@@ -4,26 +4,16 @@
     <meta charset="UTF-8">
     <title>Editor webu</title>
     <script>console.log("TataNarozeniny01.html...")</script>
-    <script src="TataNarozeniny01.js"></script>
-    <script src="VytvoritTlacitko01.js"></script>
-    <script src="VytvoritInput01.js"></script>
+    <script src="src/js/TataNarozeniny01.js"></script>
+    <script src="src/js/VytvoritTlacitko01.js"></script>
+    <script src="src/js/VytvoritInput01.js"></script>
     <noscript>Váš prohlížeč nepodporuje JavaScript!!!!!</noscript>
-    <link rel="stylesheet" href="TataNarozeniny01.css" type="text/css">
+    <link rel="stylesheet" href="src/css/TataNarozeniny01.css" type="text/css">
 </head>
-<body id="body"> <!--onload="makeadd()"-->
+<body id="body">
 <div onmousemove="pageBody()" onmousedown="pageBody()" onkeyup="pageBody()" onload="pageBody()">
-    <button class="kulatetlacitka" onmouseup="makeadd()">Přidat element</button><hr>
-
-    <!--<input onclick="vymaz();showMsg()" placeholder="Zde napište text do tlačítka." id="innertext" onkeyup="onInputKeyPress(event);nameload()">
-    <input onclick="vymaz1();showMsg1()" placeholder="Zde napište barvu pozadí(anglicky)." id="pozadi" size="30" onkeyup="onInputKeyPress1(event);nameload1()">
-    <button onclick="pridej()">Přidej tlačítko</button>--->
-    <div class="pridavacidivnatlacitka kulate" id="pridavacidivnatlacitka"><span class="yellow">Zde jsou všechny přidané elementy: </span></div>
-
-
-
-    <!--<div class="neviditelne" id="innertext1"></div>
-    <div class="neviditelne" id="pozadi1"></div>-->
-
+    <button class="roundedButtons" onmouseup="makeElement()">Přidat element</button><hr>
+    <div class="rounded" id="addingDivForEditedHTML"><span class="yellow">Zde jsou všechny přidané elementy: </span></div>
 </div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 body {
     background-color: #b1009c;
-    //#b1009c
+    /*#b1009c*/
 }
 
 .neviditelne {
@@ -8,7 +8,7 @@ body {
     color: #b1009c;
 }
 
-.pridavacidivnatlacitka {
+#addingDivForEditedHTML {
     border: 5px solid red;
     margin-bottom: 10px;
 }
@@ -32,23 +32,23 @@ body {
     border-radius: 10px;
 }
 
-.kulate {
+.rounded {
     border-radius: 10px;
 }
 
-.kulatetlacitka:hover {
+.roundedButtons:hover {
     background-color: green;
 }
 
-.kulatetlacitka {
+.roundedButtons {
     background-color: lightblue;
     border-radius: 10px;
     padding: 5px;
-    margin: 0px;
-    border: 0px;
+    margin: 0;
+    border: 0;
 }
 
-.kulatetlacitka:active {
+.roundedButtons:active {
     background-color: yellow;
 }
 

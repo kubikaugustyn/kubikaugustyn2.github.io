@@ -1,0 +1,45 @@
+body {
+background-color: #b1009c;
+}
+.neviditelne {
+background-color: #b1009c;
+color: #b1009c;
+}
+#addingDivForEditedHTML {
+border: 5px solid red;
+margin-bottom: 10px;
+}
+.yellow {
+color: yellow;
+}
+.center {
+text-align: center;
+}
+.divcenter {
+height: 200px;
+background-color: yellow;
+}
+.divcara {
+height: 15px;
+background-color: #ffc84d;
+border-radius: 10px;
+}
+.rounded {
+border-radius: 10px;
+}
+.roundedButtons:hover {
+background-color: green;
+}
+.roundedButtons {
+background-color: lightblue;
+border-radius: 10px;
+padding: 5px;
+margin: 0;
+border: 0;
+}
+.roundedButtons:active {
+background-color: yellow;
+}
+.cervene {
+background-color: red;
+}

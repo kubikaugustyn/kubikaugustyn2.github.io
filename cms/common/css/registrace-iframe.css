@@ -1,0 +1,688 @@
+.navigace .active {color: red; font-weight: bold;}
+.navigace .disabled {color: #ccc;}
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Verdana, "Bitstream Vera Sans", "DejaVu Sans", Tahoma, Geneva, Arial, Sans-serif;
+}
+
+a {
+	cursor: pointer;
+}
+
+.mt120 {
+	margin-top: 120px !important;
+}
+
+div.wrapper.outer {
+    min-width: 1200px;
+}
+
+div.background,
+div.background.profil.registrace div.content.profil div.osobni-udaje {
+	background-color: transparent;
+	background-image: none;
+}
+div.background {
+	min-width: 0;
+}
+div.content {
+	padding: 0;
+}
+div.background.profil.registrace div.content.profil div.osobni-udaje {
+	padding: 0;
+	width: 380px;
+}
+div.background.profil.registrace div.content.profil div.osobni-udaje div.form {
+	position: static;
+}
+
+div.background.profil.registrace div.content.profil div.osobni-udaje h2,
+div.background.profil.registrace div.content.profil div.osobni-udaje .after-registration {
+	text-align: center;
+}
+div.background.profil.registrace div.content.profil div.osobni-udaje a {
+	color: #F17322;
+	text-decoration: underline
+}
+
+html {
+	/*min-height: 390px;*/
+}
+
+.clr-contest {
+	color: #f46c30 !important;
+}
+
+div.box div.box-content p {
+  color: #666666;
+  font-size: 14px;
+	line-height: 24px;
+}
+
+div.box div.box-content p a {
+  color: #f46c30;
+	font-weight: bold;
+  text-decoration: underline;
+}
+
+div.box div.box-content p a:hover {
+    text-decoration: none;
+}
+
+#registrationForm label a {
+	text-decoration: underline;
+}
+
+#registrationForm label a:hover {
+	text-decoration: none;
+}
+
+div.box.w980 {
+	background: transparent url(/cms/porady/images/porady/bg-box-w980-registrace-bottom.png) no-repeat scroll left bottom;
+	padding: 0px 0px 15px 0px;
+	width: 980px;
+}
+
+div.box.w980 div.box-top {
+	background: transparent url(/cms/porady/images/porady/bg-box-w980-registrace-top.png) no-repeat scroll left top;
+	height: 15px;
+	width: 100%;
+}
+
+div.box.w980 div.box-content {
+	background: transparent url(/cms/porady/images/porady/bg-box-w980-registrace-content.png) repeat-y scroll left top;
+	padding: 10px 40px;
+	overflow: hidden;
+	min-height: 280px;
+	position: relative;
+}
+
+div#boxLogin {
+	padding: 16px 40px;
+	overflow: hidden;
+	max-width: 560px;
+}
+
+div#boxRegistrace {
+	padding: 6px 40px;
+}
+
+h2, div.box .box-content h2 {
+	color: #f46c30;
+	font-size: 24px;
+	margin: 8px 0px;
+	line-height: 28px;
+}
+
+label {
+	color: #666;
+	font-size: 12px;
+	clear: left;
+	float: left;
+	line-height: 24px;
+}
+
+/*div.zapomenute-heslo {
+	padding-left: 20px;
+}*/
+
+label.orange, a.zapomenute-heslo {
+	color: #f46c30;
+}
+
+a.zapomenute-heslo {
+	font-size: 10px;
+	cursor: pointer;
+	float: left;
+	line-height: 24px;
+	width: 194px;
+	text-align: right;
+	text-decoration: underline;
+}
+
+a.zapomenute-heslo:hover {
+	text-decoration: none;
+}
+
+input, div.registrovat a, a.continue, a.return, a.upravit, a.odeslat {
+	width: 230px;
+	height: 40px;
+	border: none;
+	clear: left;
+	float: left;
+	padding: 0px 10px;
+}
+
+input.css3[type="submit"], a.css3.submit {
+	cursor: pointer;
+	background: -webkit-linear-gradient(0deg,  rgba(241,115,34,1), rgba(254,152,86,1)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(0deg,  rgba(241,115,34,1), rgba(254,152,86,1)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(0deg,  rgba(241,115,34,1), rgba(254,152,86,1)); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(0deg,  rgba(241,115,34,1), rgba(254,152,86,1)); /* Standard syntax */
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	border-radius: 10px;
+
+	border: 1px solid #ad6435;
+	display: block;
+
+	line-height: 40px;
+	color: #fff;
+	text-align: center;
+	font-size: 14px;
+	font-family: Verdana, "Bitstream Vera Sans", "DejaVu Sans", Tahoma, Geneva, Arial, Sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+input.css3[type="submit"] {
+	height: 42px;
+}
+
+input.css3[type="submit"]:hover, a.css3.submit:hover {
+	background: -webkit-linear-gradient(0deg, rgba(254,152,86,1), rgba(241,115,34,1)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(0deg, rgba(254,152,86,1), rgba(241,115,34,1)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(0deg, rgba(254,152,86,1), rgba(241,115,34,1)); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(0deg, rgba(254,152,86,1), rgba(241,115,34,1)); /* Standard syntax */
+}
+
+.w200 {
+	width: 200px !important;
+}
+
+.w230 {
+	width: 230px !important;
+}
+
+.w240 {
+	width: 240px !important;
+}
+
+input[type="text"], input[type="password"] {
+	/*background: transparent url( /cms/common/images/form/bg-input-230x40-registrace.png) no-repeat scroll center top;*/
+	background: none;
+	border: 1px solid #e9b99b;
+	margin-bottom: 8px;
+	padding: 5px 10px;
+	width: 210px;
+	height: 30px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	background-color: #fff;
+}
+
+input[type="text"].error, input[type="password"].error, div.error + input {
+	border: 1px solid #e73939;
+}
+
+input[type="submit"].prihlasit {
+	background: transparent url( /cms/common/images/login/btn-prihlasit.png) no-repeat scroll center top;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+div.registrovat {
+	position: absolute;
+	top: 108px;
+	left: 350px;
+	font-size: 18px;
+	color: #666;
+	text-align: center;
+}
+
+div.registrovat a {
+	background: transparent url( /cms/common/images/login/btn-registrovat.png) no-repeat scroll center top;
+	margin-top: 10px;
+}
+
+input.odeslat {
+	background: transparent url( /cms/common/images/login/btn-odeslat.png) no-repeat scroll center top;
+	margin-top: 10px;
+	padding: 0px;
+}
+
+a.return {
+	background: transparent url( /cms/common/images/login/btn-az-jindy.png) no-repeat scroll center top;
+	clear: none;
+}
+
+a.upravit {
+	background: transparent url( /cms/common/images/login/btn-upravit-dvijce.png) no-repeat scroll center top;
+	margin-left: 75px;
+}
+
+div.regGender div.part.right {
+	top: 100px;
+}
+
+ul.gender li a {
+	width: 100px;
+	height: 91px;
+	display: block;
+}
+
+a.gender-male {
+	background: transparent url( /cms/moje-decko/images/profil/btn-kluk.png) no-repeat scroll center top;
+}
+
+a.gender-female {
+	background: transparent url( /cms/moje-decko/images/profil/btn-holka.png) no-repeat scroll center top;
+}
+
+ul.gender li:hover a, ul.gender li.active a {
+	background-position: center bottom;
+	/*	background: transparent url( /cms/moje-decko/images/profil/li-gender-hover.png) no-repeat scroll center center;*/
+}
+
+ul.gender {
+	/*	float: left;*/
+	padding-left: 0px;
+	margin-top: 6px;
+}
+
+ul.gender li {
+	list-style: none;
+	width: 100px;
+	height: 101px;
+	float: left;
+	margin-right: 25px;
+	color: #999999;
+	text-align: center;
+	line-height: 40px;
+	font-size: 11px;
+}
+
+a.continue {
+	background: transparent url( /cms/common/images/login/btn-pokracovat.png) no-repeat scroll center top;
+	margin-top: 6px;
+	padding: 0px;
+}
+
+input.zaregistrovat {
+	background: transparent url( /cms/common/images/login/btn-dokoncit.png) no-repeat scroll center top;
+	margin-top: 15px;
+}
+
+input[type="submit"]:hover, div.registrovat a:hover, a.continue:hover, input.zaregistrovat:hover,
+a.return:hover, a.upravit:hover, a.odeslat:hover {
+	background-position: bottom center;
+}
+
+div.part {
+	position: absolute;
+}
+
+div.part.left {
+	left: 70px;
+	font-size: 18px;
+	color: #666;
+	text-align: left;
+	top: 170px;
+}
+
+div.part.right {
+	left: 390px;
+	top: 150px;
+}
+
+div.regHeslo div.part.right {
+	top: 94px;
+}
+
+div.regEmail div.part.right {
+	/*top: 130px;*/
+	top: 110px;
+	left: 340px;
+}
+
+div.checkbox {
+	clear: left;
+	padding-top: 4px;
+}
+
+div.checkbox label {
+	font-size: 10px;
+	color: #333;
+	clear: none;
+	line-height: 20px;
+}
+
+div.checkbox label.error {
+	color: #fff;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+div.checkbox label.two-rows {
+	line-height: 12px;
+}
+
+div.checkbox input {
+	float: left;
+	width: 14px;
+	height: 14px;
+}
+
+div.navigace a, div.navigace span {
+	width: 54px;
+	height: 54px;
+	display: block;
+	margin-right: 25px;
+	float: left;
+	cursor: pointer;
+}
+
+div.navigace a.zpet {
+	background: transparent url( /cms/common/images/login/btn-zpet.png) no-repeat scroll center top;
+}
+
+div.navigace span.step1 {
+	background: transparent url( /cms/common/images/login/btn-1.png) no-repeat scroll center top;
+}
+div.navigace span.step2 {
+	background: transparent url( /cms/common/images/login/btn-2.png) no-repeat scroll center top;
+}
+div.navigace span.step3 {
+	background: transparent url( /cms/common/images/login/btn-3.png) no-repeat scroll center top;
+}
+div.navigace span.step4 {
+	background: transparent url( /cms/common/images/login/btn-4.png) no-repeat scroll center top;
+}
+div.navigace span.step5 {
+	background: transparent url( /cms/common/images/login/btn-5.png) no-repeat scroll center top;
+}
+
+div.navigace span.finished {
+	cursor: default;
+	pointer-events: none;
+	background-position: center bottom;
+}
+
+div.navigace span.active, div.navigace span.active:hover {
+	background-position: center center;
+	cursor: default;
+	pointer-events: none;
+}
+
+div.navigace a:hover, div.navigace span:hover {
+	background-position: center center;
+}
+
+div.navigace span.disabled, div.navigace a.zpet:hover, div.navigace span.disabled:hover {
+	background-position: center bottom;
+}
+
+div.navigace span.disabled {
+	cursor: default;
+	pointer-events: none;
+}
+
+div.osobni-udaje {
+	padding: 50px 0px 0px 80px;
+}
+
+div.osobni-udaje div p {
+	font-size: 18px;
+	color: #666;
+}
+
+div.osobni-udaje div p, div.osobni-udaje div h2 {
+	text-align: center;
+	width: 500px;
+}
+
+div.after-registration {
+	padding-top: 83px;
+}
+
+div.after-registration img {
+    position: absolute;
+    bottom: 98px;
+    left: 148px;
+}
+
+.login div.duhacek, .mail-delivery-state div.duhacek {
+	top: 30px;
+	right: 30px;
+}
+
+div.box div.box-content p.notNow {
+	float: left;
+	line-height: 40px;
+	margin: 0px 0px 0px 40px;
+}
+
+.registration-ok div.duhacek {
+    background: transparent url(/cms/common/images/login/img-logo.png) no-repeat scroll center center;
+    width: 178px;
+    height: 150px;
+    position: absolute;
+    top: 80px;
+    right: 80px;
+}
+
+div.duhacek {
+	background: transparent url(/cms/common/images/login/img-logo.png) no-repeat scroll center center;
+	width: 178px;
+	height: 150px;
+	position: absolute;
+	top: 80px;
+	right: 80px;
+}
+
+div.duhacek.btm {
+	top: auto;
+	bottom: 20px;
+}
+
+div.duhacek.rgt {
+	right: 10px;
+	left: auto;
+}
+
+div.sheep {
+	background: transparent url(/cms/common/images/common/sheep.png) no-repeat scroll center center;
+	width: 260px;
+	height: 200px;
+	position: absolute;
+	top: 20px;
+	right: 0px;
+}
+
+div.block {
+	position: relative;
+	/*overflow: hidden;*/
+	clear: left;
+}
+
+div.error p, label.error, div.box div.box-content div.error p, div.box div.box-content label.error {
+	/*	background: transparent url( /cms/common/images/login/bg-error-red.png) no-repeat scroll left center;*/
+	background-color: #c51616;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	/*	width: 134px;
+		height: 50px;*/
+	padding: 10px 10px 14px;
+    color: #fff;
+    font-size: 12px;
+	/*    float: none;*/
+    clear: none;
+	/*	margin: -8px 0px 0px 4px;*/
+	line-height: 16px;
+	display: block;
+	max-width: 108px;
+}
+
+div.error {
+	background: transparent url( /cms/common/images/login/bg-error-red-pointer.png) no-repeat scroll left center;
+	padding-left: 8px;
+    clear: none;
+	margin-left: 180px;
+	line-height: 16px;
+	display: block;
+	position: absolute;
+	width: 140px;
+	z-index: 999;
+}
+
+
+#profileDeniedByEmailOwner div.error {
+    left: 51px;
+    top: 16px;
+}
+
+#profileDeniedByEmailOwner div.server.error {
+    left: 110px;
+    top: 65px;
+}
+
+#profileDeniedByEmailOwner div.server.email.error {
+     top: 206px;
+}
+
+.regEmail.step3 #f_email + div.error {
+    top: 14px;
+    left: 60px;
+}
+
+input#f_nick + div.error {
+	top: 12px;
+}
+
+div.box div.box-content .regNick.step1 div.error label.error,
+div.box div.box-content div.error.j_username p {
+	max-width: none;
+}
+
+div.box div.box-content .regNick.step1 div.error {
+    width: 180px;
+}
+
+input#f_gender + div.error {
+	right: -120px;
+}
+
+input#f_password_confirmation + div.error {
+	top: 16px;
+}
+
+input[name=j_username] + div.error {
+	margin-left: 230px;
+	top: -10px;
+}
+
+input[name=agreement] + div.error {
+	left: 60px;
+}
+
+input#f_password + div.error {
+	margin-top: 14px;
+}
+
+.zapomenute-heslo input#f_password + div.error {
+	margin-top: 0px;
+}
+
+#forgottenPasswordForm div.server.error {
+	margin-left: 230px;
+	top: 10px;
+}
+
+div.error.e1 {
+    position: absolute;
+    left: 274px;
+    z-index: 9999;
+    top: 118px;
+}
+
+label.error.e1 {
+	position: absolute;
+	left: 230px;
+	top: 20px;
+}
+
+.checkbox div.error {
+	float: right;
+	margin-top: -24px;
+}
+.regGender div.error {
+	float: right;
+	margin-top: 10px;
+}
+
+div.box div.box-content .agreementBox .text {
+	font-size: 11px;
+	line-height: 12px;
+	padding: 0;
+}
+div.box div.box-content .agreementBox .text p {
+	color: #000000;
+	font-size: 11px;
+	line-height: 11px;
+	margin: 10px 0;
+}
+div.box div.box-content .agreementBox .zpet {
+	margin: 5px 10px 0 10px;
+	text-align: center;	
+	font-size: 14px;
+}
+div.box div.box-content .agreementBox .zpet a {
+	color: #f46c30;
+}
+
+#passwdSent h1 {
+	color: #f46c30;
+	padding: 50px 0px 0px 100px;
+}
+
+#passwdSent div {
+	width: 700px;
+	text-align: center;
+	font-size: 20px;
+	color: #666;
+}
+
+#Form input#f_password + div.error {
+    margin-top: -14px;
+	left: 70px;
+}
+
+#boxLogin a.info {
+	background: transparent url(/cms/common/images/form/ico-info-red.png) no-repeat scroll left top;
+	height: 15px;
+	width: 15px;
+	display: inline-block;
+}
+
+#boxLogin a.info:hover {
+	background-position: left bottom;
+}
+
+#boxLogin div.info-text {
+	background: transparent url(/cms/common/images/form/bg-error-red-pointer-top.png) no-repeat scroll center 0px;
+	width: 340px;
+	padding-top: 7px;
+	display: none;
+	left: -7px;
+    top: 130px;
+}
+
+.mail-delivery-state {
+	max-width: 560px;
+}
+
+.narrow {
+	max-width: 600px;
+}
+div.block.h-96 {
+	height: 96px;
+}
+
+/* div pages */
+body.div-background div.footer div.duhacek-motive {
+    display: none !important;
+}
