@@ -14,7 +14,7 @@ var pageVariants = {
 
     "dddd": "<a href='Html/PoHeslu.html'>Kubíkův web</a>",
 
-    "eee" : "Ahoj Ondro!!!<br><a href='Ondra/Ondra1.html'>Ondráškův web</a>",
+    "eee" : "Ahoj Ondro!!!<br><a href='Ondra/index.html'>Ondráškův web</a>",
 
     "test" : "<a href='Testy.html'>Testy</a>",
 

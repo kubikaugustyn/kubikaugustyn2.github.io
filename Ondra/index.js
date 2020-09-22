@@ -1,7 +1,7 @@
 console.log("Checking Ondra1.js")
 
-function Login1() {
-    console.log("function Login1()");
+function Login() {
+    console.log("function Login()");
     document.getElementById("div1").innerHTML = password[document.getElementById("heslo").value] || ""
 }
 

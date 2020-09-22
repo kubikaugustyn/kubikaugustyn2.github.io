@@ -28,7 +28,7 @@ function setResetButton(){
 }
 
 function checkUserName(sender) {
-    console.log("function Login1(", sender, ")");
+    console.log("function Login(", sender, ")");
     var result = (userCredits[document.getElementById("UserNameInput").value] !== undefined) || false
     setLockIcon("UserNameIcon", result)
     UserNameIsGood = result

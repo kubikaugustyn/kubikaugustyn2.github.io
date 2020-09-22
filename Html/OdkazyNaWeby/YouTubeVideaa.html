@@ -3,20 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>YouTube videa</title>
-    <style>
-        body {
-            background-color: lightblue;
-            text-align: center;
-        }
-    </style>
+    <style>@import "https://kubikaugustyn.github.io/src/css/min/bgr-clr.min.css";</style>
     <script>
-    var pageVariants = {
-        "youtube" : "<br><a href='YouTubeVideab.html'>YouTube videa</a>"
-    }
-
-    function heslo() {
-        document.getElementById("poheslu").innerHTML = pageVariants[document.getElementById("heslo").value]
-    }
+        function heslo() {
+            if (document.getElementById("heslo").value === "youtube") {
+                document.getElementById("poheslu").innerHTML = "<a href='YouTubeVideab.html'>YouTube videa</a>"
+            }
+        }
     </script>
 </head>
 <body>
