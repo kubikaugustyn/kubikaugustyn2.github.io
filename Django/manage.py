@@ -31,3 +31,5 @@ if __name__ == '__main__':
 
 
 #'C:\\Users\\Radek Augustyn\\AppData\\Local\\Programs\\Python\\Python38-32\\lib\\site-packages\\django'
+#https://docs.djangoproject.com/en/3.1/intro/tutorial07/
+#http://localhost:8000/
