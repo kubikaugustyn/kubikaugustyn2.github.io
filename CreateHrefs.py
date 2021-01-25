@@ -4,7 +4,11 @@ __author__ = "kubik.augustyn@post.cz"
 import MyTools.DirectoryBuildHrefsToAllFilesAndDirsToHTML.builder as builder
 
 if __name__ == '__main__':
-    path = "C:\\Users\\Augustynovi\\Desktop\\Kubik\\programming"
-    notGoToDirs = (".git", ".idea", "MyTools", "Amp_What", "Downloads", "src", "")
-    notGoToFileExtension = (".js", ".css", ".py", ".gitignoreddd", ".ttf", ".mp4")
+    path = "C:\\Users\\Radek Augustyn\\Desktop\\Kubik\\kubikaugustyn.github.io"
+    notGoToDirs = (".git", ".idea", "MyTools", "Amp_What", "Downloads", "src", "cms", "decko")
+    notGoToFileExtension = (
+        ".js", ".css", ".py", ".gitignoreddd", ".ttf", ".mp4", ".txt", "0", "a", "c", "f", "i", "j", "k", "l", "o", "p",
+        "t",
+        "u",
+        "y", "z")
     builder.Build(path, notGoToDirs, notGoToFileExtension)

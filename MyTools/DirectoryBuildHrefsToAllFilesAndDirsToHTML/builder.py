@@ -8,7 +8,8 @@ __author__ = "kubik.augustyn@post.cz"
 
 sep = os.path.sep
 
-HTMLFile = open("C:\\Users\\Augustynovi\\Desktop\\Kubik\\programming\\MyTools\\DirectoryBuildHrefsToAllFilesAndDirsToHTML\\Template.html", "r")
+#HTMLFile = open("C:\\Users\\Augustynovi\\Desktop\\Kubik\\programming\\MyTools\\DirectoryBuildHrefsToAllFilesAndDirsToHTML\\Template.html", "r")
+HTMLFile = open(os.path.dirname(__file__)+sep+"Template.html", "r")
 HTMLFileTemplate = HTMLFile.read()
 Files = []
 
@@ -37,22 +38,23 @@ def ListDir(path, notGoToDirs, notGoToFileExtension):
     for file in dirs:
         if not os.path.isdir(path + sep + file):
             if not os.path.splitext(path + sep + file)[1] in notGoToFileExtension:
-                print(file, os.path.isdir(path + sep + file))
+                print(file, "   Is directory: ",os.path.isdir(path + sep + file))
                 Files.append(path+sep+file)
     return 0
 
 def Build(path, notGoToDirs, notGoToFileExtension):
-    print(path)
+    print("Buiding hrefs to files in directory "+path)
     File = open(path+sep+"DirectoryHrefs.html", "w+")
     ListDir(path, notGoToDirs, notGoToFileExtension)
     Hrefs = """"""
-    for file in Files:
-        Hrefs += f"\t<a target='blank' href='{file}'>{file}</a><br>\n"
+    for fileName in Files:
+        Hrefs += f"\t<a target='blank' href='{fileName}'>{fileName}</a><br>\n"
     #HTMLFileTemplate.replace("<HREFS />", Hrefs)
     Output = HTMLFileTemplate.replace("<HREFS />", Hrefs).replace(path+sep, ".\\")
     File.write(Output)
     return 0
 
 if __name__ == '__main__':
-    path = "C:\\Users\\Augustynovi\\Desktop\\Kubik\\programming\\MyTools"
+    #path = "C:\\Users\\Augustynovi\\Desktop\\Kubik\\programming\\MyTools"
+    path = "C:\\Users\\Radek Augustyn\\Desktop\\Kubik\\kubikaugustyn.github.io\\MyTools"
     Build(path, (), ())

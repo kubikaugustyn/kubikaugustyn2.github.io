@@ -5,13 +5,13 @@ import os
 
 
 def convert(path, downloadedFileName):
-    print path, downloadedFileName
+    print (path, downloadedFileName)
     filesDir = path + os.path.sep + downloadedFileName + "_files"
     dirs = os.listdir(filesDir)
     for file in dirs:
         if not os.path.isdir(filesDir + os.path.sep + file):
             #print os.path.splitext(file)[0]
-            print file
+            print (file)
             #file = file.replace("\x9e", "ž")
             #file = file.replace("\xfd", "ý")
             OldFile = open(file, "r")

@@ -34,6 +34,7 @@ def buildFile(fileName="", FileDirFullPath="", FileBuildingStartingPath=""):
             FileNoteOnOneLine = ""
             FileNoteOnMoreLinesStart = ""
             FileNoteOnMoreLinesEnd = ""
+            #Definice poznamek
             if FileExtension == ".js":
                 FileNoteOnOneLine = "//"
                 FileNoteOnMoreLinesStart = "/*"
@@ -54,7 +55,7 @@ def buildFile(fileName="", FileDirFullPath="", FileBuildingStartingPath=""):
             FileValue = FileValue.split("\n")
             FileCurrentLineIsToPrint = True
             for FileValueLine in FileValue:
-                FileValueLine = FileValueLine.replace("    ", "")
+                FileValueLine = FileValueLine.replace("    ", "")#Smaze tabulatory
                 PrintFileCurrentLineByMoreLines = False
                 PrintFileCurrentLineByOneLine = False
                 PrintFileCurrentLineByLineNothing = FileValueLine == ""
