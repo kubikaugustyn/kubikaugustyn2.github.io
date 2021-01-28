@@ -222,7 +222,8 @@ function existsColor(color) {
         "darkgray": "tmavěšedá",
         "gray": "šedá",
         "black": "černá",
-        "brown": "hnědá"
+        "brown": "hnědá",
+        "beige": "béžová"
     }
     for (var englishColor in englishToCzechColors) {
         if(color === englishColor) {
