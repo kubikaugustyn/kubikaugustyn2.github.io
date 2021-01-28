@@ -535,7 +535,7 @@
                     },
                     s = t.iframe ? "" : o + ",resizable,scrollbars",
                     a = window.open(e, t.windowName || "dropbox", s);
-                if (!a) throw new Error("Failed to open/load the window. Dropbox.choose and Dropbox.save should only be called from within a user-triggered event handler such as a tap or click event.");
+                if (!a) throw new Error("Failed to openCode/load the window. Dropbox.choose and Dropbox.save should only be called from within a user-triggered event handler such as a tap or click event.");
                 a.focus();
                 var c = setInterval(function()
                 {
@@ -1098,7 +1098,7 @@
             {
                 var i = n.popupDimensionsString(t.width, t.height) + ",resizable,scrollbars",
                     s = window.open(o, "_blank", i);
-                if (null === s) throw new Error("Failed to open the window. Dropbox popups may only be attached to a user-triggered event handler such as a tap or click event.");
+                if (null === s) throw new Error("Failed to openCode the window. Dropbox popups may only be attached to a user-triggered event handler such as a tap or click event.");
                 return s.focus(), new e(s, r)
             }, e
         }();

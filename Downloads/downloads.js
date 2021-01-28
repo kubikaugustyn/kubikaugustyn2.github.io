@@ -3051,7 +3051,7 @@ Polymer({
     {
         role: "alert"
     },
-    observers: ["resetAutoHide_(duration, open)"],
+    observers: ["resetAutoHide_(duration, openCode)"],
     hideTimeoutId_: null,
     resetAutoHide_()
     {
@@ -6253,7 +6253,7 @@ iron-icon {
     },
     getManagementString_()
     {
-        // 
+        //
         return this.i18nAdvanced("browserManagedByOrg")
     }
 });
@@ -8071,7 +8071,7 @@ const FindShortcutManager = (() =>
             e.preventDefault()
         }
     });
-    window.addEventListener("cr-dialog-open", () =>
+    window.addEventListener("cr-dialog-openCode", () =>
     {
         modalContextOpen = true
     });

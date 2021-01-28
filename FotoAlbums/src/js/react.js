@@ -1227,7 +1227,7 @@ var setInnerHTML = _dereq_(137);
 var setTextContent = _dereq_(138);
 
 function getNodeAfter(parentNode, node) {
-  // Special case for text components, which return [open, close] comments
+  // Special case for text components, which return [openCode, close] comments
   // from getNativeNode.
   if (Array.isArray(node)) {
     node = node[1];
@@ -7274,7 +7274,7 @@ ReactDOMComponent.Mixin = {
   },
 
   /**
-   * Creates markup for the open tag and all attributes.
+   * Creates markup for the openCode tag and all attributes.
    *
    * This method has side effects because events get registered.
    *
@@ -16260,7 +16260,7 @@ var Mixin = {
    * invoked).
    */
   closeAll: function (startIndex) {
-    !this.isInTransaction() ? "development" !== 'production' ? invariant(false, 'Transaction.closeAll(): Cannot close transaction when none are open.') : invariant(false) : void 0;
+    !this.isInTransaction() ? "development" !== 'production' ? invariant(false, 'Transaction.closeAll(): Cannot close transaction when none are openCode.') : invariant(false) : void 0;
     var transactionWrappers = this.transactionWrappers;
     for (var i = startIndex; i < transactionWrappers.length; i++) {
       var wrapper = transactionWrappers[i];
@@ -19396,7 +19396,7 @@ module.exports = performanceNow;
  * of patent rights can be found in the PATENTS file in the same directory.
  *
  * @typechecks
- * 
+ *
  */
 
 /*eslint-disable no-self-compare */

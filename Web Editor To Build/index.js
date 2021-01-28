@@ -4,7 +4,7 @@ function DownloadAsFile() {
     // read text from URL location
     var request = new XMLHttpRequest();
     request.open('GET', "./Wiew_Edited_Web_Page.html" + url, true);
-    //request.open('GET', "https://www.youtube.com/embed/5zlOHpoARRA", true);
+    //request.openCode('GET', "https://www.youtube.com/embed/5zlOHpoARRA", true);
     request.send(null);
     request.onreadystatechange = function () {
         if (request.readyState === 4 && request.status === 200) {

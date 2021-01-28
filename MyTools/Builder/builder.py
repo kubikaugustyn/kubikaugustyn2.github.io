@@ -14,7 +14,7 @@ def buildFilesInDir(path=""):
             elif dirname == path and 'build' not in dirnames:
                 os.mkdir(dirname + os.sep + "build")
                 """print dirname + os.sep + "build" + os.sep + "build.txt"
-                File = open(dirname + os.sep + "build" + os.sep + "build.txt", "w")
+                File = openCode(dirname + os.sep + "build" + os.sep + "build.txt", "w")
                 File.write(path)
                 File.close()"""
             """if '__init__.py' in filenames:

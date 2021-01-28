@@ -30,6 +30,6 @@ function closeFullscreen() {
             document.msExitFullscreen();
         }
     }
-    document.getElementById('fullscreen_panel').innerHTML = '<img class="red" width="1%" src="./src/fullscreen_open.jpg" alt="open fullscreen" onclick="openFullscreen()">'
+    document.getElementById('fullscreen_panel').innerHTML = '<img class="red" width="1%" src="./src/fullscreen_open.jpg" alt="openCode fullscreen" onclick="openFullscreen()">'
     fullscreenopen = false
 }

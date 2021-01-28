@@ -165,7 +165,10 @@ function loadColor() {
 
 function colorName() {
     console.log(document.getElementById('colorName').value)
-    document.getElementById('pickedColor').backgroundcolor = /*'green'*/document.getElementById('colorName').value
+    if(existsColor(document.getElementById('colorName').value)){
+        document.getElementById('pickedColor').style.backgroundColor = document.getElementById('colorName').value
+    }
+    /*document.getElementById('pickedColor').style.backgroundColor = document.getElementById('colorName').value*/
     //document.getElementById('pickedColor').style.backgroundcolor = 'blue'
     console.log(document.getElementById('pickedColor'), document.getElementById('pickedColor').style)
     /*document.getElementById('R').value = RGBToColorComponents(getStyle(testDiv, "background-color"))[0]
@@ -188,4 +191,43 @@ function Hex() {
 
 function HSL() {
     console.log("hsl(", document.getElementById('H').value, ", ", document.getElementById('S').value, ", ", document.getElementById('L').value)
+}
+
+
+
+
+function existsColor(color) {
+    var englishToCzechColors = {
+        "lightblue": "světlemodrá",
+        "lightgreen": "světlezelená",
+        "lightyellow": "světležlutá",
+        "lightgray": "světlešedá",
+        "red": "červená",
+        "darkblue": "tmavěmodrá",
+        "violet": "fialová",
+        "blueviolet": "modrofialová",
+        "blue": "modrá",
+        "green": "zelená",
+        "darkgreen": "tmavězelená",
+        "greenyellow": "zelenožlutá",
+        "darkred": "tmavěčervená",
+        "orangered": "oranžovočervená",
+        "gold": "zlatá",
+        "orange": "oranžová",
+        "darkorange": "tmavěoranžová",
+        "yellow": "žlutá",
+        "darkviolet": "tmavěfialová",
+        "pink": "růžová",
+        "white": "bílá",
+        "darkgray": "tmavěšedá",
+        "gray": "šedá",
+        "black": "černá",
+        "brown": "hnědá"
+    }
+    for (var englishColor in englishToCzechColors) {
+        if(color === englishColor) {
+            return true
+        }
+    }
+    return false
 }

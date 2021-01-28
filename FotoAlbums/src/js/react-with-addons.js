@@ -1227,7 +1227,7 @@ var setInnerHTML = _dereq_(150);
 var setTextContent = _dereq_(151);
 
 function getNodeAfter(parentNode, node) {
-  // Special case for text components, which return [open, close] comments
+  // Special case for text components, which return [openCode, close] comments
   // from getNativeNode.
   if (Array.isArray(node)) {
     node = node[1];
@@ -7609,7 +7609,7 @@ ReactDOMComponent.Mixin = {
   },
 
   /**
-   * Creates markup for the open tag and all attributes.
+   * Creates markup for the openCode tag and all attributes.
    *
    * This method has side effects because events get registered.
    *
@@ -11633,7 +11633,7 @@ module.exports = ReactInvalidSetStateWarningDevTool;
 var React = _dereq_(27);
 
 /**
- * Deprecated: An an easy way to express two-way binding with React. 
+ * Deprecated: An an easy way to express two-way binding with React.
  * See https://facebook.github.io/react/docs/two-way-binding-helpers.html
  *
  * @param {*} value current value of the link
@@ -18192,7 +18192,7 @@ var Mixin = {
    * invoked).
    */
   closeAll: function (startIndex) {
-    !this.isInTransaction() ? "development" !== 'production' ? invariant(false, 'Transaction.closeAll(): Cannot close transaction when none are open.') : invariant(false) : void 0;
+    !this.isInTransaction() ? "development" !== 'production' ? invariant(false, 'Transaction.closeAll(): Cannot close transaction when none are openCode.') : invariant(false) : void 0;
     var transactionWrappers = this.transactionWrappers;
     for (var i = startIndex; i < transactionWrappers.length; i++) {
       var wrapper = transactionWrappers[i];
@@ -21589,7 +21589,7 @@ module.exports = performanceNow;
  * of patent rights can be found in the PATENTS file in the same directory.
  *
  * @typechecks
- * 
+ *
  */
 
 /*eslint-disable no-self-compare */

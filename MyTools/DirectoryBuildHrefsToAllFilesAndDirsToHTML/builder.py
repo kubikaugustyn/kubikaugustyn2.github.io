@@ -8,7 +8,7 @@ __author__ = "kubik.augustyn@post.cz"
 
 sep = os.path.sep
 
-#HTMLFile = open("C:\\Users\\Augustynovi\\Desktop\\Kubik\\programming\\MyTools\\DirectoryBuildHrefsToAllFilesAndDirsToHTML\\Template.html", "r")
+#HTMLFile = openCode("C:\\Users\\Augustynovi\\Desktop\\Kubik\\programming\\MyTools\\DirectoryBuildHrefsToAllFilesAndDirsToHTML\\Template.html", "r")
 HTMLFile = open(os.path.dirname(__file__)+sep+"Template.html", "r")
 HTMLFileTemplate = HTMLFile.read()
 Files = []
