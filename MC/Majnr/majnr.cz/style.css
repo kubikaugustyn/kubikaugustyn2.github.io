@@ -1,0 +1,205 @@
+/* Filip Znachor // znachor.cz 2020/8 */
+
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {background: #000; color: #fff; font-family: 'Open Sans', sans-serif; transition: opacity .3s}
+body.hidden {opacity: 0; transition: opacity 0s}
+
+/* scrollbar */
+::-webkit-scrollbar {width: 16px;}
+::-webkit-scrollbar-track {background: transparent; }
+::-webkit-scrollbar-thumb {background: #10181b;}
+::-webkit-scrollbar-thumb:hover {background: #3a4447;}
+::-webkit-scrollbar-corner {background: #10181b;}
+
+.catamaran {font-family: Catamaran, sans-serif;}
+
+/* Nav */
+
+nav {padding-top: 10px; z-index: 10; transition: border-bottom .3s, padding-top .2s, height .2s, background-image .3s; background-image: linear-gradient(to bottom, transparent, transparent); position: fixed; top: 0; left: 0; width: 100%; height: 80px}
+nav > .inner {font-size: 17px; max-width: 1300px; margin: auto; padding: 10px 40px}
+nav.floating {padding-top: 0px; background-image: linear-gradient(to bottom, #000, transparent);}
+
+nav .logo {transition: opacity .3s; cursor: pointer; height: 40px; opacity: 1; padding: 5px; margin: 5px; float: left; margin-top: 10px}
+nav .logo:hover {opacity: .5;}
+nav .logo img {height: 100%; margin-top: 1px; transition: height .2s, margin-top .2s; float: left;}
+
+nav .item {border-radius: 100px; transition: color .2s, background .2s; cursor: pointer; height: 30px; line-height: 20px; padding: 5px 10px; margin: 5px; float: left; margin-top: 16px; color: #c4c4c4;}
+nav .item.r {float: right}
+nav .item:hover {color: #fff}
+nav .logo2 {line-height: 20px; margin: 6px 0px; margin-left: 15px; white-space: nowrap; float: left; float: left;}
+
+/* Section System */
+
+.section {position: relative; overflow: hidden;}
+.section > * {position: relative; z-index: 1}
+.section > .inner > * {position: relative; z-index: 1}
+
+.section .centered {width: 100%; height: 100%; display: table}
+.section .centered .inner {display: table-cell; text-align: center; vertical-align: middle;}
+
+.section .grid {display: grid; grid-gap: 0em;}
+.section > .inner {padding: 50px; padding-top: 80px; padding-bottom: 80px; margin: auto; max-width: 1300px;}
+.section > .inner.fwidth {max-width: 1800px;}
+.section > .inner.nopadding {padding-top: 0px !important; padding-bottom: 0px !important;}
+
+.section.header {box-shadow: 0px 0px 40px 0px rgba(0,0,0,.4); z-index: 1}
+.section.header > .inner {padding-top: 380px;}
+
+.section.header2 {display: table; z-index: 1; height: 100vh; min-height: 500px; width: 100%}
+.section.header2 > .inner {display: table-cell; vertical-align: middle; padding-top: 130px; padding-bottom: 100px;}
+
+.section .mwidth {max-width: 600px;}
+
+.section > .inner.w {max-width: 1400px;}
+
+.sec-bg {background: #FAFAFA; color: #000}
+
+.section .bck {opacity: .3; z-index: 0; content: ''; background-size: cover; background-position: center; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px;}
+
+@media screen and (max-width: 650px) {
+    .section > .inner {padding-left: 20px; padding-right: 20px;}
+    nav > .inner {padding: 0px 15px}
+}
+
+
+
+
+a {color: #F4511E; transition: all .1s;}
+a:hover {color: #c5431b;}
+
+.weight-400 {font-weight: 400}
+.weight-700 {font-weight: 700}
+.weight-900 {font-weight: 900}
+
+.text-left {text-align: left}
+.text-right {text-align: right}
+.text-center {text-align: center}
+
+.size1 {font-size: 50px !important; margin: 12px 0px;}
+.size2 {font-size: 40px !important; margin: 9px 0px;}
+.size3 {font-size: 35px !important; margin: 7px 0px;}
+.size4 {font-size: 30px !important; margin: 6px 0px;}
+.size5 {font-size: 25px !important; margin: 5px 0px;}
+.size6 {font-size: 19px !important; margin: 3px 0px;}
+.size7 {font-size: 17px !important; margin: 3px 0px;}
+.size8 {font-size: 15px !important; margin: 2.5px 0px;}
+
+@media only screen and (max-width: 701px) {
+
+    .size1 {font-size: 41px !important; margin: 12px 0px;}
+    .size2 {font-size: 33px !important; margin: 9px 0px;}
+    .size3 {font-size: 29px !important; margin: 7px 0px;}
+    .size4 {font-size: 25px !important; margin: 6px 0px;}
+    .size5 {font-size: 21px !important; margin: 5px 0px;}
+    .size6 {font-size: 16px !important; margin: 3px 0px;}
+    .size7 {font-size: 14px !important; margin: 3px 0px;}
+    .size8 {font-size: 13px !important; margin: 2.5px 0px;}
+}
+
+@media screen and (max-width: 950px) {
+    .only-pc {display: none !important}
+}
+
+.semiopacity {opacity: .5;}
+.semiopacity2 {opacity: .7;}
+
+
+/* Footer */
+
+footer.section {padding: 50px 0 30px; border-top: 1px solid rgba(255,255,255,.1);}
+.footer-heading {font-family: Catamaran; margin-top: 15px; letter-spacing: 2px; font-size: 18px}
+
+.footer-link {color: #ddd; line-height: 40px; font-size: 16px;}
+.footer-link a {color: #ddd; transition: all .2s;}
+.footer-link a:hover {color: #F4511E;}
+.contact-info {color: #ddd; font-size: 16px;}
+.footer-alt {color: #ddd; font-size: 15px}
+.footer-heading {position: relative; padding-bottom: 12px; font-weight: 700}
+.footer-heading:after {content: ''; width: 26px; border-bottom: 1px solid #ddd; position: absolute; left: 0; bottom: 0; display: block; border-bottom: 1px solid #F4511E;}
+
+.footer-alt .l {text-align: left; float: left; width: 50%}
+.footer-alt .r {text-align: right; float: right; width: 50%}
+@media screen and (max-width: 400px) {
+	.footer-alt div {text-align: center !important; width: 100% !important; float: none;}
+}
+
+
+.section.topBackground {position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; min-height: 400px}
+.section.topBackground:after {content: ''; position: absolute; bottom: 0px; left: 0px; width: 100%; height: 100%; background: linear-gradient(to bottom, #00000044, #000000); opacity: 1;}
+
+.shbar {border-top: 0px solid rgba(255,255,255,.2); max-width: 550px; width: 100%; margin: auto; padding-top: 10px}
+.shbar > a {text-decoration: none; transition: color .3s; color: #fff; overflow: hidden; display: inline-block; padding: 20px; margin: 3px; border-radius: 20px;}
+.shbar > a:hover .mdi {background: rgba(255,255,255,.1); box-shadow: 0px 0px 0px 90px rgba(255,255,255,.1)}
+.shbar .mdi {box-shadow: 0px 0px 0px 0px rgba(255,255,255,.2); transition: box-shadow .3s, background .3s; display: block; font-size: 50px; line-height: 100px; background: rgba(255,255,255,.2); border-radius: 50%; width: 100px; height: 100px}
+.shbar .text {opacity: .7; transition: all .3s; top: 0px; position: relative; font-family: 'Catamaran'; font-weight: 700; font-size: 24px; padding-top: 15px; display: block}
+.shbar > a:hover .text {opacity: 1; top: -10px}
+
+#particles-js {position: absolute; width: 100%; height: 100%; opacity: .5}
+
+.members {margin-top: 30px; display: grid; grid-template-columns: repeat(4, 1fr); grid-gap: 10px;}
+.members .member {line-height: 22px; width: 100%; display: inline-block; border-radius: 5px; background: rgba(255,255,255,.1); padding: 10px;}
+.members .member img {height: 50px; border-radius: 4px; float: left; margin-right: 10px;}
+
+.members .member .live {animation: liveblink 1s linear infinite; position: relative; transition: all .3s; border-radius: 50%; float: right; margin-left: 10px; background: #ff0000; box-shadow: 0px 1.5px 7px 0px #ff0000; width: 20px; height: 20px; margin-top: 5px;}
+.members .member .live.hidden {transform: scale(0);}
+@keyframes liveblink {
+    0% {opacity: .5}
+    50% {opacity: 1}
+    100% {opacity: .5}
+}
+
+.members .member .name {font-weight: 700; font-family: Catamaran; font-size: 20px; margin-top: 6px; display: block}
+.members .member .name.mc {display: none;}
+.members .member:hover .name {display: none}
+.members .member:hover .name.mc {display: block;}
+.members .member .sub {font-size: 14px; opacity: .5; padding-bottom: 2px}
+.members .member .bio {font-size: 14px; opacity: .7; margin-top: 5px;}
+.members .member .social {margin-top: 7px;}
+.members .member .social .mdi {transition: all .1s; margin-right: 4px; float: left; background: rgba(0,0,0,.4); border-radius: 5px; font-size: 20px; display: block; width: 30px; height: 30px; line-height: 30px; text-align: center; color: #999}
+
+.members .member .social .mdi-instagram {color: #e4405f;}
+.members .member .social .mdi-instagram:hover {background: #e4405f; color: #fff}
+.members .member .social .mdi-youtube {color: #eb2222;}
+.members .member .social .mdi-youtube:hover {background: #cd201f; color: #fff}
+.members .member .social .mdi-web {color: #21759b;}
+.members .member .social .mdi-web:hover {background: #21759b; color: #fff}
+.members .member .social .mdi-twitter {color: #55acee;}
+.members .member .social .mdi-twitter:hover {background: #55acee; color: #fff}
+.members .member .social .mdi-facebook {color: #5273b9;}
+.members .member .social .mdi-facebook:hover {background: #3b5999; color: #fff}
+.members .member .social .mdi-twitch {color: #825bcc;}
+.members .member .social .mdi-twitch:hover {background: #6441a5; color: #fff}
+
+
+@media only screen and (max-width: 1100px) {
+    .members {grid-template-columns: repeat(3, 1fr);}
+}
+@media only screen and (max-width: 800px) {
+    .members {grid-template-columns: repeat(2, 1fr);}
+}
+@media only screen and (max-width: 500px) {
+    .members {grid-template-columns: repeat(1, 1fr);}
+}
+
+.grid-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "about faq";
+}
+.grid-about .about { grid-area: about; }
+.grid-about .faq { grid-area: faq; }
+@media only screen and (max-width: 1100px) {
+    .grid-about {grid-template-areas: "about" "faq"; grid-template-columns: 1fr;}
+}
+
+.liveindicator.hidden {transform: scale(0)}
+.liveindicator {transition: transform .3s; position: absolute; bottom: 20px; left: 20px; z-index: 20;}
+.liveindicator .circle {cursor: pointer; background: #f13232; box-shadow: 0px 2px 10px 0px #f13232; width: 35px; height: 35px; float: left; border-radius: 50%}
+.liveindicator::after {margin-left: -300px; pointer-events: none; position: relative; content: 'Z Majnru se právě streamuje!'; white-space: nowrap; transition: left .3s, opacity .3s, margin-left 0s .3s; opacity: 0; left: 5px; background: #111; box-shadow: 0px 2px 5px 0px rgb(0,0,0,.5); top: 5px; border-radius: 5px; padding: 3px 9px}
+.liveindicator:hover::after {left: 10px; opacity: 1; margin-left: 0; transition: left .3s, opacity .3s, margin-left 0s;}

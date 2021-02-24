@@ -26,7 +26,7 @@ function DynMap(options) {
 		return;
 	me.options = options;
 	$.getJSON(me.options.url.configuration, function(configuration) {
-		if(configuration.error == 'login-required') {
+		if(configuration.error === 'login-required') {
 			me.saveURL();
 			window.location = 'login.html';
 		}
@@ -46,31 +46,31 @@ DynMap.prototype = {
 	worlds: {},
 	registeredTiles: [],
 	players: {},
-	
+
 	lasttimestamp: new Date().getUTCMilliseconds(), /* Pseudorandom - prevent cached '?0' */
 	reqid: 0,
     servertime: 0,
     serverday: false,
     inittime: new Date().getTime(),
-    
+
 	followingPlayer: '',
 	initfollow: null,
-	
+
 	missedupdates: 0,
 	maxcount: -1,
 	currentcount: 0,
-	
+
 	sidebar: null,
 	sidebarPanel: null,
 	playerlist: null,
 	playerfield: null,
 	layercontrol: undefined,
-	
+
 	sidebarSections: [],
-	
+
 	nogui: false,
 	nocompass: false,
-	
+
 	formatUrl: function(name, options) {
 		var url = this.options.url[name];
 		$.each(options, function(n,v) {
@@ -93,38 +93,38 @@ DynMap.prototype = {
 					dynmap: me
 				});
 				map = world.maps[mapentry.name] = maptypes[mapentry.type](map);
-				if(me.options.defaultmap && me.options.defaultmap == mapentry.name)
+				if(me.options.defaultmap && me.options.defaultmap === mapentry.name)
 					world.defaultmap = map;
 				world.defaultmap = world.defaultmap || map;
 			});
 			me.defaultworld = me.defaultworld || world;
 		});
 		var urlarg = me.getParameterByName('worldname');
-		if(urlarg == "")
+		if(urlarg === "")
 			urlarg = me.options.defaultworld || "";
-		if(urlarg != "") {
+		if(urlarg !== "") {
 		    me.defaultworld = me.worlds[urlarg] || me.defaultworld;
 		}
 		urlarg = me.getParameterByName('mapname');
-		if(urlarg != "") {
+		if(urlarg !== "") {
 			me.defaultworld.defaultmap = me.defaultworld.maps[urlarg] || me.defaultworld.defaultmap;
 		}
 		urlarg = me.getIntParameterByName('x');
-		if(urlarg != null)
+		if(urlarg !== null)
 			me.defaultworld.center.x = urlarg;
 		urlarg = me.getIntParameterByName('y');
-		if(urlarg != null)
+		if(urlarg !== null)
 			me.defaultworld.center.y = urlarg;
 		urlarg = me.getIntParameterByName('z');
-		if(urlarg != null)
+		if(urlarg !== null)
 			me.defaultworld.center.z = urlarg;
 		urlarg = me.getParameterByName('nogui');
-		if(urlarg != "") {
-			me.nogui = (urlarg == 'true');
+		if(urlarg !== "") {
+			me.nogui = (urlarg === 'true');
 		}
 		urlarg = me.getParameterByName('nocompass');
-		if(urlarg != "") {
-			me.nocompass = (urlarg == 'true');
+		if(urlarg !== "") {
+			me.nocompass = (urlarg === 'true');
 		}
 	},
 	initialize: function() {
@@ -148,27 +148,27 @@ DynMap.prototype = {
 
 		// Try to set the default zoom level based on the URL parameter.
 		var urlzoom = me.getIntParameterByName('zoom');
-		if(urlzoom != null)
+		if(urlzoom !== null)
 			me.options.defaultzoom = urlzoom;
 
 		// Decide whether or not the layer control will be visible based on the URL parameter or
 		// or fallback to the options
 		var showlayerctl = me.getParameterByName('showlayercontrol');
-		if(showlayerctl != "")
+		if(showlayerctl !== "")
 			me.options.showlayercontrol = showlayerctl;
 
 		// If we still don't have a default zoom level, force it to be 1
-		if(typeof me.options.defaultzoom == 'undefined')
+		if(typeof me.options.defaultzoom === 'undefined')
 			me.options.defaultzoom = 1;
 
 		// Decide whether we should be following a given player or not based solely on URL parameter.
 		var initfollowplayer = me.getParameterByName('playername');
-		if(initfollowplayer != "")
+		if(initfollowplayer !== "")
 			me.initfollow = initfollowplayer;
 
 		// Derive the state of the sidebar based on the URL parameter.
 		var sidebaropen = me.getParameterByName('sidebaropened');
-		if(sidebaropen == 'false' || sidebaropen == 'true' || sidebaropen == 'pinned')
+		if(sidebaropen === 'false' || sidebaropen === 'true' || sidebaropen === 'pinned')
 			me.options.sidebaropened = sidebaropen;
 
 		var map = this.map = new L.Map(mapContainer.get(0), {
@@ -216,10 +216,10 @@ DynMap.prototype = {
 		var panel;
 		var sidebar;
 		var pinbutton;
-		var nopanel = (me.getParameterByName('nopanel') == 'true') || me.nogui;
+		var nopanel = (me.getParameterByName('nopanel') === 'true') || me.nogui;
 
 		var pincls = 'pinned';
-		if(me.options.sidebaropened == 'false')
+		if(me.options.sidebaropened === 'false')
 			pincls = '';
 		sidebar = me.sidebar = $('<div/>')
 			.addClass('sidebar ' + pincls);
@@ -228,7 +228,7 @@ DynMap.prototype = {
 			.addClass('panel')
 			.appendTo(sidebar);
 
-		if(me.options.sidebaropened != 'true') { // false or pinned
+		if(me.options.sidebaropened !== 'true') { // false or pinned
 			// Pin button.
 			pinbutton = $('<div/>')
 				.addClass('pin')
@@ -237,7 +237,7 @@ DynMap.prototype = {
 				})
 				.appendTo(panel);
 		}
-		
+
 		if(!nopanel)
 			sidebar.appendTo(container);
 
@@ -280,18 +280,19 @@ DynMap.prototype = {
 
 				var worldName = wname;
 				var mapName = mapindex;
-				if (worldName.endsWith('_nether') || (worldName == 'DIM-1')) {
+				if (worldName.endsWith('_nether') || (worldName === 'DIM-1')) {
 				   worldName = 'nether';
-				   mapName = (mapindex == 'nether') ? 'surface' : 'flat';
+				   mapName = (mapindex === 'nether') ? 'surface' : 'flat';
 				}
-				else if (worldName.endsWith('the_end') || (worldName == 'DIM1')) {
+				else if (worldName.endsWith('the_end') || (worldName === 'DIM1')) {
 				   worldName = 'the_end';
-				   mapName = (mapindex == 'the_end') ? 'surface' : 'flat';
+				   mapName = (mapindex === 'the_end') ? 'surface' : 'flat';
 				}
 				else {
 				    worldName = 'world';
 				    mapName = [ 'surface', 'flat', 'biome', 'cave' ].includes(mapindex) ? mapindex : 'flat';
 				}
+				console.log("Kuba, ",(map.options.icon || ('images/block_' + worldName + '_' + mapName + '.png')))
 				map.element = $('<li/>')
 					.addClass('map item')
 					.append($('<a/>')
@@ -312,31 +313,31 @@ DynMap.prototype = {
 				world.element.appendTo(me.worldlist);
 			}
 		});
-		
+
 		var playersSection = SidebarUtils.createListSection(me.options['msg-players']);
 		me.playerlist = playersSection.content.addClass('playerlist');
 		playersSection.section.appendTo(panel);
 		me.playerfield = playersSection.legend;
 		me.sidebarSections.push(playersSection);
-		
+
 		function upd() {
 			me.updateSidebarHeight();
 		}
 		$(window).resize(upd);
 		$(dynmap).bind('playeradded playerremoved', upd);
 		upd();
-		
+
 		// The Compass
 		if ((!me.nogui) && (!me.nocompass)) {
 			var compass = $('<div/>').
 				addClass('compass');
 			if(L.Browser.mobile)
 				compass.addClass('mobilecompass');
-			
+
 			compass.appendTo(container);
 		}
-		
-		if(me.options.sidebaropened != 'true') {
+
+		if(me.options.sidebaropened !== 'true') {
 			var hitbar = $('<div/>')
 			.addClass('hitbar')
 			.click(function() {
@@ -350,7 +351,7 @@ DynMap.prototype = {
 			.hide()
 			.appendTo(container);
 
-		if((dynmapversion != me.options.coreversion) && (dynmapversion.indexOf("-Dev") < 0)) { // Disable on dev builds
+		if((dynmapversion !== me.options.coreversion) && (dynmapversion.indexOf("-Dev") < 0)) { // Disable on dev builds
 			me.alertbox
 				.text('Web files are not matched with plugin version: All files need to be same version (' + me.options.dynmapversion + ') - try refreshing browser cache (shift-reload)')
 				.show();
@@ -387,7 +388,7 @@ DynMap.prototype = {
 				}
 				delete tobeloaded[type];
 				componentstoload--;
-				if (componentstoload == 0) {
+				if (componentstoload === 0) {
 					// Actually start updating once all components are loaded.
 					me.update();
 					setTimeout(function() { me.update(); }, me.options.updaterate);
@@ -413,9 +414,9 @@ DynMap.prototype = {
 	},
 	updateSidebarHeight: function () {
 		var me = this;
-		
+
 		var minContentHeight = 24;
-		
+
 		var minSectionsHeight = 0;
 		var sectionsHeight = 0;
 		var sectionsHeightWithScrollButtons = 0;
@@ -423,7 +424,7 @@ DynMap.prototype = {
 		// indexes of sections that do not benefit from resizing
 		// because the content size is smaller when shown fully than when shown with scrolling arrows
 		var nonResizeableSections = [];
-		
+
 		// collect size information about all the sections
 		$.each(me.sidebarSections, function (i, section) {
 			var legend = section.legend.outerHeight(true);
@@ -431,13 +432,13 @@ DynMap.prototype = {
 			var up = section.upBtn.outerHeight(true);
 			var down = section.downBtn.outerHeight(true);
 			var sectionPadding = section.section.outerHeight(true) - section.section.height();
-			
+
 			var sHeight = legend + content + sectionPadding;
-			
+
 			sectionsHeight += sHeight;
 			minSectionsHeight += legend + sectionPadding;
 			sectionsHeightWithScrollButtons += sHeight;
-			
+
 			if (content < up + down + minContentHeight) {
 				nonResizeableSections.push(i);
 				minSectionsHeight += content;
@@ -449,11 +450,11 @@ DynMap.prototype = {
 			}
 		});
 		var sidebarHeight = me.sidebar.height();
-		
+
 		// if sidebar is too small, start reducing content size
 		if (sectionsHeight > sidebarHeight && sidebarHeight > minSectionsHeight) {
 			var missingHeight = sectionsHeightWithScrollButtons - sidebarHeight;
-			
+
 			$.each(me.sidebarSections, function (i, section) {
 				if ($.inArray(i, nonResizeableSections) > -1) {
 					section.upBtn.hide();
@@ -461,10 +462,10 @@ DynMap.prototype = {
 					section.content.height('auto');
 					return;
 				}
-				
+
 				section.upBtn.show();
 				section.downBtn.show();
-				
+
 				var contentHeight = section.content.scrollHeight();
 				// longer sections get resized more aggressively than shorted ones
 				var proportionalMissingHeight =
@@ -480,7 +481,7 @@ DynMap.prototype = {
 				section.content.height('auto');
 			});
 		}
-		
+
 		if (sidebarHeight < minSectionsHeight) {
 			// screen size makes sidebar smaller than least usable height
 			// fallback to scrollable sidebar
@@ -558,9 +559,9 @@ DynMap.prototype = {
 			}
 			else {
 				var prevloc = null;
-				if(prevmap != null)
+				if(prevmap !== null)
 					prevloc = prevmap.getProjection().fromLatLngToLocation(me.map.getCenter(), 64);
-				if(prevloc != null)
+				if(prevloc !== null)
 					centerPoint = me.getProjection().fromLocationToLatLng(prevloc);
 				else
 					centerPoint = me.map.getCenter();
@@ -646,7 +647,7 @@ DynMap.prototype = {
 				me.alertbox.hide();
 
 				if(update.error) {
-					if(update.error == 'login-required') {
+					if(update.error === 'login-required') {
 						me.saveURL();
 						window.location = 'login.html';
 					}
@@ -655,7 +656,7 @@ DynMap.prototype = {
 					}
 					return;
 				}
-				if (me.lasttimestamp == update.timestamp) { // Same as last update?
+				if (me.lasttimestamp === update.timestamp) { // Same as last update?
 					setTimeout(function() { me.update(); }, me.options.updaterate);
 					return;
 				}
@@ -663,7 +664,7 @@ DynMap.prototype = {
 				if (!me.options.jsonfile) {
 					me.lasttimestamp = update.timestamp;
 				}
-				if(me.options.confighash != update.confighash) {
+				if(me.options.confighash !== update.confighash) {
 				    window.location = me.getLink();
 					return;
 				}
@@ -671,7 +672,7 @@ DynMap.prototype = {
 
 				me.servertime = update.servertime;
 				var newserverday = (me.servertime > 23100 || me.servertime < 12900);
-				if(me.serverday != newserverday) {
+				if(me.serverday !== newserverday) {
 					me.serverday = newserverday;
 
 					me.updateBackground();
@@ -690,7 +691,7 @@ DynMap.prototype = {
 						me.updatePlayer(player, playerUpdate);
 					} else {
 						me.addPlayer(playerUpdate);
-						if(me.initfollow && (me.initfollow == acct)) {
+						if(me.initfollow && (me.initfollow === acct)) {
 							me.followPlayer(me.players[acct]);
 							me.initfollow = null;
 						}
@@ -753,7 +754,7 @@ DynMap.prototype = {
 		var me = this;
 		var tile = me.registeredTiles[tileName];
 
-		if(tile == null) {
+		if(tile === null) {
 			var url = me.options.url.tiles;
 			tile = this.registeredTiles[tileName] = url + escape(me.world.name + '/' + tileName);
 		}
@@ -848,10 +849,10 @@ DynMap.prototype = {
 
 		$(me).trigger('playerupdated', [ player ]);
 
-		if (player.menuname && (player.menuname.html() != player.name)) {
+		if (player.menuname && (player.menuname.html() !== player.name)) {
 		    player.menuname.html(player.name);
 		}
-		
+
 		// Update menuitem.
 		if(me.options.grayplayerswhenhidden)
 			player.menuitem.toggleClass('otherworld', me.world !== location.world);
@@ -914,16 +915,16 @@ DynMap.prototype = {
 		var regexS = "[\\?&]"+name+"=([^&#]*)";
 		var regex = new RegExp( regexS );
 		var results = regex.exec( window.location.href );
-		if( results == null )
+		if( results === null )
 			return "";
 		else
 			return decodeURIComponent(results[1].replace(/\+/g, " "));
 	},
 	getIntParameterByName: function(name) {
 		var v = this.getParameterByName(name);
-		if(v != "") {
+		if(v !== "") {
 			v = parseInt(v, 10);
-			if(v != NaN) {
+			if(v !== NaN) {
 				return v;
 				}
 		}
@@ -931,10 +932,10 @@ DynMap.prototype = {
 	},
 	getBoolParameterByName: function(name) {
 		var v = this.getParameterByName(name);
-		if(v != "") {
-			if(v == "true")
+		if(v !== "") {
+			if(v === "true")
 				return true;
-			else if(v == "false")
+			else if(v === "false")
 				return false;
 		}
 		return null;
@@ -945,9 +946,9 @@ DynMap.prototype = {
 	addToLayerSelector: function(layer, name, priority) {
 		var me = this;
 
-		if(me.options.showlayercontrol != "false" && (!me.layercontrol)) {
+		if(me.options.showlayercontrol !== "false" && (!me.layercontrol)) {
 			me.layercontrol = new DynmapLayerControl();
-			if(me.options.showlayercontrol == "pinned")
+			if(me.options.showlayercontrol === "pinned")
 				me.layercontrol.options.collapsed = false;
 			map.addControl(me.layercontrol);
 		}
@@ -964,12 +965,12 @@ DynMap.prototype = {
 			me.layersetlist[i] = { layer: layer, priority: priority, name: name };
 		}
 		me.layersetlist.sort(function(a, b) {
-			if(a.priority != b.priority)
+			if(a.priority !== b.priority)
 				return a.priority - b.priority;
 			else
 				return ((a.name < b.name) ? -1 : ((a.name > b.name) ? 1 : 0));
 		});
-		if(me.options.showlayercontrol != "false") {
+		if(me.options.showlayercontrol !== "false") {
 			for(i = 0; i < me.layersetlist.length; i++) {
 				me.layercontrol.removeLayer(me.layersetlist[i].layer);
 			}
@@ -984,7 +985,7 @@ DynMap.prototype = {
 		for(i = 0; i < me.layersetlist.length; i++) {
 			if(me.layersetlist[i].layer === layer) {
 				me.layersetlist.splice(i, 1);
-				if(me.options.showlayercontrol != "false")
+				if(me.options.showlayercontrol !== "false")
 					me.layercontrol.removeLayer(layer);
 				break;
 			}
@@ -1024,7 +1025,7 @@ DynMap.prototype = {
 				if (!this._map) return;
 				var c = this._container;
 				var cls = 'loginbutton';
-				if(me.options.sidebaropened != 'false') {
+				if(me.options.sidebaropened !== 'false') {
 					cls = 'loginbutton pinnedloginbutton';
 				}
 				if (me.options.loggedin) {
@@ -1061,10 +1062,10 @@ DynMap.prototype = {
   			x=ourcookies[i].substr(0,ourcookies[i].indexOf("="));
   			y=ourcookies[i].substr(ourcookies[i].indexOf("=")+1);
 			x=x.replace(/^\s+|\s+$/g,"");
-  			if (x == "dynmapurl") {
+  			if (x === "dynmapurl") {
   				var v = unescape(y);
   				document.cookie='dynmapurl=; expires=Thu, 01-Jan-70 00:00:01 GMT;';
-  				if((v.indexOf('?') >= 0) && (v != window.location)) {
+  				if((v.indexOf('?') >= 0) && (v !== window.location)) {
 					window.location = v;
 					return true;
 				}

@@ -15,7 +15,7 @@ jQuery.stringifyJSON = function(obj) {
 function fixedAjax(obj) {
     var mysuccess = obj.success;
     obj.success = function(data, status, request) {
-        if (request.status == 200) {
+        if (request.status === 200) {
             if (mysuccess) mysuccess(data, status, request);
         } else {
             obj.error(request, request.status, null);
