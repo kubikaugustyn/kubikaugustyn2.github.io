@@ -4,19 +4,6 @@
     <title>Playing version 1.0 - Minecraft</title>
     <meta charset="UTF-8">
     <script>
-        function download(file) {
-            fetch(document.location.origin) //To functionally in localhost and http://kubikaugustyn.github.io/
-                .then(response => {
-                    response.blob().then(blob => {
-                        var url = window.URL.createObjectURL(blob);
-                        var a = document.createElement('a');
-                        a.href = url;
-                        a.download = file;
-                        a.click();
-                    });
-                });
-        }
-
         var listOfTextures = [{
                 URL: "1.0/texturepacks/Deafult/textures/blocks/air.png"
             },
@@ -69,7 +56,7 @@
 
         function onLoad() {
             for (var i = 0; i < listOfTextures.length; i++) {
-                document.body.innerHTML += "<img src='./" + listOfTextures[i].URL + "'><button onclick='download(`" + listOfTextures[i].URL + "`)'>Download " + listOfTextures[i].URL + "</button><br>"
+                document.body.innerHTML += "<img src='./" + listOfTextures[i].URL + "'><a href='./" + listOfTextures[i].URL + "' download>Download " + listOfTextures[i].URL + "</button><br>"
             }
         }
     </script>
