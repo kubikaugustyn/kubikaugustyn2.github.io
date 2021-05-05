@@ -7,14 +7,16 @@
 <body>
     <h1>Checking URL...</h1>
 <script>
-if(document.location.href !== "https://kubikaugustyn.github.io/MC.html?isAuthorized=true&hosting=true&web=kubikaugustyn.github.io&fromUserID=Honza46dc2565dvg5vgfd6&fromUser=Author&source=Email"){
-    document.location = "https://kubikaugustyn.github.io/error"
-}
-    var a = document.createElement("a")
-    a.href = "https://online-web-mc.web.app/"
-    a.innerText = "'Hello' stránka"
-    document.body.innerHTML += "URL is OK...<br>Vítej Honzo...<br>"
-    document.body.appendChild(a)
+    if(document.location.search !== "?isAuthorized=true&hosting=true&web=kubikaugustyn.github.io&fromUserID=Honza46dc2565dvg5vgfd6&fromUser=Author&source=Email"){
+        document.location.href = "https://kubikaugustyn.github.io/error"
+    }
+    else {
+        var a = document.createElement("a")
+        a.href = "https://online-web-mc.web.app/"
+        a.innerText = "'Hello' stránka"
+        document.body.innerHTML += "URL is OK...<br>Vítej Honzo...<br>"
+        document.body.appendChild(a)
+    }
 </script>
 </body>
 </html>
