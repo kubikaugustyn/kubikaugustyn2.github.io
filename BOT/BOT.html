@@ -69,7 +69,7 @@ function StartBot(ObsahZpravy: string) {<br>
   Result = addMessageValue(ObsahZpravy, Casy, Result, "Casy")<br>
   Result = addMessageValue(ObsahZpravy, KdoJsem, Result, "KdoJsem")<br>
   Result = addMessageValue(ObsahZpravy, YTID, Result, "YTID")<br>
-  if (Result === "THIS IS BOT.<br>") {<br>
+  if (Result === "THIS IS BOT.&lt;br>") {<br>
     Result += "Zkuste napsat: " + ZpravyObsahy.join(" NEBO ")<br>
   }<br>
   console.log("Result: " + Result)<br>
@@ -119,7 +119,7 @@ function YTID(Result: string, ObsahZpravy: string, YTIDPolozky: string[]) {<br>
     if (ObsahZpravy.search(YTIDPolozky[i].replace(" ${ID}", "")) === 0) {<br>
       let YTIDPolozkaJenTextZpravy = YTIDPolozky[i].replace(" ${ID}", "")<br>
       let MujObsahZpravy = ObsahZpravy.replace(YTIDPolozkaJenTextZpravy + " ", "")<br>
-      let addToResult = "Adresa URL videa: ${URL}<br>Aderesa URL videa bez reklam (uživatelům se zhlédnutím reklamy neposílají peníze): ${EMBEDURL}"<br>
+      let addToResult = "Adresa URL videa: ${URL}&lt;br>Aderesa URL videa bez reklam (uživatelům se zhlédnutím reklamy neposílají peníze): ${EMBEDURL}"<br>
 <br>
       let URLS: string[] = []<br>
       let videoId: string = MujObsahZpravy<br>
@@ -129,7 +129,7 @@ function YTID(Result: string, ObsahZpravy: string, YTIDPolozky: string[]) {<br>
       addToResult = addToResult.replace("${EMBEDURL}", getLink(URLS[1], URLS[1]))<br>
       Result += addToResult<br>
       if (videoId.length !== 11) {<br>
-        Result += "<br>Warning: Video ID hasn't length 11 but " + videoId.length<br>
+        Result += "&lt;br>Warning: Video ID hasn't length 11 but " + videoId.length<br>
       }<br>
     }<br>
   }<br>
