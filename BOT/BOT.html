@@ -17,12 +17,12 @@ function main(
   FromEmail: string,
   DateReceived: string
 ): string {
-  ObsahZpravy = ObsahZpravy.replace("<div>", "")
-  ObsahZpravy = ObsahZpravy.replace('<div itemprop="copy-paste-block">', "")
-  ObsahZpravy = ObsahZpravy.replace('<div style="font-size:14px">', "")
-  ObsahZpravy = ObsahZpravy.replace("</div>", "")
-  ObsahZpravy = ObsahZpravy.replace("</div>", "")
-  ObsahZpravy = ObsahZpravy.replace("</div>", "")
+  ObsahZpravy = ObsahZpravy.replace("&lt;div>", "")
+  ObsahZpravy = ObsahZpravy.replace('&lt;div itemprop="copy-paste-block">', "")
+  ObsahZpravy = ObsahZpravy.replace('&lt;div style="font-size:14px">', "")
+  ObsahZpravy = ObsahZpravy.replace("&lt;/div>", "")
+  ObsahZpravy = ObsahZpravy.replace("&lt;/div>", "")
+  ObsahZpravy = ObsahZpravy.replace("&lt;/div>", "")
   ObsahZpravy = ObsahZpravy.replace("\n", "")
   ObsahZpravy = ObsahZpravy.replace("\n", "")
   ObsahZpravy = ObsahZpravy.replace("\n", "")
