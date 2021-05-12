@@ -55,7 +55,7 @@ function main(
 }
 
 function StartBot(ObsahZpravy: string) {
-  let Result = "THIS IS BOT.<br>"
+  let Result = "THIS IS BOT.&lt;br>"
   let Pozdravy = ["dobrý den", "ahoj", "čus"]
   let Casy = ["kolik je hodin", "jaký je čas"]
   let YTID = ["YouTubeID ${ID}", "YtID ${ID}"]
@@ -70,7 +70,7 @@ function StartBot(ObsahZpravy: string) {
   Result = addMessageValue(ObsahZpravy, Casy, Result, "Casy")
   Result = addMessageValue(ObsahZpravy, KdoJsem, Result, "KdoJsem")
   Result = addMessageValue(ObsahZpravy, YTID, Result, "YTID")
-  if (Result === "THIS IS BOT.<br>") {
+  if (Result === "THIS IS BOT.&lt;br>") {
     Result += "Zkuste napsat: " + ZpravyObsahy.join(" NEBO ")
   }
   console.log("Result: " + Result)
@@ -89,12 +89,12 @@ function addMessageValue(OldObsahZpravy: string, Polozky: string[], OldResult: s
   switch (Type) {
     case "Pozdrav":
       if (isIn(ObsahZpravy, Polozky)) {
-        Result += "Také zdravím.<br>"
+        Result += "Také zdravím.&lt;br>"
       }
       break
     case "Casy":
       if (isIn(ObsahZpravy, Polozky)) {
-        let addToResult = "Čas: ${TIME}<br>"
+        let addToResult = "Čas: ${TIME}&lt;br>"
         let Time = new Date().toLocaleDateString() + new Date().toLocaleTimeString()
         addToResult = addToResult.replace("${TIME}", Time)
         Result += addToResult
@@ -102,7 +102,7 @@ function addMessageValue(OldObsahZpravy: string, Polozky: string[], OldResult: s
       break
     case "KdoJsem":
       if (isIn(ObsahZpravy, Polozky)) {
-        Result += "Jsem BOT.<br>"
+        Result += "Jsem BOT.&lt;br>"
       }
       break
     case "YTID":
@@ -120,7 +120,7 @@ function YTID(Result: string, ObsahZpravy: string, YTIDPolozky: string[]) {
     if (ObsahZpravy.search(YTIDPolozky[i].replace(" ${ID}", "")) === 0) {
       let YTIDPolozkaJenTextZpravy = YTIDPolozky[i].replace(" ${ID}", "")
       let MujObsahZpravy = ObsahZpravy.replace(YTIDPolozkaJenTextZpravy + " ", "")
-      let addToResult = "Adresa URL videa: ${URL}<br>Aderesa URL videa bez reklam (uživatelům se zhlédnutím reklamy neposílají peníze): ${EMBEDURL}"
+      let addToResult = "Adresa URL videa: ${URL}&lt;br>Aderesa URL videa bez reklam (uživatelům se zhlédnutím reklamy neposílají peníze): ${EMBEDURL}"
 
       let URLS: string[] = []
       let videoId: string = MujObsahZpravy
@@ -130,7 +130,7 @@ function YTID(Result: string, ObsahZpravy: string, YTIDPolozky: string[]) {
       addToResult = addToResult.replace("${EMBEDURL}", getLink(URLS[1], URLS[1]))
       Result += addToResult
       if (videoId.length !== 11) {
-        Result += "<br>Warning: Video ID hasn't length 11 but " + videoId.length
+        Result += "&lt;br>Warning: Video ID hasn't length 11 but " + videoId.length
       }
     }
   }
