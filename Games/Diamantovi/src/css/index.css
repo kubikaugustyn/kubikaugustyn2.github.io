@@ -1,0 +1,58 @@
+#canvasDiv, #canvasDiv #gameCanvas, body, html {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+#canvasDiv {
+    position: absolute;
+}
+
+body {
+    background-image: url("../img/logo.png");
+    background-size: 34.5px;
+}
+
+#playDiv {
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#playDiv img {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: -50px;
+}
+
+.ldc {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#loadingDiv {
+    height: 25px;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    /*margin-top: -12.5px;*/
+
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 10px;
+}
+
+#loadingDiv #loadingBar {
+    background-color: lightgray;
+    border-radius: 5px;
+    height: 100%;
+}

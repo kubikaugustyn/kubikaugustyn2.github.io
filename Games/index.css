@@ -1,0 +1,29 @@
+#gamesSection {
+    border: 5px solid blue;
+    border-radius: 10px;
+    background-color: #00e1ff;
+}
+
+.gameDiv {
+    margin: 0;
+    padding: 0;
+    border: 5px solid #00a1ff;
+    border-radius: 10px;
+    width: 147px;
+}
+
+.gameDiv .logo {
+    border: 5px solid transparent;
+    border-radius: 10px;
+    width: 138px;
+    height: 138px;
+}
+
+.gameDiv .name {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: 5px solid transparent;
+    border-radius: 10px;
+    width: 138px;
+}
