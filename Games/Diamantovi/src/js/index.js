@@ -33,7 +33,8 @@ function drawHouse(scale, mw, mh, params) {
 
 function play() {
     document.getElementById("playDiv").style.display = 'none'
-    document.getElementById("loadingDiv").style.display = 'block'
+    // document.getElementById("loadingDiv").style.display = 'block'
+    document.getElementById("canvasDiv").style.display = 'block'
 }
 
 function calculateScale(width, height, maxWidth, maxHeight, margin) {
@@ -78,7 +79,7 @@ function onLoad() {
         grassH: 5,
         colors: ["red", "green", "#225bff", "blue", "black", "white"],
         rooms: [
-            [2, 0.5, 15.5, wPokoje, hPokoje],
+            [1, 0.5, 15.5, wPokoje, hPokoje],
             [2, wPokoje + 1, 15.5, wPokoje, hPokoje],
             [2, wPokoje * 2 + 1.5, 15.5, wPokoje, hPokoje],
             [2, wPokoje * 3 + 2, 15.5, wPokoje, hPokoje],
