@@ -1,0 +1,156 @@
+<pre>
+/*function main(
+    workbook: ExcelScript.Workbook,
+    FromName: string = "Kuba test!",
+    FromID: string = "Kuba643cv3xc",
+    MessageID: string = "fd2536fdc3@threat.tacv2",
+    ObsahZpravy: string = "Tohle je test.",
+    FromEmail: string = "Jakub.Augustyn",
+    DateReceived: string = "2021-02-26T09:48:03.284Z"
+): string {*/
+function main(
+  workbook: ExcelScript.Workbook,
+  FromName: string,
+  FromID: string,
+  MessageID: string,
+  ObsahZpravy: string,
+  FromEmail: string,
+  DateReceived: string
+): string {
+  ObsahZpravy = ObsahZpravy.replace("&lt;div>", "")
+  ObsahZpravy = ObsahZpravy.replace('&lt;div itemprop="copy-paste-block">', "")
+  ObsahZpravy = ObsahZpravy.replace('&lt;div style="font-size:14px">', "")
+  ObsahZpravy = ObsahZpravy.replace("&lt;/div>", "")
+  ObsahZpravy = ObsahZpravy.replace("&lt;/div>", "")
+  ObsahZpravy = ObsahZpravy.replace("&lt;/div>", "")
+  ObsahZpravy = ObsahZpravy.replace("\n", "")
+  ObsahZpravy = ObsahZpravy.replace("\n", "")
+  ObsahZpravy = ObsahZpravy.replace("\n", "")
+  ObsahZpravy = ObsahZpravy.replace("\n", "")
+  ObsahZpravy = ObsahZpravy.replace("\n", "")
+  ObsahZpravy = ObsahZpravy.replace("\n", "")
+  let Result = StartBot(ObsahZpravy)
+
+  // Get the email table.
+  let emailWorksheet = workbook.getWorksheet("Messages");
+  let table = emailWorksheet.getTable("MessagesTable");
+
+  // Get the PivotTable.
+  let pivotTableWorksheet = workbook.getWorksheet("MessagesValues");
+  let pivotTable = pivotTableWorksheet.getPivotTable("Pivot");
+
+  // Parse the received date string to determine the day of the week.
+  let emailDate = new Date(DateReceived);
+  let DayName = emailDate.toLocaleDateString("en-US", {
+    weekday: 'long'
+  });
+
+  // Add the parsed text to the table.
+  table.addRow(-1, [DateReceived, DayName, FromName, ObsahZpravy, Result]);
+
+  // Refresh the PivotTable to include the new row.
+  pivotTable.refresh();
+
+  return Result
+}
+
+function StartBot(ObsahZpravy: string) {
+  let Result = "THIS IS BOT.&lt;br>"
+  let Pozdravy = ["dobrý den", "ahoj", "čus"]
+  let Casy = ["kolik je hodin", "jaký je čas"]
+  let YTID = ["YouTubeID ${ID}", "YtID ${ID}"]
+  let KdoJsem = ["kdo jsi"]
+
+  let ZpravyObsahy = Pozdravy
+  ZpravyObsahy = ZpravyObsahy.concat(Casy)
+  ZpravyObsahy = ZpravyObsahy.concat(YTID)
+  ZpravyObsahy = ZpravyObsahy.concat(KdoJsem)
+
+  Result = addMessageValue(ObsahZpravy, Pozdravy, Result, "Pozdrav")
+  Result = addMessageValue(ObsahZpravy, Casy, Result, "Casy")
+  Result = addMessageValue(ObsahZpravy, KdoJsem, Result, "KdoJsem")
+  Result = addMessageValue(ObsahZpravy, YTID, Result, "YTID")
+  if (Result === "THIS IS BOT.&lt;br>") {
+    Result += "Zkuste napsat: " + ZpravyObsahy.join(" NEBO ")
+  }
+  console.log("Result: " + Result)
+
+  return Result
+}
+
+function addMessageValue(OldObsahZpravy: string, Polozky: string[], OldResult: string, Type: string) {
+  let Result = OldResult
+  let ObsahZpravy = OldObsahZpravy
+  if ((Type != "YTID")) {
+    ObsahZpravy = ObsahZpravy.toLowerCase()
+  }
+  //console.log(ObsahZpravy + ":" + Polozky.join(" X ") + ":" + Result + ":" + Type + ":" + "  Kubafgdx")
+  //console.log((isIn(ObsahZpravy, Polozky)) + ":" + ObsahZpravy + ":" + Polozky.join(","))
+  switch (Type) {
+    case "Pozdrav":
+      if (isIn(ObsahZpravy, Polozky)) {
+        Result += "Také zdravím.&lt;br>"
+      }
+      break
+    case "Casy":
+      if (isIn(ObsahZpravy, Polozky)) {
+        let addToResult = "Čas: ${TIME}&lt;br>"
+        let Time = new Date().toLocaleDateString() + new Date().toLocaleTimeString()
+        addToResult = addToResult.replace("${TIME}", Time)
+        Result += addToResult
+      }
+      break
+    case "KdoJsem":
+      if (isIn(ObsahZpravy, Polozky)) {
+        Result += "Jsem BOT.&lt;br>"
+      }
+      break
+    case "YTID":
+      Result = YTID(Result, ObsahZpravy, Polozky)
+  }
+  //console.log("Result = '"+Result+"'")
+  //console.log(ObsahZpravy + ":" + Polozky.join(" X ") + ":" + Result + ":" + Type + ":" + "  Kubafgdx")
+  return Result
+}
+
+function YTID(Result: string, ObsahZpravy: string, YTIDPolozky: string[]) {
+  //console.log("YTID, result = "+Result)
+  for (let i = 0; i < YTIDPolozky.length; i++) {
+    //console.log(ObsahZpravy+ObsahZpravy.search(YTIDPolozky[i].replace(" ${ID}", ""))+YTIDPolozky[i].replace(" ${ID}", ""))
+    if (ObsahZpravy.search(YTIDPolozky[i].replace(" ${ID}", "")) === 0) {
+      let YTIDPolozkaJenTextZpravy = YTIDPolozky[i].replace(" ${ID}", "")
+      let MujObsahZpravy = ObsahZpravy.replace(YTIDPolozkaJenTextZpravy + " ", "")
+      let addToResult = "Adresa URL videa: ${URL}&lt;br>Aderesa URL videa bez reklam (uživatelům se zhlédnutím reklamy neposílají peníze): ${EMBEDURL}"
+
+      let URLS: string[] = []
+      let videoId: string = MujObsahZpravy
+      URLS[0] = "https://youtu.be/" + videoId
+      URLS[1] = "https://www.youtube.com/embed/" + videoId
+      addToResult = addToResult.replace("${URL}", getLink(URLS[0], URLS[0]))
+      addToResult = addToResult.replace("${EMBEDURL}", getLink(URLS[1], URLS[1]))
+      Result += addToResult
+      if (videoId.length !== 11) {
+        Result += "&lt;br>Warning: Video ID hasn't length 11 but " + videoId.length
+      }
+    }
+  }
+  //console.log("YTID, result = "+Result)
+  return Result
+}
+
+function isIn(Value: string, Array: string[]) {
+  if (Value && Array) {
+    for (let i = 0; i < Array.length; i++) {
+      if (Value.search(Array[i]) > -1) {
+        return true
+      }
+    }
+    return false
+  }
+}
+
+function getLink(Href: String, Value: String){
+  let link = "<a href='"+Href+"' target='_blank'>"+Value+"</a>";
+  return link
+}
+</pre>

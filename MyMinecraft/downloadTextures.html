@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>Minecraft version 1.0 - textures</title>
+    <meta charset="UTF-8">
+    <script>
+        var listOfTextures = [{
+                URL: "1.0/texturepacks/Deafult/textures/blocks/air.png"
+            },
+            {
+                URL: "1.0/texturepacks/Deafult/textures/blocks/cobblestone.png",
+            },
+            {
+                URL: "1.0/texturepacks/Deafult/textures/blocks/dirt.png"
+            },
+            {
+                URL: "1.0/texturepacks/Deafult/textures/blocks/grass_side.png"
+            },
+            {
+                URL: "1.0/texturepacks/Deafult/textures/blocks/grass_up.png"
+            },
+            {
+                URL: "1.0/texturepacks/Deafult/textures/blocks/leaves.png"
+            },
+            {
+                URL: "1.0/texturepacks/Deafult/textures/blocks/sign_front.png"
+            },
+            {
+                URL: "1.0/texturepacks/Deafult/textures/blocks/sign_front_up.png"
+            },
+            {
+                URL: "1.0/texturepacks/Deafult/textures/blocks/wood_side.png"
+            },
+            {
+                URL: "1.0/texturepacks/Deafult/textures/blocks/wood_up.png"
+            },
+            {
+                URL: "1.0/texturepacks/Deafult/textures/inventory/inventory.png"
+            },
+            {
+                URL: "1.0/texturepacks/Deafult/textures/inventory/inventory_selected_slot.png"
+            },
+            {
+                URL: "1.0/texturepacks/Deafult/textures/items/cobblestone.png"
+            },
+            {
+                URL: "1.0/texturepacks/Deafult/textures/items/sapling.png"
+            },
+            {
+                URL: "1.0/texturepacks/Deafult/textures/items/sign.png"
+            },
+            {
+                URL: "1.0/texturepacks/Deafult/textures/items/wood.png"
+            },
+        ]
+
+        function onLoad() {
+            for (var i = 0; i < listOfTextures.length; i++) {
+                document.body.innerHTML += "<img src='./" + listOfTextures[i].URL + "'><a href='./" + listOfTextures[i].URL + "' download>Download " + listOfTextures[i].URL + "</button><br>"
+            }
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body style="background-color: black;color: white;" onload="onLoad()">
+    <h1>Textury</h1>
+</body>
+
+</html>
