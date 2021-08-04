@@ -75,7 +75,7 @@ function CSkryvaneMenu(Meno, Sirka) {
     this.classPolozka = "Polozka";
     this.classApolozka = "Apolozka";
 
-    this.Polozky = new  Array();
+    this.Polozky = [];
 
     this.divMenu = null;
     this.divX = null;

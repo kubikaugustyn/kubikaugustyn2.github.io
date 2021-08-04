@@ -6,35 +6,31 @@ function openInNewTab(url) {
 }
 
 var pageVariants = {
-    "aaa" : "<br><a href='https://decko.ceskatelevize.cz/hry/kutej-spunte'><img alt='Kutej špunte' src='Kutej_spunte.png'></a>",
+    "aaa": "<br><a href='https://decko.ceskatelevize.cz/hry/kutej-spunte'><img alt='Kutej špunte' src='Kutej_spunte.png'></a>",
 
-    "bbb" : "Vítejte Paní učitelko (Pane učiteli)!!!<br><a href='Html/UcitelPoHeslu.html'>Kubíkův web</a>",
+    "bbb": "Vítejte Paní učitelko (Pane učiteli)!!!<br><a href='Html/UcitelPoHeslu.html'>Kubíkův web</a>",
 
     "ccc": "Vítej Žáku!!!<br><a href='Html/ZakPoHeslu.html'>Kubíkův web</a>",
 
     "dddd": "<a href='Html/PoHeslu.html'>Kubíkův web</a>",
 
-    "eee" : "Ahoj Ondro!!!<br><a href='Ondra/index.html'>Ondráškův web</a>",
+    "test": "<a href='Testy.html'>Testy</a>",
 
-    "test" : "<a href='Testy.html'>Testy</a>",
+    "tata": "<a href='TataNarozeniny01/TataNarozeniny01.html'>Tátův editor</a>",
 
-    "tata" : "<a href='TataNarozeniny01/TataNarozeniny01.html'>Tátův editor</a>",
+    "editor": "<a href='Editor.html'>Editor webu</a>",
 
-    "editor" : "<a href='Editor.html'>Editor webu</a>",
-
-    "game" : "" +
+    "game": "" +
         "<a href='URL_button_enabled/index.html?closeButtonEnabled=true'>" +
-            "URL_button_enabled/index.html?buttonEnabled=true" +
+        "URL_button_enabled/index.html?buttonEnabled=true" +
         "</a><br>" +
         "<a href='URL_button_enabled/index.html?closeButtonEnabled=false'>" +
-            "URL_button_enabled/index.html?buttonEnabled=false" +
+        "URL_button_enabled/index.html?buttonEnabled=false" +
         "</a>",
 
-    "node" : "<a href='./node'>Node</a>",
+    "node": "<a href='./node'>Node</a>",
 
-    "loading" : "<a href='./loading'>Loading</a>",
-
-    "downloads" : "<a href='./Downloads/downloads'>Downloads</a>"
+    "loading": "<a href='./loading'>Loading</a>",
 
     //další heslo a funkce k němu ("heslo" : "funkce")
 }
@@ -49,35 +45,3 @@ function onKeyPress() {
 
 //zobrazí v consoli hesla (pageVariants)
 //console.log(pageVariants)
-
-function showNext(nextID) {
-    switch(nextID){
-        case'next1':
-            document.getElementById(nextID).innerHTML = "" +
-		"<a href='./Downloads/downloads'>Downloads</a><br>" +
-                "<button onclick='download(\"index.html\")'>" +
-                "Download index.html" +
-                "</button><br>" +
-                "<button onclick='download(\"view_source_index.html\")'>" +
-                "Download view-source:index.html" +
-                "</button><br>" +
-                "<button onclick='download(\"view_full_source_index.html.txt\")'>" +
-                "Download view-full-source:index.html" +
-                "</button><br>";
-        default:
-            return
-    }
-}
-
-function download(file){
-   fetch(document.location.origin) //To functionally in localhost and http://kubikaugustyn.github.io/
-      .then(response => {
-          response.blob().then(blob => {
-            var url = window.URL.createObjectURL(blob);
-            var a = document.createElement('a');
-            a.href = url;
-            a.download = file;
-            a.click();
-          });
-    });
-}

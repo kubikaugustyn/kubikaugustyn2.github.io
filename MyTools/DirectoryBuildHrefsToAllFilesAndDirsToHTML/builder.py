@@ -42,7 +42,7 @@ def ListDir(path, notGoToDirs, notGoToFileExtension):
                 Files.append(path+sep+file)
     return 0
 
-def Build(path, notGoToDirs, notGoToFileExtension):
+def Build(path, notGoToDirs=(), notGoToFileExtension=()):
     print("Buiding hrefs to files in directory "+path)
     File = open(path+sep+"DirectoryHrefs.html", "w+")
     ListDir(path, notGoToDirs, notGoToFileExtension)

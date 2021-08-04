@@ -7,13 +7,13 @@
 <script src="src/js/colorChanger.js"></script>
 <script src="src/js/ntc.js"></script>
 <style>@import "src/css/styles.css";</style>
-<body onload="loadColor()">
+<body onload="reload()">
 <center>
     Jméno barvy: <input id="colorName" placeholder="Jméno barvy" onkeyup="colorName()"><br><hr>
-    R: <input type="number" id="R" placeholder="R" onkeyup="RGB()"><br>G: <input type="number" id="G" placeholder="G" onkeyup="RGB()"><br>B: <input type="number" id="B" placeholder="B" onkeyup="RGB()"><br><hr>
+    R: <input max="255" min="0" type="number" id="R" placeholder="R" onkeyup="RGB()"><br>G: <input max="255" min="0" type="number" id="G" placeholder="G" onkeyup="RGB()"><br>B: <input max="255" min="0" type="number" id="B" placeholder="B" onkeyup="RGB()"><br><hr>
     Hex: #<input id="Hex" placeholder="Hex" onkeyup="Hex()"><br><hr>
-    H: <input type="number" id="H" placeholder="H" onkeyup="HSL()"><br>S: <input id="S" placeholder="S" onkeyup="HSL()"><br>L: <input id="L" placeholder="L" onkeyup="HSL()"><br><hr>
-    <div id="pickedColor">fdr</div>
+    H: <input type="number" id="H" placeholder="H" onkeyup="HSL()"><br>S: <input type="number" id="S" placeholder="S" onkeyup="HSL()">%<br>L: <input type="number" id="L" placeholder="L" onkeyup="HSL()">%<br><hr>
+    <div id="pickedColor"></div>
 </center>
 </body>
 </html>

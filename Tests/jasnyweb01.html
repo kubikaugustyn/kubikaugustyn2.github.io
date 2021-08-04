@@ -9,10 +9,10 @@
 <input type="button" onclick="alert('jasnyweb.cz jede!')" value="testujeme">
 
 <h2>Confirm</h2>
-<input type="button" onclick="confirm('jasnyweb.cz jede!')" value="testujeme">
+<input type="button" onclick="console.log(confirm('jasnyweb.cz jede!'))" value="testujeme">
 
 <h2>Prompt</h2>
-<input type="button" onclick="prompt('jasnyweb.cz jede!','Bla, bla, bla!!!!')" value="testujeme">
+<input type="button" onclick="console.log(prompt('jasnyweb.cz jede!','Bla, bla, bla!!!!'))" value="testujeme">
 </body>
 
   <head>
@@ -25,7 +25,7 @@
         Nahrano
     </div>
     <a href='#' onClick="getElementById('mujDiv').innerHTML = '<b>zpracovano</b>'">Interaguj!</a>
-    <a href='#' onClick="getElementById('mujDiv').style.color('red')">Interaguj!</a>
+    <a href='#' onClick="getElementById('mujDiv').style.color = 'red'">Interaguj!</a>
     <a href='#' onClick="window.alert('hello World!')">Interaguj!</a>
   </body>
 </html>

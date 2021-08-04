@@ -2,26 +2,32 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Untitled Document</title>
+    <title>Blob</title>
     <script type="text/javascript">
         window.onload = function () {
+            var url = 'https://kubikaugustyn.github.io/ZitSvujSen.mp4'
             var elem = document.getElementById("myVideo");
             var req = new XMLHttpRequest();
             req.onreadystatechange = function () {
                 if (this.readyState === 4 && this.status === 200) {
+                    var blob = URL.createObjectURL(this.response)
                     elem.appendChild(document.createElement("source"))
-                        .src = URL.createObjectURL(this.response);
+                        .src = blob;
+                    document.getElementById("url").innerText = url
+                    document.getElementById("blobUrl").innerText = blob
                 }
             };
             //req.responseType = "arraybuffer"
             req.responseType = "blob";
             console.log(req.responseType)
-            req.open('GET', 'https://kubikaugustyn.github.io/ZitSvujSen.mp4', true);
+            req.open('GET', url, true);
             req.send();
         };
     </script>
 </head>
 <body>
-<video id="myVideo" width="600" height="334" controls></video>
+<video id="myVideo" width="600" height="334" controls></video><hr>
+URL: <span id="url"></span><br>
+Blob URL: <span id="blobUrl"></span>
 </body>
 </html>

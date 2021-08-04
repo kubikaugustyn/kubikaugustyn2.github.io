@@ -2,9 +2,9 @@ var viditelnaTlacitka = [];
 
 function ButtonProc1(sender, coZviditelnitId) {
     console.log(sender);
-    sender.disabled=true;
+    sender.disabled = true;
     var spanToBeVisible = document.getElementById(coZviditelnitId);
-    spanToBeVisible.style.visibility="visible";
+    spanToBeVisible.style.visibility = "visible";
     viditelnaTlacitka.push(spanToBeVisible);
     document.getElementById("RemoveAddedButtons_Button").disabled = false;
 }
@@ -12,13 +12,14 @@ function ButtonProc1(sender, coZviditelnitId) {
 
 function ButtonProc6() {
     console.log("6", viditelnaTlacitka);
-    for (var i= 0; i<viditelnaTlacitka.length; i++) {
+    var i
+    for (i = 0; i < viditelnaTlacitka.length; i++) {
         viditelnaTlacitka[i].style.visibility = "hidden";
     }
 
     const switcherButtons = document.querySelectorAll(".switcher");
     console.log(switcherButtons)
-    for (var i= 0; i<switcherButtons.length; i++) {
+    for (i = 0; i < switcherButtons.length; i++) {
         switcherButtons[i].disabled = false;
     }
 

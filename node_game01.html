@@ -6,25 +6,25 @@
 </head>
 <body onload="openFullscreen()">
 <script>
-var elem = document.documentElement;
+    var elem = document.documentElement;
 
-if(document.location.href !== "https://kubikaugustyn.github.io/node_game01?isAuthorized=true&hosting=true&web=kubikaugustyn.github.io"){
-    document.location = "https://kubikaugustyn.github.io/error"
-}
+    if (document.location.href !== "https://kubikaugustyn.github.io/node_game01?isAuthorized=true&hosting=true&web=kubikaugustyn.github.io") {
+        document.location = "https://kubikaugustyn.github.io/error"
+    }
 
-function openFullscreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.mozRequestFullScreen) {
-    elem.mozRequestFullScreen();
-  } else if (elem.webkitRequestFullscreen) {
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) {
-    elem.msRequestFullscreen();
-  }
+    function openFullscreen() {
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) {
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+            elem.msRequestFullscreen();
+        }
 
-  document.location.href = "https://react-game01.firebaseapp.com/"
-}
+        document.location.href = "https://react-game01.firebaseapp.com/"
+    }
 </script>
 </body>
 </html>
