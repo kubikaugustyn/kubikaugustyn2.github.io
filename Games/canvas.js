@@ -1,9 +1,9 @@
 class Canvas {
-    constructor(params = {}, style = {}, divId = "") {
+    constructor(params = {}, style = {}, elemId = "") {
         this.canvas = document.createElement("canvas")
         this.params = params
         this.style = style
-        this.divId = divId
+        this.elemId = elemId
         for (let [key, value] of Object.entries(this.params)) {
             this.canvas.setAttribute(key, value);
         }
@@ -11,19 +11,6 @@ class Canvas {
             this.canvas.style[key] = value
         }
         this.ctx = this.canvas.getContext("2d")
-        /*this.size = this.size.bind(this)
-        this.reload = this.reload.bind(this)
-        this.get = this.get.bind(this)
-        this.fillStyle = this.fillStyle.bind(this)
-        this.circle = this.circle.bind(this)
-        this.line = this.line.bind(this)
-        this.rect = this.rect.bind(this)
-        this.createLinearGradient = this.createLinearGradient.bind(this)
-        this.createRadialGradient = this.createRadialGradient.bind(this)
-        this.fillText = this.fillText.bind(this)
-        this.strokeText = this.strokeText.bind(this)
-        this.font = this.font.bind(this)
-        this.image = this.image.bind(this)*/
     }
 
     size(w = NaN, h = NaN) {
@@ -32,8 +19,8 @@ class Canvas {
     }
 
     reload() {
-        document.getElementById(this.divId).innerHTML = ""
-        document.getElementById(this.divId).appendChild(this.get())
+        document.getElementById(this.elemId).innerHTML = ""
+        document.getElementById(this.elemId).appendChild(this.get())
     }
 
     get() {

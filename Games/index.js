@@ -3,6 +3,11 @@ var games = [
         name: "Diamantovi",
         logo: "Diamantovi/src/img/logo.png",
         link: "Diamantovi"
+    },
+    {
+        name: "Katan pro 4 hráče",
+        logo: "Katan/OsadniciZKatanu/Hra/4/src/img/logo.png",
+        link: "Katan/OsadniciZKatanu/Hra/4"
     }
 ]
 
