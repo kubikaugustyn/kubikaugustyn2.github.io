@@ -5,15 +5,38 @@
     <title>Katan pro 4 hráče</title>
     <link rel="stylesheet" type="text/css" href="src/css/index.css">
     <script src="../../../../canvas.js"></script>
+    <script src="src/js/URL.js"></script>
     <script src="src/js/index.js"></script>
 </head>
-<body onload="onLoad()">
+<body onload="onLoad()" style="background-image: url('src/img/logo.png');background-size: 115px">
 <div id="game" style="display: none"></div>
-<div id="selectRole" style="display: none"></div>
-<div id="selectName" style="display: none"></div>
-<div id="start"></div>
+<div id="selectRole" style="display: none">
+    <select size="1" name="selectRoleSelect">
+        <option selected value="1">Member</option>
+        <option value="2">Admin</option>
+    </select>
+</div>
+<div id="selectName" style="display: none">
+    <center>
+        <h1>Write your username</h1>
+        <input placeholder="Your username here." id="name" type="text"><br><br>
+        <button id="nameOK" disabled>OK</button>
+    </center>
+</div>
+<div id="start">
+    <center>
+        <h1>Katan</h1>
+        <button id="playButton" disabled>Hrát</button>
+    </center>
+</div>
 <div id="downBar">
-    <p>&copy; 2021 <a href="mailto:kubik.augustyn@post.cz">Jakub Augustýn</a></p>
+    <bottom>
+        <center>
+            &copy; 2021 <a href="mailto:kubik.augustyn@post.cz">Jakub Augustýn</a> |
+            <a target="_blank" href="../../Almanach/Almanach.pdf">Almanach</a> |
+            <a target="_blank" href="../../Pravidla/Pravidla.pdf">Pravidla</a>
+        </center>
+    </bottom>
 </div>
 </body>
 </html>

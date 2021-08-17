@@ -4,6 +4,7 @@ class Canvas {
         this.params = params
         this.style = style
         this.elemId = elemId
+        this.wasLoaded = false
         for (let [key, value] of Object.entries(this.params)) {
             this.canvas.setAttribute(key, value);
         }
@@ -21,6 +22,7 @@ class Canvas {
     reload() {
         document.getElementById(this.elemId).innerHTML = ""
         document.getElementById(this.elemId).appendChild(this.get())
+        this.wasLoaded = true
     }
 
     get() {
