@@ -107,7 +107,7 @@ var navod = [
         "img": "IMG_8606"
     },
     {
-        "kostky": "/IMG_",
+        "kostky": "cerne/IMG_",
         "pocet": "1",
         "img": "IMG_8607"
     },
@@ -212,7 +212,7 @@ var navod = [
         "img": "IMG_8627"
     },
     {
-        "kostky": "cerne/IMG_",
+        "kostky": "cerne/IMG_9013",
         "pocet": "2",
         "img": "IMG_8628"
     },

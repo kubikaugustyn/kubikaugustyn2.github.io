@@ -11,6 +11,12 @@
 <a href="01">Návod 1</a><br>
 <a href="02">Návod 2</a><br>
 <a href="Vrana?page=0">Návod na vránu</a><br>
-<a href="Vrana/1?page=0">Návod na vránu s ukládáním aktuálního místava ve stránkách</a><br>
+<a href="Vrana/1.html?page=0">Návod na vránu s ukládáním aktuálního místava ve stránkách</a><br>
+<script>
+    var as = document.getElementsByTagName("a")
+    for (var a of as) {
+        a.target = "_blank"
+    }
+</script>
 </body>
 </html>
