@@ -15,20 +15,17 @@ function setLockIcon(elementId, value) {
     document.getElementById(elementId).innerHTML = lockIcons[value]
 }
 
-function setResetButton(){
-    if(document.getElementById("UserNameInput").value !== "") {
+function setResetButton() {
+    if (document.getElementById("UserNameInput").value !== "") {
         document.getElementById("ResetButtonDiv").innerHTML = '<input onclick="setResetButton(); resetForm()" type="reset" value="Vynulovat" class="btn float-right login_btn">'
-    }
-    else if(document.getElementById("PasswordInput").value !== "") {
+    } else if (document.getElementById("PasswordInput").value !== "") {
         document.getElementById("ResetButtonDiv").innerHTML = '<input onclick="setResetButton(); resetForm()" type="reset" value="Vynulovat" class="btn float-right login_btn">'
-    }
-    else {
+    } else {
         document.getElementById("ResetButtonDiv").innerHTML = '<input onclick="setResetButton(); resetForm()" type="reset" value="Vynulovat" class="btn float-right login_btn" disabled>'
     }
 }
 
 function checkUserName(sender) {
-    console.log("function Login(", sender, ")");
     var result = (userCredits[document.getElementById("UserNameInput").value] !== undefined) || false
     setLockIcon("UserNameIcon", result)
     UserNameIsGood = result
@@ -38,8 +35,6 @@ function checkUserName(sender) {
 }
 
 function checkUserPassword(sender) {
-    console.log("function Login2(", sender, ")");
-
     var result = checkUserName(sender) && (document.getElementById("PasswordInput").value === userCredits[document.getElementById("UserNameInput").value])
     setLockIcon("PasswordIcon", result)
     PasswordIsGood = result
@@ -49,32 +44,26 @@ function checkUserPassword(sender) {
 }
 
 function checkUserNameAndUserPassword(sender) {
-    console.log("checkUserNameAndUserPassword()...")
-    console.log('getElemById("PasswordIcon").innerHTML: ', getElemById("PasswordIcon").innerText)
-    console.log('getElemById("UserNameIcon").innerHTML: ', getElemById("UserNameIcon").innerHTML)
-    console.log("lockIcons.true: ", lockIcons.true)
     if (PasswordIsGood === true && UserNameIsGood === true) {
         getElemById("GoodUserNameAndUserPassword").innerHTML = lockIcons.true
-        console.log("aaa")
-    }
-    else {
+        getElemById("Prihlasit").removeAttribute("disabled")
+    } else {
         getElemById("GoodUserNameAndUserPassword").innerHTML = lockIcons.false
-        console.log("bbb")
+        getElemById("Prihlasit").setAttribute("disabled", "")
     }
 }
 
-function resetUserCredits(sender){
-    console.log("resetUserCredits")
+function resetUserCredits(sender) {
     setLockIcon("UserNameIcon", false)
     setLockIcon("PasswordIcon", false)
 }
 
 function prihlasit(sender) {
-    console.log("prihlasit(), sender: ", sender)
+    console.log("Logging in...")
 }
 
 var userCredits = {
-    "bbb" : "ccc",
+    "bbb": "ccc",
     "augustyn": "jakub"
 }
 

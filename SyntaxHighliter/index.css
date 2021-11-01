@@ -8,7 +8,7 @@
     padding: 0;
     -webkit-writing-mode: horizontal-tb !important;
     text-rendering: auto;
-    color: #f5f5f5;
+    color: transparent;
     letter-spacing: normal;
     word-spacing: normal;
     text-transform: none;
@@ -46,7 +46,6 @@
     text-shadow: none;
     display: inline-block;
     text-align: start;
-    background-color: rgba(245, 245, 245, 0);
     background-color: transparent;
     -webkit-rtl-ordering: logical;
     flex-direction: column;

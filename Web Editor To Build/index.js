@@ -1,9 +1,12 @@
 //var LeftDivHeight
 
 function DownloadAsFile() {
+    var url = document.getElementById('body').value +
+        '&' +
+        document.getElementById('head').value
     // read text from URL location
     var request = new XMLHttpRequest();
-    request.open('GET', "./Wiew_Edited_Web_Page.html" + url, true);
+    request.open('GET', "./Wiew_Edited_Web_Page.html?" + url, true);
     //request.openCode('GET', "https://www.youtube.com/embed/5zlOHpoARRA", true);
     request.send(null);
     request.onreadystatechange = function () {
