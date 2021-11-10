@@ -6,5 +6,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="all" level="application" />
+    <orderEntry type="library" name="stylesheets.theme-defaultV2.min-c74e8c7" level="application" />
+    <orderEntry type="library" name="editor-f6261be" level="application" />
   </component>
 </module>
