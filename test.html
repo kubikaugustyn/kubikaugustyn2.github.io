@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<script>
+    var url = "https://www.etaktik.cz/download/reseni/trd_hd6.pdf"
+    var headers = {
+        'Access-Control-Allow-Origin': url
+    }
+    var http = new XMLHttpRequest()
+    http.onerror = function (error) {
+        console.log(error)
+    }
+    http.onreadystatechange = function (state) {
+        console.log(state)
+    }
+    http.onprogress = function (progress) {
+        console.log(progress)
+    }
+    http.open("HEAD", url)
+    // http.setRequestHeader('Access-Control-Allow-Origin', "https://www.etaktik.cz/")
+    http.setRequestHeader('Access-Control-Allow-Origin', "http://localhost:63342")
+    http.send()
+</script>
+</body>
+</html>
