@@ -38,8 +38,8 @@ def ListDir(path, notGoToDirs, notGoToFileExtension):
     for file in dirs:
         if not os.path.isdir(path + sep + file):
             if not os.path.splitext(path + sep + file)[1] in notGoToFileExtension:
-                print(file, "   Is directory: ",os.path.isdir(path + sep + file))
-                Files.append(path+sep+file)
+                print(file, "   Is directory: ", os.path.isdir(path + sep + file))
+                Files.append(str(path + sep + file))
     return 0
 
 def Build(path, notGoToDirs=(), notGoToFileExtension=()):
@@ -48,7 +48,9 @@ def Build(path, notGoToDirs=(), notGoToFileExtension=()):
     ListDir(path, notGoToDirs, notGoToFileExtension)
     Hrefs = """"""
     for fileName in Files:
-        Hrefs += f"\t<a target='blank' href='{fileName}'>{fileName}</a><br>\n"
+        filePath = fileName.replace("\\", "/")
+        filePath = filePath.replace("C:/Users/Radek Augustyn/Desktop/Kubik/kubikaugustyn.github.io", ".")
+        Hrefs += f"\t<a target='blank' href='{filePath}'>{filePath}</a><br>\n"
     #HTMLFileTemplate.replace("<HREFS />", Hrefs)
     Output = HTMLFileTemplate.replace("<HREFS />", Hrefs).replace(path+sep, ".\\")
     File.write(Output)
