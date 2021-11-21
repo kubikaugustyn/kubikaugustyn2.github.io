@@ -1,0 +1,25 @@
+Engine.hero.money = 197893465435482395234235794835457245263543275425648752347
+Engine.hero.inventory.sonar = 100000000
+Engine.hero.inventory.tnt = 100000000
+Engine.hero.inventory.energy = 100000000
+Engine.hero.upgrades.drill = "layer_4"
+Engine.hero.upgrades.backpack = "red"
+Engine.hero.upgrades.energystorage = "red"
+Engine.hero.upgrades.flashlight = "red"
+Engine.hero.color = "red"
+Engine.hero.artifacts.layer_0 = Engine.artifacts.layer_0
+Engine.hero.artifacts.layer_1 = Engine.artifacts.layer_1
+Engine.hero.artifacts.layer_2 = Engine.artifacts.layer_2
+Engine.hero.artifacts.layer_3 = Engine.artifacts.layer_3
+Engine.hero.artifacts.layer_4 = Engine.artifacts.layer_4
+Engine.hero.layersReached.layer_0 = true
+Engine.hero.layersReached.layer_1 = true
+Engine.hero.layersReached.layer_2 = true
+Engine.hero.layersReached.layer_3 = true
+Engine.hero.layersReached.layer_4 = true
+Engine.hero.energyUnits = 1000000
+Engine.saveLoad.save((a)=>{console.log(a);document.location.reload()})
+
+
+
+Engine.tileTypeCodeMap
