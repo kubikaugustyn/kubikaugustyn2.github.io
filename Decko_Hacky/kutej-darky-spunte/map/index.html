@@ -6,6 +6,30 @@
 </head>
 <body>
 <img id="map" alt="Map image" style="display: none">
+<h1>Nastavení</h1>
+1. Otevřete
+<a target="_blank"
+   href="https://decko.ceskatelevize.cz/flashAppIframe/ff1af0a6-7386-49be-9b85-6d06a1c72788?closeButtonEnabled=false">hru</a>
+nebo
+<a target="_blank" href="https://decko.ceskatelevize.cz/hry/kutej-darky-spunte">tuto hru</a> (to samé)<br>
+2. Stiskněte <kbd>F12</kbd>
+3. Pokud použijete "https://decko.ceskatelevize.cz/hry/kutej-darky-spunte", zkontrolujte, že máte vybráno
+"ff1af0a6-7386-49be-9b85-6d06a1c72788", nikoli "top"<br>
+4. Spusťte hru (Nová hra / Pokračovat)<br>
+5. Vložte: Engine.tileTypeCodeMap a stiskněte <kbd>Enter</kbd><br>
+6. Zobrazí se dlouhý text, dole je tlačítko Kopírovat / Copy<br>
+7. Vložte sem: <input id="mapStr" type="text" placeholder="Zde..." size="50000"><br>
+<button onclick="renderMap()">Hotovo!</button>
+<h1>Upravit mapu</h1>
+<h2>Replace</h2>
+What: <input value="obstacle" id="replaceWhatId" type="text" size="100"><br>
+To: <input value="soil" id="replaceToId" type="text" size="100"><br>
+<button onclick="replaceInMap()">Replace all</button>
+<h1>Uložit mapu</h1>
+<pre id="mapSaveText"></pre>
+<h1>Odkazy do mapy</h1>
+<div id="mapLinks"></div>
+<h1>Mapa</h1>
 <canvas id="map_canvas" width="6519" height="16695"></canvas>
 <script src="index.js"></script>
 </body>
