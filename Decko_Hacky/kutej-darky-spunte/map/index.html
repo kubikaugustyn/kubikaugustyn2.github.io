@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mapa</title>
+    <title>Kutej dárky špunte! - Mapa</title>
 </head>
-<body>
+<body style="margin: 0"
+      onload="var str = loadMapStr();document.getElementById('mapStr').value=str;str.length>5&&renderMap()">
 <img id="map" alt="Map image" style="display: none">
 <h1>Nastavení</h1>
 1. Otevřete
@@ -18,7 +19,7 @@ nebo
 4. Spusťte hru (Nová hra / Pokračovat)<br>
 5. Vložte: Engine.tileTypeCodeMap a stiskněte <kbd>Enter</kbd><br>
 6. Zobrazí se dlouhý text, dole je tlačítko Kopírovat / Copy<br>
-7. Vložte sem: <input id="mapStr" type="text" placeholder="Zde..." size="50000"><br>
+7. Vložte sem: <input id="mapStr" type="text" placeholder="Zde..." size="500"><br>
 <button onclick="renderMap()">Hotovo!</button>
 <h1>Upravit mapu</h1>
 <h2>Replace</h2>
@@ -27,10 +28,13 @@ To: <input value="soil" id="replaceToId" type="text" size="100"><br>
 <button onclick="replaceInMap()">Replace all</button>
 <h1>Uložit mapu</h1>
 <pre id="mapSaveText"></pre>
+<input style="color:transparent;background-color: transparent;border: transparent;padding: 0" id="mapSaveTextInput"
+       type="text"><br>
+<button id="mapSaveButton">Kopírovat do schránky</button>
 <h1>Odkazy do mapy</h1>
 <div id="mapLinks"></div>
 <h1>Mapa</h1>
-<canvas id="map_canvas" width="6519" height="16695"></canvas>
+<canvas id="map_canvas" width="6466" height="16695"></canvas>
 <script src="index.js"></script>
 </body>
 </html>
