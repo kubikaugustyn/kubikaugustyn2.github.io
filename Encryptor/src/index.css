@@ -5,3 +5,12 @@ body {
 table, th, td {
     border: 1px solid black;
 }
+
+red {
+    color: red;
+}
+
+#message {
+    width: 50vw;
+    height: 50vh;
+}
