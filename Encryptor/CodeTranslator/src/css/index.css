@@ -1,0 +1,88 @@
+body {
+    background-color: lightblue;
+}
+
+html, body, #main /*, .languagesChooser, .fromLanguage, .toLanguage, .swapLanguages, .fromLanguageInput, .toLanguageOutput*/
+{
+    width: 100%;
+    margin: 0;
+}
+
+html, body /*, #main*/
+{
+    height: 100%;
+}
+
+body {
+    position: relative;
+    text-align: center;
+    /*vertical-align: center;*/
+    /*horiz-align: center;*/
+}
+
+.fromLanguageInput, .toLanguageOutput {
+    /*display: inline-block;*/
+    vertical-align: middle;
+    /*line-height: normal;*/
+}
+
+#main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/*Languages Chooser*/
+
+.languagesChooser {
+    cursor: default;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.fromLanguage select, .toLanguage select {
+    border: 0;
+}
+
+.swapLanguages, .swapLanguages button {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    width: 15px;
+    height: 15px;
+}
+
+.swapLanguages button {
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.swapLanguages button::before {
+    content: url("../img/swap.svg");
+    /*width: 150px;
+    height: 150px;*/
+}
+
+/*fromLanguageInput, toLanguageOutput*/
+
+.fromLanguageInput textarea, .toLanguageOutput textarea {
+    display: inline;
+    cursor: text;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(133, 133, 133);
+    border-image: initial;
+    border-radius: 5px;
+    width: 25vw;
+    height: 25vh;
+    background-color: white;
+    color: black;
+    resize: none;
+}
+
+.fromLanguageInput textarea {
+
+}

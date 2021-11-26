@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Translator</title>
+    <script src="src/js/Languages/Normal.js"></script>
+    <script src="src/js/Languages/GirlsCode_1.js"></script>
+    <script src="src/js/index.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="src/css/index.css">
+</head>
+<body>
+<div id="main">
+    <div class="languagesChooser">
+        <span class="fromLanguage">
+            <select size="1" name="fromLanguageSelect" id="fromLanguageSelect"></select>
+        </span>
+        <span class="swapLanguages">
+            <button id="swapLanguagesButton"></button>
+        </span>
+        <span class="toLanguage">
+            <select size="1" name="toLanguageSelect" id="toLanguageSelect"></select>
+        </span>
+    </div>
+    <br>
+    <span class="fromLanguageInput">
+        <textarea id="fromLanguageTextarea" placeholder="Text to translate here..."></textarea>
+    </span>
+    <span class="toLanguageOutput">
+        <textarea id="toLanguageTextarea" placeholder="Translated text will be here..." disabled></textarea>
+    </span>
+</div>
+</body>
+</html>
