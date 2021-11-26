@@ -102,6 +102,4 @@ elements.fromLanguageTextarea.addEventListener("keyup", function (e) {
     translate(e)
 })
 
-console.log(elements, languages, data)
-
 onLoad()
