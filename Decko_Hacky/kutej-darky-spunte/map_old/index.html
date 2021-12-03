@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Kutej dárky špunte! - Mapa</title>
-    <script src="MapEditor.js"></script>
-    <script src="index.js" defer></script>
 </head>
-<body style="margin: 0">
+<body style="margin: 0"
+      onload="var str = loadMapStr();document.getElementById('mapStr').value=str;str.length>5&&renderMap()">
 <img id="map" alt="Map image" style="display: none">
-<img id="horizon" alt="Horizon image" style="display: none">
 <h1>Nastavení</h1>
 1. Otevřete
 <a target="_blank"
@@ -22,22 +20,21 @@ nebo
 5. Vložte: Engine.tileTypeCodeMap a stiskněte <kbd>Enter</kbd><br>
 6. Zobrazí se dlouhý text, dole je tlačítko Kopírovat / Copy<br>
 7. Vložte sem: <input id="mapStr" type="text" placeholder="Zde..." size="500"><br>
-<button onclick="mapEditor&&mapEditor.done()" style="position: fixed">Hotovo!</button>
-<div style="display: none">
-    <h1>Upravit mapu</h1>
-    <h2>Replace</h2>
-    What: <input value="obstacle" id="replaceWhatId" type="text" size="100"><br>
-    To: <input value="soil" id="replaceToId" type="text" size="100"><br>
-    <button onclick="mapEditor&&mapEditor.replaceInMap()">Replace all</button>
-    <h1>Uložit mapu</h1>
-    <pre id="mapSaveText"></pre>
-    <input style="color:transparent;background-color: transparent;border: transparent;padding: 0" id="mapSaveTextInput"
-           type="text"><br>
-    <button id="mapSaveButton">Kopírovat do schránky</button>
-    <h1>Odkazy do mapy</h1>
-    <div id="mapLinks"></div>
-</div>
+<button onclick="renderMap()">Hotovo!</button>
+<h1>Upravit mapu</h1>
+<h2>Replace</h2>
+What: <input value="obstacle" id="replaceWhatId" type="text" size="100"><br>
+To: <input value="soil" id="replaceToId" type="text" size="100"><br>
+<button onclick="replaceInMap()">Replace all</button>
+<h1>Uložit mapu</h1>
+<pre id="mapSaveText"></pre>
+<input style="color:transparent;background-color: transparent;border: transparent;padding: 0" id="mapSaveTextInput"
+       type="text"><br>
+<button id="mapSaveButton">Kopírovat do schránky</button>
+<h1>Odkazy do mapy</h1>
+<div id="mapLinks"></div>
 <h1>Mapa</h1>
 <canvas id="map_canvas" width="6466" height="16695"></canvas>
+<script src="index.js"></script>
 </body>
 </html>
