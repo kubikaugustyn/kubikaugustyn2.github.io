@@ -115,7 +115,7 @@ class MapEditor {
             },
             movedY: -4 * this.blockSize - 34,
             computeX: function (x) {
-                return 11 * this.blockSize + ((x - 11) * 51)
+                return x * this.blockSize//11 * this.blockSize + ((x - 11) * this.blockSize)
             }
         }
         this.specialBlocks.horizon.texture.computeX = this.specialBlocks.horizon.texture.computeX.bind(this)
