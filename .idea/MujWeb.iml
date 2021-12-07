@@ -8,5 +8,6 @@
     <orderEntry type="library" name="all" level="application" />
     <orderEntry type="library" name="stylesheets.theme-defaultV2.min-c74e8c7" level="application" />
     <orderEntry type="library" name="editor-f6261be" level="application" />
+    <orderEntry type="library" name="gstream" level="application" />
   </component>
 </module>

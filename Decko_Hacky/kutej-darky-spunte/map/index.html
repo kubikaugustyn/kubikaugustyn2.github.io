@@ -23,20 +23,20 @@ nebo
 6. Zobrazí se dlouhý text, dole je tlačítko Kopírovat / Copy<br>
 7. Vložte sem: <input id="mapStr" type="text" placeholder="Zde..." size="500"><br>
 <button onclick="mapEditor&&mapEditor.done()" style="position: fixed">Hotovo!</button>
-<div style="display: none">
-    <h1>Upravit mapu</h1>
-    <h2>Replace</h2>
-    What: <input value="obstacle" id="replaceWhatId" type="text" size="100"><br>
-    To: <input value="soil" id="replaceToId" type="text" size="100"><br>
-    <button onclick="mapEditor&&mapEditor.replaceInMap()">Replace all</button>
-    <h1>Uložit mapu</h1>
-    <pre id="mapSaveText"></pre>
-    <input style="color:transparent;background-color: transparent;border: transparent;padding: 0" id="mapSaveTextInput"
-           type="text"><br>
-    <button id="mapSaveButton">Kopírovat do schránky</button>
-    <h1>Odkazy do mapy</h1>
-    <div id="mapLinks"></div>
-</div>
+<!--<div style="display: none">-->
+<h1>Upravit mapu</h1>
+<h2>Replace</h2>
+What: <input value="obstacle" id="replaceWhatId" type="text" size="100"><br>
+To: <input value="soil" id="replaceToId" type="text" size="100"><br>
+<button onclick="mapEditor&&mapEditor.replaceInMap()">Replace all</button>
+<h1>Uložit mapu</h1>
+<pre id="mapSaveText"></pre>
+<input style="color:transparent;background-color: transparent;border: transparent;padding: 0" id="mapSaveTextInput"
+       type="text"><br>
+<button id="mapSaveButton">Kopírovat do schránky</button>
+<h1>Odkazy do mapy</h1>
+<div id="mapLinks"></div>
+<!--</div>-->
 <h1>Mapa</h1>
 <canvas id="map_canvas" width="6466" height="16695"></canvas>
 </body>

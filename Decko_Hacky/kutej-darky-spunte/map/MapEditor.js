@@ -1,13 +1,14 @@
 var __author__ = "kubik.augustyn@post.cz"
 
 class MapEditor {
-    constructor(mapKey, textures, mapCanvasId, mapStrInputId) {
+    constructor(mapKey, textures, mapCanvasId, mapStrInputId, mapLinksDivId, mapSaveIdPart) {
         console.log("Map editor...")
         this.blockSize = 53
         this.specialBlocks = {
             horizon: {
                 ys: [-2, 372, 746, 1120]
-            }
+            },
+            soil: {}
         }
         this.specialBlocks.horizon.texture = {
             specialTextureType: "byBlockX,movedY,computeX",
@@ -111,14 +112,21 @@ class MapEditor {
                 107: this.createHorizonPiece(0, 1),
                 108: this.createHorizonPiece(0, 0),
                 109: this.createHorizonPiece(1294, 0),
-                110: this.createHorizonPiece(160, 0),
+                110: {x: 0, y: 0, w: 0, h: 0}
             },
             movedY: -4 * this.blockSize - 34,
             computeX: function (x) {
-                return x * this.blockSize//11 * this.blockSize + ((x - 11) * this.blockSize)
+                return 11 * this.blockSize + ((x - 11) * (this.blockSize * (110 / 109)))
             }
         }
         this.specialBlocks.horizon.texture.computeX = this.specialBlocks.horizon.texture.computeX.bind(this)
+        this.specialBlocks.soil.texture = {
+            specialTextureType: "byBlockY",
+            byBlockY: {
+                7: {x: 830, y: 214, w: this.blockSize, h: this.blockSize},
+                else: {x: 828, y: 52, w: this.blockSize, h: this.blockSize}
+            }
+        }
         this.blocks = {
             none: {
                 code: "A",
@@ -212,9 +220,25 @@ class MapEditor {
             artifact_33: this.createNormalBlock("t", 1312, 592),
             artifact_34: this.createNormalBlock("u", 1312, 538),
             obstacle: this.createNormalBlock("v", 830, 700),
-            soil: this.createNormalBlock("w", 828, 52),
+            // soil: this.createNormalBlock("w", 828, 52),
+            soil: {
+                code: "w",
+                texture: {
+                    x: 0,
+                    y: 0,
+                    w: 0,
+                    h: 0,
+                    hasTexture: true,
+                    specialTexture: true,
+                    textureId: "world"
+                }
+            },
             cave_up: this.createNormalBlock("x", 766, 1186),
             cave_down: this.createNormalBlock("y", 1022, 538),
+        }
+        this.blockCodesMap = {}
+        for (var key of Object.keys(this.blocks)) {
+            this.blockCodesMap[this.blocks[key].code] = key
         }
         this.mapKey = mapKey
         this.textures = textures
@@ -223,6 +247,9 @@ class MapEditor {
         this.mapCanvas = document.getElementById(this.mapCanvasId)
         this.mapStrInputId = mapStrInputId
         this.mapStrInput = document.getElementById(this.mapStrInputId)
+        this.mapLinksDivId = mapLinksDivId
+        this.mapLinksDiv = document.getElementById(this.mapLinksDivId)
+        this.mapSaveIdPart = mapSaveIdPart
         this.mapStr = undefined
         this.map = undefined
         this.loadTextures()
@@ -318,13 +345,15 @@ class MapEditor {
     }
 
     moveToBlock(x, y) {
-        /*var blockX = x * mapBlockSize
-        var blockY = y * mapBlockSize
-        var bRect = document.getElementById("map_canvas").getBoundingClientRect()
-        var pageX = bRect.x + blockX - window.innerWidth / 2
-        var pageY = bRect.y + blockY - window.innerHeight / 2
-        window.scrollTo(pageX, pageY)*/
-        console.log("Move to:", x, y)
+        var blockX = x * this.blockSize
+        var blockY = y * this.blockSize
+        var bRect = this.mapCanvas.getBoundingClientRect()
+        var pageX = Math.floor(bRect.x + blockX)// + window.innerWidth / 2)
+        var pageY = Math.floor(bRect.y + blockY)// + window.innerHeight / 2)
+        // window.scroll(pageX, pageY)
+        // window.scrollTo(pageX, pageY)
+        window.scrollBy(pageX, pageY)
+        console.log("Move to:", x, y, bRect.y + blockY, window.innerHeight / 2)
     }
 
     copyToClipboard(elemId) {
@@ -358,22 +387,38 @@ class MapEditor {
         mapToRender[6] = 'EEEEEEEEEEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEEEEEEEEEE'.split("")
         // console.log(mapToRender)
 
+        var blockPos
+        // var useNarutoMethod = true
         var ctx = this.mapCanvas.getContext("2d")
         ctx.fillStyle = "white"
         ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height)
         ctx.fillStyle = "red"
-        for (var y = mapToRender.length - 1; y > -1; y--) {
+        var mapLinkIdParts = ["teleport", "shop", "artifact_"]
+        var mapLinks = []
+        var mapLinksNumLimit = 150
+        var sTime = Date.now()
+        // for (var y = mapToRender.length - 1; y > -1; y--) {
+        for (var y = 0; y < mapToRender.length; y++) {
             var row = mapToRender[y]
             for (var x in row) {
                 var blockCode = row[x]
+                var blockKey = undefined
                 var blockData = undefined
-                for (var blockKey of Object.keys(this.blocks)) {
-                    var block = this.blocks[blockKey]
-                    if (block.code === blockCode) {
-                        blockData = block
-                        break
+                //Naruto method off
+                /*if (!useNarutoMethod) {
+                    for (blockKey of Object.keys(this.blocks)) {
+                        var block = this.blocks[blockKey]
+                        if (block.code === blockCode) {
+                            blockData = block
+                            break
+                        }
                     }
-                }
+                }*/
+                //Naruto method on
+                // else {
+                blockKey = this.blockCodesMap[blockCode]
+                blockData = this.blocks[blockKey]
+                // }
                 if (blockData) {
                     // console.log("Found block data...")
                     if (blockData.texture.hasTexture) {
@@ -382,7 +427,7 @@ class MapEditor {
                             // console.log(blockKey)
                             switch (this.specialBlocks[blockKey].texture.specialTextureType) {
                                 case "byBlockX,movedY,computeX":
-                                    var blockPos = this.specialBlocks[blockKey].texture.byBlockX[x]
+                                    blockPos = this.specialBlocks[blockKey].texture.byBlockX[x]
                                     //Prevent errors
                                     if (blockPos) {
                                         ctx.imageSmoothingEnabled = false
@@ -394,11 +439,31 @@ class MapEditor {
                                             blockPos.h,
                                             this.specialBlocks[blockKey].texture.computeX(x),
                                             y * this.blockSize + this.specialBlocks[blockKey].texture.movedY,
-                                            /*blockPos.w*/this.blockSize,
+                                            /*blockPos.w*/this.blockSize * (110 / 109),
                                             blockPos.h
                                         )
                                     } else {
                                         console.log("An error, x: " + x + "...")
+                                    }
+                                    break
+                                case "byBlockY":
+                                    blockPos = Object.keys(this.specialBlocks[blockKey].texture.byBlockY).includes("" + y) ? this.specialBlocks[blockKey].texture.byBlockY[y] : this.specialBlocks[blockKey].texture.byBlockY.else
+                                    //Prevent errors
+                                    if (blockPos) {
+                                        ctx.imageSmoothingEnabled = false
+                                        ctx.drawImage(
+                                            this.images[blockData.texture.textureId],
+                                            blockPos.x,
+                                            blockPos.y,
+                                            blockPos.w,
+                                            blockPos.h,
+                                            x * this.blockSize,
+                                            y * this.blockSize,
+                                            blockPos.w,
+                                            blockPos.h
+                                        )
+                                    } else {
+                                        console.log("An error, y: " + y + "...")
                                     }
                                     break
                             }
@@ -408,6 +473,9 @@ class MapEditor {
                         }
                         // console.log("Found block with texture...")
                     }
+                    if (blockKey.includes("artifact_")) {
+                        ctx.fillText(blockKey, x * this.blockSize, y * this.blockSize)
+                    }
                     /*if (blockData.imgPos && blockData.imgPos.length > 0) {
                         //console.log(`Have image pos, block at x: ${x}, y: ${y}!!!`, x * mapBlockSize, y * mapBlockSize, mapBlockSize, mapBlockSize)
                         ctx.imageSmoothingEnabled = false
@@ -416,9 +484,47 @@ class MapEditor {
                         console.log(`Artifact without texture, id: ${blockData.id}...`)
                         ctx.fillText(blockData.id, x * mapBlockSize, y * mapBlockSize)
                     }*/
+                    for (var mapLinkIdPart of mapLinkIdParts) {
+                        if (blockKey.includes(mapLinkIdPart)) {
+                            mapLinks.push({
+                                id: blockKey,
+                                x,
+                                y
+                            })
+                        }
+                    }
                 }
             }
         }
+        if (mapLinks.length > mapLinksNumLimit) {
+            this.mapLinksDiv.innerHTML = `There are ${mapLinks.length} links to render, but quota is set to ${mapLinksNumLimit}.`
+        } else {
+            mapLinks = mapLinks.sort(function (a, b) {
+                if (a.id < b.id) {
+                    return -1;
+                }
+                if (a.id > b.id) {
+                    return 1;
+                }
+                return 0;
+            })
+            this.mapLinksDiv.innerHTML = ""
+            ctx.strokeStyle = "red"
+            for (var mapLink of mapLinks) {
+                // console.log(mapLink)
+                ctx.rect(mapLink.x * this.blockSize, mapLink.y * this.blockSize, this.blockSize, this.blockSize)
+                ctx.stroke()
+                var button = document.createElement("button")
+                button.innerText = mapLink.id
+                button.setAttribute("onclick", `mapEditor.moveToBlock(${mapLink.x}, ${mapLink.y})`)
+                this.mapLinksDiv.appendChild(button)
+                // mapLinksDiv.innerHTML += "<br>"
+            }
+        }
+        document.getElementById(this.mapSaveIdPart + "Text").innerText = `Engine.tileTypeCodeMap = '...'\nEngine.saveLoad.save((a)=>{console.log(a);a.status==="OK"?document.location.reload():console.error("An error occured.")})`
+        document.getElementById(this.mapSaveIdPart + "TextInput").value = `Engine.tileTypeCodeMap = '${this.mapStr}';Engine.saveLoad.save((a)=>{console.log(a);a.status==="OK"?document.location.reload():console.error("An error occured.")})`
+        document.getElementById(this.mapSaveIdPart + "Button").setAttribute("onclick", `mapEditor.copyToClipboard("${this.mapSaveIdPart}TextInput")`)
+        console.log(`Done in ${Date.now() - sTime}ms.`)
         /*ctx.strokeStyle = "red"
         var mapLinksDiv = document.getElementById("mapLinks")
         mapLinksDiv.innerHTML = ""
