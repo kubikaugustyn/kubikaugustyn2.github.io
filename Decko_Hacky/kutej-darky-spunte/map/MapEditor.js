@@ -1,7 +1,7 @@
 var __author__ = "kubik.augustyn@post.cz"
 
 class MapEditor {
-    constructor(mapKey, textures, mapCanvasId, mapStrInputId, mapLinksDivId, mapSaveIdPart) {
+    constructor(mapKey, textures, mapCanvasId, mapStrInputId, mapLinksDivId, mapSaveIdPart, replaceWhatInputId, replaceToInputId) {
         console.log("Map editor...")
         this.blockSize = 53
         this.specialBlocks = {
@@ -250,11 +250,15 @@ class MapEditor {
         this.mapLinksDivId = mapLinksDivId
         this.mapLinksDiv = document.getElementById(this.mapLinksDivId)
         this.mapSaveIdPart = mapSaveIdPart
+        this.replaceWhatInputId = replaceWhatInputId
+        this.replaceWhatInput = document.getElementById(this.replaceWhatInputId)
+        this.replaceToInputId = replaceToInputId
+        this.replaceToInput = document.getElementById(this.replaceToInputId)
         this.mapStr = undefined
         this.map = undefined
         this.loadTextures()
         this.loadMapStr()
-        this.mapStrInput.value = this.mapStr;
+        this.mapStrInput.value = this.mapStr
         // [38309, 38309 + 2].includes(this.mapStr.length) && this.done()
         // this.A = ['none', 'shop', 'invisible', 'horizon', 'unbreakable', 'teleport', 'coin_0', 'coin_1', 'coin_2', 'coin_3', 'coin_4', 'bonus', 'artifact_0', 'artifact_1', 'artifact_2', 'artifact_3', 'artifact_4', 'artifact_5', 'artifact_6', 'artifact_7', 'artifact_8', 'artifact_9', 'artifact_10', 'artifact_11', 'artifact_12', 'artifact_13', 'artifact_14', 'artifact_15', 'artifact_16', 'artifact_17', 'artifact_18', 'artifact_19', 'artifact_20', 'artifact_21', 'artifact_22', 'artifact_23', 'artifact_24', 'artifact_25', 'artifact_26', 'artifact_27', 'artifact_28', 'artifact_29', 'artifact_30', 'artifact_31', 'artifact_32', 'artifact_33', 'artifact_34', 'obstacle', 'soil', 'cave_up', 'cave_down']
         // this.B = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y']
@@ -348,12 +352,12 @@ class MapEditor {
         var blockX = x * this.blockSize
         var blockY = y * this.blockSize
         var bRect = this.mapCanvas.getBoundingClientRect()
-        var pageX = Math.floor(bRect.x + blockX)// + window.innerWidth / 2)
-        var pageY = Math.floor(bRect.y + blockY)// + window.innerHeight / 2)
+        var pageX = Math.floor(bRect.x + blockX - window.innerWidth / 2)
+        var pageY = Math.floor(bRect.y + blockY - window.innerHeight / 2)
         // window.scroll(pageX, pageY)
         // window.scrollTo(pageX, pageY)
         window.scrollBy(pageX, pageY)
-        console.log("Move to:", x, y, bRect.y + blockY, window.innerHeight / 2)
+        // console.log("Move to:", x, y, window.innerWidth / 2, window.innerHeight / 2)
     }
 
     copyToClipboard(elemId) {
@@ -364,14 +368,30 @@ class MapEditor {
     }
 
     replaceInMap() {
-        var whatId = document.getElementById("replaceWhatId").value
-        var toId = document.getElementById("replaceToId").value
-        var mapStr = document.getElementById("mapStr").value
-        // console.log(whatId, toId, allReverse[whatId], allReverse[toId], mapStr.length)
-        mapStr = mapStr.replaceAll(allReverse[whatId], allReverse[toId])
-        document.getElementById("mapStr").value = mapStr
-        saveMapStr(mapStr)
-        renderMap()
+        var whatId = this.replaceWhatInput.value
+        var toId = this.replaceToInput.value
+        var mapStr = this.mapStrInput.value
+        var whatCode = this.blocks[whatId].code
+        var toCode = this.blocks[toId].code
+        if (whatId.length === 1) {
+            whatCode = whatId
+        }
+        if (toId.length === 1) {
+            toCode = toId
+        }
+        mapStr = mapStr.replaceAll(whatCode, toCode)
+        console.log(`Replace all, ${whatId}-->${toId}, ${whatCode}-->${toCode}.`)
+        this.mapStrInput.value = mapStr
+        this.mapStr = mapStr
+        this.done()
+    }
+
+    replaceInMapAtPos(x, y, blockId) {
+        this.map[y][x] = this.blocks[blockId]
+        this.generateMapStr()
+        this.saveMapStr()
+        this.mapStrInput.value = this.mapStr
+        this.done()
     }
 
     renderMap() {
@@ -560,7 +580,7 @@ class MapEditor {
             this.map[6] = 'EEEEEEEEEEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEEEEEEEEEE'.split("")
             for (var i in this.map[7]) {
                 var col = this.map[7][i]
-                if (![this.blocks["none"].code, this.blocks["soil"].code, this.blocks["unbreakable"].code].includes(col)) {
+                if (![this.blocks.none.code, this.blocks.soil.code, this.blocks.unbreakable.code].includes(col)) {
                     this.map[7][i] = this.blocks["soil"].code
                 }
             }

@@ -44,20 +44,18 @@ class GirlsCode_1 {
     decode(text) {
         var decoded_string = ""
         for (var line of text.split("\n")) {
-            for (var part of line.split("")) decoded_string += this.alphabet[part] || "?"
+            for (var part of line.split("")) decoded_string += this.alphabet[part] || ""
             decoded_string += "\n"
         }
-        decoded_string.includes("?") ? decoded_string = "Dekódovaný text obsahuje nepovolené charaktery." : null
         return decoded_string
     }
 
     code(text) {
         var coded_string = ""
         for (var line of text.split("\n")) {
-            for (var part of line.split("")) coded_string += this.alphabetReverse[part.toUpperCase()] || "?"
+            for (var part of line.split("")) coded_string += this.alphabetReverse[part.toUpperCase()] || ""
             coded_string += "\n"
         }
-        coded_string.includes("?") ? coded_string = "Kódovaný text obsahuje nepovolené charaktery." : null
         return coded_string
     }
 }

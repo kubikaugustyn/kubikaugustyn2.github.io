@@ -23,6 +23,7 @@ elements.toLanguageTextarea = elements.get("toLanguageTextarea")
 var languages = []
 languages.push(new Normal())
 languages.push(new GirlsCode_1())
+auth.loggedIn && auth.userName === "Sifra1" && languages.push(new Sifra1())
 var loadedData = localStorage.getItem("CodeTranslatorData") ? JSON.parse(localStorage.getItem("CodeTranslatorData")) : {}
 var defaultData = {
     fromLanguage: languages[0].languageID,
@@ -42,6 +43,15 @@ function getLanguageIndexById(id) {
     return undefined
 }
 
+function getLanguageIndexByName(name) {
+    for (var i in languages) {
+        if (languages[i].languageName === name) {
+            return i
+        }
+    }
+    return undefined
+}
+
 function saveData() {
     localStorage.setItem("CodeTranslatorData", JSON.stringify(data))
 }
@@ -53,19 +63,32 @@ function onLoad() {
         var fromOption = elements.createOption(
             language.languageID,
             language.languageName,
-            getLanguageIndexById(language.languageID) === data.fromLanguage,
+            language.languageID === data.fromLanguage,
             language.languageID === data.toLanguage
         )
         var toOption = elements.createOption(
             language.languageID,
             language.languageName,
-            getLanguageIndexById(language.languageID) === data.toLanguage,
+            language.languageID === data.toLanguage,
             language.languageID === data.fromLanguage
         )
         elements.fromLanguageSelect.appendChild(fromOption)
         elements.toLanguageSelect.appendChild(toOption)
     }
 }
+
+function languageSelectClick() {
+    var fromLanguageName = elements.fromLanguageSelect.value
+    data.fromLanguage = languages[getLanguageIndexByName(fromLanguageName)].languageID
+    var toLanguageName = elements.toLanguageSelect.value
+    data.toLanguage = languages[getLanguageIndexByName(toLanguageName)].languageID
+    saveData()
+    onLoad()
+    translate()
+}
+
+elements.fromLanguageSelect.addEventListener("click", languageSelectClick)
+elements.toLanguageSelect.addEventListener("click", languageSelectClick)
 
 elements.swapLanguagesButton.addEventListener("click", function () {
     var fromLang, toLang, fromText, toText
@@ -103,3 +126,5 @@ elements.fromLanguageTextarea.addEventListener("keyup", function (e) {
 })
 
 onLoad()
+
+document.location.search.length > 0 && (document.location.href = document.location.protocol + "//" + document.location.host + "/" + PATHS.HOME)

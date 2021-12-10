@@ -16,7 +16,7 @@ var textures = {
 
 function onLoad() {
     console.log("onLoad...")
-    mapEditor = new MapEditor(mapKey, textures, "map_canvas", "mapStr", "mapLinks", "mapSave")
+    mapEditor = new MapEditor(mapKey, textures, "map_canvas", "mapStr", "mapLinks", "mapSave", "replaceWhatId", "replaceToId")
 }
 
 onLoad()
