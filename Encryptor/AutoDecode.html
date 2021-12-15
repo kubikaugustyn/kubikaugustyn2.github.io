@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auto decode</title>
+    <script src="src/auto_decode.js"></script>
+    <link rel="stylesheet" href="src/index.css" type="text/css">
+</head>
+<body onload="onLoad()">
+<h1>Automatický dekodér šifry - Verze 1.0</h1>
+Sem vložte zprávu z WhatsAppu (Označte zprávu a klikněte kopírovat), funguje pouze formát: [Datum a čas] Jméno:
+Zpráva<br>
+Znaky, které dekodér nezná nahradí otazníkem.<br>
+<textarea onkeyup="decode(this.value)" id="message" placeholder="Zprávy" type="text">
+[13. 9. 16:15] Vilma Černá: /€(@ €(."{ @/" %+ ,/¥+
+[13. 9. 16:26] Vilma Černá: );(: ?+(=+)&%£@+¥+
+[13. 9. 16:28] Adéla Vrbová: Jsem jediná co to nechápe😶😂
+[13. 9. 16:28] Vilma Černá: ?+
+[13. 9. 16:30] Vilma Černá: @( /=( ¥/"{)&%
+[13. 9. 16:30] Adéla Hálová: ,/, %+ =(!;+
+[13. 9. 16:30] Vilma Černá: 👌
+[13. 9. 16:30] Adéla Vrbová: Wtf🤣
+[13. 9. 16:30] Vilma Černá: €+€+
+[13. 9. 16:31] Adéla Hálová: €/€/
+[13. 9. 16:31] Vilma Černá: €&€&
+[13. 9. 16:44] Veronika Hubková: Jste v pohodě holky
+[13. 9. 16:45] Adéla Vrbová: Nejesou🤣
+[13. 9. 16:45] Veronika Hubková: Ne nejsi jediná
+[13. 9. 16:45] Adéla Hálová: @(
+[13. 9. 16:45] Adéla Vrbová: Uf
+[13. 9. 16:45] Adéla Vrbová: 🤦🏼‍♀️
+[13. 9. 16:45] Veronika Hubková: Tak to je na mě dneska už moc 😂🤦🏼‍♀️
+[13. 9. 16:46] Veronika Hubková: Jako nejsem jediná protože i kamarádovy přijdete divné 😂😂😂😂
+[13. 9. 16:47] Adéla Hálová: /€/
+[13. 9. 16:51] Adéla Vrbová: 🤣xd
+[13. 9. 17:15] Vilma Černá: %/,/ @%& =&~?/
+[13. 9. 17:19] Adéla Vrbová: Už dost pls
+[13. 9. 17:20] Lucie Abtová: #$*)°•¶∆~¥^°
+[13. 9. 17:20] Sára Hrebinková: .(. @/"? +~& ( :( @=*
+[13. 9. 17:20] Lukáš Kovařík: A dost
+[13. 9. 17:21] Veronika Hubková: Prosím dost už se mi z toho dělá zle
+[13. 9. 17:21] Vanessa Eliasová: ?+
+[13. 9. 17:21] Vilma Černá: ?+£,&% ¥( ¥/" ?+)&% ?+%,{%.{
+[13. 9. 17:21] Sára Hrebinková: ) ;+%? + ¥/"
+[13. 9. 17:22] Vilma Černá: @( ?(
+[13. 9. 17:22] Lukáš Kovařík: -+) e>! "-@[&"-<%-*
+[13. 9. 17:22] Vilma Černá: !.!(%¥
+[13. 9. 17:22] Lukáš Kovařík: $::-"+$) //@??*("(3($! *) 9\@)
+[13. 9. 17:22] Vanessa Eliasová: ,?+ * ¥+!+
+[13. 9. 17:23] Lukáš Kovařík: Xd
+[13. 9. 17:23] Lukáš Kovařík: ℅©℅®[®]£¶`\€®[`=`××~π√•|π~¶|\¥]℅©™©°|{`\£¢}~`|√•π÷×¶∆££¢€€¥^^°={\\}][℅™™©%%
+[13. 9. 17:23] Lucie Abtová: ®™©%✓}£=|[¢£∆|[¥=]|¢¶¢
+[13. 9. 17:24] Vilma Černá: /%&   ¥/"
+[13. 9. 17:24] Vanessa Eliasová: ~+;£?”(
+[13. 9. 17:25] Vilma Černá: 🤣🤣
+[13. 9. 17:25] Adéla Hálová: 🤣🤣
+[13. 9. 17:25] Vilma Černá: @/ ?+%¥&€/, );+"./=/¥
+[13. 9. 17:26] Sára Hrebinková: (?&  @%(£  £).?+ !.!{
+[13. 9. 17:26] Vanessa Eliasová: &~/? ,&.£@+ +..£
+[13. 9. 17:26] Lucie Abtová: Síkrit lengvič
+[13. 9. 17:26] Vilma Černá: 😂😂
+[13. 9. 17:26] Lukáš Kovařík: Sikrit sendvič
+[13. 9. 17:27] Vilma Černá: 👌👌
+[13. 9. 17:27] Sára Hrebinková: ¥/"{
+[13. 9. 17:27] Vanessa Eliasová: 🔫🔫
+[13. 9. 17:27] Vilma Černá: 🤣👌
+[13. 9. 17:27] Lucie Abtová: 🔪🔪
+[13. 9. 17:27] Sára Hrebinková: 😂😂
+[13. 9. 17:27] Vanessa Eliasová: ⚰️⚰️
+[13. 9. 17:28] Vilma Černá: @/" ?+~+=& ( :( %+ @+=?/
+[13. 9. 17:29] Vanessa Eliasová: @%,+ @+ ?/%;/.{
+[13. 9. 17:29] Vilma Černá: ?+@%)&%
+[13. 9. 17:29] Sára Hrebinková: .£:"/  ¥(  ,(:  ?+)(!&;/
+[13. 9. 17:30] Vilma Černá: 😂😂
+[13. 9. 17:30] Vanessa Eliasová: ¥/“ @/ @=£ :/£
+[13. 9. 17:30] Sára Hrebinková: 😂😂
+[13. 9. 17:30] Vanessa Eliasová: 😂😂
+[13. 9. 17:31] Sára Hrebinková: @/  ¥/"£
+[13. 9. 17:31] Vilma Černá: ¥( !{.( ×+?&/.?& ~{,{%.+¥ @/*{"
+[13. 9. 17:31] Adéla Hálová: :/£
+[13. 9. 17:32] Vilma Černá: @/ ?+:€:& /.+ :( ¥£ !£=£ %/,/ =+./¥ *+ @( 😂
+[13. 9. 17:33] Adéla Vrbová: 🤦🏼‍♀️
+[13. 9. 17:33] Sára Hrebinková: ¥/"£  %&  ,£%.£,
+[13. 9. 17:33] Vilma Černá: / ,/%¥/={:€{!£@+?¥/",&,(:€(=+,
+[13. 9. 17:33] Vanessa Eliasová: ☺️
+[13. 9. 17:33] Adéla Vrbová: Fakt
+[13. 9. 17:36] Vilma Černá: @%,+  %¥;/%?+ :€{¥;{
+[13. 9. 17:36] Sára Hrebinková: ?+@~&:
+[13. 9. 17:37] Vilma Černá: 😁😁
+[13. 9. 17:41] Vilma Černá: €,, ?/@+=?(£ @+ ¥/={ .&=£);/*=?(
+[13. 9. 17:42] Sára Hrebinková: ¥/"{  %&  ;&"/,
+[13. 9. 17:54] Lukáš Kovařík: `•°™©°{{}¶÷•|`¢`¢®™℅[]{{=^€%©®=
+[13. 9. 17:54] Veronika Hubková: Jako vážně si tady budete posílat různé znaky ?🤦🏼‍♀️🤦🏼‍♀️🤦🏼‍♀️
+[13. 9. 17:54] Lukáš Kovařík: Jo
+[13. 9. 17:54] Sára Hrebinková: To nejsou různý
+[13. 9. 17:54] Lukáš Kovařík: ℅%=€{£}€{¥℅×|}¢¶`}€
+[13. 9. 17:55] Vilma Černá: Joo jako
+[13. 9. 17:55] Vanessa Eliasová: 🤦‍♀️🤦‍♀️
+[13. 9. 17:55] Vilma Černá: 😂
+[13. 9. 17:55] Vanessa Eliasová: joo🔫
+[13. 9. 17:56] Lukáš Kovařík: *armádní generál Lukašík leaved The chat*
+[13. 9. 17:56] Vilma Černá: "(?+:?+
+[13. 9. 17:57] Sára Hrebinková: ¥{   @%(£  £).?+   !.!{
+[13. 9. 17:58] Vilma Černá: ¥/" )(=;£€+ ¥+?¥(";/¥ ?/%);/~?+ %"£)&?+
+[13. 9. 17:59] Vilma Černá: ?+=+.+@ * ?/% !.!"{ !.!"(
+[13. 9. 17:59] Vilma Černá: 😂😁
+[13. 9. 17:59] Sára Hrebinková: 🤣🤣🤣
+[13. 9. 18:00] Adéla Vrbová: Doooooost
+[13. 9. 18:00] Vanessa Eliasová: 😇
+[13. 9. 18:00] Sára Hrebinková: ?/%+;  %&
+[13. 9. 18:01] Vilma Černá: ,(*?/ !{@%,+ ,(€.{);+%¥/¥/!{?/%@+%¥+?+~{€(=&.&
+[13. 9. 18:02] Vilma Černá: 😅😅
+[13. 9. 18:02] Sára Hrebinková: Ok
+[13. 9. 18:03] Vilma Černá: /   *,+?¥+  ¥£  );&%+;?(£   );(-&.(~"£
+[13. 9. 18:03] Sára Hrebinková: Už končíme :)
+[13. 9. 18:03] Vilma Černá: Jojo
+[13. 9. 18:03] Lukáš Kovařík: Kk
+[13. 9. 18:03] Lukáš Kovařík: :D
+[13. 9. 18:04] Veronika Hubková: Hurá
+[13. 9. 18:04] Lucie Abtová: ¥
+[13. 9. 18:05] Vilma Černá: €/ ?+!(@ );&@=+  =/.%&  ~.?/
+[13. 9. 18:05] Vilma Černá: Konciiim
+[13. 9. 18:05] Sára Hrebinková: 🤣
+[13. 9. 18:07] Lukáš Kovařík: Xddddd
+[13. 9. 18:08] Veronika Hubková: Prosím dost
+[13. 9. 18:08] Sára Hrebinková: Však joo
+[13. 9. 18:09] Vilma Černá: Jestli jsi si nevsimla tak jsme napsali že pro dnesek koncime
+[13. 9. 18:09] Vilma Černá: 😁😁😁
+[13. 9. 18:10] Tomáš Hála: Našel jsem způsob jak by se tahle vaše řec dala pochopit
+[13. 9. 18:11] Vilma Černá: Sakra?
+[13. 9. 18:11] Vilma Černá: Asi?
+[13. 9. 18:11] Vilma Černá: 😅😅
+[13. 9. 18:11] Vilma Černá: Tak povidej
+[13. 9. 18:12] Tomáš Hála: Ale je to blbost
+[13. 9. 18:12] Tomáš Hála: Asi
+[13. 9. 18:12] Vilma Černá: Tak pis
+[13. 9. 18:12] Vilma Černá: ...
+[13. 9. 18:12] Vilma Černá: Ja cekaaam
+[13. 9. 18:12] Vanessa Eliasová: Já takyyy
+[13. 9. 18:13] Vilma Černá: Staale cekaam
+[13. 9. 18:13] Vilma Černá: A zakazuje se používat adi telefon
+[13. 9. 18:13] Vilma Černá: !!!
+[13. 9. 18:13] Tomáš Hála: Jo
+[13. 9. 18:13] Sára Hrebinková: @+%¥.&  ¥(   :€/)+%  ?+;&"+@  ¥(
+[13. 9. 18:13] Tomáš Hála: Proč vlastně ?
+[13. 9. 18:14] Vilma Černá: To se nestane neboj
+[13. 9. 18:14] Vilma Černá: Aleee jen tak
+[13. 9. 18:14] Vilma Černá: To je jedno
+[13. 9. 18:15] Vilma Černá: 😁😁
+[13. 9. 18:16] Vilma Černá: Tak ven s tou tvojí teorii
+[13. 9. 18:16] Tomáš Hála: Lozlyk      Já vím ze je to blbost napsal jsem jen tu část do mezery
+[13. 9. 18:16] Tomáš Hála: 😅
+[13. 9. 18:16] Vilma Černá: Coze? Jakej lozlyk
+[13. 9. 18:17] Tomáš Hála: Já nvm
+[13. 9. 18:17] Tomáš Hála: 😔
+[13. 9. 18:17] Vilma Černá: Co??🤣
+[13. 9. 18:17] Tomáš Hála: Já říkal ze je to blbost
+[13. 9. 18:17] Vilma Černá: Ne ale ja nechápu jak jsi to vymyslel nebo jako coM
+[13. 9. 18:18] Vilma Černá: 😂
+[13. 9. 18:18] Tomáš Hála: Takže je to dobře
+[13. 9. 18:18] Tomáš Hála: ?
+[13. 9. 18:18] Vilma Černá: Ee ne? 😂
+[13. 9. 18:18] Vanessa Eliasová: Ne
+[13. 9. 18:18] Vilma Černá: 🤣🤣
+[13. 9. 18:18] Tomáš Hála: Aha
+[13. 9. 18:18] Vilma Černá: Ja nevim co je to lozlyk
+[13. 9. 18:18] Tomáš Hála: Já taky ne
+[13. 9. 18:18] Tomáš Hála: 😂
+[13. 9. 18:18] Vilma Černá: Aha? 😂🤣
+[13. 9. 18:19] Vilma Černá: A jak jsi přišel na ten tvůj,, lozlyk"?
+[13. 9. 18:19] Tomáš Hála: Já ty to pošlu
+[13. 9. 18:19] Vilma Černá: Ok?
+[13. 9. 18:20] Vilma Černá: Tam neměl být ten otaznik
+[13. 9. 18:38] Matěj Veselý: #€¢°|π|=×¥}^¶:;"✓™¥×|}\{∆¢^|π°|}€^|•¢×°|™∆
+[13. 9. 18:38] Vilma Černá: Prvotřídní blbost tohle to
+[13. 9. 18:38] Matěj Veselý: =|÷•✓✓¥×}€
+[13. 9. 18:38] Vilma Černá: Blbooost
+[13. 9. 18:38] Matěj Veselý: {¢¶×|=√=^
+[13. 9. 18:38] Adéla Hálová: Jj
+[13. 9. 18:38] Matěj Veselý: |÷π|`^¢×¶¶{`]
+[13. 9. 18:38] Vilma Černá: 🤷‍♀️🤦‍♀️
+[13. 9. 18:39] Matěj Veselý: ×|π|=¶¶£}=
+[13. 9. 18:39] Vilma Černá: Mne je to jedno
+[13. 9. 18:39] Vilma Černá: Pis si co chceš
+[13. 9. 18:39] Vilma Černá: ¥( @+ /.+ &=&(¥
+[13. 9. 18:39] Matěj Veselý: `✓¥¶|✓°€÷|√^£¶|°¶|¶¶×`∆¥}{^÷|{¶^=|}¶×¥[•}][%©©✓€×|=™©××•{¥π¢¶`€✓™×€^
+[13. 9. 18:39] Matěj Veselý: |÷=€^€÷¢{}∆`}¥π°€
+[13. 9. 18:47] Matyáš Jan Sobota: A já myslel ze budeme ctít popis skupiny
+[13. 9. 18:51] Matěj Veselý: π`√|=¢÷€=|°€÷`
+[13. 9. 18:51] Matyáš Jan Sobota: 😑
+[13. 9. 18:51] Matěj Veselý: `•¢√|==~•¢^|√¥¥¥¥¢π`√`
+[13. 9. 18:52] Matyáš Jan Sobota: Taky mužů spamovat náhodný znaky
+[13. 9. 18:52] Matěj Veselý: ^£•`°=~°ππ
+[13. 9. 18:52] Matyáš Jan Sobota: Nejsi jedinej, kdo to umí
+[13. 9. 18:52] Matěj Veselý: π¢^¢
+[13. 9. 18:53] Matěj Veselý: ¥€¢¥£®✓√¥=¥=¥[€°€°©°©°©✓™°{^¥=€=¥=¥÷|÷•×^×^{=π•{^{^÷•|÷^×°¶√×{¥÷`π|{^{}✓∆∆✓∆°×∆°}✓}°{•×^}°✓∆}{}¶^°}^{¥{•^
+[13. 9. 18:54] Adéla Vrbová: Ale dost už
+[13. 9. 18:56] Matěj Veselý: `√€°`÷|°|
+[13. 9. 18:58] Matěj Veselý: ¥||√`√€°¥✓^÷•
+[13. 9. 18:58] Matěj Veselý: ^€√€√√^`
+[13. 9. 18:59] Adéla Vrbová: Nech toho
+[13. 9. 18:59] Matěj Veselý: ^|`|^^°°√√••€€£|°π√``==×¶}∆}=^
+[13. 9. 18:59] Adéla Vrbová: Fakt
+[13. 9. 18:59] Matěj Veselý: €^¢^|^`^€√¥√
+[13. 9. 19:00] Matyáš Jan Sobota: To stačí Matěji, všichni pochopili, ze se chceš nad všechny povisovat, ale už toho můžeš nechat
+[13. 9. 19:00] Adéla Vrbová: Jn
+[13. 9. 19:01] Matěj Veselý: €√|√√©°¥°¢√¥=¥√|✓¥[
+[13. 9. 19:01] Matěj Veselý: `°¢√¥°π%π€¥®®™©✓©✓©=¥=÷
+[13. 9. 19:01] Matěj Veselý: π|¥¥π€π¥π¥
+[13. 9. 19:01] Adéla Vrbová: Ja musela
+[13. 9. 19:01] Adéla Vrbová: 🤷🏼‍♀️
+[13. 9. 19:01] Ema Hartová: Jj
+[13. 9. 19:02] Matyáš Jan Sobota: To bylo rychlý
+[13. 9. 19:02] Adéla Vrbová: Neměl štvát
+[13. 9. 19:08] Vanessa Eliasová: nezná někdo nějakýho vojtu z 6.C?🤣
+[13. 9. 19:10] Lucie Abtová: ✨✨✨
+[13. 9. 19:12] Veronika Hubková: Ráda bych ti řekla ne protože Vojty co znám nechodí do šestý a už ani do 6.C
+[13. 9. 19:12] Veronika Hubková: Kdo odešel ??
+[13. 9. 19:13] Adéla Vrbová: Ja odebrala matěje
+[13. 9. 19:13] Adéla Vrbová: Jestli myslis tohle
+[13. 9. 19:14] Veronika Hubková: Mě se ukazuje že někdo opustil skupinu sám
+[13. 9. 19:14] Adéla Vrbová: To nevim
+[13. 9. 19:14] Veronika Hubková: Ok
+[13. 9. 19:14] Veronika Hubková: Tak mám halucinace
+[13. 9. 19:14] Adéla Vrbová: 😂
+[13. 9. 19:15] Veronika Hubková: 😂
+[13. 9. 19:29] Sára Hrebinková: Poslal by mi někdo to co jsme dneska dělali ve fyzice?
+[13. 9. 19:29] Matyáš Jan Sobota: Nic
+[13. 9. 19:29] Matyáš Jan Sobota: Byli jsme v laborkach
+[13. 9. 19:30] Sára Hrebinková: No však jo
+[13. 9. 19:34] Vilma Černá: Promin ja mela nemcinu
+[13. 9. 21:06] Jakub Augustýn: Budou
+Myslím si, že je to tajná řeč.
+Sára psala ve škole několik abeced.
+[13. 9. 21:09] Jakub Augustýn: Ale je to jen teorie
+[13. 9. 21:14] Matyáš Jan Sobota: Spis pravda
+[13. 9. 21:19] Lukáš Kovařík: L vzplál
+[13. 9. 21:19] Lukáš Kovařík: Divil boji
+[13. 9. 21:19] Lukáš Kovařík: Brigády činil
+[13. 9. 21:20] Lukáš Kovařík: Tvůj mnoho videu vznesl vtom vtip AP sypu
+[13. 9. 21:20] Matyáš Jan Sobota: A ty zase píšeš různý slova?
+[13. 9. 21:20] Lukáš Kovařík: Xd
+[13. 9. 21:20] Lukáš Kovařík: Jj
+[13. 9. 21:20] Vilma Černá: %¥+@?+  ?+~&¥+ :( ¥(*?/,+?/
+[13. 9. 21:20] Lukáš Kovařík: Proč
+[13. 9. 21:21] Lukáš Kovařík: Nejsem správce
+[13. 9. 21:21] Matyáš Jan Sobota: Ty tomu rozumíš?
+[13. 9. 21:21] Vanessa Eliasová: jak to můžeš vědět?🧐
+[13. 9. 21:21] Lukáš Kovařík: Vždyť nespamuju
+[13. 9. 21:21] Lukáš Kovařík: Co jsem provedl
+[13. 9. 21:21] Lukáš Kovařík: :(
+[13. 9. 21:21] Matyáš Jan Sobota: Nejsem de*il
+[13. 9. 21:21] Matyáš Jan Sobota: První varování
+[13. 9. 21:21] Lukáš Kovařík: Hele hele
+[13. 9. 21:21] Vilma Černá: ¥/"*+ @+ ~/, ¥( " :+,£
+[13. 9. 21:21] Lukáš Kovařík: Nehraj si tady na boha
+[13. 9. 21:22] Vanessa Eliasová: 😌
+[13. 9. 21:23] Matyáš Jan Sobota: Prozradilo
+[13. 9. 21:23] Lukáš Kovařík: Vrat mi správce
+[13. 9. 21:23] Vilma Černá: Co?
+[13. 9. 21:23] Vilma Černá: To
+[13. 9. 21:23] Vilma Černá: Meleš
+[13. 9. 21:23] Vanessa Eliasová: ale je super, že máte teorie, ale jestli taky k něčemu vedou
+[13. 9. 21:23] Matyáš Jan Sobota: Ok
+[13. 9. 21:23] Vilma Černá: ?
+[13. 9. 21:23] Lukáš Kovařík: Nic jsem neprovedl
+[13. 9. 21:23] Vanessa Eliasová: a ted nám řekni co ti to prozradiloo
+[13. 9. 21:23] Vilma Černá: Asi taaak
+[13. 9. 21:23] Lukáš Kovařík: Tak to je trochu zbytečný
+[13. 9. 21:23] Adéla Vrbová: 😂
+[13. 9. 21:23] Matyáš Jan Sobota: No ze tomu rozumíte?
+[13. 9. 21:24] Lukáš Kovařík: Stačí si psat do soukromých zpráv
+[13. 9. 21:24] Vilma Černá: No nekecej
+[13. 9. 21:24] Adéla Vrbová: Jn
+[13. 9. 21:24] Lukáš Kovařík: Nebo soukromých skupin
+[13. 9. 21:24] Adéla Vrbová: Asi tak
+[13. 9. 21:24] Lukáš Kovařík: Alespoň někdo se mnou souhlasí
+[13. 9. 21:24] Adéla Vrbová: 😂
+[13. 9. 21:24] Vilma Černá: Jo a proc nadáváte nám a ne třeba matejovi kterého tady spamoval
+[13. 9. 21:24] Vanessa Eliasová: stačí spamovat do jiných skupinnn
+[13. 9. 21:24] Vanessa Eliasová: 🧐
+[13. 9. 21:24] Lukáš Kovařík: Ale já nespamuju
+[13. 9. 21:24] Sára Hrebinková: Přesně
+[13. 9. 21:24] Sára Hrebinková: Jj
+[13. 9. 21:24] Vilma Černá: Lucka by s tebou souhlasila taky . Kdyby tady byla
+[13. 9. 21:25] Lukáš Kovařík: >:(
+[13. 9. 21:25] Jakub Augustýn: );(: ?+(=+)&%£@+¥+
+[13. 9. 21:25] Sára Hrebinková: Ať žije LULU
+[13. 9. 21:25] Adéla Vrbová: To vy s těma klikyhákama
+[13. 9. 21:25] Lukáš Kovařík: Tak jo
+[13. 9. 21:25] Matyáš Jan Sobota: Ty tomu rozumíš?
+[13. 9. 21:25] Lukáš Kovařík: Právě
+[13. 9. 21:25] Jakub Augustýn: Nn
+[13. 9. 21:25] Lukáš Kovařík: Jsi mne
+[13. 9. 21:25] Vanessa Eliasová: co my s nimaaa
+[13. 9. 21:25] Lukáš Kovařík: Naštvala
+[13. 9. 21:26] Adéla Vrbová: To vy jste je první spamovaly
+[13. 9. 21:26] Matyáš Jan Sobota: Ok
+[13. 9. 21:26] Vilma Černá: To nebylo spamování to bylo dorozumivani
+[13. 9. 21:26] Vanessa Eliasová: to není spam to jsme psaly něco my a, že tomu nerozumíte je nám jednooo
+[13. 9. 21:26] Vilma Černá: My nepsaly nesmysly narodil od ostatnich
+[13. 9. 21:26] Jakub Augustýn: Já to věděl!!!!
+[13. 9. 21:27] Adéla Vrbová: Tak si to pište soukromě
+[13. 9. 21:27] Matyáš Jan Sobota: Tak si ti pište do vlastních skupin
+[13. 9. 21:27] Sára Hrebinková: Woow jak nečekaně
+[13. 9. 21:27] Vanessa Eliasová: tak si to ztište
+[13. 9. 21:27] Lukáš Kovařík: Tak pište do jines kupunx
+[13. 9. 21:27] Vilma Černá: Ty vado Kubo .... neříkají ti náhodou Blesk?
+[13. 9. 21:28] Lukáš Kovařík: Jiné skupiny
+[13. 9. 21:28] Lukáš Kovařík: Ehm
+[13. 9. 21:28] Adéla Vrbová: Ale stejně mi to nemaže těch ja nevim kolik zpráv nebo jo
+[13. 9. 21:28] Vanessa Eliasová: blesk kubík, to je ono
+[13. 9. 21:28] Matyáš Jan Sobota: 177
+[13. 9. 21:28] Lukáš Kovařík: Xdddd
+[13. 9. 21:28] Jakub Augustýn: Ne! 🤨
+[13. 9. 21:28] Adéla Vrbová: 😂ok
+[13. 9. 21:28] Vilma Černá: Ty vadoooo vy tady delate jak kdyby jste nikdy nikdo z vás nespamovaliiii
+[13. 9. 21:28] Matyáš Jan Sobota: Tak formule 1?
+[13. 9. 21:28] Lukáš Kovařík: Říkají mu technik
+[13. 9. 21:28] Adéla Vrbová: No já ne
+[13. 9. 21:28] Vanessa Eliasová: ne asiii
+[13. 9. 21:28] Jakub Augustýn: Ne
+[13. 9. 21:29] Sára Hrebinková: Turbo šnek?
+[13. 9. 21:29] Jakub Augustýn: Ne
+[13. 9. 21:29] Vanessa Eliasová: mluvíme obecněěě
+[13. 9. 21:29] Vilma Černá: Ehm ehm tak třeba tadyyy
+[13. 9. 21:30] Vilma Černá: No tak Kubo prozrad nám svou identitu
+[13. 9. 21:30] Matyáš Jan Sobota: On je komár
+[13. 9. 21:30] Adéla Vrbová: 🤦🏼‍♀️
+[13. 9. 21:30] Matyáš Jan Sobota: Nebo pan spagetka
+[13. 9. 21:30] Adéla Vrbová: 😂
+[13. 9. 21:30] Vilma Černá: Už to není vtipny 😒
+[13. 9. 21:30] Vilma Černá: 😂
+[13. 9. 21:30] Sára Hrebinková: 🦗🦟🦗🦟🦗🦟🦗🦟
+[13. 9. 21:31] Jakub Augustýn: Jsem HACKER!!!!!!!!!!
+[13. 9. 21:31] Vanessa Eliasová: ne
+[13. 9. 21:31] Sára Hrebinková: Už mě ta konverzace přestává bavit
+[13. 9. 21:31] Matyáš Jan Sobota: Jo
+[13. 9. 21:31] Matyáš Jan Sobota: Koukal jsem se, když jsem přišel z kroužku
+[13. 9. 21:32] Lukáš Kovařík: 😆😅😂😃😂😀🤗🥲🥲😇😇😃😍😃😂😙🤗🙂🤗😃😂😅😍😅😂😂🙃🤩😉😭😭😔😔😢😏🥺😉😎😎🤪😭🤪😶😉🥺😖😖😒😞
+[13. 9. 21:32] Adéla Vrbová: Takž teď jako kdo má pravdu😂
+[13. 9. 21:32] Jakub Augustýn: Jsem elektrotechnik, technik, programátor, kajakář atd.
+[13. 9. 21:32] Lukáš Kovařík: Tak
+[13. 9. 21:32] Lukáš Kovařík: A dost
+[13. 9. 21:32] Vanessa Eliasová: pro tvůj dobrý pocit jsem ti je spočítala a je jich okolo 50 ostatní zprávy nejsou od nás
+[13. 9. 21:32] Matyáš Jan Sobota: Tomuhle říkám spam
+[13. 9. 21:32] Matyáš Jan Sobota: Ok
+[13. 9. 21:32] Vilma Černá: Jo ale MY jsme tě 177 zpráv nenapsaly sami vis? To te třeba nenapadlo
+[13. 9. 21:32] Lukáš Kovařík: ČD
+[13. 9. 21:32] Vanessa Eliasová: jelikož jsem to počítala tak guess
+[13. 9. 21:32] Matyáš Jan Sobota: Nespamuuuuuuuuuj
+[13. 9. 21:32] Adéla Vrbová: Ale většinu vy
+[13. 9. 21:33] Lukáš Kovařík: Já chtěl napsat xd
+[13. 9. 21:33] Vanessa Eliasová: jsem ráda, že to chápešš
+[13. 9. 21:33] Jakub Augustýn: ČD = Čedar
+[13. 9. 21:33] Lukáš Kovařík: Ne CD
+[13. 9. 21:33] Vilma Černá: Pak tam byli třeba ještě komentáře jak jsme divnee
+[13. 9. 21:33] Adéla Vrbová: 😂
+[13. 9. 21:33] Vanessa Eliasová: tyvole, 50 není ani půlka tak jsi to přeberte
+[13. 9. 21:33] Lukáš Kovařík: Autokorekce
+[13. 9. 21:33] Adéla Vrbová: Ale  kvůli komu se to psalo hm
+[13. 9. 21:33] Jakub Augustýn: A co je Martin??????
+[13. 9. 21:34] Jakub Augustýn: Debil
+[13. 9. 21:34] Vanessa Eliasová: si
+[13. 9. 21:34] Jakub Augustýn: Blbec
+[13. 9. 21:34] Lukáš Kovařík: No každopádně ja jsem po tečce takže jdu spát
+[13. 9. 21:34] Lukáš Kovařík: Gn :D
+[13. 9. 21:34] Jakub Augustýn: Lesba
+[13. 9. 21:34] Matyáš Jan Sobota: Dobře ti tak, upadne ti ruka
+[13. 9. 21:34] Vanessa Eliasová: ale za to my nemůžeme, že jakože haha to komentujete není náš problém
+[13. 9. 21:34] Lukáš Kovařík: Xddd
+[13. 9. 21:34] Lukáš Kovařík: Gn
+[13. 9. 21:34] Vilma Černá: Asi taak
+[13. 9. 21:36] Vanessa Eliasová: bye besties
+[13. 9. 21:36] Vilma Černá: Bye besties 💞
+[13. 9. 21:36] Adéla Vrbová: Čau
+[13. 9. 21:36] Vilma Černá: 😽
+[13. 9. 21:36] Vanessa Eliasová: 💞💞
+[13. 9. 21:58] Jakub Augustýn: π=3,14159265359
+[13. 9. 21:58] Jakub Augustýn: Důležité vědět!!!
+[13. 9. 21:58] Martin Vinduška: Zapomněl jsi pár tisíc čísel
+[13. 9. 21:59] Jakub Augustýn: Jj
+[13. 9. 21:59] Jakub Augustýn: Ale je jich nekonečno.
+[13. 9. 22:00] Martin Vinduška: Ne?!
+[13. 9. 22:00] Martin Vinduška: Není
+[13. 9. 22:07] Jakub Augustýn: Je
+[13. 9. 22:08] Martin Vinduška: Ehhm.....
+[13. 9. 22:08] Martin Vinduška: Možná
+</textarea>
+<h1>Výsledek</h1>
+<div id="root"></div>
+</body>
+</html>
