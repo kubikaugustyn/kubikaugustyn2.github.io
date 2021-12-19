@@ -8,7 +8,8 @@ var textures = {
         id: "map"
     },
     horizon: {
-        URL: "https://decko.ceskatelevize.cz/rest/FileStore/FLASH_APP_DATA_PACKAGES/FILE-2136509!/img/Horizon.png",
+        // URL: "https://decko.ceskatelevize.cz/rest/FileStore/FLASH_APP_DATA_PACKAGES/FILE-2136509!/img/Horizon.png",
+        URL: "./img_Horizon.png",
         id: "horizon"
     }
 }
