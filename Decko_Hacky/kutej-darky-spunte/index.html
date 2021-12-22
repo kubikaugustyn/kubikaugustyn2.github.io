@@ -7,7 +7,30 @@
 <body>
 <h1>Znič hru!!!</h1>
 <pre>
-Engine.startGame()
+<!--Engine.startGame()-->function kupuj(){container.audio.play("kdyz_cokoli_koupim");Display.vrtulka.x = 670;Display.vrtulka.y = 200;Display.vrtulka.rotation = 200;Display.vrtulka.visible = true;setTimeout(kupuj, 1000)}
+kupuj()
+Display.vrtulka.start("dabing1")
+</pre>
+<h1>Nezapomeň na začátku každé hry!!!</h1>
+<pre>
+Display.alert.startStatic("kubikaugustyn.github.io")
+Game.levels[Game.levelId].upgrades.energystorage[Engine.hero.upgrades.energystorage].units = 1e+100
+Game.levels[Game.levelId].upgrades.backpack[Engine.hero.upgrades.backpack].units = 1e+100
+Game.levels[Game.levelId].upgrades.flashlight[Engine.hero.upgrades.flashlight].radius = 50
+Game.levels[Game.levelId].inventory.energy.unitsIncrement = 1e+100
+Game.levels[Game.levelId].inventory.sonar.radius = 1000
+Game.levels[Game.levelId].inventory.tnt.radius = 7
+Game.levels[Game.levelId].inventory.tnt.price = 15
+Game.levels[Game.levelId].inventory.sonar.price = 10
+Game.levels[Game.levelId].inventory.energy.price = 5
+Game.levels[Game.levelId].world.teleport.time = 0
+var fiveBlocks = ["teleport", "shop", "obstacle", "none", "bonus", "soil"]
+for (var key of Object.keys(Game.levels[Game.levelId].materials)) {
+    if (!["defaultMoveTime"].includes(key)) {
+        Game.levels[Game.levelId].materials[key].resistance = 1
+        Game.levels[Game.levelId].materials[key].bonus = (fiveBlocks.includes(key) ? 5e+100 : 1e+100)
+    }
+}
 </pre>
 <h1>Nezapomeň na začátku hry!!!</h1>
 <pre>
@@ -31,9 +54,9 @@ Engine.hero.layersReached.layer_2 = true
 Engine.hero.layersReached.layer_3 = true
 Engine.hero.layersReached.layer_4 = true
 Engine.hero.energyUnits = 1e+100
-var shadowMap = ""
+/*var shadowMap = ""
 for(var i = 0;i&lt;Engine.shadowMap.length;i++){shadowMap+="0"}
-Engine.shadowMap = shadowMap
+Engine.shadowMap = shadowMap*/
 Engine.saveLoad.save((a)=>{console.log(a);a.status==="OK"?document.location.reload():console.error("An error occured.")})
 </pre>
 <h1>Úprava mapy</h1>
