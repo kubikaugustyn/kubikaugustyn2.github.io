@@ -31,6 +31,12 @@ for (var key of Object.keys(Game.levels[Game.levelId].materials)) {
         Game.levels[Game.levelId].materials[key].bonus = (fiveBlocks.includes(key) ? 5e+100 : 1e+100)
     }
 }
+for (var key of Object.keys(Game.levels[Game.levelId].achievments)) {
+    if (![].includes(key)) {
+        Game.levels[Game.levelId].achievments[key].units = 1
+        Game.levels[Game.levelId].achievments[key].bonus = 5e+100
+    }
+}
 </pre>
 <h1>Nezapomeň na začátku hry!!!</h1>
 <pre>
