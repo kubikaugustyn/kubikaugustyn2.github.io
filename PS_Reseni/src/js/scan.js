@@ -1,6 +1,6 @@
 var __author__ = "kubik.augustyn@post.cz"
 
-var url = "https://www.etaktik.cz/download/reseni/{id}_hch7.pdf"
+var url = "https://www.etaktik.cz/download/reseni/{id}_hp7.pdf"
 var idLength = 3
 var startAtId = "aaa"
 var foundResultsNum = 0
@@ -69,6 +69,7 @@ function generateIds() {
 
 function processIds() {
     for (var id of ids) {
+        document.body.innerHTML = `<h1>${id}</h1>`
         var status = getFileStatus(url.replaceAll("{id}", id))
         if (status === 200) {
             workingIds.push(id)
