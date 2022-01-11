@@ -1,6 +1,6 @@
 var __author__ = "kubik.augustyn@post.cz"
 
-var url = "https://www.etaktik.cz/download/reseni/{id}_hp7.pdf"
+var url = "https://www.etaktik.cz/download/reseni/{id}_hi7.pdf"
 var idLength = 3
 var startAtId = "aaa"
 var foundResultsNum = 0
@@ -18,7 +18,7 @@ function start() {
     console.log(`Done id ${(eTime - sTime) / 1000 / 60} min`)
 }
 
-function getIndexById(id) {
+function getIndexById(id = "aaa") {
     var index = 0
     for (var a in id.split("")) {
         var char = id[a]
@@ -74,7 +74,7 @@ function processIds() {
         if (status === 200) {
             workingIds.push(id)
         } else if (status === 404) {
-            console.log("404 Not Found")
+            // console.log("404 Not Found")
         }
         if (workingIds.length === workingIdsLimit) break
     }
