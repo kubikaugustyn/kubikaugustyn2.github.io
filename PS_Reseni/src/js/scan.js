@@ -1,6 +1,6 @@
 var __author__ = "kubik.augustyn@post.cz"
 
-var url = "https://www.etaktik.cz/download/reseni/{id}_hch8.pdf"
+var url = "https://www.etaktik.cz/download/reseni/{id}_hd8.pdf"
 var idLength = 3
 var startAtId = "aaa"
 var foundResultsNum = 0
