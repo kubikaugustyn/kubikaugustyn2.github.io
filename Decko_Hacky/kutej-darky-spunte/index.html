@@ -16,7 +16,8 @@ Display.vrtulka.start("dabing1")
 Display.alert.startStatic("kubikaugustyn.github.io")
 Game.levels[Game.levelId].upgrades.energystorage[Engine.hero.upgrades.energystorage].units = 1e+100
 Game.levels[Game.levelId].upgrades.backpack[Engine.hero.upgrades.backpack].units = 1e+100
-Game.levels[Game.levelId].upgrades.flashlight[Engine.hero.upgrades.flashlight].radius = 50
+Game.levels[Game.levelId].upgrades.flashlight[Engine.hero.upgrades.flashlight].radius = 10
+    Game.levels[Game.levelId].upgrades.flashlight[Engine.hero.upgrades.flashlight].treshold = 4
 Game.levels[Game.levelId].inventory.energy.unitsIncrement = 1e+100
 Game.levels[Game.levelId].inventory.sonar.radius = 1000
 Game.levels[Game.levelId].inventory.tnt.radius = 7
@@ -25,10 +26,12 @@ Game.levels[Game.levelId].inventory.sonar.price = 10
 Game.levels[Game.levelId].inventory.energy.price = 5
 Game.levels[Game.levelId].world.teleport.time = 0
 var fiveBlocks = ["teleport", "shop", "obstacle", "none", "bonus", "soil"]
+var priceBlocks = {coin_0: 1e+100, coin_1: 2e+100, coin_2: 3e+100, coin_3: 4e+100, coin_4: 5e+100}
 for (var key of Object.keys(Game.levels[Game.levelId].materials)) {
     if (!["defaultMoveTime"].includes(key)) {
         Game.levels[Game.levelId].materials[key].resistance = 1
         Game.levels[Game.levelId].materials[key].bonus = (fiveBlocks.includes(key) ? 5e+100 : 1e+100)
+        Object.keys(priceBlocks).includes(key) && (Game.levels[Game.levelId].materials[key].price = priceBlocks[key])
     }
 }
 for (var key of Object.keys(Game.levels[Game.levelId].achievments)) {
@@ -37,6 +40,30 @@ for (var key of Object.keys(Game.levels[Game.levelId].achievments)) {
         Game.levels[Game.levelId].achievments[key].bonus = 5e+100
     }
 }
+function degrees2PIXIRotation(deg){
+    return (deg / 360) * 6.28
+}
+//hud width: 61
+var pozice = {
+    hud: [1088, 312, degrees2PIXIRotation(180)],
+    artifacts: [0, 0, 0],
+    inventory: [0, 456, 0],
+    money: [840, 0, 0],
+    vrtulka: [500, 250, degrees2PIXIRotation(180)]
+}
+Display.vrtulka.start("dabing1")
+//Automaticke dobijeni energie a poskladani pozic
+var b = ()=>{
+    Engine.surfaceReached()
+    Display.alert.start("kubikaugustyn.github.io\nByla doplňena energie!")
+    for (var a of Object.keys(pozice)){
+        Display[a].x = pozice[a][0]
+        Display[a].y = pozice[a][1]
+        Display[a].rotation = pozice[a][2]
+    }
+    setTimeout(b, 10000)
+}
+b()
 </pre>
 <h1>Nezapomeň na začátku hry!!!</h1>
 <pre>
@@ -67,5 +94,8 @@ Engine.saveLoad.save((a)=>{console.log(a);a.status==="OK"?document.location.relo
 </pre>
 <h1>Úprava mapy</h1>
 <a href="map">Zde</a>
+<hr>
+<iframe allowfullscreen
+        src="https://decko.ceskatelevize.cz/ivysilani/embed/iFramePlayer.php?bonus=BO-29114&hash=9746a2c55614666f08d8be7c22f1a4024ad12ded"></iframe>
 </body>
 </html>

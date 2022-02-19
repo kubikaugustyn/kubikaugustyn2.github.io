@@ -103,7 +103,7 @@ function addMessageValue(OldObsahZpravy, Polozky, OldResult, Type, FromUserName,
         case "Casy":
             if (isIn(ObsahZpravy, Polozky)) {
                 let addToResult = "Čas: ${TIME}<br>"
-                let Time = new Date().toLocaleDateString() + new Date().toLocaleTimeString()
+                let Time = new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString()
                 addToResult = addToResult.replace("${TIME}", Time)
                 Result += addToResult
             }
