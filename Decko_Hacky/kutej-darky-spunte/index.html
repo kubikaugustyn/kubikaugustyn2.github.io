@@ -51,7 +51,7 @@ Display.vrtulka.start("dabing1")
         var materials = {}
         for (var key of Object.keys(Game.levels[Game.levelId].materials)) {
             if (!["defaultMoveTime"].includes(key)) {
-                materials[key] = {...Game.levels[Game.levelId].materials[key]}
+                materials[key] = {...JSON.parse(JSON.stringify(Game.levels[Game.levelId].materials[key]))}
                 Game.levels[Game.levelId].materials[key].resistance = 0
             }
         }

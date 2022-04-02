@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vše</title>
+    <script src="https://kuba-apis.web.app/js/myquery/1.0.0/myquery.js"></script>
+    <!--    <script src="AmfJsD.js"></script>-->
+    <!--    <script src="AmfConnector.js"></script>-->
+    <!--    <script src="dpapi.js"></script>-->
+</head>
+<body>
+<h1>Vše</h1>
+<pre>
+
+</pre>
+<script>
+    // var http = $$.Data.http("GET", "")
+    var gameIds = {
+        "kutej-darky-spunte": "ff1af0a6-7386-49be-9b85-6d06a1c72788",
+        "hopsvaca": "267a4ea7-6241-4297-8a0d-cd5f02dfbc80"
+    }
+
+    var proxy = "https://cors-anywhere.herokuapp.com/"
+
+    /*function loadFlashVars(gameId) {
+        return JSON.parse($$.Data.http("GET", proxy + "https://decko.ceskatelevize.cz/rest/Token/flashVars?closeButtonEnabled=false&app=" + gameIds[gameId]).responseText)
+    }
+
+    // var flashVars = loadFlashVars("kutej-darky-spunte")
+    var flashVars = loadFlashVars("hopsvaca")
+
+    // AmfConnector.init(proxy + flashVars.flashvars.amfUrl, flashVars.flashvars.token)
+    // AmfConnector.init(proxy + flashVars.flashvars.amfUrl, "2m5tuOoO9XW0SojyAyLR")
+    AmfConnector.init(proxy + flashVars.flashvars.amfUrl, "vj8TjhZtL78X19Kupxo3")
+
+    // AmfConnector.getAppConfig($$.log)
+    // AmfConnector.getTokenStatus($$.log)
+    // AmfConnector.getDate($$.log)
+    // AmfConnector.loadAppState($$.log, 0, 'startSeed', 'text')
+    // AmfConnector.loadAppState($$.log, 0, 'saved_state', 'text')
+
+    var dpa
+    dpapi.createToken(gameIds["hopsvaca"]).then(a=>{
+        dpa = a
+        AmfConnector.token = dpa.flashvars.token
+        console.log("READY")
+    })*/
+
+    var gamesHacker = {
+        results: {
+            token: undefined
+        }
+    }
+    gamesHacker.init = (appUuid) => {
+        // https://decko.ceskatelevize.cz/rest/Token/flashVars?closeButtonEnabled=false&app=ff1af0a6-7386-49be-9b85-6d06a1c72788
+        gamesHacker.results.token = JSON.parse($$.Data.http("POST", proxy + "https://decko.ceskatelevize.cz/rest/Token/amfJson", false, null, null, {
+            "Content-Type": "application/x-amf; charset=UTF-8"
+        }, `{"version":"3","headers":[],"bodies":[{"targetURI":"createToken","responseURI":"/1","data":[{"appUuid":"${appUuid}"}]}]}`).responseText)
+        console.log(gamesHacker.results.token)
+    }
+
+    gamesHacker.init(gameIds["hopsvaca"])
+</script>
+</body>
+</html>
