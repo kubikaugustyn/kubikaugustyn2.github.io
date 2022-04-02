@@ -11,13 +11,84 @@
 kupuj()
 Display.vrtulka.start("dabing1")
 </pre>
+<h1>Robot</h1>
+<script>
+    var Display = {
+        world: {
+            moveKeyPressed: direction => {
+                console.log(`Move ${direction}.`)
+                Engine.phase = Label.phase.WAITING
+            }
+        }
+    }
+    var Label = {
+        key: {
+            UP: "up",
+            RIGHT: "right",
+            DOWN: "down",
+            LEFT: "left"
+        },
+        phase: {
+            INACTIVE: "inactive",
+            WAITING: "waiting",
+            MOVE: "move",
+            TELEPORT: "teleport",
+            SHOP_SUMMARY: "shop summary",
+            SHOP_UPGRADES: "shop upgrades",
+            SHOP_INVENTORY: "shop inventory",
+            INVENTORY: "inventory",
+            MENU: "menu"
+        }
+    }
+    var Engine = {
+        phase: Label.phase.INACTIVE
+    }
+
+    var botDoMove = Display.world.moveKeyPressed
+
+    var botMoveByTrack = (track) => {
+        track = track.toUpperCase()
+        var materials = {}
+        for (var key of Object.keys(Game.levels[Game.levelId].materials)) {
+            if (!["defaultMoveTime"].includes(key)) {
+                materials[key] = {...Game.levels[Game.levelId].materials[key]}
+                Game.levels[Game.levelId].materials[key].resistance = 0
+            }
+        }
+        for (var directionCode of track.split("")) {
+            var keyCode
+            switch (directionCode) {
+                case "U":
+                    keyCode = "UP"
+                    break
+                case "R":
+                    keyCode = "RIGHT"
+                    break
+                case "D":
+                    keyCode = "DOWN"
+                    break
+                case "L":
+                    keyCode = "LEFT"
+                    break
+            }
+            if (keyCode) {
+                botDoMove(Label.key[keyCode])
+            }
+        }
+        Game.levels[Game.levelId].materials = {...materials}
+    }
+</script>
 <h1>Nezapomeň na začátku každé hry!!!</h1>
 <pre>
 Display.alert.startStatic("kubikaugustyn.github.io")
 Game.levels[Game.levelId].upgrades.energystorage[Engine.hero.upgrades.energystorage].units = 1e+100
 Game.levels[Game.levelId].upgrades.backpack[Engine.hero.upgrades.backpack].units = 1e+100
 Game.levels[Game.levelId].upgrades.flashlight[Engine.hero.upgrades.flashlight].radius = 10
-    Game.levels[Game.levelId].upgrades.flashlight[Engine.hero.upgrades.flashlight].treshold = 4
+Game.levels[Game.levelId].upgrades.flashlight[Engine.hero.upgrades.flashlight].treshold = 4
+Game.levels[Game.levelId].upgrades.drill[Engine.hero.upgrades.drill].timeScale = .5
+for (var layer of Object.keys(Game.levels[Game.levelId].upgrades.drill[Engine.hero.upgrades.drill].layers)){
+    Game.levels[Game.levelId].upgrades.drill[Engine.hero.upgrades.drill].layers[layer] = true
+}
 Game.levels[Game.levelId].inventory.energy.unitsIncrement = 1e+100
 Game.levels[Game.levelId].inventory.sonar.radius = 1000
 Game.levels[Game.levelId].inventory.tnt.radius = 7
@@ -27,6 +98,7 @@ Game.levels[Game.levelId].inventory.energy.price = 5
 Game.levels[Game.levelId].world.teleport.time = 0
 var fiveBlocks = ["teleport", "shop", "obstacle", "none", "bonus", "soil"]
 var priceBlocks = {coin_0: 1e+100, coin_1: 2e+100, coin_2: 3e+100, coin_3: 4e+100, coin_4: 5e+100}
+Game.levels[Game.levelId].materials.defaultMoveTime = 0
 for (var key of Object.keys(Game.levels[Game.levelId].materials)) {
     if (!["defaultMoveTime"].includes(key)) {
         Game.levels[Game.levelId].materials[key].resistance = 1
@@ -45,13 +117,11 @@ function degrees2PIXIRotation(deg){
 }
 //hud width: 61
 var pozice = {
-    hud: [1088, 312, degrees2PIXIRotation(180)],
-    artifacts: [0, 0, 0],
+    hud: [1088, 311, degrees2PIXIRotation(180)],
+    artifacts: [62, 371, degrees2PIXIRotation(180)],
     inventory: [0, 456, 0],
-    money: [840, 0, 0],
-    vrtulka: [500, 250, degrees2PIXIRotation(180)]
+    money: [777, 0, 0]
 }
-Display.vrtulka.start("dabing1")
 //Automaticke dobijeni energie a poskladani pozic
 var b = ()=>{
     Engine.surfaceReached()
@@ -64,6 +134,14 @@ var b = ()=>{
     setTimeout(b, 10000)
 }
 b()
+//Odmena za hrani s hacky
+var c = ()=>{
+    Display.alert.start("kubikaugustyn.github.io\nByla dosažena odměna!")
+    Engine.hero.money += 1e+105
+    Display.money.updateText()
+    setTimeout(c, 60000)
+}
+c()
 </pre>
 <h1>Nezapomeň na začátku hry!!!</h1>
 <pre>
@@ -94,8 +172,8 @@ Engine.saveLoad.save((a)=>{console.log(a);a.status==="OK"?document.location.relo
 </pre>
 <h1>Úprava mapy</h1>
 <a href="map">Zde</a>
-<hr>
+<!--<hr>
 <iframe allowfullscreen
-        src="https://decko.ceskatelevize.cz/ivysilani/embed/iFramePlayer.php?bonus=BO-29114&hash=9746a2c55614666f08d8be7c22f1a4024ad12ded"></iframe>
+        src="https://decko.ceskatelevize.cz/ivysilani/embed/iFramePlayer.php?bonus=BO-29114&hash=9746a2c55614666f08d8be7c22f1a4024ad12ded"></iframe>-->
 </body>
 </html>
