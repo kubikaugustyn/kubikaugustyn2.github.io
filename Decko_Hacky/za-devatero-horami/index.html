@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Za devatero horami</title>
+</head>
+<body>
+<h1>Hacky!!!</h1>
+<pre>
+var state;
+AmfConnector.loadAppState(a=>state=JSON.parse(a.state), 0, 'Main', 'text')
+state.status.forEach((a, b)=>{state.status[b] = 4})
+state.stars.forEach((a, b)=>{state.stars[b] = 1e+100})
+AmfConnector.saveAppState(console.log, 0, "SaveGame", [{name: "Main", state: JSON.stringify(state)}])
+</pre>
+</body>
+</html>

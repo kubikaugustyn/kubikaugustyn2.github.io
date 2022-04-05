@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pixelovánky</title>
+</head>
+<body>
+<h1>Hacky!!!</h1>
+<pre>
+var state;
+dpapi.loadAppState(0, "saved_state", integrativeContainer.getToken()).then(a=>{state=a})
+state.levelsAreFinished.forEach((a, b)=>{state.levelsAreFinished[b] = true})
+dpapi.saveAppState(0, "v4.0", [{name: "saved_state", state: JSON.stringify(state)}], integrativeContainer.getToken())
+</pre>
+</body>
+</html>

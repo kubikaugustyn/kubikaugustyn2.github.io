@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hopsváča</title>
+</head>
+<body>
+<h1>Hacky!!!</h1>
+<pre>
+var newState = {levels: [], enemies: [], heroes: []}
+for (var a = 1; a <= 10; a++) newState.levels.push({levelNum: a, maxScore: 999999999, isOpened: true})
+for (var b = 0; b < 25; b++) newState.enemies.push(b)
+for (var c = 0; c < 10; c++) newState.heroes.push(c)
+dpapi.saveAppState(0, "v4.0", [{name: "saved_state", state: JSON.stringify(newState)}], integrativeContainer.getToken())
+</pre>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bzz!</title>
+</head>
+<body>
+<h1>Level 1</h1>
+<pre>
+var state;
+
+function hack(){
+    state.stems.forEach((a, b)=>state.stems[b]=true)
+    state.treasures.forEach((a, b)=>state.treasures[b]=true)
+    state.decorations.forEach((a, b)=>state.decorations[b]=true)
+    state.plants.forEach((a, b)=>state.plants[b]=true)
+    //state.moneyEarned = 1e+100
+    dpapi.saveAppState(1, "levelData_1", [{name: "levelData_1", state: JSON.stringify(state)}], integrativeContainer.getToken())
+}
+
+dpapi.loadAppState(1, "levelData_1", integrativeContainer.getToken()).then(a=>{state=a;hack()})
+</pre>
+<h1>Player data</h1>
+<pre>
+var state;
+
+function hack(){
+    //console.log(state)
+    state.money = 1e+100
+    state.colorDrops = 1e+100
+    state.whiteDrops = 1e+100
+    state.colorUpgrade = 4
+    state.containerUpgrade = 4
+    state.ticketBought = 1e+100
+    state.walkUpgrade = 4
+    dpapi.saveAppState(0, "playerData", [{name: "playerData", state: JSON.stringify(state)}], integrativeContainer.getToken())
+}
+
+dpapi.loadAppState(0, "playerData", integrativeContainer.getToken()).then(a=>{state=a;hack()})
+</pre>
+</body>
+</html>

@@ -2,27 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Vše</title>
+    <title>Hacky na vše na déčku</title>
     <script src="https://kuba-apis.web.app/js/myquery/1.0.0/myquery.js"></script>
-    <!--    <script src="AmfJsD.js"></script>-->
-    <!--    <script src="AmfConnector.js"></script>-->
-    <!--    <script src="dpapi.js"></script>-->
+    <script src="AmfJsD.js"></script>
+    <script src="AmfConnector.js"></script>
+    <script src="dpapi.js"></script>
+    <script src="classes/hopsvaca.js"></script>
+    <script src="DeckoHacker.js"></script>
+    <style>
+        body {
+            margin: 0
+        }
+
+        #container {
+            width: 100vw;
+            height: 100vh
+        }
+    </style>
 </head>
 <body>
-<h1>Vše</h1>
-<pre>
-
-</pre>
+<div id="container"></div>
 <script>
+    var dh = new DeckoHacker(document.getElementById("container"))
+    dh.begin()
+</script>
+<!--<script>
     // var http = $$.Data.http("GET", "")
     var gameIds = {
         "kutej-darky-spunte": "ff1af0a6-7386-49be-9b85-6d06a1c72788",
-        "hopsvaca": "267a4ea7-6241-4297-8a0d-cd5f02dfbc80"
+        "hopsvaca": "267a4ea7-6241-4297-8a0d-cd5f02dfbc80",
+        "bzz": "2ace6e72-fc28-4a47-bd71-fcd2a006358d"
     }
 
     var proxy = "https://cors-anywhere.herokuapp.com/"
 
-    /*function loadFlashVars(gameId) {
+    function loadFlashVars(gameId) {
         return JSON.parse($$.Data.http("GET", proxy + "https://decko.ceskatelevize.cz/rest/Token/flashVars?closeButtonEnabled=false&app=" + gameIds[gameId]).responseText)
     }
 
@@ -38,28 +52,52 @@
     // AmfConnector.getDate($$.log)
     // AmfConnector.loadAppState($$.log, 0, 'startSeed', 'text')
     // AmfConnector.loadAppState($$.log, 0, 'saved_state', 'text')
+    // AmfConnector.saveAppState(console.log, 0, "v4.0", [{name: "kuba", state: "Kuba je nej!"}])
+
+    // dpapi.saveAppState(0, "v4.0", [{name: "kuba", state: '{"truth":"Kuba je nej!"}'}], integrativeContainer.getToken())
+    // dpapi.loadAppState(0, "kuba", integrativeContainer.getToken()).then(console.log)
 
     var dpa
-    dpapi.createToken(gameIds["hopsvaca"]).then(a=>{
+    dpapi.createToken(gameIds["bzz"]).then(a => {
         dpa = a
+        // dpa.flashvars.token = "l1egZIUcMLrmynNjo5W3"
         AmfConnector.token = dpa.flashvars.token
         console.log("READY")
-    })*/
 
-    var gamesHacker = {
+        dpapi.loadAppState(0, "playerData", dpa.flashvars.token).then(a => {
+            console.log(a)
+        })
+    })
+
+    /*var gamesHacker = {
         results: {
             token: undefined
         }
     }
     gamesHacker.init = (appUuid) => {
         // https://decko.ceskatelevize.cz/rest/Token/flashVars?closeButtonEnabled=false&app=ff1af0a6-7386-49be-9b85-6d06a1c72788
-        gamesHacker.results.token = JSON.parse($$.Data.http("POST", proxy + "https://decko.ceskatelevize.cz/rest/Token/amfJson", false, null, null, {
-            "Content-Type": "application/x-amf; charset=UTF-8"
-        }, `{"version":"3","headers":[],"bodies":[{"targetURI":"createToken","responseURI":"/1","data":[{"appUuid":"${appUuid}"}]}]}`).responseText)
+        /!*gamesHacker.results.token = JSON.parse($$.Data.http("POST", proxy + "https://decko.ceskatelevize.cz/rest/Token/amfJson", false, null, null, {
+            "Content-Type": "application/x-amf; charset=UTF-8",
+            "Accept": "application/json, text/plain, *!/!*"
+        }, `{"version":"3","headers":[],"bodies":[{"targetURI":"createToken","responseURI":"/1","data":[{"appUuid":"${appUuid}"}]}]}`).responseText)*!/
         console.log(gamesHacker.results.token)
     }
+    gamesHacker.post = (type, target, data) => {
+        var a = $$.Data.http("POST", proxy + `https://decko.ceskatelevize.cz/rest/${type}/amfJson`, false, null, null, {
+            // "Content-Type": "application/x-amf; charset=UTF-8",
+            // "Accept": "application/json, text/plain, *!/!*"
+            Accept: "application/json, text/plain, *!/!*",
+            Authorization: "Basic" + btoa(":")
+        }, `{"version":"3","headers":[],"bodies":[{"targetURI":"${target}","responseURI":"/1","data":[${JSON.stringify(data)}]}]}`)
+        console.log(JSON.parse(a.responseText))
+    }
 
-    gamesHacker.init(gameIds["hopsvaca"])
-</script>
+    // gamesHacker.init(gameIds["hopsvaca"])
+    gamesHacker.post("AppState", "loadAppState", {
+        "token": "3PeoqNgcowtTWvJzxu1M",
+        "slotNumber": 0,
+        "resourceName": "saved_state"
+    })*/
+</script>-->
 </body>
 </html>
