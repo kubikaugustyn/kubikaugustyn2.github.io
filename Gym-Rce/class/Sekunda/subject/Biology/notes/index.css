@@ -1,0 +1,19 @@
+underline {
+    text-decoration: underline;
+    font-size: large;
+}
+
+verticalline {
+    /*background-color: white;*/
+    /*color: white;*/
+    /*font-weight: bold;*/
+    /*font-size: xx-large;*/
+    border-left: 15px solid white;
+    border-right: 3px solid black;
+    margin-right: 2px;
+    height: 19px;
+}
+
+verticalline::before {
+    /*content: " | ";*/
+}
