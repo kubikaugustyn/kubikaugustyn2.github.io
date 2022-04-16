@@ -11,6 +11,7 @@ function processNoteCommands(note) {
     var func = arguments.shift()
     var result = ""
     var newLine = true
+    var verticalLine = false
     switch (func.toUpperCase()) {
         case "YTID":
             if (arguments[0].length === 11)
@@ -25,16 +26,17 @@ function processNoteCommands(note) {
         case "ONE_LINE":
             result = arguments.join(" ")
             newLine = false
+            verticalLine = true
             break
         case "TEXT_DOWN":
-            result = "<down>" + arguments.join(" ") + "</down>"
+            result = "<sub>" + arguments.join(" ") + "</sub>"
             break
         default:
             result = func + ": " + arguments.join(" ")
             break
     }
     console.log(func, arguments, result)
-    return [result, newLine]
+    return [result, newLine, verticalLine]
 }
 
 function buildNotes(container, offset, data) {
@@ -44,16 +46,17 @@ function buildNotes(container, offset, data) {
             // console.log(offset, note)
             var html = ""
             var doNewLine = true
+            var drawVerticalLine = true
             if (typeof data[noteIndex + 1] === "object") {
                 html = "<underline>" + note + "</underline>"
             } else {
                 if (note[0] === "<") {
-                    [html, doNewLine] = processNoteCommands(note)
+                    [html, doNewLine, drawVerticalLine] = processNoteCommands(note)
                 } else {
                     html = note.replaceAll("\n", "")
                 }
             }
-            container.innerHTML += (note[0] !== "<" ? $$.Data.encryption.string.multiply("<verticalline></verticalline>", offset) + (offset > 0 ? "-" : "") : "") + html + (doNewLine ? "<br>" : "")
+            container.innerHTML += (drawVerticalLine ? $$.Data.encryption.string.multiply("<verticalline></verticalline>", offset) + (offset > 0 ? "-" : "") : "") + html + (doNewLine ? "<br>" : "")
         } else {
             buildNotes(container, offset + 1, note)
         }
