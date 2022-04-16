@@ -9,8 +9,32 @@ function processNoteCommands(note) {
         arguments[i] = arguments[i].replaceAll("<SPACE>", " ")
     }
     var func = arguments.shift()
-    console.log(func, arguments)
-    return func + ": " + arguments.join(" ")
+    var result = ""
+    var newLine = true
+    switch (func.toUpperCase()) {
+        case "YTID":
+            if (arguments[0].length === 11)
+                // result = `<iframe allowfullscreen src="https://youtube.com/embed/${arguments[0]}">${arguments.slice(1).join(" ")}</iframe>`
+                result = `<iframe width="300" height="150" src="https://www.youtube.com/embed/${arguments[0]}" title="YouTube video player - ${arguments.slice(1).join(" ")}" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen>${arguments.slice(1).join(" ")}</iframe>`
+            else result = `YouTube Video, ID part: ${arguments[0]}, other arguments: "${arguments.slice(1).join(" ")}"`
+            break
+        case "NOTE":
+            result = ""
+            newLine = false
+            break
+        case "ONE_LINE":
+            result = arguments.join(" ")
+            newLine = false
+            break
+        case "TEXT_DOWN":
+            result = "<down>" + arguments.join(" ") + "</down>"
+            break
+        default:
+            result = func + ": " + arguments.join(" ")
+            break
+    }
+    console.log(func, arguments, result)
+    return [result, newLine]
 }
 
 function buildNotes(container, offset, data) {
@@ -19,12 +43,17 @@ function buildNotes(container, offset, data) {
         if (typeof note === "string") {
             // console.log(offset, note)
             var html = ""
+            var doNewLine = true
             if (typeof data[noteIndex + 1] === "object") {
                 html = "<underline>" + note + "</underline>"
             } else {
-                html = note[0] === "<" ? processNoteCommands(note) : note.replaceAll("\n", "")
+                if (note[0] === "<") {
+                    [html, doNewLine] = processNoteCommands(note)
+                } else {
+                    html = note.replaceAll("\n", "")
+                }
             }
-            container.innerHTML += $$.Data.encryption.string.multiply("<verticalline></verticalline>", offset) + (offset > 0 ? "-" : "") + html + "<br>"
+            container.innerHTML += (note[0] !== "<" ? $$.Data.encryption.string.multiply("<verticalline></verticalline>", offset) + (offset > 0 ? "-" : "") : "") + html + (doNewLine ? "<br>" : "")
         } else {
             buildNotes(container, offset + 1, note)
         }
