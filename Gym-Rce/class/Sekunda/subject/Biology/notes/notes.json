@@ -173,118 +173,133 @@
   ],
   "Rostliny",
   [
-    "fotosyntéza",
+    "systém",
     [
-      "přeměna anorganických (neústrojných) látek na látky organické (ústrojné)",
-      "<ONE_LINE potřeba světla, uvolňuje se O>",
-      "<TEXT_DOWN 2>"
-    ],
-    "obory",
-    [
-      "a",
-      "a",
-      "a",
-      "a",
-      "a"
-    ],
-    "Carl von Linné",
-    [
-      "a",
-      "a"
+      "fotosyntéza",
+      [
+        "přeměna anorganických (neústrojných) látek na látky organické (ústrojné)",
+        "<ONE_LINE true potřeba světla, uvolňuje se O>",
+        "<TEXT_DOWN false 2>"
+      ],
+      "obory",
+      [
+        "Botanika - věda o rostlinách",
+        "systematická botanika - popisuje a řadí rostliny do systému",
+        "morfologie - studuje a popisuje vnější stavbu rostliny",
+        "anatomie - studuje a popisuje vnitřní stavbu rostliny",
+        "fyziologie - popisuje a zkoumá životní děje v rostlině (dýchání, fotosyntéza)"
+      ],
+      "Carl von Linné",
+      [
+        "zakladatel botanické a zoologické botaniky",
+        "označil rostliny a živočichy rodovým a druhovým jménem"
+      ]
     ],
     "nižší",
     [
-      "a",
-      "a",
+      "tělo tvořené stélkou",
+      "řasy",
       "(Prima)"
     ],
     "vyšší",
     [
       "(Sekunda)",
-      "a",
-      "a",
-      "a",
-      "a",
-      "a",
+      "vznik specializovaných pletiv",
+      "orgány plní určitou funkci (kořen, stonek, ...)",
+      "složitá stavba pohlavních orgánů",
+      "lepší život na souši",
+      "přechod rostlin na souš",
       [
-        "a",
-        "a",
-        "a"
+        "vznik Země cca před 4.6 miliardami let",
+        "<ONE_LINE true před 3.5 miliardami let - v atmosféře N>",
+        "<TEXT_DOWN true 2>",
+        "<ONE_LINE false , methan, CO>",
+        "<TEXT_DOWN true 2>",
+        "<VERTICAL_NEW_LINE false true  a mnoho UV záření dopadalo na Zemi>",
+        "<ONE_LINE true dnes (díky fotosyntéze) - 21% O>",
+        "<TEXT_DOWN true 2>",
+        "<ONE_LINE false , 78% N>",
+        "<TEXT_DOWN true 2>",
+        "<VERTICAL_NEW_LINE false true , 1% ostatních plynů + ochranná ozonová vrstva>",
+        "postupně rostliny opouštěly vodu -> suchozemské",
+        "nejstarší - mechorosty",
+        "nejmladší (nejdokonalejší) - krytosemenné"
       ],
-      "a",
+      "přizpůsobení rostlin životu na souši",
       [
-        "a",
-        "a",
-        "a"
+        "vznik pletiv - buňek stejného tvaru a funkce",
+        "vodivá pletiva - vedou vodu a minerální látky z kořenů do listů, rozvádí produkty fotosyntézy z listů",
+        "krycí pletiva - chrání rostlinu před vysycháním, tvoří pokožku rostliny",
+        "průduchy - umožňují výměnu plynů a vodních par mezi rostlinou a prostředím - nacházejí se v pokožce",
+        "podpůrné pletivo - udržuje tvar a vzpřímený růst rostliny",
+        "zásobní pletivo - k přežití v nepříznivých podmínkách"
       ],
       "orgány",
       [
         "tvoří je soubory pletiv",
         "kořen, stonek, květ, list, plod"
-      ]
-    ],
-    "výtrusné rostliny",
-    [
-      "a",
-      "a",
+      ],
+      "výtrusné rostliny",
       [
-        "a",
-        "a",
-        "a",
-        "a",
-        "a",
-        "a",
-        "a",
+        "rozmnožují se pomocí výtrusů",
+        "oddělení: Mechorosty",
         [
-          "a",
-          "a",
-          "a",
-          "a",
-          "a",
-          "a",
+          "1 z nejstarších suchozemských rostlin",
+          "vznikly z mnohobuněčných zelených řas",
+          "nemají pravá vodivá pletiva (pro rozvod živin) -> jsou nízké, rostou v trsech (aby se navzájem podpíraly)",
+          "tělo rostliny = stélka",
+          "výskyt - téměř všude",
+          "Játrovky",
           [
-            "a",
+            "nejprimitivnější",
+            "nejstarší skupina mechorostů",
+            "vlhká, stinná místa",
+            "lupenitá X listnatá stélka",
+            "pohárky - slouží k rozmnožování",
+            "zástupci",
             [
-              "a",
-              "a"
+              "porostnice mnohotvárná",
+              [
+                "stélka k podkladu přichycena příchytnými vlákny",
+                "vlhká, stinná místa"
+              ]
             ]
-          ]
-        ],
-        "mechy",
-        [
-          "a",
-          "a",
-          "a",
-          "a",
-          "a",
-          "a",
-          [
-            "",
-            ""
-          ]
-        ],
-        "mechy - zástupci",
-        [
-          "a",
-          [
-            "a"
           ],
-          "a",
+          "mechy",
           [
-            "a",
-            "a"
+            "na vlhkých místech i v tundře, vyšších horách",
+            "tzv. pionýrské organismy - osidlují území první a připravují půdu pro další organismy",
+            "někteří tzv. bioindikátory - citliví na nepříznivé podmínky ovzduší",
+            "zabraňují půdní erozi v lesích",
+            "zásobárna vody, zvlhčují vzduch"
           ],
-          "a",
+          "rozmnožování ???mechů nebo mechorostů???",
           [
-            "a"
+            "rodozměna - pravidelné střídání tvorby pohlavních buněk s tvorbou výtrusů",
+            "ve vodním prostředí"
           ],
-          "a",
+          "mechy - zástupci",
           [
-            "a",
-            "a",
-            "a",
-            "a",
-            "a"
+            "???",
+            [
+              "???"
+            ],
+            "ploník obecný",
+            [
+              "tvoří husté trsy"
+            ],
+            "bělomech sivý",
+            "travník (pokryvnatec) Schreberův",
+            [
+              "často v trávnících"
+            ],
+            "rašeliník",
+            [
+              "roste v horských oblastech",
+              "neustále na vrcholu dorůstá",
+              "z odumřelých částí vzniká rašelina -> využití v zahradnictví, léčba pohybového ústrojí (Karlovy Vary), topivo",
+              "hyalocysty - bezbarvé buňky - slouží jako zásobárna vody"
+            ]
           ]
         ]
       ]

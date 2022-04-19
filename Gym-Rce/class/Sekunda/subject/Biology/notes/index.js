@@ -2,7 +2,9 @@ var __author__ = "kubik.augustyn@post.cz"
 
 var notes = JSON.parse($$.Data.http("GET", "notes.json").responseText)
 
-function processNoteCommands(note) {
+var YouTubeVideos = []
+
+function processNoteCommands(note, container) {
     note = note.slice(1, note.length - 1)// <code> --> code
     var arguments = note.split(" ")
     for (var i = 0; i < arguments.length; i++) {
@@ -14,29 +16,41 @@ function processNoteCommands(note) {
     var verticalLine = false
     switch (func.toUpperCase()) {
         case "YTID":
-            if (arguments[0].length === 11)
-                // result = `<iframe allowfullscreen src="https://youtube.com/embed/${arguments[0]}">${arguments.slice(1).join(" ")}</iframe>`
-                result = `<iframe width="300" height="150" src="https://www.youtube.com/embed/${arguments[0]}" title="YouTube video player - ${arguments.slice(1).join(" ")}" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen>${arguments.slice(1).join(" ")}</iframe>`
-            else result = `YouTube Video, ID part: ${arguments[0]}, other arguments: "${arguments.slice(1).join(" ")}"`
+            if (arguments[0].length === 11) {
+                YouTubeVideos.push(new YouTubeVideoEmbedPreview(arguments[0], arguments.slice(1).join(" "), container))
+                newLine = false
+            } else result = `YouTube Video, ID part: ${arguments[0]}, other arguments: "${arguments.slice(1).join(" ")}"`
             break
         case "NOTE":
             result = ""
             newLine = false
             break
         case "ONE_LINE":
+            verticalLine = $$.String.toBool(arguments.shift())
             result = arguments.join(" ")
             newLine = false
-            verticalLine = true
+            break
+        case "VERTICAL_NEW_LINE":
+            verticalLine = $$.String.toBool(arguments.shift())
+            newLine = $$.String.toBool(arguments.shift())
+            result = arguments.join(" ")
             break
         case "TEXT_DOWN":
+            newLine = !$$.String.toBool(arguments.shift())
             result = "<sub>" + arguments.join(" ") + "</sub>"
             break
         default:
             result = func + ": " + arguments.join(" ")
             break
     }
-    console.log(func, arguments, result)
+    // console.log(func, arguments, result)
     return [result, newLine, verticalLine]
+}
+
+function addText(container, text) {
+    var a = document.createElement("span")
+    a.innerHTML = text
+    container.appendChild(a)
 }
 
 function buildNotes(container, offset, data) {
@@ -51,12 +65,17 @@ function buildNotes(container, offset, data) {
                 html = "<underline>" + note + "</underline>"
             } else {
                 if (note[0] === "<") {
-                    [html, doNewLine, drawVerticalLine] = processNoteCommands(note)
+                    [html, doNewLine, drawVerticalLine] = processNoteCommands(note, container)
                 } else {
                     html = note.replaceAll("\n", "")
                 }
             }
-            container.innerHTML += (drawVerticalLine ? $$.Data.encryption.string.multiply("<verticalline></verticalline>", offset) + (offset > 0 ? "-" : "") : "") + html + (doNewLine ? "<br>" : "")
+            if (drawVerticalLine) {
+                for (var a = 0; a < offset; a++) container.appendChild(document.createElement("verticalline"))
+                addText(container, "-")
+            }
+            html.length && addText(container, html)
+            doNewLine && container.appendChild(document.createElement("br"))
         } else {
             buildNotes(container, offset + 1, note)
         }
