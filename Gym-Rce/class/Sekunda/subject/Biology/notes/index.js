@@ -72,7 +72,8 @@ function buildNotes(container, offset, data) {
             }
             if (drawVerticalLine) {
                 for (var a = 0; a < offset; a++) container.appendChild(document.createElement("verticalline"))
-                addText(container, "-")
+                // addText(container, "-")
+                container.appendChild(document.createElement("horizontallline"))
             }
             html.length && addText(container, html)
             doNewLine && container.appendChild(document.createElement("br"))
@@ -85,3 +86,4 @@ function buildNotes(container, offset, data) {
 
 buildNotes(document.getElementById("notes"), 0, notes)
 document.body.removeChild(document.getElementById("loading"))
+window.scrollTo(0, document.body.scrollHeight)

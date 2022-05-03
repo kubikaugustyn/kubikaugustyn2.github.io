@@ -41,7 +41,7 @@ class YouTubeVideoEmbedPreview {
         this.div.addEventListener("mousemove", this.handleEvent)
         this.div.addEventListener("mouseover", this.handleEvent)
         document.addEventListener("click", this.handleEvent)
-        $$.Data.http("GET", "https://yt2html5.com/?id=" + this.id, true, null, null, {onreadystatechange: this.onVideoInfoLoad})
+        // console.log($$.Data.http("GET", "https://yt2html5.com/?id=" + this.id, true, null, null, {onload: this.onVideoInfoLoad}))
         this.firstRender()
     }
 

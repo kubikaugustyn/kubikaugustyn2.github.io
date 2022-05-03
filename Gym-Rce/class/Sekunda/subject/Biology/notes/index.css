@@ -9,3 +9,12 @@ verticalline {
     margin-right: 2px;
     height: 19px;
 }
+
+horizontallline {
+    width: 10px;
+    height: 0;
+    background-color: black;
+    border: 1px solid black;
+    margin: 3px;
+    display: inline-block;
+}
