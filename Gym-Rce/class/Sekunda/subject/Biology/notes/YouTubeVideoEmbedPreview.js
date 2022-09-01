@@ -13,7 +13,7 @@ class YouTubeVideoEmbedPreview {
         this.setAttributes(this.iframe, {
             width: 300,
             height: 150,
-            src: `https://www.youtube.com/embed/${this.id}`,
+            src: `https://www.youtube.com/embed/${this.id}?loop=1&autoplay=1`,
             title: `YouTube video player - ${this.title}`,
             frameborder: 0,
             allow: "autoplay; clipboard-write; encrypted-media; picture-in-picture",
@@ -65,7 +65,7 @@ class YouTubeVideoEmbedPreview {
     }
 
     handleEvent(event) {
-        console.log(event.type)
+        // console.log(event.type)
         switch (event.type) {
             case "click":
                 this.changeContent(event.path.includes(this.div))

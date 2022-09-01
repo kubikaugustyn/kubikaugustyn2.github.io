@@ -1,0 +1,19 @@
+:HEAD
+#DATE Test date
+#DAY Test day
+:BODY
+=0 ~Test notes
+=1 This is note one
+;red This is red note two
+;rgb(255,0,0) This is red note two duplicate
+#YT-VIDEO 2
+$ID dQw4w9WgXcQ
+%This video is cool.
+$TITLE Never gonna give you up...
+~~h2 Test
+=3 This is test!
+=0
+%This will be cool!
+=3
+&https://kubovy-hry.web.app/ Kubovy hry!!!
+:END

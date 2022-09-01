@@ -1,0 +1,26 @@
+date:before {
+    content: "Date: ";
+}
+
+day:before {
+    content: "Day: ";
+}
+
+date, day {
+    margin: 4px;
+}
+
+.hour-header {
+    margin: 1px;
+    text-decoration: underline;
+}
+
+.hour-div .hour-header-main {
+    margin: 1px;
+}
+
+.hour-container {
+    border-left: 3px solid black;
+    margin-left: 11px;
+    padding-left: 3px;
+}
