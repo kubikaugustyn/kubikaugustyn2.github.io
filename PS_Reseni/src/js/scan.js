@@ -101,3 +101,5 @@ function getFileStatus(url) {
     }
     return http.status
 }
+
+start()
