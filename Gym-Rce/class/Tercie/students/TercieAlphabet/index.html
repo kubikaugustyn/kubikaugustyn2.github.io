@@ -6,8 +6,69 @@
     <script src="Child.js"></script>
     <script src="Tree.js"></script>
     <script src="index.js" defer></script>
+    <style>
+        table, tr, td, th, canvas {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+<!-- https://www.amp-what.com/ -->
+<!-- https://en.wikipedia.org/wiki/List_of_Unicode_characters#Box_Drawing -->
+<table>
+    <thead>
+    <tr>
+        <th>Význam</th>
+        <th>Znak</th>
+        <th>Znak</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Začátek zprávy</td>
+        <td>╬</td>
+        <td>&#9580;</td>
+    </tr>
+    <tr>
+        <td>Začátek zprávy</td>
+        <td>#</td>
+        <td>&num;</td>
+    </tr>
+    <tr>
+        <td>Konec zprávy</td>
+        <td>╫</td>
+        <td>&#9579;</td>
+    </tr>
+    <tr>
+        <td>Dělení písmen</td>
+        <td>│</td>
+        <td>&#9474;</td>
+    </tr>
+    <tr>
+        <td>Dělení slov</td>
+        <td>║</td>
+        <td>&#9553;</td>
+    </tr>
+    <tr>
+        <td>1. volba</td>
+        <td>○</td>
+        <td>&#9675;</td>
+    </tr>
+    <tr>
+        <td>2. volba</td>
+        <td>△</td>
+        <td>&#9651;</td>
+    </tr>
+    <tr>
+        <td>3. volba</td>
+        <td>□</td>
+        <td>&#9633;</td>
+    </tr>
+    </tbody>
+</table>
+<p>Například: ╬○△△△║○□△△║○□□△║△○○○║○○△○╫ znamená Ahoj! Jak se máš?</p>
 <canvas id="tree"></canvas>
 </body>
 </html>

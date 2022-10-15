@@ -178,7 +178,10 @@ class Hour {
                 }
             } else if (stage === "BODY") {
                 if (keyword === "=") {
-                    var diff = parseInt(lineParts[0]) - offset
+                    var diff = 0
+                    if (lineParts[0] === "++") diff = 1
+                    else if (lineParts[0] === "--") diff = -1
+                    else diff = parseInt(lineParts[0]) - offset
                     offset += diff
                     for (i = 0; i < Math.abs(diff); i++) {
                         if (diff > 0) {

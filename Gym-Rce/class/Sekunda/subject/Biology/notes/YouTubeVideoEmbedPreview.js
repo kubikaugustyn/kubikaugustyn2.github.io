@@ -7,7 +7,7 @@ class YouTubeVideoEmbedPreview {
         this.container = container
         this.div = document.createElement("div")
         this.div.innerHTML = "Loading..."
-        this.div.style = "position: relative; width: 300px; height: 150px; background-color: white; border-radius: 5px; border: 5px solid black; margin: 30px; transition-duration: 0.1s;"
+        this.div.style = "cursor: pointer; position: relative; width: 300px; height: 150px; background-color: white; border-radius: 5px; border: 5px solid black; margin: 30px; transition-duration: 0.1s;"
         //<iframe width="300" height="150" src="https://www.youtube.com/embed/${id}" title="YouTube video player - ${name}" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen>${name}</iframe>
         this.iframe = document.createElement("iframe")
         this.setAttributes(this.iframe, {
@@ -24,7 +24,7 @@ class YouTubeVideoEmbedPreview {
         //<div>${this.title}</div>
         this.nonIframe = document.createElement("div")
         this.nonIframe.innerHTML = (this.title.length ? this.title : "No title.") + "<br>Click to play."
-        this.nonIframe.style = "position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);text-align: center;"
+        this.nonIframe.style = "cursor: pointer; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);text-align: center;"
 
         this.isIframe = true
         this.changeContent(false)

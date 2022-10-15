@@ -1,0 +1,7 @@
+# @name Add item to my cart
+#GET https://app.kaufland.net/getPrice
+POST https://sellerapi.kaufland.com/v2/units/
+Accept: application/json
+Shop-Client-Key:
+Shop-Timestamp: 1665593579879
+

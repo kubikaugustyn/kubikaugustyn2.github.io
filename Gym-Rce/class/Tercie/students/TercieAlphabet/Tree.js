@@ -23,19 +23,21 @@ class Tree {
         c.fillStyle = "white"
         c.fillRect(0, 0, w, h)
 
+        var border = 3
+        w -= 2 * border
         var width, y, line_h, rootChild
         width = w
         y = 0
         line_h = h / this.children.length
         rootChild = new Child("", 0, true)
         rootChild.y = 0
-        rootChild.x = w / 2
+        rootChild.x = border + w / 2
         for (var [depth, line] of Object.entries(this.children)) {
             depth = parseInt(depth)
             // c.fillStyle = depth % 2 ? "red" : "green"
             // c.fillRect(0, y, w, line_h)
 
-            width = w / (line.filter(a => a.text !== "~").length)
+            // width = w / (line.filter(a => a.text !== "~").length)
             var xIndex = 0
             for (var [i, child] of Object.entries(line)) {
                 if (child.text === "~") continue
@@ -43,11 +45,22 @@ class Tree {
                 var parentI = Math.floor(i / this.childBranchsNum)
                 var branchI = i % this.childBranchsNum
                 var parentChild = depth ? this.children[depth - 1][parentI] : rootChild
+                var parentBranches = []
+                for (var a = 0; a < this.childBranchsNum; a++) {
+                    var d = this.children[depth][parentI + a]
+                    d && d.text !== "~" && parentBranches.push(d)
+                }
+                // depth && console.log(this.children[depth - 1], parentBranches.length)
+                // depth && (width = (w / this.children[depth - 1].length) / parentBranches.length)
+                width = (parentChild.width || w) / parentBranches.length
+                // console.log(parentBranches, parentI, branchI, parentChild, this.children)
                 var x = xIndex * width
                 // console.log(depth, i, branchI, child, parentChild)
-                child.x = Math.floor(x + (width / 2))
+                child.x = border + Math.floor(x + (width / 2))
                 child.y = Math.floor(y + (line_h / 2))
-                child.size = Math.floor(width > 25 ? 25 : width)
+                child.width = width
+                // child.size = Math.floor(width > 25 ? 25 : width) // Limit: 25px
+                child.size = Math.floor(width > 100 ? 100 : width) // Limit: 50px
                 // var b = (branchI * (255 / this.childBranchsNum)).toString(16)
                 // c.fillStyle = `#ffff${b.length > 1 ? b : "0" + b}`
                 // c.fillRect(x, y, width, line_h)

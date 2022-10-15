@@ -7,6 +7,7 @@ class Child {
         this.root = root
         this.x = 0
         this.y = 0
+        this.width = 0
         this.size = 10
 
         Object.getOwnPropertyNames(Object.getPrototypeOf(this)).filter(method => (method !== 'constructor')).forEach((method) => {
