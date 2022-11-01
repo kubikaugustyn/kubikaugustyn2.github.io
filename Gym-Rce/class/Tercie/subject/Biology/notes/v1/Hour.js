@@ -50,6 +50,7 @@ class Text extends Container {
     createHtml() {
         this.html = document.createElement("div")
         this.html.className = "hour-text"
+        this.html.innerHTML = '<div class="line"></div>'
     }
 
     render() {
@@ -114,7 +115,7 @@ class Hour {
         this.div.className = "hour-div"
         this.text_lines = []
         this.container = new Container(this)
-        this.container.html.className = ""
+        this.container.html.className = "hour-body"
         this.header = {}
 
         Object.getOwnPropertyNames(Object.getPrototypeOf(this)).filter(method => (method !== 'constructor')).forEach((method) => {
@@ -164,9 +165,12 @@ class Hour {
             console.log($$.Data.encryption.string.multiply("    ", offset), stage + ":", keyword, line)
             if (keyword === ":") {
                 if (stage === "HEAD") { // On head end
-                    this.div.innerHTML = `<h1 class="hour-header-main">Hour ${this.name}</h1>`
-                    this.div.innerHTML += `<date>${this.header.date}</date>`
-                    this.div.innerHTML += `<day>${this.header.day}</day>`
+                    var head = document.createElement("div")
+                    head.className = 'hour-head'
+                    head.innerHTML = `<h1 class="hour-header-main">Hour ${this.name}</h1>`
+                    head.innerHTML += `<date>${this.header.date}</date>`
+                    head.innerHTML += `<day>${this.header.day}</day>`
+                    this.div.appendChild(head)
                 }
                 stage = line
             } else if (stage === "HEAD") {
@@ -207,8 +211,8 @@ class Hour {
                     container.appendChild(header)
                 } else if (keyword === ";") {
                     var colouredText = new Text(container)
-                    colouredText.html.innerHTML = endLineParts
-                    colouredText.style.color = lineParts[0]
+                    colouredText.html.innerHTML += endLineParts
+                    colouredText.style.color = this.normalizeText(lineParts[0])
                     container.appendChild(colouredText)
                 } else if (keyword === "#") {
                     if (lineParts[0] === "YT-VIDEO") {
@@ -229,14 +233,14 @@ class Hour {
                         container.appendChild(video)
                     }
                 } else if (keyword === "&") {
-                    var link = new Link()
+                    var link = new Link(container)
                     link.setValue(endLineParts)
                     link.setURL(lineParts[0])
                     container.appendChild(link)
                 } else if (keyword === "%") {
                 } else {
                     var text = new Text(container)
-                    text.html.innerHTML = keyword + line
+                    text.html.innerHTML += this.normalizeText(keyword + line)
                     container.appendChild(text)
                 }
             } else if (stage === "END") {
@@ -247,5 +251,14 @@ class Hour {
         console.log("Container:", this.container)
         this.container.render()
         this.div.appendChild(this.container.html)
+    }
+
+    normalizeText(text) {
+        var replaces = {
+            '->': "<arrow></arrow>",
+            '...': "&hellip;"
+        }
+        for (var [from, to] of Object.entries(replaces)) text = text.replaceAll(from, to)
+        return text
     }
 }

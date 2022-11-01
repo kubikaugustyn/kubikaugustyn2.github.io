@@ -113,7 +113,7 @@ for (var key of Object.keys(Game.levels[Game.levelId].achievments)) {
     }
 }
 function degrees2PIXIRotation(deg){
-    return (deg / 360) * 6.28
+    return deg / (360 * 2 * Math.PI)
 }
 //hud width: 61
 var pozice = {

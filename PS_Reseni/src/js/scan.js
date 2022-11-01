@@ -1,11 +1,11 @@
 var __author__ = "kubik.augustyn@post.cz"
 
 var url = "https://www.etaktik.cz/download/reseni/{id}_hd8.pdf"
-var idLength = 3
-var startAtId = "aaa"
+var idLength = 4
+var startAtId = "aaaa"
 var foundResultsNum = 0
 var alphabet = "abcdefghijklmnopqrstuvwxyz".split("")
-var possibleCombinations = alphabet.length * alphabet.length * alphabet.length
+var possibleCombinations = Math.pow(alphabet.length, idLength)
 var ids = []
 var workingIds = []
 var workingIdsLimit = 1
@@ -18,7 +18,7 @@ function start() {
     console.log(`Done id ${(eTime - sTime) / 1000 / 60} min`)
 }
 
-function getIndexById(id = "aaa") {
+function getIndexById(id = "aaaa") {
     var index = 0
     for (var a in id.split("")) {
         var char = id[a]
@@ -86,6 +86,9 @@ function processIds() {
 function getFileStatus(url) {
     var http = new XMLHttpRequest()
     http.open("HEAD", url, false)
+    http.onreadystatechange = e => {
+        e?.preventDefault?.()
+    }
     http.onerror = function () {
         // console.log("error")
     }

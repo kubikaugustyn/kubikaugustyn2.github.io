@@ -237,8 +237,13 @@ class MapEditor {
             cave_down: this.createNormalBlock("y", 1022, 538),
         }
         this.blockCodesMap = {}
-        for (var key of Object.keys(this.blocks)) {
-            this.blockCodesMap[this.blocks[key].code] = key
+        var blocksDiv = document.getElementById("blocks")
+        if (blocksDiv) blocksDiv.innerHTML = '<h2>Blocky</h2>'
+        var i = 0
+        for (var [key, block] of Object.entries(this.blocks)) {
+            this.blockCodesMap[block.code] = key
+            if (blocksDiv) blocksDiv.innerHTML += `${key}${(i < (Object.keys(this.blocks).length - 1) ? ', ' : '')}`
+            i++
         }
         this.mapKey = mapKey
         this.textures = textures

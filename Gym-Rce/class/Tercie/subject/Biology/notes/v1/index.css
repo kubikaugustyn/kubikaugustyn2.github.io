@@ -10,12 +10,42 @@ date, day {
     margin: 4px;
 }
 
+arrow:before {
+    content: "➔";
+    position: absolute;
+}
+
+arrow {
+    font-size: 20px;
+    position: relative;
+    margin-right: 21px;
+}
+
+.line {
+    float: left;
+    border: 1.5px solid transparent;
+    background: black;
+    transform: translateY(9.4px);
+    width: 10px;
+    margin-right: 5px;
+}
+
 .hour-header {
     margin: 1px;
     text-decoration: underline;
 }
 
-.hour-div .hour-header-main {
+.hour-div {
+    position: relative;
+}
+
+.hour-div .hour-head {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.hour-div .hour-head .hour-header-main {
     margin: 1px;
 }
 
