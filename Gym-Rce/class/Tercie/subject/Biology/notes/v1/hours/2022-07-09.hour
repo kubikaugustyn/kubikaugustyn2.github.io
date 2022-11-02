@@ -1,8 +1,9 @@
 :HEAD
+#NAME První hodina
 #DATE 7. 9. 2022
 #DAY Středa
 :BODY
-~Třída: Savci
+=2 ~Třída: Savci
 =++ ~~Vývoj, Adaptace
 =++ Nejvyvinutější obratlovci
 Rozmanitá skupina -> přizpůsobili se různým podmínkám prostředí
@@ -19,4 +20,5 @@ Vyvinuli se v druhohorách (před 200 mil. let)
 Vyhynuli velcí savci (mamut, jeskynní medvěd...)
 =-- Před 135 mil let - savci vejcorodí
 Před 100 mil let - savci živorodí
+??? Možná ještě něco ???
 :END

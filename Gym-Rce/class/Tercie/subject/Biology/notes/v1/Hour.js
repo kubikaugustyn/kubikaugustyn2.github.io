@@ -143,6 +143,7 @@ class Hour {
             this.div.innerHTML = e
         }
         console.groupEnd()
+        this.onAfterLoad()
     }
 
     onError(e) {
@@ -167,9 +168,9 @@ class Hour {
                 if (stage === "HEAD") { // On head end
                     var head = document.createElement("div")
                     head.className = 'hour-head'
-                    head.innerHTML = `<h1 class="hour-header-main">Hour ${this.name}</h1>`
-                    head.innerHTML += `<date>${this.header.date}</date>`
-                    head.innerHTML += `<day>${this.header.day}</day>`
+                    head.innerHTML = `<h1 class="hour-header-main">Hour ${this.header.name || this.name || 'No name'}</h1>`
+                    head.innerHTML += `<date>${this.header.date || 'No date'}</date>`
+                    head.innerHTML += `<day>${this.header.day || 'No day'}</day>`
                     this.div.appendChild(head)
                 }
                 stage = line
@@ -256,9 +257,13 @@ class Hour {
     normalizeText(text) {
         var replaces = {
             '->': "<arrow></arrow>",
-            '...': "&hellip;"
+            '...': "&hellip;",
+            ':-D': "&#128515;"
         }
         for (var [from, to] of Object.entries(replaces)) text = text.replaceAll(from, to)
         return text
+    }
+
+    onAfterLoad() {
     }
 }

@@ -5,7 +5,13 @@ var hours_names = $$.Data.http("GET", "hours.array").responseText.replaceAll("\r
 var hours = []
 
 for (var hour_name of hours_names) {
-    if (hour_name.length && hour_name[0] !== "#") hours.push(new Hour(hour_name))
+    if (hour_name.length && hour_name[0] !== "#") {
+        var hour = new Hour(hour_name)
+        hour.onAfterLoad = () => {
+            window.scrollTo(0, document.body.scrollHeight)
+        }
+        hours.push(hour)
+    }
 }
 
 function renderHours(container, hours) {
@@ -18,4 +24,3 @@ function renderHours(container, hours) {
 
 renderHours(document.getElementById("notes"), hours)
 document.body.removeChild(document.getElementById("loading"))
-window.scrollTo(0, document.body.scrollHeight)
