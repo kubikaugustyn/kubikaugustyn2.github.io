@@ -2,14 +2,17 @@ var __author__ = "kubik.augustyn@post.cz"
 
 // **********************************
 var url = "https://www.etaktik.cz/download/reseni/{id}_hd8.pdf"
-var idLength = 4
-var alphabet = "abcdefghijklmnopqrstuvwxyz".split("")
+var idLength = 3
+var alphabet = "abcdefghijklmnopqrstuvwxyz"
+alphabet += alphabet.toUpperCase()
+alphabet += "0123456789" + "_-"
+alphabet = alphabet.split("")
 // **********************************
 
 String.prototype.multiply = String.prototype.repeat
 var startAtId = alphabet[0].multiply(idLength)
 var possibleCombinations = Math.pow(alphabet.length, idLength)
-var id = "waaa"// getIdByIndex(possibleCombinations - 1) // The id before first id we use in request
+var id = getIdByIndex(possibleCombinations - 1) // The id before first id we use in request
 var workingIds = []
 var workingIdsLimit = 1
 var sTime, eTime
