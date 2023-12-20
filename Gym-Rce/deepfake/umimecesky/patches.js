@@ -65,9 +65,37 @@ function ourShowFinalBoardFactory(func) {
     }
 }
 
+function manageFullscreen() {
+    if (!document.fullscreenElement) {
+        showFullscreenRequest(true)
+        toggleFullScreen(true).then(manageFullscreen).catch(() => {
+        })
+    } else showFullscreenRequest(false)
+}
+
+var limitShown = false
+
 function showLimit(limited = true) {
+    limitShown = limited
+    document.getElementById("need_fullscreen").style.display = "none"
     document.getElementById("exercise").style.display = limited ? "none" : "block"
     document.getElementById("limit_thing").style.display = limited ? "block" : "none"
+}
+
+function showFullscreenRequest(shown = true) {
+    var isLimit = limitShown
+    showLimit(shown ? true : limitShown)
+    limitShown = isLimit
+    if (shown) document.getElementById("limit_thing").style.display = "none"
+    document.getElementById("need_fullscreen").style.display = shown ? "block" : "none"
+}
+
+function toggleFullScreen(on = true) {
+    if (!document.fullscreenElement && on) {
+        return document.documentElement.requestFullscreen();
+    } else if (document.exitFullscreen && !on) {
+        return document.exitFullscreen();
+    }
 }
 
 function redirectToReal(path = "") {
@@ -88,6 +116,7 @@ checkParams()
 applyPatches()
 showLimit(false)
 setTimeout(useParams, 100)
+setInterval(manageFullscreen, 100)
 
 ///////////////////////////////////////////
 // showFinalBoard("medalBased", "ps", "endSet", "0") // Sada dokoncena
