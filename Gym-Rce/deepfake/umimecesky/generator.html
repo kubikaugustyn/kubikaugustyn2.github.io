@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Generátor</title>
+</head>
+<body>
+<h1>Generátor umimecesky.cz</h1>
+<form id="form">
+    <label>
+        Zadejte URL:
+        <input type="url" placeholder="https://www.umimecesky.cz/..." size="100" name="url"
+               value="https://www.umimecesky.cz/doplnovacka-koncovky-pridavnych-jmen-1-uroven">
+    </label>
+    <br>
+    <label>
+        Zadejte název:
+        <input type="text" placeholder="Koncovky přídavných jmen (lehké)" size="100" name="name"
+               value="Koncovky přídavných jmen (jarní/mladý) (lehké)">
+    </label>
+    <br>
+    <label>
+        Vyberte štít:
+        <select size="1" name="shield">
+            <option value="3">Štít 3</option>
+            <option value="4" selected>Štít 4</option>
+        </select>
+    </label>
+    <br>
+    <input type="submit" value="OK">
+</form>
+<script>
+    var form = document.getElementById("form")
+
+    function submit(e) {
+        e.preventDefault()
+
+        var params = new URLSearchParams()
+        params.set("url", form.url.value)
+        params.set("name", form.name.value)
+        params.set("shield", form.shield.value)
+        params.set("_ij_reload", "RELOAD_ON_SAVE")
+        document.location = `${location.pathname.replaceAll(/generator(.html)?/g, "")}?${params}`
+    }
+
+    form.addEventListener("submit", submit)
+</script>
+</body>
+</html>

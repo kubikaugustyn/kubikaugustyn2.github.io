@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Řešení pracovních sešitů - 9. ročník</title>
+</head>
+<body>
+<h1>Řešení pracovních sešitů - Etaktik</h1>
+<h2>Chemie</h2>
+<a href="https://www.etaktik.cz/download/reseni/utf_hch8.pdf" target="_blank">Zde</a>
+<script>
+    function addBonus(name, uuid, highlight = false) {
+        var h2 = document.createElement("h2")
+        h2.innerText = name
+        var link = document.createElement("a")
+        link.target = "_blank"
+        link.href = `https://www.etaktik.cz/bonus-material/${uuid}`
+        link.innerText = "Zde"
+        if (highlight) h2.style.backgroundColor = "yellow"
+        document.body.appendChild(h2)
+        document.body.appendChild(link)
+    }
+
+    var regex = /([a-žA-Ž0-9 -.]+)( - řešení)?<https:\/\/www.etaktik.cz\/bonus-material\/([a-z0-9]+)>/g
+    var normalizeRegex = /( - [0-9]{4}-[0-9]{4})?( -( nové)? řešení)( aktualizované)?( - NOVÁ ŘADA)?( - nové)?( ([0-9]{2}-){2}[0-9]{4})?/g
+    var highlights = ["chemie", "dějepis", "přírodopis", "zeměpis"]
+    var source = `Český jazyk v pohodě 9 - pracovní sešit - řešení <https://www.etaktik.cz/bonus-material/5cfcfc68533d52f6c2fadbbdafc6a54c>
+    Hravá čeština 9 - pracovní sešit - řešení - nové <https://www.etaktik.cz/bonus-material/d0720b4cfb82439915022151a56ca122>
+    Hravá čeština 9 - učebnice - řešení <https://www.etaktik.cz/bonus-material/f61b2bbae7a8ec43e208036513a664d2>
+    Hravá chemie 9 - pracovní sešit - řešení <https://www.etaktik.cz/bonus-material/619ba95fbe5baef169d0015c61d9bcfe>
+    Hravá fyzika 9 - pracovní sešit - řešení <https://www.etaktik.cz/bonus-material/725ad35bc25720560700e01591add52e>
+    Hravá fyzika 9 - pracovní sešit - řešení - NOVÁ ŘADA <https://www.etaktik.cz/bonus-material/5757f9e5c3a5c1c7b8a7348f752261d6>
+    Hravá literatura 9 - pracovní sešit - řešení <https://www.etaktik.cz/bonus-material/80789a441a1ffb21f7102daf9eedaddf>
+    Hravá matematika 9 - pracovní sešit - řešení <https://www.etaktik.cz/bonus-material/cd34d1a598b4ac62759a6b803352139f>
+    Hravá občanská výchova 9 - pracovní sešit - řešení <https://www.etaktik.cz/bonus-material/157cbbbed4a77a0bd0cfcd1193c03656>
+    Hravý dějepis 9 - pracovní sešit - řešení <https://www.etaktik.cz/bonus-material/4d1fd9ea149e1e78f5542822bf344066>
+    Hravý početník 9 - 1.díl - řešení <https://www.etaktik.cz/bonus-material/f3f3c52dfdfeb98cf99c448cd4e716ad>
+    Hravý početník 9 - 2.díl - řešení <https://www.etaktik.cz/bonus-material/675dfaee20bd831d113ddff85caf94fe>
+    Hravý přírodopis 9 - laboratorní práce - řešení <https://www.etaktik.cz/bonus-material/06aa3b654a6aee35c94f458af5a6b397>
+    Hravý přírodopis 9 - pracovní sešit - řešení aktualizované <https://www.etaktik.cz/bonus-material/b6763900142dd862e3048a28873bb033>
+    Hravý sloh 9 - pracovní sešit <https://www.etaktik.cz/bonus-material/38929a390d3df3a6fb2e5febfaaee34d>
+    Hravý zeměpis 9 - pracovní sešit - nové řešení <https://www.etaktik.cz/bonus-material/7030662cf7e41da0a54dbecb8f2c133c>
+    Matematika v pohodě 9 - algebra - pracovní sešit - řešení 12-11-2020 <https://www.etaktik.cz/bonus-material/b192153372c03b096c8cefe10bc3cbeb>
+    Matematika v pohodě 9 - geometrie - pracovní sešit - řešení <https://www.etaktik.cz/bonus-material/e6c4c0e4e3e5e53b2d7c02210afb8722>
+    Přijímačky 9 - Český jazyk a literatura - 2018-2023 - řešení <https://www.etaktik.cz/bonus-material/c7ac1022c3573a953e5910ab723578b4>
+    Přijímačky 9 - Český jazyk a literatura - 2021-2024 - řešení <https://www.etaktik.cz/bonus-material/584ab43d38dccb20866a592efe42e667>
+    Přijímačky 9 - Matematika - 2018-2023 - řešení <https://www.etaktik.cz/bonus-material/7433afad3800829deeb45ba6f3dc40cb>
+    Přijímačky 9 - Matematika - 2022-2024 - řešení <https://www.etaktik.cz/bonus-material/b4dd237224bd9d7f924b239e2211dd8a>
+    `
+    var matches = source.matchAll(regex)
+    for (var match of matches) {
+        // console.log(match)
+        addBonus(match[1].trim().replaceAll(normalizeRegex, ""), match[3], highlights.find(a => match[1].toLowerCase().includes(a)))
+    }
+</script>
+</body>
+</html>
