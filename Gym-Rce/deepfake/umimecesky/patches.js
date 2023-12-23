@@ -91,11 +91,30 @@ function showFullscreenRequest(shown = true) {
 }
 
 function toggleFullScreen(on = true) {
-    if (!document.fullscreenElement && on) {
-        return document.documentElement.requestFullscreen();
-    } else if (document.exitFullscreen && !on) {
-        return document.exitFullscreen();
+    var promise
+    if (/*!document.fullscreenElement && */on) {
+        var elem = document.documentElement
+        if (elem.requestFullscreen) {
+            promise = elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) { /* Firefox */
+            promise = elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+            promise = elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE/Edge */
+            promise = elem.msRequestFullscreen();
+        }
+    } else/* if (document.exitFullscreen && !on)*/ {
+        if (document.exitFullscreen) {
+            promise = document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            promise = document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+            promise = document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+            promise = document.msExitFullscreen();
+        }
     }
+    return promise
 }
 
 function redirectToReal(path = "") {

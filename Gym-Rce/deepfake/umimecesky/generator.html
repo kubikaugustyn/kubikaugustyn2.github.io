@@ -7,7 +7,7 @@
 <body>
 <h1>Speciální záložka</h1>
 <p>Přetáhněte (nebo si uložte jiným způsobem) tento odkaz:</p>
-<a href='javascript:(function a(){if(/(www.)?umime(cesky)?.cz/.test(location.host)){if(window.mode!=="ps")return;initSkill();initBar();var shield=confirm("Checete štít 4?")?"4":"3";showFinalBoard("medalBased","ps","mastered".concat(shield),"0");updateBar(shield==="3"?.955:1)}})()'>Umimecesky.cz</a>
+<a href='javascript:(function a(){if(/(www.)?umime(cesky)?.cz/.test(location.host)){if(window.mode!=="ps")return;initSkill();initBar();var shield=confirm("Checete štít 3?")?"3":"4";showFinalBoard("medalBased","ps","mastered".concat(shield),"0");updateBar(shield==="3"?.955:1)}})()'>Umimecesky.cz</a>
 <br>
 <p>Pokud vás zajímá, co tento odkaz dělá, je to toto:</p>
 <pre>
@@ -16,13 +16,13 @@
         if (window.mode !== "ps") return;
         initSkill();
         initBar();
-        var shield = confirm("Checete štít 4?") ? "4" : "3";
+        var shield = confirm("Checete štít 3?") ? "3" : "4";
         showFinalBoard("medalBased", "ps", "mastered".concat(shield), "0");
         updateBar(shield === "3" ? .955 : 1)
     }
 })()
 // Na 1 řádku:
-(function a(){if(/(www.)?umime(cesky)?.cz/.test(location.host)){if(window.mode!=="ps")return;initSkill();initBar();var shield=confirm("Checete štít 4?")?"4":"3";showFinalBoard("medalBased","ps","mastered".concat(shield),"0");updateBar(shield==="3"?.955:1)}})()
+(function a(){if(/(www.)?umime(cesky)?.cz/.test(location.host)){if(window.mode!=="ps")return;initSkill();initBar();var shield=confirm("Checete štít 3?")?"3":"4";showFinalBoard("medalBased","ps","mastered".concat(shield),"0");updateBar(shield==="3"?.955:1)}})()
 </pre>
 <h1>Generátor umimecesky.cz</h1>
 <form id="form">
