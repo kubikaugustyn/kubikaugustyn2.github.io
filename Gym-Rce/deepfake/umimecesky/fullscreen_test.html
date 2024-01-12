@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test of the fullscreen mode in Safari on iPhone</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body>
+<h1>Test of the fullscreen mode in Safari on iPhone</h1>
+<span id="test">???</span>
+<script>
+    // https://stackoverflow.com/questions/16485919/sus
+    setInterval(function () {
+        document.getElementById("test").innerText = window.navigator.standalone ? "Yes, in fullscreen" : "No, not in fullscreen"
+    }, 100)
+</script>
+<hr>
+<button onclick="test()">Test</button>
+<script>
+    function test() {
+        if (document.webkitFullscreenElement) {
+            document.webkitCancelFullScreen();
+        } else {
+            const el = document.documentElement;
+            el.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+        }
+    }
+</script>
+<hr>
+<button onclick="document.getElementById('video').webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT)">
+    Open video in fullscreen
+</button>
+<br>
+<video id="video" src="https://kubikaugustyn.github.io/ZitSvujSen.mp4" width="25%" height="25%" controls></video>
+</body>
+</html>
