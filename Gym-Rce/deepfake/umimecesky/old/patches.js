@@ -1,7 +1,9 @@
 var __author__ = "kubik.augustyn@post.cz"
 
 var params = new URLSearchParams(location.search)
-var usernames = "sýkora koroptev slon červ pavouk krokodýl zebra krokodýl aligátor anonym had kachna kos kočka pes slepice kuře".split(" ")
+var usernames =
+    "anonym sýkora koroptev slon červ pavouk krokodýl zebra aligátor had kachna kos kočka pes slepice kuře papuchalk hroch okoun kapr štika cejn kobylka saranče papoušek ara babočka racek rak rákosník rejnok krab delfín velryba bramborníček gaviál"
+        .split(" ").filter((item, i, arr) => item && arr.indexOf(item) === i ? true : (console.warn("Duplicate:", item), false))
 var username = usernames[Math.floor(Math.random() * usernames.length)]
 
 function checkParams() {
@@ -22,6 +24,9 @@ function applyPatches() {
     }
 
     showFinalBoard = ourShowFinalBoardFactory(showFinalBoard)
+
+    elem = document.getElementById("limit_number")
+    elem.innerText = String(47 + Math.floor(Math.random() * 10))
 }
 
 function useParams() {
@@ -127,7 +132,7 @@ function redirectToReal(path = "") {
 }
 
 function redirectToGenerator() {
-    document.location = location.pathname.concat("generator.html")
+    document.location = location.pathname.slice(0, location.pathname.lastIndexOf("/")).concat("/generator.html")
 }
 
 
